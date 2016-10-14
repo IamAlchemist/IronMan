@@ -12,6 +12,9 @@ const mathUrl = 'https://www.khanacademy.org/math';
 
 const tableItemClass =  '.content_1gdgprv-o_O-contentOnBottom_rfy4py';
 const linkClass = '.link_1uvuyao-o_O-noUnderlineOnHover_gzi9n-o_O-blurb_1692lk9';
+const itemNameClass = '.title_1ytnru0-o_O-reducedMargin_zu6h1b';
+const descriptionClass = '.description_svya6c';
+
 superagent.get(mathUrl)
     .end(function (err, sres) {
         if (err) { return next(err); }
