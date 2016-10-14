@@ -5,24 +5,27 @@
 const superagent = require('superagent');
 const cheerio = require('cheerio');
 
+const mathUrl = 'https://www.khanacademy.org/math';
 //const url = 'https://www.khanacademy.org/math/algebra-home';
-const url = 'https://cnodejs.org/';
+//const url = 'https://www.khanacademy.org/math/geometry-home';
+//const url = 'https://cnodejs.org/';
 
-superagent.get(url)
+const tableItemClass =  '.content_1gdgprv-o_O-contentOnBottom_rfy4py';
+const linkClass = '.link_1uvuyao-o_O-noUnderlineOnHover_gzi9n-o_O-blurb_1692lk9';
+superagent.get(mathUrl)
     .end(function (err, sres) {
         if (err) { return next(err); }
 
         var $ = cheerio.load(sres.text);
         var items = [];
 
-        $('#topic_list .topic_title').each(function (idx, element) {
-            var $element = $(element);
-
-            items.push({
-                title: $element.attr('title'),
-                href: $element.attr('href')
-            })
-        });
+        $(linkClass, tableItemClass)
+            .each(function (idx, element) {
+                var $element = $(element);
+                items.push({
+                    href: $element.attr('href')
+                });
+            });
 
         console.log(items)
     });
