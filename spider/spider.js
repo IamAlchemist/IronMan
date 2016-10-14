@@ -2,17 +2,27 @@
  * Created by wizard on 10/13/16.
  */
 
-const https = require('https');
+const superagent = require('superagent');
+const cheerio = require('cheerio');
 
-https.get('https://www.khanacademy.org/math/algebra-home', (res) => {
-    console.log('statusCode: ', res.statusCode);
-    console.log('headers: ', res.headers);
+//const url = 'https://www.khanacademy.org/math/algebra-home';
+const url = 'https://cnodejs.org/';
 
-    res.on('data', (d) => {
-        process.stdout.write(d);
+superagent.get(url)
+    .end(function (err, sres) {
+        if (err) { return next(err); }
+
+        var $ = cheerio.load(sres.text);
+        var items = [];
+
+        $('#topic_list .topic_title').each(function (idx, element) {
+            var $element = $(element);
+
+            items.push({
+                title: $element.attr('title'),
+                href: $element.attr('href')
+            })
+        });
+
+        console.log(items)
     });
-
-}).on('error', (e) => {
-    console.error(e);
-});
-
