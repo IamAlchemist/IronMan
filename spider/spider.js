@@ -15,9 +15,15 @@ const linkClass = '.link_1uvuyao-o_O-noUnderlineOnHover_gzi9n-o_O-blurb_1692lk9'
 //const itemNameClass = '.title_1ytnru0-o_O-reducedMargin_zu6h1b';
 const descriptionClass = '.description_svya6c';
 
+const topicListClass = '.list_1clqkf3';
+const topicNameClass = '.link_1uvuyao';
+const topicListItemClass = '.nodeTitle_1lw7ui1';
+
 const khan = 'https://www.khanacademy.org';
 
-snatchURL(mathUrl, snatchSubMath);
+const testUrl = 'https://www.khanacademy.org/math/early-math/cc-early-math-counting-topic';
+//snatchURL(mathUrl, snatchSubMath);
+snatchGoldPageFromURL(testUrl);
 
 function snatchURL(url, cb) {
     console.log("... working on url : " + url);
@@ -52,12 +58,77 @@ function snatchURL(url, cb) {
 function snatchSubMath(items) {
     items.forEach(function (item) {
         var url = khan + item.href;
-        snatchURL(url, snatchGold);
+        snatchURL(url, snatchGoldPage);
     });
 }
 
-function snatchGold(items) {
+function snatchGoldPage(items) {
     items.forEach(function (item) {
-        console.log(item.href);
+        var url = khan + item.href;
+        snatchGoldPageFromURL(url);
     });
 }
+
+function snatchGoldPageFromURL(url) {
+    console.log('snatch gold page from : ' + url);
+
+    superagent.get(url)
+        .end(function (err, sres) {
+            if (err) {
+                return console.log(err);
+            }
+
+            var $ = cheerio.load(sres.text);
+            var items = [];
+
+            $(topicListClass)
+                .each(function (idx, element) {
+                    var $element = $(element);
+                    var title = $element.find(topicNameClass).text();
+                    var href = $element.find(topicNameClass).attr('href');
+
+                    items.push({
+                        title: title,
+                        href: href,
+                    });
+                });
+
+            snatchClass(items);
+        });
+}
+
+var goldItemInVideoPageClass = '.containerSubwayTracks_15zais5';
+var goldVideoPageClass = '.link_1uvuyao-o_O-link_m6j4io-o_O-linkSubwayTracks_19zvu2s';
+
+function snatchClassFromURL(url) {
+    console.log('snatch class from : ' + url);
+    superagent.get(url)
+        .end(function (err, sres) {
+            if (err) {
+                return console.log(err);
+            }
+
+            var $ = cheerio.load(sres.text);
+            var items = [];
+
+            $('video')
+                .each(function (idx, element) {
+                    console.log('find video');
+                    var $element = $(element);
+                    var href = $element.attr('src');
+
+                    items.push({
+                        href: href,
+                    });
+                });
+
+            console.log(items);
+        });
+}
+function snatchClass(items) {
+    items.forEach(function (item, idx) {
+        var url = khan + item.href;
+        snatchClassFromURL(url);
+    });
+}
+

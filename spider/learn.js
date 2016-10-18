@@ -8,6 +8,9 @@ const text = '<ul id="fruits"> <li class="apple">Apple</li> <li class="orange">O
 
 $ = cheerio.load(text);
 
+$('li').each(function (idx, item) {
+    console
+});
 var element = $('#fruits');
 console.log(element.find('.apple').length);
 
@@ -22,5 +25,7 @@ console.log(items);
 items.forEach(function (item, idx) {
     console.log(item + ":" + idx);
 });
+
+
 
 
