@@ -12,9 +12,9 @@ describe("SnatchSubject", function() {
     describe("from url", function() {
         this.timeout(10000);
 
-        it("early-math", function(done) {
+        it("early-math", done => {
             spider.snatchSubjectFromURL(subSubjectURL, function (items) {
-                expect(items).to.have.length(8);
+                expect(items).lengthOf(8);
                 done();
             });
         });
@@ -24,10 +24,9 @@ describe("SnatchSubject", function() {
 describe("SnatchClass", function () {
     describe("from url", function() {
         this.timeout(15000);
-        it("cc-early-math-counting-topic", function (done) {
-            "use strict";
+        it('cc-early-math-counting-topic', done => {
             spider.snatchClassFromURL(classURL, function (items) {
-                expect(items).to.have.length(10);
+                expect(items).lengthOf(10);
                 done();
             });
         });
