@@ -6,26 +6,23 @@ const superagent = require('superagent');
 const cheerio = require('cheerio');
 
 const mathUrl = 'https://www.khanacademy.org/math';
-//const url = 'https://www.khanacademy.org/math/algebra-home';
-//const url = 'https://www.khanacademy.org/math/geometry-home';
-//const url = 'https://cnodejs.org/';
+const testUrl = 'https://www.khanacademy.org/math/early-math/cc-early-math-counting-topic';
 
 const tableItemClass =  '.content_1gdgprv-o_O-contentOnBottom_rfy4py';
-const linkClass = '.link_1uvuyao-o_O-noUnderlineOnHover_gzi9n-o_O-blurb_1692lk9';
-//const itemNameClass = '.title_1ytnru0-o_O-reducedMargin_zu6h1b';
+const subSubjectLinkClass = '.link_1uvuyao-o_O-noUnderlineOnHover_gzi9n-o_O-blurb_1692lk9';
 const descriptionClass = '.description_svya6c';
 
 const topicListClass = '.list_1clqkf3';
 const topicNameClass = '.link_1uvuyao';
-const topicListItemClass = '.nodeTitle_1lw7ui1';
 
 const khan = 'https://www.khanacademy.org';
 
-const testUrl = 'https://www.khanacademy.org/math/early-math/cc-early-math-counting-topic';
-//snatchURL(mathUrl, snatchSubMath);
-snatchGoldPageFromURL(testUrl);
+//snatchSubject(mathUrl, snatchSubSubject);
 
-function snatchURL(url, cb) {
+
+snatchClassFromURL(testUrl);
+
+function snatchSubject(url, cb) {
     console.log("... working on url : " + url);
     superagent.get(url)
         .end(function (err, sres) {
@@ -41,7 +38,7 @@ function snatchURL(url, cb) {
 
                     var $element = $(element);
                     var title = $element.find('h3').text();
-                    var href = $element.find(linkClass).attr('href');
+                    var href = $element.find(subSubjectLinkClass).attr('href');
                     var desc = $element.find(descriptionClass).text();
 
                     items.push({
@@ -55,10 +52,10 @@ function snatchURL(url, cb) {
         });
 }
 
-function snatchSubMath(items) {
+function snatchSubSubject(items) {
     items.forEach(function (item) {
         var url = khan + item.href;
-        snatchURL(url, snatchGoldPage);
+        snatchSubject(url, snatchGoldPage);
     });
 }
 
@@ -97,9 +94,7 @@ function snatchGoldPageFromURL(url) {
         });
 }
 
-var goldItemInVideoPageClass = '.containerSubwayTracks_15zais5';
-var goldVideoPageClass = '.link_1uvuyao-o_O-link_m6j4io-o_O-linkSubwayTracks_19zvu2s';
-
+var goldItemClass = ".nodeTitle_1lw7ui1";
 function snatchClassFromURL(url) {
     console.log('snatch class from : ' + url);
     superagent.get(url)
@@ -111,22 +106,23 @@ function snatchClassFromURL(url) {
             var $ = cheerio.load(sres.text);
             var items = [];
 
-            $('video')
+            $(goldItemClass)
                 .each(function (idx, element) {
-                    console.log('find video');
-                    var $element = $(element);
-                    var href = $element.attr('src');
+                    var $element = $(element).find('span').first();
+                    if (!$element.text().startsWith('Practice:')) {
+                        items.push({
+                            class: $element.text(),
+                        });
 
-                    items.push({
-                        href: href,
-                    });
+                    }
                 });
 
             console.log(items);
         });
 }
+
 function snatchClass(items) {
-    items.forEach(function (item, idx) {
+    items.forEach(function (item) {
         var url = khan + item.href;
         snatchClassFromURL(url);
     });
