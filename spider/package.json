@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chai": "^3.5.0",
     "cheerio": "^0.22.0",
+    "mocha": "^3.1.2",
     "phantom": "^2.1.21",
     "superagent": "^2.3.0"
   }

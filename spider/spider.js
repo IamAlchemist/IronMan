@@ -12,17 +12,9 @@ const tableItemClass =  '.content_1gdgprv-o_O-contentOnBottom_rfy4py';
 const subSubjectLinkClass = '.link_1uvuyao-o_O-noUnderlineOnHover_gzi9n-o_O-blurb_1692lk9';
 const descriptionClass = '.description_svya6c';
 
-const topicListClass = '.list_1clqkf3';
-const topicNameClass = '.link_1uvuyao';
-
 const khan = 'https://www.khanacademy.org';
 
-//snatchSubject(mathUrl, snatchSubSubject);
-
-
-snatchClassFromURL(testUrl);
-
-function snatchSubject(url, cb) {
+function snatchSubjectFromURL(url, cb) {
     console.log("... working on url : " + url);
     superagent.get(url)
         .end(function (err, sres) {
@@ -51,47 +43,20 @@ function snatchSubject(url, cb) {
             cb(items)
         });
 }
+exports.snatchSubjectFromURL = snatchSubjectFromURL;
 
 function snatchSubSubject(items) {
     items.forEach(function (item) {
         var url = khan + item.href;
-        snatchSubject(url, snatchGoldPage);
+        snatchSubjectFromURL(url, snatchClass);
     });
 }
 
-function snatchGoldPage(items) {
+function snatchClass(items) {
     items.forEach(function (item) {
         var url = khan + item.href;
-        snatchGoldPageFromURL(url);
+        snatchClassFromURL(url);
     });
-}
-
-function snatchGoldPageFromURL(url) {
-    console.log('snatch gold page from : ' + url);
-
-    superagent.get(url)
-        .end(function (err, sres) {
-            if (err) {
-                return console.log(err);
-            }
-
-            var $ = cheerio.load(sres.text);
-            var items = [];
-
-            $(topicListClass)
-                .each(function (idx, element) {
-                    var $element = $(element);
-                    var title = $element.find(topicNameClass).text();
-                    var href = $element.find(topicNameClass).attr('href');
-
-                    items.push({
-                        title: title,
-                        href: href,
-                    });
-                });
-
-            snatchClass(items);
-        });
 }
 
 var goldItemClass = ".nodeTitle_1lw7ui1";
@@ -120,11 +85,3 @@ function snatchClassFromURL(url) {
             console.log(items);
         });
 }
-
-function snatchClass(items) {
-    items.forEach(function (item) {
-        var url = khan + item.href;
-        snatchClassFromURL(url);
-    });
-}
-
