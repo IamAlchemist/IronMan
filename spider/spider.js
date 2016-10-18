@@ -51,6 +51,7 @@ function snatchSubSubject(items) {
         snatchSubjectFromURL(url, snatchClass);
     });
 }
+exports.snatchSubSubject = snatchSubSubject;
 
 function snatchClass(items) {
     items.forEach(function (item) {
@@ -60,7 +61,7 @@ function snatchClass(items) {
 }
 
 var goldItemClass = ".nodeTitle_1lw7ui1";
-function snatchClassFromURL(url) {
+function snatchClassFromURL(url, cb) {
     console.log('snatch class from : ' + url);
     superagent.get(url)
         .end(function (err, sres) {
@@ -82,6 +83,7 @@ function snatchClassFromURL(url) {
                     }
                 });
 
-            console.log(items);
+            cb(items);
         });
 }
+exports.snatchClassFromURL = snatchClassFromURL;

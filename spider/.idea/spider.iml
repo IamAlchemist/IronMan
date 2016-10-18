@@ -11,5 +11,10 @@
     <orderEntry type="library" name="superagent-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="cheerio-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="phantomjs-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="mocha-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="chai-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="chai-things-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="chai-as-promised-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="chai-fuzzy-DefinitelyTyped" level="application" />
   </component>
 </module>
