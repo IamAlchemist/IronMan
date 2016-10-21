@@ -1,5 +1,17 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    .container
+        .row
+            h1= title
+            small 图书列表
+            each item in books
+                .col-md-3.col-xm-6
+                    .thumbnail.text-center
+                        a(href='/books/#{item._id}')
+                            img(src='#{item.poster}',alt='#{item.title}')
+                        .caption
+                            h3= item.title
+                            .btn-group
+                                a.btn.btn-primary(href='/books/#{item._id}') 查看详情
+                                a.btn.btn-primary(href='#{item.buyUrl}') 购买书籍
