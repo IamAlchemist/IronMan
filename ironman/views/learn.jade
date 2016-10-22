@@ -9,21 +9,20 @@ block content
             h1 Hello World
             ul.list-group-item-text
                 li
-                    input(type='checkbox')
-                li
-                    input(type='checkbox' checked=true)
-                li
                     input#check2(type='radio', name='iCheck')
                     label(for='check2') check2
                 li
-                    input#check1(type='radio', name='iCheck', checked=true)
+                    input#check1(type='radio', name='iCheck')
                     label(for='check1') check1
 
     script.
         $(document).ready(function () {
             $('input').iCheck({
-                checkboxClass: 'icheckbox_square-green',
                 radioClass: 'iradio_square-green',
                 increaseArea: '20%'
+            });
+
+            $('input').on('ifChecked', event => {
+                alert(event.type + ' callback');
             });
         });
