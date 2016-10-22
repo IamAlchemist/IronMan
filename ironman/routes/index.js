@@ -20,4 +20,8 @@ router.get('/', function (req, res, next) {
     res.render('index', options);
 });
 
+router.get('/learn', function(req, res, next) {
+    res.render('learn');
+});
+
 module.exports = router;
