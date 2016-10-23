@@ -4,7 +4,7 @@
 extends layout
 
 block content
-    .container.exercise-section
+    .container
         .lead
             h1 Hello World
             ul.list-group-item-text
@@ -15,14 +15,4 @@ block content
                     input#check1(type='radio', name='iCheck')
                     label(for='check1') check1
 
-    script.
-        $(document).ready(function () {
-            $('input').iCheck({
-                radioClass: 'iradio_square-green',
-                increaseArea: '20%'
-            });
-
-            $('input').on('ifChecked', event => {
-                alert(event.type + ' callback');
-            });
-        });
+    script(src='/javascripts/exercises.js')
