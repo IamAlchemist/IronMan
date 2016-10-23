@@ -10,6 +10,6 @@ $(document).ready(function () {
     });
 
     inputs.on('ifChecked', event => {
-        alert(event.type + ' callback');
+        console.log(event.target.id);
     });
 });
