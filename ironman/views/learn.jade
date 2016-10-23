@@ -6,13 +6,14 @@ extends layout
 block content
     .container
         .lead
-            h1 Hello World
-            ul.list-group-item-text
-                li
-                    input#check2(type='radio', name='iCheck')
-                    label(for='check2') check2
-                li
-                    input#check1(type='radio', name='iCheck')
-                    label(for='check1') check1
+            h1 练习题
+            h4= exercise.question
+            h5= exercise.description
+            p
+                each option in exercise.options
+                    ul.list-group-item-text
+                        li
+                            input(id= '#{option.id}',type='radio', name='#{option.name}')
+                            label(for='#{option.id}') '#{option.description}'
 
     script(src='/javascripts/exercises.js')
