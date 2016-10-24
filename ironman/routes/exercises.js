@@ -26,7 +26,7 @@ router.get('/', function (req, res, next) {
         exercise
     };
 
-    res.render('learn', params);
+    res.render('exercises', params);
 });
 
 module.exports = router;

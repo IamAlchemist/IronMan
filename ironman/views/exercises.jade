@@ -1,0 +1,19 @@
+//
+   Created by wizard on 10/22/16.
+
+extends layout
+
+block content
+    .container
+        .lead
+            h1 练习题
+            h4= exercise.question
+            h5= exercise.description
+            p
+                each option in exercise.options
+                    ul.list-group-item-text
+                        li
+                            input(id= '#{option.id}',type='radio', name='#{option.name}')
+                            label(for='#{option.id}') '#{option.description}'
+
+    script(src='/javascripts/exercises.js')

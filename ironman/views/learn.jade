@@ -1,19 +1,47 @@
 //
-   Created by wizard on 10/22/16.
+   Created by wizard on 10/24/16.
 
 extends layout
 
 block content
     .container
-        .lead
-            h1 练习题
-            h4= exercise.question
-            h5= exercise.description
-            p
-                each option in exercise.options
-                    ul.list-group-item-text
-                        li
-                            input(id= '#{option.id}',type='radio', name='#{option.name}')
-                            label(for='#{option.id}') '#{option.description}'
+        .row-fluid
+            .col-xs-12
+                form(action="/learn" method='GET')
+                    fieldset
+                        legend Personal information:
+                        .row
+                            .col-xs-2.
+                                First Name:
+                            .col-xs-10
+                                input(type='text' name='firstName' value='Mickey')
+                        .row
+                            .col-xs-2.
+                                Last Name:
+                            .col-xs-10
+                                input(type='text' name='lastName' value='Mouse')
+                        .row
+                            .col-xs-12
+                                input(type='submit' value='Submit')
 
-    script(src='/javascripts/exercises.js')
+        .row-fluid
+            .col-xs-12
+                form.form-inline(role='form')
+                    .form-group
+                        label.sr-only(for='exampleInputEmail2') Email address
+                        input.form-control(type='email' id='exampleInputEmail2' placeholder='Enter email')
+                    .form-group
+                        .input-group
+                            .input-group-addon @
+                            input.form-control(type='email' placeholder='Enter email')
+                    .form-group
+                        label.sr-only(for='exampleInputPassword2') Password
+                        input.form-control(type='password' id='exampleInputPassword2' placeholder='Password')
+                    .checkbox
+                        label
+                            input(type='checkbox')
+                            | Remember me
+                    button.btn.btn-default(type='submit') Sign in
+
+
+
