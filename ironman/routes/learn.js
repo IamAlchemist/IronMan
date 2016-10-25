@@ -9,4 +9,9 @@ router.get('/', function (req, res, next) {
     res.render('learn', options);
 });
 
+router.get('/getForm', function (req, res, next) {
+    console.log(req.query);
+    res.send('ok');
+});
+
 module.exports = router;

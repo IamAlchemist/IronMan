@@ -8,11 +8,11 @@ block content
         .row
             .col-sm-12
                 h1.text-center Learn
-        form#add.form-horizontal(role='from' action='/learn' method='GET')
+        form#add.form-horizontal(role='from' action='/learn/getForm' method='GET')
             .form-group
                 label.col-sm-2.control-label(for='inputTitle') Title
                 .col-sm-10
-                    input.form-control#inputTitle(type='text')
+                    input.form-control#inputTitle(type='text' name='title')
             button.btn.btn-success.btn-large.col-sm-4.col-center-block(type='submit') Submit
     script(src='/javascripts/learn.js')
 
