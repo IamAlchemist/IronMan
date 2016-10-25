@@ -29,4 +29,9 @@ router.get('/', function (req, res, next) {
     res.render('exercises', params);
 });
 
+router.get('/add', function (req, res, next) {
+    var params = {};
+    res.render('addExercise', params)
+});
+
 module.exports = router;
