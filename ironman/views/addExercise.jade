@@ -45,13 +45,9 @@ block content
                 label.col-sm-2.control-label(for='tag') Tag
                 .col-sm-2
                     input.form-control#tag(type='text' placeholder='tag1; tag2')
-                label.col-sm-2.control-label(for='dropDownMenu1') Type
-                #dropDownMenu1.dropdown.col-sm-2
-                    button.btn.btn-default.dropdown-toggle(type='button' data-toggle='dropdown') 题目类型
-                        span.caret
-                    ul.dropdown-menu(aria-labelledby='dropDownMenu1')
-                        li
-                            a(tabindex='-1' href='#') 选择题
-                        li
-                            a(tabindex='-1' href='#') 填空题
+                label.col-sm-2.control-label(for='selectType') Type
+                .col-sm-2
+                    select#selectType.form-control
+                        option 选择题
+                        option 填空题
             button.btn.btn-success.btn-large.col-sm-4.col-center-block(type='submit') Submit
