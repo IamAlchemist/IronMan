@@ -5,8 +5,8 @@ extends layout
 
 block content
     .container
-        .row.col-xs-12.jumbotron
-            h1 添加新题目
+        .row.col-xs-12
+            h3 添加新题目
 
         form.form-horizontal(role='from')
             .form-group
@@ -14,7 +14,7 @@ block content
                 .col-sm-10
                     input.form-control#inputTitle(type='text')
             .form-group
-                label.col-sm-2.control-label(for='inputDescription') Title
+                label.col-sm-2.control-label(for='inputDescription') Description
                 .col-sm-10
                     textarea.form-control#inputDescription(rows='4')
             .form-group
@@ -33,6 +33,16 @@ block content
                 label.col-sm-2.control-label(for='optionD') D
                 .col-sm-10
                     input.form-control#optionD(type='text')
-
-
-
+            .form-group
+                label.col-sm-2.control-label(for='answer') Answer
+                .col-sm-10
+                    input.form-control#answer(type='text' placeholder='0 or 1 or 2 or 3')
+            .form-group
+                label.col-sm-2.control-label(for='hint') Hint
+                .col-sm-10
+                    input.form-control#hint(type='text')
+            .form-group
+                label.col-sm-2.control-label(for='tag') Tag
+                .col-sm-10
+                    input.form-control#tag(type='text' placeholder='tag1; tag2')
+            button.btn.btn-success.btn-large.col-sm-4.col-center-block(type='submit') Submit
