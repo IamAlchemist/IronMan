@@ -8,7 +8,7 @@ block content
         .row.col-xs-12
             h3 添加新题目
 
-        form.form-horizontal(role='from')
+        form#add.form-horizontal(role='from')
             .form-group
                 label.col-sm-2.control-label(for='inputTitle') Title
                 .col-sm-10
@@ -51,3 +51,5 @@ block content
                         option 选择题
                         option 填空题
             button.btn.btn-success.btn-large.col-sm-4.col-center-block(type='submit') Submit
+
+    script(src='/javascript/exercisesAdd.js')

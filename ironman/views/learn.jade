@@ -5,43 +5,15 @@ extends layout
 
 block content
     .container
-        .row-fluid
-            .col-xs-12
-                form(action="/learn" method='GET')
-                    fieldset
-                        legend Personal information:
-                        .row
-                            .col-xs-2.
-                                First Name:
-                            .col-xs-10
-                                input(type='text' name='firstName' value='Mickey')
-                        .row
-                            .col-xs-2.
-                                Last Name:
-                            .col-xs-10
-                                input(type='text' name='lastName' value='Mouse')
-                        .row
-                            .col-xs-12
-                                input(type='submit' value='Submit')
-
-        .row-fluid
-            .col-xs-12
-                form.form-inline(role='form')
-                    .form-group
-                        label.sr-only(for='exampleInputEmail2') Email address
-                        input.form-control(type='email' id='exampleInputEmail2' placeholder='Enter email')
-                    .form-group
-                        .input-group
-                            .input-group-addon @
-                            input.form-control(type='email' placeholder='Enter email')
-                    .form-group
-                        label.sr-only(for='exampleInputPassword2') Password
-                        input.form-control(type='password' id='exampleInputPassword2' placeholder='Password')
-                    .checkbox
-                        label
-                            input(type='checkbox')
-                            | Remember me
-                    button.btn.btn-default(type='submit') Sign in
-
+        .row
+            .col-sm-12
+                h1.text-center Learn
+        form#add.form-horizontal(role='from' action='/learn' method='GET')
+            .form-group
+                label.col-sm-2.control-label(for='inputTitle') Title
+                .col-sm-10
+                    input.form-control#inputTitle(type='text')
+            button.btn.btn-success.btn-large.col-sm-4.col-center-block(type='submit') Submit
+    script(src='/javascripts/learn.js')
 
 

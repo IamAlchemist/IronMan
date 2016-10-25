@@ -20,27 +20,4 @@ router.get('/', function (req, res, next) {
     res.render('index', options);
 });
 
-router.get('/learn', function(req, res, next) {
-    var options = new Array(3);
-
-    for (var i = 0; i < 3; ++i) {
-        options[i] = {
-            id: `option_${i}`,
-            name: 'option_name',
-            description: 'option_description'
-        };
-    }
-    var exercise = {
-        question: 'exer_question',
-        description: 'exer_description',
-        options
-    };
-
-    var params = {
-        exercise
-    };
-
-    res.render('learn', params);
-});
-
 module.exports = router;
