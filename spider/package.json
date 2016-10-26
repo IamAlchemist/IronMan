@@ -13,6 +13,7 @@
     "cheerio": "^0.22.0",
     "mocha": "^3.1.2",
     "phantom": "^2.1.21",
-    "superagent": "^2.3.0"
+    "superagent": "^2.3.0",
+    "tracer": "^0.8.3"
   }
 }
