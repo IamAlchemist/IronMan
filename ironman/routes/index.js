@@ -20,4 +20,12 @@ router.get('/', function (req, res, next) {
     res.render('index', options);
 });
 
+router.get('/login', function (req, res, next) {
+    var options = {
+        title: 'IronMan'
+    };
+
+    res.render('login', options);
+});
+
 module.exports = router;
