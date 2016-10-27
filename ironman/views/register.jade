@@ -1,0 +1,29 @@
+//
+   Created by wizard on 10/27/16.
+
+extends layout
+
+block content
+    .container
+        .row.col-lg-12.jumbotron
+            h4.text-center.text-info 
+        form.form-horizontal.col-lg-6.col-lg-offset-3(method='POST')
+            .form-group
+                label.control-label.col-lg-2(for='username') 用户名
+                .col-lg-10
+                    input#username.form-control(type='text' name='username')
+            .form-group
+                label.control-label.col-lg-2(for='password') 密码
+                .col-lg-10
+                    input#password.form-control(type='text' name='username')
+            .form-group
+                label.control-label.col-lg-2(for='re_password') 确认密码
+                .col-lg-10
+                    input#re_password.form-control(type='text' name='username')
+            .form-group
+                .col-lg-10.col-lg-offset-2
+                    button.btn.btn-primary.btn-block(type='submit') 注册
+            .form-group
+                .col-lg-10.col-lg-offset-2
+                    a.btn.btn-info.form-control(href='/users/login') 已有账户？登录
+
