@@ -23,5 +23,12 @@ router.get('/register', function (req, res, next) {
     res.render('register', options);
 });
 
+router.get('/profile', function (req, res, next) {
+    var options = {
+        title: 'IronMan Register'
+    };
+
+    res.render('profile', options);
+});
 
 module.exports = router;
