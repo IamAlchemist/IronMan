@@ -4,7 +4,7 @@
 
 const express = require('express');
 const router = express.Router();
-const mongoose = require('../libs/mongoose');
+const mongoose = require('../libs/mongodb');
 
 router.get('/', function (req, res, next) {
     var options = new Array(3);
