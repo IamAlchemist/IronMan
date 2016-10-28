@@ -4,7 +4,10 @@ block content
     .container
         .row.col-sm-10.col-sm-offset-1.jumbotron
             h1.text-center= title
-        form.col-sm-4.col-sm-offset-4(role='form')
+        .row
+            .col-lg-4.col-lg-offset-4
+                p.text-primary.text-center= error
+        form.col-sm-4.col-sm-offset-4(role='form' method='POST')
             .form-group
                 label.control-label(for='inputEmail') Email
                 input#inputEmail.form-control(type='email' name='email' placeholder='Email address' required=true autofocus=true)

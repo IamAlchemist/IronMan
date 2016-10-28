@@ -1,6 +1,7 @@
 const express = require('express');
 const crypto = require('crypto');
 const User = require('../models/user');
+const logger = require('../libs/ironmanLogger');
 const router = express.Router();
 
 
@@ -20,24 +21,44 @@ router.get('/login', function (req, res) {
 
 router.post('/login', noCheckAuthentication);
 router.post("/login", function (req, res) {
-    var name = req.body.username,
+
+    var name = req.body.email,
         password = req.body.password,
         md5 = crypto.createHash('md5'),
         md5_password = md5.update(password).digest('hex');
+
     if (name == "" || password == "") {
         req.session.error = "请不要留白！";
-        return res.redirect('/users/login');
+        var message = `no name ${name} or no password ${password}`;
+        logger.info(message);
+
+        return res.render('login', {
+            error: message,
+            title: "IronMan"
+        });
     }
 
     User.get(name, function(err, user) {
         if (!user) {
-            req.session.error = "用户不存在！";
-            return res.redirect('/users/login');
+            var message = "用户不存在！请先注册";
+            req.session.error = message;
+            logger.info(message);
+
+            return res.render('login', {
+                error: message,
+                title: "IronMan"
+            });
         }
 
         if (user.password != md5_password) {
-            req.session.error = "密码错误！";
-            return res.redirect('/users/login');
+            var message = "密码错误！";
+            req.session.error = message;
+            logger.info(message);
+
+            return res.render('login', {
+                error: message,
+                title: "IronMan"
+            });
         }
 
         req.session.user = user;
@@ -107,6 +128,12 @@ router.get('/profile', function (req, res) {
     };
 
     res.render('profile', options);
+});
+
+router.get("/logout", checkAuthentication);
+router.get("/logout", function (req, res) {
+    req.session.user = null;
+    res.redirect('/');
 });
 
 function checkAuthentication (req, res, next) {
