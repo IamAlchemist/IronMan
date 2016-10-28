@@ -10,6 +10,12 @@ var users = require('./routes/users');
 var exercises = require('./routes/exercises');
 var learn = require('./routes/learn');
 
+var SessionStore = require('session-mongoose')(express);
+var store = new SessionStore({
+    url: "mongodb://localhost/session",
+    interval: 120000
+});
+
 var app = express();
 
 // view engine setup
