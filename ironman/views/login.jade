@@ -7,7 +7,7 @@ block content
         .row
             .col-lg-4.col-lg-offset-4
                 p#message.text-primary.text-center &nbsp;
-        form#login.col-sm-4.col-sm-offset-4(role='form' method='POST')
+        form#login.col-sm-4.col-sm-offset-4(role='form' target='/users/login' method='POST')
             .form-group
                 label.control-label(for='inputEmail') Email
                 input#inputEmail.form-control(type='email' name='email' placeholder='Email address' required=true autofocus=true)

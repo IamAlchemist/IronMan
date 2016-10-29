@@ -6,20 +6,23 @@ extends layout
 block content
     .container
         .row.col-lg-12.jumbotron
-            h4.text-center.text-info
-        form.form-horizontal.col-lg-6.col-lg-offset-3(method='POST')
+            h3.text-center.text-info= title
+        .row
+            .col-lg-4.col-lg-offset-4
+                p#message.text-primary.text-center &nbsp;
+        form#register.form-horizontal.col-lg-6.col-lg-offset-3(action='/users/register' method='POST')
             .form-group
-                label.control-label.col-lg-2(for='username') 用户名
+                label.control-label.col-lg-2(for='username') 邮箱名
                 .col-lg-10
-                    input#username.form-control(type='text' name='username')
+                    input#username.form-control(type='email' name='username' placeholder='Email address' required=true autofocus=true)
             .form-group
                 label.control-label.col-lg-2(for='password') 密码
                 .col-lg-10
-                    input#password.form-control(type='text' name='username')
+                    input#password.form-control(type='password' name='password' placeholder='Password' required=true)
             .form-group
                 label.control-label.col-lg-2(for='re_password') 确认密码
                 .col-lg-10
-                    input#re_password.form-control(type='text' name='username')
+                    input#re_password.form-control(type='password' name='repassword' placeholder='Password' required=true)
             .form-group
                 .col-lg-10.col-lg-offset-2
                     button.btn.btn-primary.btn-block(type='submit') 注册
@@ -27,3 +30,4 @@ block content
                 .col-lg-10.col-lg-offset-2
                     a.btn.btn-info.form-control(href='/users/login') 已有账户？登录
 
+    script(src='/javascripts/require.js' async='true' defer data-main='/javascripts/register.js')

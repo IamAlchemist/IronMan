@@ -101,7 +101,7 @@ router.post("/register", function (req, res) {
 
     const name = req.body.username,
         password = req.body.password,
-        repassword = req.body['repassword'];
+        repassword = req.body.repassword;
 
     if (name == "" || password == "" || repassword == "") {
         const result = new ApiResult(4);
