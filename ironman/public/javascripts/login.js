@@ -18,7 +18,11 @@ require([], function () {
                 url: form.attr('action'),
                 data: form.serialize(),
             }).done(function (data) {
+
                 messageElem.text(data.message);
+                if (data.errorCode == 0) {
+                    window.location.replace('/users/profile');
+                }
             })
 
         });
