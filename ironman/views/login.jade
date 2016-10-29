@@ -6,8 +6,8 @@ block content
             h1.text-center= title
         .row
             .col-lg-4.col-lg-offset-4
-                p.text-primary.text-center= error
-        form.col-sm-4.col-sm-offset-4(role='form' method='POST')
+                p#message.text-primary.text-center &nbsp;
+        form#login.col-sm-4.col-sm-offset-4(role='form' method='POST')
             .form-group
                 label.control-label(for='inputEmail') Email
                 input#inputEmail.form-control(type='email' name='email' placeholder='Email address' required=true autofocus=true)
@@ -23,5 +23,5 @@ block content
             .form-group
                 a.btn.btn-block.btn-success(href='/users/register') Sign up
 
-
+    script(src='/javascripts/require.js' async='true' defer data-main='/javascripts/login.js')
 

@@ -1,7 +1,10 @@
+"use strict";
+
 const express = require('express');
 const crypto = require('crypto');
 const User = require('../models/user');
 const logger = require('../libs/ironmanLogger');
+const ApiResult = require('../libs/api-result');
 const router = express.Router();
 
 
@@ -19,7 +22,6 @@ router.get('/login', function (req, res) {
     res.render('login', options);
 });
 
-router.post('/login', noCheckAuthentication);
 router.post("/login", function (req, res) {
 
     var name = req.body.email,
@@ -28,37 +30,22 @@ router.post("/login", function (req, res) {
         md5_password = md5.update(password).digest('hex');
 
     if (name == "" || password == "") {
-        req.session.error = "请不要留白！";
-        var message = `no name ${name} or no password ${password}`;
-        logger.info(message);
-
-        return res.render('login', {
-            error: message,
-            title: "IronMan"
-        });
+        const result = ApiResult(1);
+        logger.info(result.message);
+        return res.send(result);
     }
 
     User.get(name, function(err, user) {
         if (!user) {
-            var message = "用户不存在！请先注册";
-            req.session.error = message;
-            logger.info(message);
-
-            return res.render('login', {
-                error: message,
-                title: "IronMan"
-            });
+            const result = ApiResult(2);
+            logger.info(result.message);
+            return res.send(result);
         }
 
         if (user.password != md5_password) {
-            var message = "密码错误！";
-            req.session.error = message;
-            logger.info(message);
-
-            return res.render('login', {
-                error: message,
-                title: "IronMan"
-            });
+            const result = ApiResult(3);
+            logger.info(result.message);
+            return res.send(result);
         }
 
         req.session.user = user;
