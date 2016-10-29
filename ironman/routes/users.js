@@ -22,7 +22,7 @@ router.get('/login', function (req, res) {
         title: 'IronMan Login'
     };
 
-    res.render('login', options);
+    res.render('users/login', options);
 });
 
 router.get('/register', noCheckAuthentication);
@@ -31,7 +31,7 @@ router.get('/register', function (req, res) {
         title: 'IronMan Register'
     };
 
-    res.render('register', options);
+    res.render('users/register', options);
 });
 
 router.get('/profile', checkAuthentication);
@@ -40,7 +40,7 @@ router.get('/profile', function (req, res) {
         title: 'IronMan Profile'
     };
 
-    res.render('profile', options);
+    res.render('users/profile', options);
 });
 
 router.get("/logout", checkAuthentication);
