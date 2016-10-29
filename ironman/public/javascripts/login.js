@@ -4,6 +4,10 @@ require([], function () {
     $(document).ready(function () {
         messageElem = $('p#message');
 
+        setupLoginForm();
+    });
+
+    function setupLoginForm() {
         $('form#login').submit(function (event) {
             event.preventDefault();
 
@@ -18,5 +22,6 @@ require([], function () {
             })
 
         });
-    });
+    }
 });
+

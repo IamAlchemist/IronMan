@@ -22,39 +22,6 @@ router.get('/login', function (req, res) {
     res.render('login', options);
 });
 
-router.post("/login", function (req, res) {
-
-    var name = req.body.email,
-        password = req.body.password,
-        md5 = crypto.createHash('md5'),
-        md5_password = md5.update(password).digest('hex');
-
-    if (name == "" || password == "") {
-        const result = ApiResult(1);
-        logger.info(result.message);
-        return res.send(result);
-    }
-
-    User.get(name, function(err, user) {
-        if (!user) {
-            const result = ApiResult(2);
-            logger.info(result.message);
-            return res.send(result);
-        }
-
-        if (user.password != md5_password) {
-            const result = ApiResult(3);
-            logger.info(result.message);
-            return res.send(result);
-        }
-
-        req.session.user = user;
-        req.session.success = "登录成功！";
-
-        res.redirect('/users/profile');
-    });
-});
-
 router.get('/register', noCheckAuthentication);
 router.get('/register', function (req, res) {
     var options = {
@@ -62,50 +29,6 @@ router.get('/register', function (req, res) {
     };
 
     res.render('register', options);
-});
-
-router.post("/register", noCheckAuthentication);
-router.post("/register", function (req, res) {
-
-    var name = req.body.username,
-        password = req.body.password,
-        repassword = req.body['repassword'];
-
-    if (name == "" || password == "" || repassword == "") {
-        req.session.error = "请不要留白！";
-        return res.redirect('/users/register');
-    }
-
-    if (password != repassword) {
-        req.session.error = "两次密码输入不一样";
-        return res.redirect('/users/register');
-    }
-
-    var md5 = crypto.createHash('md5'),
-        passwd = md5.update(req.body.password).digest('hex');
-    var newUser = new User({
-        name: name,
-        password: passwd
-    });
-
-    User.get(newUser.name, function (err, user) {
-        if (user) {
-            req.session.error = "用户已经存在!";
-            return res.redirect('/users/register');
-        }
-
-        newUser.save(function (err, user) {
-            if (err) {
-                req.session.error = err;
-                return res.redirect('/users/register');
-            }
-
-            req.session.user = user;
-            req.session.success = "注册成功！";
-            res.redirect('/users/profile');
-        });
-
-    });
 });
 
 router.get('/profile', checkAuthentication);
@@ -123,7 +46,7 @@ router.get("/logout", function (req, res) {
     res.redirect('/');
 });
 
-function checkAuthentication (req, res, next) {
+function checkAuthentication(req, res, next) {
     if (!req.session.user) {
         req.session.error = '请登录';
         return res.redirect('/users/login');
@@ -131,12 +54,96 @@ function checkAuthentication (req, res, next) {
     next();
 }
 
-function noCheckAuthentication (req, res, next) {
+function noCheckAuthentication(req, res, next) {
     if (req.session.user) {
         req.session.error = '已登录';
         return res.redirect('/users/profile');
     }
     next();
 }
+
+
+/* POST */
+router.post("/login", function (req, res) {
+
+    var name = req.body.email,
+        password = req.body.password,
+        md5 = crypto.createHash('md5'),
+        md5_password = md5.update(password).digest('hex');
+
+    if (name == "" || password == "") {
+        const result = new ApiResult(1);
+        logger.info(result.message);
+        return res.send(result);
+    }
+
+    User.get(name, function (err, user) {
+        if (!user) {
+            const result = new ApiResult(2);
+            logger.info(result.message);
+            return res.send(result);
+        }
+
+        if (user.password != md5_password) {
+            const result = new ApiResult(3);
+            logger.info(result.message);
+            return res.send(result);
+        }
+
+        req.session.user = user;
+        req.session.success = "登录成功！";
+
+        res.send(new ApiResult(0));
+    });
+});
+
+router.post("/register", function (req, res) {
+
+    const name = req.body.username,
+        password = req.body.password,
+        repassword = req.body['repassword'];
+
+    if (name == "" || password == "" || repassword == "") {
+        const result = new ApiResult(4);
+        logger.info(result.message);
+        return res.send(result);
+    }
+
+    if (password != repassword) {
+        const result = new ApiResult(5);
+        log.info(result.message);
+        return res.send(result);
+    }
+
+    const md5 = crypto.createHash('md5'),
+        passwd = md5.update(req.body.password).digest('hex');
+
+    const newUser = new User({
+        name,
+        password: passwd
+    });
+
+    User.get(newUser.name, function (err, user) {
+        if (user) {
+            const result = new ApiResult(6);
+            logger.info(result.message);
+            return res.send(result);
+        }
+
+        newUser.save(function (err, user) {
+            if (err) {
+                req.session.error = err;
+                var result = new ApiResult(7, error);
+                logger.error(JSON.stringify(result));
+                return res.send(result);
+            }
+
+            req.session.user = user;
+            req.session.success = "注册成功！";
+            res.send(new ApiResult(0));
+        });
+
+    });
+});
 
 module.exports = router;
