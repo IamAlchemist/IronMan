@@ -1,12 +1,10 @@
 extends layout
 
 block content
+    include navbar
     .container
         .row.col-sm-10.col-sm-offset-1.jumbotron
             h1.text-center= title
-        .row
-            .col-lg-4.col-lg-offset-4
-                p#message.text-primary.text-center &nbsp;
         form#login.col-sm-4.col-sm-offset-4(role='form' target='/users/login' method='POST')
             .form-group
                 label.control-label(for='inputEmail') Email
@@ -22,6 +20,9 @@ block content
                 button.btn.btn-primary.btn-block(type='submit') Sign in
             .form-group
                 a.btn.btn-block.btn-success(href='/users/register') Sign up
+        .row
+            .col-lg-5.col-lg-offset-4
+                p#message.text-primary.text-center &nbsp;
 
     script(src='/javascripts/require.js' async='true' defer data-main='/javascripts/login.js')
 
