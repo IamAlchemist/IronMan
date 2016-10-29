@@ -5,8 +5,11 @@ const crypto = require('crypto');
 const User = require('../models/user');
 const logger = require('../libs/ironmanLogger');
 const ApiResult = require('../libs/api-result');
-const router = express.Router();
+const auth = require('../libs/authentication');
+const noCheckAuthentication = auth.noCheckAuthentication;
+const checkAuthentication = auth.checkAuthentication;
 
+const router = express.Router();
 
 /* GET users listing. */
 router.get('/', function (req, res) {
@@ -45,22 +48,6 @@ router.get("/logout", function (req, res) {
     req.session.user = null;
     res.redirect('/');
 });
-
-function checkAuthentication(req, res, next) {
-    if (!req.session.user) {
-        req.session.error = '请登录';
-        return res.redirect('/users/login');
-    }
-    next();
-}
-
-function noCheckAuthentication(req, res, next) {
-    if (req.session.user) {
-        req.session.error = '已登录';
-        return res.redirect('/users/profile');
-    }
-    next();
-}
 
 
 /* POST */
