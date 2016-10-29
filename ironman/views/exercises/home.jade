@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        include ../head
+        link(rel='stylesheet', href='/icheck/skins/square/green.css')
+        script(src='/icheck/icheck.js')
+        link(rel='stylesheet', href='/stylesheets/exercises.css')
+
+    body
+        include ../navbar
+        .container
+            .row
+                .lead
+                    h1 练习题
+                    h4= exercise.question
+                    h5= exercise.description
+                    p
+                        each option in exercise.options
+                            ul.list-group-item-text
+                                li
+                                    input(id= '#{option.id}',type='radio', name='#{option.name}')
+                                    label(for='#{option.id}') '#{option.description}'
+
+        script(src='/javascripts/require.js' async='true' defer data-main='/javascripts/exercises/home.js')

@@ -6,7 +6,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('../libs/mongodb');
 
-router.get('/', function (req, res, next) {
+router.get('/', function (req, res) {
     var options = new Array(3);
 
     for (var i = 0; i < 3; ++i) {
@@ -26,12 +26,12 @@ router.get('/', function (req, res, next) {
         exercise
     };
 
-    res.render('exercises', params);
+    res.render('exercises/home', params);
 });
 
-router.get('/add', function (req, res, next) {
+router.get('/add', function (req, res) {
     var params = {};
-    res.render('addExercise', params)
+    res.render('exercises/add', params)
 });
 
 module.exports = router;

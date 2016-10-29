@@ -22,8 +22,8 @@ html
                 #sidebar.col-xs-6.col-sm-3.sidebar-offcanvas(role='navigation')
                     .list-group
                         a.list-group-item.active(href='/users/profile') 基本信息
-                        a.list-group-item(href='#') 我的题目
-                        a.list-group-item(href='#') 创建题目
+                        a.list-group-item(href='/exercises/create') 创建题目
+                        a.list-group-item(href='/exercises') 我的题目
                         a.btn.btn-block.btn-danger(href='/users/logout') 注销
 
         script(src='/javascripts/require.js' async='true' defer data-main='/javascripts/users/profile.js')
