@@ -44,13 +44,13 @@ router.post('/create', function (req, res) {
     }
 
     const username = req.session.user.mail,
-        title = req.body.title,
-        description = req.body.description,
+        title = req.body.title.trim(),
+        description = req.body.description.trim(),
         answer = req.body.answer;
 
-    let options = [req.body.optionA, req.body.optionB, req.body.optionC, req.body.optionD],
-        hints = req.body.hints.split(';'),
-        tags = req.body.tags.split(';');
+    let options = [req.body.optionA, req.body.optionB, req.body.optionC, req.body.optionD].map((str)=>{return str.trim()}),
+        hints = req.body.hints.split(';').map((str)=>{return str.trim()}),
+        tags = req.body.tags.split(';').map((str)=>{return str.trim()});
 
     options = options.filter(filterEmpty);
     hints = hints.filter(filterEmpty);

@@ -24,6 +24,7 @@ function Exercise(exercise) {
     this.description = exercise.description;
     this.answer = exercise.answer;
     this.options = exercise.options;
+    this.hints = exercise.hints;
     this.tags = exercise.tags;
     this.type = exercise.type;
 }

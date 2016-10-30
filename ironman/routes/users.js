@@ -47,8 +47,8 @@ router.get("/logout", function (req, res) {
 /* POST */
 router.post("/login", function (req, res) {
 
-    var mail = req.body.email,
-        password = req.body.password,
+    var mail = req.body.email.trim(),
+        password = req.body.password.trim(),
         md5 = crypto.createHash('md5'),
         md5_password = md5.update(password).digest('hex');
 
@@ -82,9 +82,9 @@ router.post("/login", function (req, res) {
 
 router.post("/register", function (req, res) {
 
-    const mail = req.body.mail,
-        password = req.body.password,
-        repassword = req.body.repassword;
+    const mail = req.body.mail.trim(),
+        password = req.body.password.trim(),
+        repassword = req.body.repassword.trim();
 
     if (mail == "" || password == "" || repassword == "") {
         const result = new ApiResult(4);

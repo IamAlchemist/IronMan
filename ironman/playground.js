@@ -1,40 +1,46 @@
 'use strict';
 
-const bluebird = require('bluebird');
-const mongoose = require('mongoose');
-mongoose.Promise = bluebird.Promise;
-const mongodb = mongoose.connect('mongodb://localhost/test');
+var strings = [" sf ", " mm "];
+strings = strings.map( (str) => { return str.trim() } );
 
-const NothingModel = mongoose.model('nothing', {
-    mail: String,
-    password: String
-});
-
-function Nothing(user) {
-    this.mail = user.mail;
-    this.password = user.password;
+for (let str of strings) {
+    console.log(str)
 }
-
-Nothing.prototype.save = function () {
-    return NothingModel(this).save();
-};
-
-Nothing.getByMail = function (mail) {
-    return NothingModel.findOne({mail: mail}).exec();
-};
-
-const nothing = new Nothing({mail: "mail", password: "passwd"});
-
-nothing.save()
-    .then((sth)=>{
-        console.log("1."+JSON.stringify(sth));
-        throw {err:"err"};
-    })
-    .catch((sth)=>{
-        console.log("2."+JSON.stringify(sth));
-    });
-
-
+// const bluebird = require('bluebird');
+// const mongoose = require('mongoose');
+// mongoose.Promise = bluebird.Promise;
+// const mongodb = mongoose.connect('mongodb://localhost/test');
+//
+// const NothingModel = mongoose.model('nothing', {
+//     mail: String,
+//     password: String
+// });
+//
+// function Nothing(user) {
+//     this.mail = user.mail;
+//     this.password = user.password;
+// }
+//
+// Nothing.prototype.save = function () {
+//     return NothingModel(this).save();
+// };
+//
+// Nothing.getByMail = function (mail) {
+//     return NothingModel.findOne({mail: mail}).exec();
+// };
+//
+// const nothing = new Nothing({mail: "mail", password: "passwd"});
+//
+// nothing.save()
+//     .then((sth)=>{
+//         console.log("1."+JSON.stringify(sth));
+//         throw {err:"err"};
+//     })
+//     .catch((sth)=>{
+//         console.log("2."+JSON.stringify(sth));
+//     });
+//
+//
 
 // var Q = require('q');
 // /**
