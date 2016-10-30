@@ -117,10 +117,15 @@ router.post("/register", function (req, res) {
         .catch(() => {
 
             newUser.save()
-                .then(()=> {
-                    req.session.user = newUser;
+                .then((user)=> {
+                    req.session.user = user;
                     req.session.success = "注册成功！";
                     return res.send(new ApiResult(0));
+                })
+                .catch((err)=> {
+                    const result = new ApiResult(7, err);
+                    logger.info(JSON.stringify(result));
+                    return res.send(result);
                 });
         });
 });

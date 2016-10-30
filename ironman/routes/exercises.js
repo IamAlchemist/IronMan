@@ -6,6 +6,7 @@
 const express = require('express');
 const Result = require('../libs/api-result');
 const logger = require('../libs/ironmanLogger');
+const Exercise = require('../models/exercise');
 
 const router = express.Router();
 
@@ -38,6 +39,10 @@ router.get('/create', function (req, res) {
 });
 
 router.post('/create', function (req, res) {
+    if (!req.session.user) {
+        return res.send(new Result(8));
+    }
+
     const username = req.session.user.mail,
         title = req.body.title,
         description = req.body.description,
@@ -58,7 +63,28 @@ router.post('/create', function (req, res) {
         return res.send(result);
     }
 
+    const newExercise = new Exercise({
+        username,
+        title,
+        description,
+        answer: parseInt(answer),
+        options,
+        hints,
+        tags,
+        type: 0
+    });
 
+    newExercise.save()
+        .then(()=>{
+            const result = new Result(0, {message:'已经保存'});
+            logger.info(JSON.stringify(result));
+            return res.send(result);
+        })
+        .catch(()=>{
+            const result = new Result(101, {message:'保存错误'});
+            logger.info(JSON.stringify(result));
+            return res.send(result);
+        });
 
     function filterEmpty(elem) {
         return elem != undefined && elem != '';

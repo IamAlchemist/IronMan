@@ -27,6 +27,12 @@ require([], function () {
             }).done(function (data) {
                 let msg = data.errorCode == 0 ? data.content.message : data.message;
                 messageElem.text(msg);
+                if (data.errorCode == 0) {
+                    createForm[0].reset();
+                }
+                else if (data.errorCode == 8) {
+                    window.location.replace('/users/login');
+                }
             })
         });
     }

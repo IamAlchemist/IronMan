@@ -25,27 +25,15 @@ Nothing.getByMail = function (mail) {
 
 const nothing = new Nothing({mail: "mail", password: "passwd"});
 
-
-Nothing.getByMail('mail')
-    .then((user) => {
-        console.log("---- 1 : " + user.mail);
-        return user;
+nothing.save()
+    .then((sth)=>{
+        console.log("1."+JSON.stringify(sth));
+        throw {err:"err"};
     })
-    .catch((err)=> {
-        console.log("---- err : " + err);
+    .catch((sth)=>{
+        console.log("2."+JSON.stringify(sth));
     });
 
-Nothing.getByMail('mail2')
-    .then((user) => {
-            console.log("---- 1 : " + user.mail);
-            return user;
-        },
-        (err)=> {
-            console.log("---- 2 err : " + err);
-        })
-    .catch((err)=> {
-        console.log("---- err 3: " + err);
-    });
 
 
 // var Q = require('q');
