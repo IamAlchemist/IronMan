@@ -53,12 +53,12 @@ function checkAuth(req, res, next) {
                 return res.redirect('/users/login');
             }
             else {
-                next();
+                return next();
             }
         }
     }
 
-    next();
+    return next();
 }
 module.exports.checkAuth = checkAuth;
 

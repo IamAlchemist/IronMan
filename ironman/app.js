@@ -12,6 +12,8 @@ var exercises = require('./routes/exercises');
 var learn = require('./routes/learn');
 var auth = require('./libs/authentication');
 
+const tracer = require('./libs/ironmanLogger');
+
 var app = express();
 
 // view engine setup
@@ -43,6 +45,7 @@ app.use('/learn', learn);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
+    tracer.error(req.baseUrl + req.path);
     var err = new Error('Not Found');
     err.status = 404;
     next(err);
