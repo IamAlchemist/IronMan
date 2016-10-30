@@ -6,7 +6,6 @@
 const express = require('express');
 const Result = require('../libs/api-result');
 const logger = require('../libs/ironmanLogger');
-const mongodb = require('../libs/mongodb');
 
 const router = express.Router();
 
