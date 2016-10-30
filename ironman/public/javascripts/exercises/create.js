@@ -3,5 +3,5 @@
  */
 
 $(document).ready(function () {
-    var addExerciseForm = $('form#add');
+    var addExerciseForm = $('form#create');
 });

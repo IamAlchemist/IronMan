@@ -29,9 +29,9 @@ router.get('/', function (req, res) {
     res.render('exercises/home', params);
 });
 
-router.get('/add', function (req, res) {
+router.get('/create', function (req, res) {
     var params = {};
-    res.render('exercises/add', params)
+    res.render('exercises/create', params)
 });
 
 module.exports = router;

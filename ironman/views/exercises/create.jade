@@ -8,7 +8,7 @@ html
             .row.col-xs-12
                 h3 添加新题目
 
-            form#add.form-horizontal(role='from')
+            form#create.form-horizontal(role='from')
                 .form-group
                     label.col-sm-2.control-label(for='inputTitle') Title
                     .col-sm-10
@@ -51,4 +51,4 @@ html
                             option 选择题
                             option 填空题
                 button.btn.btn-success.btn-large.col-sm-4.col-center-block(type='submit') Submit
-        script(src='/javascripts/require.js' async='true' defer data-main='/javascripts/exercises/add.js')
+        script(src='/javascripts/require.js' async='true' defer data-main='/javascripts/exercises/create.js')

@@ -13,6 +13,7 @@ const noChecks = [
 
 const checks = [
     /^\/users\/.*/,
+    /^\/exercises\/.*/
 ];
 
 function checkAuth(req, res, next) {
