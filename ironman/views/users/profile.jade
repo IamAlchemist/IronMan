@@ -4,7 +4,6 @@ html
         include ../head
         link(rel='stylesheet', href='/stylesheets/offcanvas.css')
     body
-
         include ../navbar
         .container
             .row.row-offcanvas.row-offcanvas-right
@@ -12,7 +11,7 @@ html
                     p.pull-right.visible-xs
                         button.btn.bg-primary.btn-xs(type='button' data-toggle='offcanvas') 展开侧边栏
                     #content.col-xs-12
-                        h3 IronMan
+                        h3 Welcome, #{mail}
                         .row
                             .col-xs-6.col-lg-4
                                 h2 Heading

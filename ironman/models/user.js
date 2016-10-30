@@ -1,22 +1,19 @@
+'use strict';
+
 const mongoose = require('../libs/mongodb');
 
 const UserModel = mongoose.model('User', {
-    name: String,
+    mail: String,
     password: String
 });
 
 function User(user) {
-    this.name = user.name;
+    this.mail = user.mail;
     this.password = user.password;
 }
 
 User.prototype.save = function (callback) {
-    var user = {
-        name: this.name,
-        password: this.password
-    };
-
-    var newUser = new UserModel(user);
+    var newUser = new UserModel(this);
     newUser.save(function (err, user) {
         if (err) {
             return callback(err);
@@ -26,7 +23,7 @@ User.prototype.save = function (callback) {
 };
 
 User.get = function (name, callback) {
-    UserModel.findOne({name: name}, function (err, user) {
+    UserModel.findOne({mail: name}, function (err, user) {
         if (err) {
             return callback(err);
         }

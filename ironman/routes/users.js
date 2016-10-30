@@ -31,7 +31,8 @@ router.get('/register', function (req, res) {
 
 router.get('/profile', function (req, res) {
     var options = {
-        title: 'IronMan Profile'
+        title: 'IronMan Profile',
+        mail: req.session.user.mail
     };
 
     res.render('users/profile', options);
@@ -46,18 +47,18 @@ router.get("/logout", function (req, res) {
 /* POST */
 router.post("/login", function (req, res) {
 
-    var name = req.body.email,
+    var mail = req.body.email,
         password = req.body.password,
         md5 = crypto.createHash('md5'),
         md5_password = md5.update(password).digest('hex');
 
-    if (name == "" || password == "") {
+    if (mail == "" || password == "") {
         const result = new ApiResult(1);
         logger.info(result.message);
         return res.send(result);
     }
 
-    User.get(name, function (err, user) {
+    User.get(mail, function (err, user) {
         if (!user) {
             const result = new ApiResult(2);
             logger.info(result.message);
@@ -79,11 +80,11 @@ router.post("/login", function (req, res) {
 
 router.post("/register", function (req, res) {
 
-    const name = req.body.username,
+    const mail = req.body.mail,
         password = req.body.password,
         repassword = req.body.repassword;
 
-    if (name == "" || password == "" || repassword == "") {
+    if (mail == "" || password == "" || repassword == "") {
         const result = new ApiResult(4);
         logger.info(result.message);
         return res.send(result);
@@ -99,7 +100,7 @@ router.post("/register", function (req, res) {
         passwd = md5.update(req.body.password).digest('hex');
 
     const newUser = new User({
-        name,
+        mail,
         password: passwd
     });
 
