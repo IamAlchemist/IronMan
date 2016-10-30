@@ -5,9 +5,9 @@ html
     body
         include ../navbar
         .container
-            .row.col-sm-10.col-sm-offset-1.jumbotron
+            .row.col-lg-10.col-lg-offset-1.jumbotron
                 h1.text-center= title
-            form#login.col-sm-4.col-sm-offset-4(role='form' target='/users/login' method='POST')
+            form#login.col-lg-4.col-lg-offset-4(role='form' target='/users/login' method='POST')
                 .form-group
                     label.control-label(for='inputEmail') Email
                     input#inputEmail.form-control(type='email' name='email' placeholder='Email address' required=true autofocus=true)

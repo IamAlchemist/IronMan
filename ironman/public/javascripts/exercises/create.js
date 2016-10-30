@@ -2,6 +2,32 @@
  * Created by wizard on 10/26/16.
  */
 
-$(document).ready(function () {
-    var addExerciseForm = $('form#create');
+require([], function () {
+    var messageElem;
+
+    $(document).ready(function () {
+        "use strict";
+        messageElem = $('p#message');
+
+        setupCreateForm();
+    });
+
+    function setupCreateForm() {
+        const createForm = $('form#create');
+
+        createForm.submit(function (event) {
+            event.preventDefault();
+
+            const form = $(this);
+
+            $.ajax({
+                type: form.attr('method'),
+                url: form.attr('action'),
+                data: form.serialize(),
+            }).done(function (data) {
+                let msg = data.errorCode == 0 ? data.content.message : data.message;
+                messageElem.text(msg);
+            })
+        });
+    }
 });

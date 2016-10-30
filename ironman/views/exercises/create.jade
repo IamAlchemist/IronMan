@@ -5,45 +5,46 @@ html
     body
         include ../navbar
         .container
-            .row.col-xs-12
+            .row.col-lg-12
                 h3 添加新题目
-
-            form#create.form-horizontal(role='from')
+            .row.col-lg-10.col-lg-offset-2
+                p#message.text-primary &nbsp;
+            form#create.form-horizontal(role='from' target='/exercises/create' method='POST')
                 .form-group
-                    label.col-sm-2.control-label(for='inputTitle') Title
-                    .col-sm-10
+                    label.col-lg-2.control-label(for='inputTitle') Title
+                    .col-lg-10
                         input.form-control#inputTitle(type='text' name='title')
                 .form-group
-                    label.col-sm-2.control-label(for='inputDescription') Description
-                    .col-sm-10
+                    label.col-lg-2.control-label(for='inputDescription') Description
+                    .col-lg-10
                         textarea.form-control#inputDescription(rows='4' name='description')
                 .form-group
-                    label.col-sm-2.control-label(for='optionA') A
-                    .col-sm-10
+                    label.col-lg-2.control-label(for='optionA') A
+                    .col-lg-10
                         input.form-control#optionA(type='text' name='optionA')
                 .form-group
-                    label.col-sm-2.control-label(for='optionB') B
-                    .col-sm-10
+                    label.col-lg-2.control-label(for='optionB') B
+                    .col-lg-10
                         input.form-control#optionB(type='text' name='optionB')
                 .form-group
-                    label.col-sm-2.control-label(for='optionC') C
-                    .col-sm-10
+                    label.col-lg-2.control-label(for='optionC') C
+                    .col-lg-10
                         input.form-control#optionC(type='text' name='optionC')
                 .form-group
-                    label.col-sm-2.control-label(for='optionD') D
-                    .col-sm-10
+                    label.col-lg-2.control-label(for='optionD') D
+                    .col-lg-10
                         input.form-control#optionD(type='text' name='optionD')
                 .form-group
-                    label.col-sm-2.control-label(for='answer') Answer
-                    .col-sm-10
+                    label.col-lg-2.control-label(for='answer') Answer
+                    .col-lg-10
                         input.form-control#answer(type='text' name='answer' placeholder='0 or 1 or 2 or 3')
                 .form-group
-                    label.col-sm-2.control-label(for='hint' ) Hint
-                    .col-sm-10
+                    label.col-lg-2.control-label(for='hint' ) Hint
+                    .col-lg-10
                         input.form-control#hint(type='text' name='hint' placeholder='hint1; hint2')
                 .form-group
-                    label.col-sm-2.control-label(for='tag') Tag
-                    .col-sm-2
+                    label.col-lg-2.control-label(for='tag') Tag
+                    .col-lg-2
                         input.form-control#tag(type='text' name='tag' placeholder='tag1; tag2')
-                button.btn.btn-success.btn-large.col-sm-4.col-center-block(type='submit') Submit
+                button.btn.btn-success.btn-large.col-lg-4.col-center-block(type='submit') Submit
         script(src='/javascripts/require.js' async='true' defer data-main='/javascripts/exercises/create.js')

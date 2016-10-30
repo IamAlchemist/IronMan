@@ -34,4 +34,9 @@ router.get('/create', function (req, res) {
     res.render('exercises/create', params)
 });
 
+router.post('/create', function (req, res) {
+
+});
+
+
 module.exports = router;
