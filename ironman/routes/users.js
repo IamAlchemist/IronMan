@@ -5,9 +5,6 @@ const crypto = require('crypto');
 const User = require('../models/user');
 const logger = require('../libs/ironmanLogger');
 const ApiResult = require('../libs/api-result');
-const auth = require('../libs/authentication');
-const noCheckAuthentication = auth.noCheckAuthentication;
-const checkAuthentication = auth.checkAuthentication;
 
 const router = express.Router();
 
@@ -16,7 +13,6 @@ router.get('/', function (req, res) {
     res.send('respond with a resource');
 });
 
-router.get('/login', noCheckAuthentication);
 router.get('/login', function (req, res) {
     var options = {
         title: 'IronMan Login'
@@ -25,7 +21,6 @@ router.get('/login', function (req, res) {
     res.render('users/login', options);
 });
 
-router.get('/register', noCheckAuthentication);
 router.get('/register', function (req, res) {
     var options = {
         title: 'IronMan Register'
@@ -34,7 +29,6 @@ router.get('/register', function (req, res) {
     res.render('users/register', options);
 });
 
-router.get('/profile', checkAuthentication);
 router.get('/profile', function (req, res) {
     var options = {
         title: 'IronMan Profile'
@@ -43,7 +37,6 @@ router.get('/profile', function (req, res) {
     res.render('users/profile', options);
 });
 
-router.get("/logout", checkAuthentication);
 router.get("/logout", function (req, res) {
     req.session.user = null;
     res.redirect('/');

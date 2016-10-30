@@ -10,6 +10,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var exercises = require('./routes/exercises');
 var learn = require('./routes/learn');
+var auth = require('./libs/authentication');
 
 var app = express();
 
@@ -34,6 +35,7 @@ app.use(session({
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(/.*/, auth.checkAuth);
 app.use('/', routes);
 app.use('/users', users);
 app.use('/exercises', exercises);
@@ -53,7 +55,7 @@ app.use(function (req, res, next) {
 if (app.get('env') === 'development') {
     app.locals.pretty = true;
 
-    app.use(function (err, req, res, next) {
+    app.use(function (err, req, res) {
         res.status(err.status || 500);
         res.render('error', {
             message: err.message,
@@ -64,7 +66,7 @@ if (app.get('env') === 'development') {
 
 // production error handler
 // no stacktraces leaked to user
-app.use(function (err, req, res, next) {
+app.use(function (err, req, res) {
     res.status(err.status || 500);
     res.render('error', {
         message: err.message,
