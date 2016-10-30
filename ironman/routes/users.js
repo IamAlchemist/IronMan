@@ -59,24 +59,19 @@ router.post("/login", function (req, res) {
     }
 
     User.getByMail(mail)
+
         .then((user)=> {
-                if (user.password != md5_password) {
-                    const result = new ApiResult(3);
-                    logger.info(result.message);
-                    return res.send(result);
-                }
-
-                req.session.user = user;
-                req.session.success = "登录成功！";
-
-                res.send(new ApiResult(0));
-            },
-
-            (err)=> {
-                const result = new ApiResult(2, {message: JSON.stringify(err)});
-                logger.info(JSON.stringify(result));
+            if (user.password != md5_password) {
+                const result = new ApiResult(3);
+                logger.info(result.message);
                 return res.send(result);
-            })
+            }
+
+            req.session.user = user;
+            req.session.success = "登录成功！";
+
+            res.send(new ApiResult(0));
+        })
 
         .catch((err) => {
             const result = new ApiResult(2, {message: JSON.stringify(err)});
@@ -111,27 +106,23 @@ router.post("/register", function (req, res) {
         password: passwd
     });
 
-    User.get(newUser.name, function (err, user) {
-        if (user) {
-            const result = new ApiResult(6);
-            logger.info(result.message);
-            return res.send(result);
-        }
+    User.getByMail(mail)
 
-        newUser.save(function (err, user) {
-            if (err) {
-                req.session.error = err;
-                var result = new ApiResult(7, error);
-                logger.error(JSON.stringify(result));
-                return res.send(result);
-            }
+        .then((user) => {
+            const result = new ApiResult(6, {mail: user.mail});
+            logger.info(JSON.stringify(result));
+            res.send(result);
+        })
 
-            req.session.user = user;
-            req.session.success = "注册成功！";
-            res.send(new ApiResult(0));
+        .catch(() => {
+
+            newUser.save()
+                .then(()=> {
+                    req.session.user = newUser;
+                    req.session.success = "注册成功！";
+                    return res.send(new ApiResult(0));
+                });
         });
-
-    });
 });
 
 module.exports = router;

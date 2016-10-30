@@ -12,14 +12,8 @@ function User(user) {
     this.password = user.password;
 }
 
-User.prototype.save = function (callback) {
-    var newUser = new UserModel(this);
-    newUser.save(function (err, user) {
-        if (err) {
-            return callback(err);
-        }
-        callback(null, user);
-    });
+User.prototype.save = function () {
+    return UserModel(this).save();
 };
 
 User.getByMail = function (mail) {
