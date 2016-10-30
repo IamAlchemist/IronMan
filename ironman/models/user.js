@@ -22,13 +22,8 @@ User.prototype.save = function (callback) {
     });
 };
 
-User.get = function (name, callback) {
-    UserModel.findOne({mail: name}, function (err, user) {
-        if (err) {
-            return callback(err);
-        }
-        callback(null, user);
-    });
+User.getByMail = function (mail) {
+    return UserModel.findOne({mail: mail}).exec();
 };
 
 module.exports = User;

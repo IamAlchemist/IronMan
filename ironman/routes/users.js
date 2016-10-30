@@ -58,24 +58,31 @@ router.post("/login", function (req, res) {
         return res.send(result);
     }
 
-    User.get(mail, function (err, user) {
-        if (!user) {
-            const result = new ApiResult(2);
-            logger.info(result.message);
+    User.getByMail(mail)
+        .then((user)=> {
+                if (user.password != md5_password) {
+                    const result = new ApiResult(3);
+                    logger.info(result.message);
+                    return res.send(result);
+                }
+
+                req.session.user = user;
+                req.session.success = "登录成功！";
+
+                res.send(new ApiResult(0));
+            },
+
+            (err)=> {
+                const result = new ApiResult(2, {message: JSON.stringify(err)});
+                logger.info(JSON.stringify(result));
+                return res.send(result);
+            })
+
+        .catch((err) => {
+            const result = new ApiResult(2, {message: JSON.stringify(err)});
+            logger.info(JSON.stringify(result));
             return res.send(result);
-        }
-
-        if (user.password != md5_password) {
-            const result = new ApiResult(3);
-            logger.info(result.message);
-            return res.send(result);
-        }
-
-        req.session.user = user;
-        req.session.success = "登录成功！";
-
-        res.send(new ApiResult(0));
-    });
+        });
 });
 
 router.post("/register", function (req, res) {
