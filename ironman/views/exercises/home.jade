@@ -10,15 +10,7 @@ html
         include ../navbar
         .container
             .row
-                .lead
-                    h1 练习题
-                    h4= exercise.question
-                    h5= exercise.description
-                    p
-                        each option in exercise.options
-                            ul.list-group-item-text
-                                li
-                                    input(id= '#{option.id}',type='radio', name='#{option.name}')
-                                    label(for='#{option.id}') '#{option.description}'
+                .bs-callout.bs-callout-info
+                    h4 nice
 
         script(src='/javascripts/require.js' async='true' defer data-main='/javascripts/exercises/home.js')
