@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b903ec8f-157f-4431-8659-022e2b0cd42a" name="Default" comment="change the style of exercises/home">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/read.css" />
+    <list default="true" id="b903ec8f-157f-4431-8659-022e2b0cd42a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/exercises.css" afterPath="$PROJECT_DIR$/public/stylesheets/exercises.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/exercises/home.jade" afterPath="$PROJECT_DIR$/views/exercises/home.jade" />
     </list>
     <ignored path="ironman.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -134,8 +131,8 @@
           <file leaf-file-name="exercises.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/stylesheets/exercises.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+                <state relative-caret-position="375">
+                  <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -479,7 +476,7 @@
       <workItem from="1477613532262" duration="7792000" />
       <workItem from="1477785572012" duration="13093000" />
       <workItem from="1477812371196" duration="11195000" />
-      <workItem from="1477869974828" duration="13631000" />
+      <workItem from="1477869974828" duration="13697000" />
     </task>
     <task id="LOCAL-00001" summary="add nav bar and side bar in profile">
       <created>1477744507070</created>
@@ -600,11 +597,18 @@
       <option name="project" value="LOCAL" />
       <updated>1477902751592</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="change the style of exercises/home">
+      <created>1477906941681</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1477906941681</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109607000" />
+    <option name="totallyTimeSpent" value="109673000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="402" y="1200" width="1440" height="900" extended-state="0" />
@@ -1076,8 +1080,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/exercises.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        <state relative-caret-position="375">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
