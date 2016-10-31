@@ -11,26 +11,15 @@ const Exercise = require('../models/exercise');
 const router = express.Router();
 
 router.get('/', function (req, res) {
-    var options = new Array(3);
-
-    for (var i = 0; i < 3; ++i) {
-        options[i] = {
-            id: `option_${i}`,
-            mail: 'option_name',
-            description: 'option_description'
-        };
-    }
-    var exercise = {
-        question: 'exer_question',
-        description: 'exer_description',
-        options
-    };
-
-    var params = {
-        exercise
-    };
-
-    res.render('exercises/home', params);
+    Exercise.getByType(0, req.session.user.mail)
+        .then((exercises)=> {
+            logger.info(JSON.stringify(exercises));
+            res.render('exercises/home', {exercises});
+        })
+        .catch((error)=>{
+            logger.error(JSON.stringify(error));
+            res.render('exercises/home');
+        });
 });
 
 router.get('/create', function (req, res) {
@@ -43,14 +32,20 @@ router.post('/create', function (req, res) {
         return res.send(new Result(8));
     }
 
-    const username = req.session.user.mail,
+    const mail = req.session.user.mail,
         title = req.body.title.trim(),
         description = req.body.description.trim(),
         answer = req.body.answer;
 
-    let options = [req.body.optionA, req.body.optionB, req.body.optionC, req.body.optionD].map((str)=>{return str.trim()}),
-        hints = req.body.hints.split(';').map((str)=>{return str.trim()}),
-        tags = req.body.tags.split(';').map((str)=>{return str.trim()});
+    let options = [req.body.optionA, req.body.optionB, req.body.optionC, req.body.optionD].map((str)=> {
+            return str.trim()
+        }),
+        hints = req.body.hints.split(';').map((str)=> {
+            return str.trim()
+        }),
+        tags = req.body.tags.split(';').map((str)=> {
+            return str.trim()
+        });
 
     options = options.filter(filterEmpty);
     hints = hints.filter(filterEmpty);
@@ -64,7 +59,7 @@ router.post('/create', function (req, res) {
     }
 
     const newExercise = new Exercise({
-        username,
+        mail,
         title,
         description,
         answer: parseInt(answer),
@@ -75,13 +70,13 @@ router.post('/create', function (req, res) {
     });
 
     newExercise.save()
-        .then(()=>{
-            const result = new Result(0, {message:'已经保存'});
+        .then(()=> {
+            const result = new Result(0, {message: '已经保存'});
             logger.info(JSON.stringify(result));
             return res.send(result);
         })
-        .catch(()=>{
-            const result = new Result(101, {message:'保存错误'});
+        .catch(()=> {
+            const result = new Result(101, {message: '保存错误'});
             logger.info(JSON.stringify(result));
             return res.send(result);
         });

@@ -8,7 +8,7 @@ const mongodb = require('../libs/mongodb');
 
 // type: 0 for 选择题; 1 for 填空题
 const ExerciseModel = mongodb.model('Exercise', {
-    username: String,
+    mail: String,
     title: String,
     description: String,
     answer: Number,
@@ -19,7 +19,7 @@ const ExerciseModel = mongodb.model('Exercise', {
 });
 
 function Exercise(exercise) {
-    this.username = exercise.username;
+    this.mail = exercise.mail;
     this.title = exercise.title;
     this.description = exercise.description;
     this.answer = exercise.answer;
@@ -31,6 +31,10 @@ function Exercise(exercise) {
 
 Exercise.prototype.save = function () {
     return ExerciseModel(this).save();
+};
+
+Exercise.getByType = function (type, mail) {
+    return ExerciseModel.find( {type, mail} ).exec();
 };
 
 module.exports = Exercise;

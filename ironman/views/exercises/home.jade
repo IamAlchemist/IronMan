@@ -5,12 +5,27 @@ html
         link(rel='stylesheet', href='/icheck/skins/square/green.css')
         script(src='/icheck/icheck.js')
         link(rel='stylesheet', href='/stylesheets/exercises.css')
-
     body
         include ../navbar
         .container
             .row
-                .bs-callout.bs-callout-info
-                    h4 nice
+                p.lead
+                    h4 练习题
+            .row
+                #exercisesList.col-lg-12
+                    each exercise in exercises
+                        .bs-callout.bs-callout-info
+                            .row
+                                h4= exercise.title
+                            .row
+                                h5= exercise.description
+                            .row
+                                each option, i in exercise.options
+                                    ul.list-group-item-text
+                                        - var optionId = exercise._id + '_' + i
+                                        li
+                                            input(id='#{optionId}' type='radio' name='#{exercise._id}')
+                                            label(for='#{optionId}') #{option}
+
 
         script(src='/javascripts/require.js' async='true' defer data-main='/javascripts/exercises/home.js')
