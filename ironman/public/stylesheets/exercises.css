@@ -17,14 +17,9 @@ label {
     font: 14px "MontserratRegular", Helvetica, Arial, sans-serif;
 }
 
-ul {
-    list-style-type: none;
-}
 
-a {
-    color: #00B7FF;
-}
-
-.exercise-section {
-    line-height: 28px;
-}
+a {color: #00B7FF;}
+ul {list-style-type: none;}
+ul.exercise-list {padding:20px 10px 20px 10px;line-height: 18px;}
+ul.exercise-list li{position:relative;padding-bottom:10px;}
+ul.exercise-list li label{cursor:pointer;padding-left: 10px;}

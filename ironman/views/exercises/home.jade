@@ -14,16 +14,15 @@ html
             .row
                 #exercisesList.col-lg-12
                     each exercise in exercises
-                        .bs-callout.bs-callout-info
-                            .row
+                        .panel.panel-primary
+                            .panel-heading
                                 h4= exercise.title
-                            .row
+                            .panel-body
                                 h5= exercise.description
-                            .row
-                                each option, i in exercise.options
-                                    ul.list-group-item-text
+                                ul.exercise-list
+                                    each option, i in exercise.options
                                         - var optionId = exercise._id + '_' + i
-                                        li
+                                        li.exercise-section
                                             input(id='#{optionId}' type='radio' name='#{exercise._id}')
                                             label(for='#{optionId}') #{option}
 
