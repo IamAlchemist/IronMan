@@ -4,5 +4,5 @@
 
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird').Promise;
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://localhost/IronMan');
 module.exports = mongoose;

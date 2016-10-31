@@ -1,20 +1,24 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var session = require('express-session');
-var bodyParser = require('body-parser');
+const express = require('express'),
+    path = require('path'),
+    favicon = require('serve-favicon'),
+    logger = require('morgan'),
+    cookieParser = require('cookie-parser'),
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var exercises = require('./routes/exercises');
-var learn = require('./routes/learn');
-var auth = require('./libs/authentication');
+    session = require('express-session'),
+    MongoStore = require('connect-mongo')(session),
+    mongodb = require('./libs/mongodb'),
+
+    bodyParser = require('body-parser'),
+
+    routes = require('./routes/index'),
+    users = require('./routes/users'),
+    exercises = require('./routes/exercises'),
+    learn = require('./routes/learn'),
+    auth = require('./libs/authentication');
 
 const tracer = require('./libs/ironmanLogger');
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -32,7 +36,8 @@ app.use(session({
     saveUninitialized: true,
     cookie: {
         maxAge: 24 * 60 * 60 * 1000
-    }
+    },
+    store: new MongoStore({ mongooseConnection: mongodb.connection })
 }));
 
 app.use(express.static(path.join(__dirname, 'public')));
