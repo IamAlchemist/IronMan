@@ -14,6 +14,16 @@ const WordProgressModel = mongodb.model('WordProgress', {
     word: Object
 });
 
+class Word {
+    constructor(word) {
+        Object.assign(this, {word});
+    }
+
+    save() {
+        return WordProgressModel(this).save();
+    }
+}
+
 function insertAWordProgress() {
     WordModel.findOne({}).exec()
         .then((word)=>{
@@ -32,11 +42,10 @@ function insertAWordProgress() {
 }
 
 function insertAWord() {
-    const aWordModel = new WordModel({
-        word: "hello"
-    });
+    const wordString = 'hello2';
 
-    aWordModel.save()
+    const word = new Word(wordString);
+    word.save()
         .then((sth)=> {
             logger.info(JSON.stringify(sth));
         })
