@@ -6,7 +6,7 @@
 
 const mongodb = require('../libs/mongodb');
 
-export const WordExerciseModel = mongodb.model('WordExercise', {
+ const WordExerciseModel = mongodb.model('WordExercise', {
     mail: String,
     word: String,
     partOfSpeech: String,
@@ -15,8 +15,9 @@ export const WordExerciseModel = mongodb.model('WordExercise', {
     exampleExplanation: String,
     others: String
 });
+module.exports.WordExerciseModel = WordExerciseModel;
 
-export function MakeWordExercise(mail = throwIfMissing(),
+module.exports.MakeWordExercise = function MakeWordExercise(mail = throwIfMissing(),
                                  word = throwIfMissing(),
                                  partOfSpeech = throwIfMissing(),
                                  explanation = throwIfMissing(),
@@ -32,10 +33,9 @@ export function MakeWordExercise(mail = throwIfMissing(),
         example,
         exampleExplanation,
         others});
-}
+};
 
 function throwIfMissing() {
     throw new Error('Missing parameter');
 }
-
 
