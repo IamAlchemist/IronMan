@@ -7,6 +7,7 @@ const express = require('express');
 const Result = require('../libs/api-result');
 const logger = require('../libs/ironmanLogger');
 const Exercise = require('../models/exercise');
+const WordExercise = require('../models/wordExercise');
 
 const router = express.Router();
 
@@ -16,7 +17,7 @@ router.get('/', function (req, res) {
             logger.info(JSON.stringify(exercises));
             res.render('exercises/home', {exercises});
         })
-        .catch((error)=>{
+        .catch((error)=> {
             logger.error(JSON.stringify(error));
             res.render('exercises/home');
         });
@@ -25,6 +26,10 @@ router.get('/', function (req, res) {
 router.get('/create', function (req, res) {
     var params = {};
     res.render('exercises/create', params)
+});
+
+router.get('/words/create', function (req, res) {
+    res.render('exercises/words/create');
 });
 
 router.post('/create', function (req, res) {
@@ -81,10 +86,58 @@ router.post('/create', function (req, res) {
             return res.send(result);
         });
 
-    function filterEmpty(elem) {
-        return elem != undefined && elem != '';
-    }
 });
 
+router.post('/words/create', function (req, res) {
+    if (!req.session.user) {
+        return res.send(new Result(8));
+    }
+
+    const mail = req.session.user.mail,
+        word = req.body.word.trim(),
+        partOfSpeech = req.body.partOfSpeech.trim(),
+        explanation = req.body.explanation.trim(),
+        example = req.body.example.trim(),
+        exampleExplanation = req.body.exampleExplanation.trim(),
+        others = req.body.others.trim();
+
+    if (word == '' ||
+        partOfSpeech == '' ||
+        explanation == '' ||
+        example == '' ||
+        exampleExplanation == '') {
+
+        const message = '必填项不能为空';
+        const result = new Result(102, {message});
+        logger.info(JSON.stringify(result));
+        return res.send(result);
+    }
+
+    const newWordExercise = new WordExercise({
+        mail,
+        word,
+        partOfSpeech,
+        explanation,
+        example,
+        exampleExplanation,
+        others
+    });
+
+    newWordExercise.save()
+        .then(()=> {
+            const result = new Result(0, {message: '已经保存'});
+            logger.info(JSON.stringify(result));
+            return res.send(result);
+        })
+        .catch(()=> {
+            const result = new Result(101, {message: '保存错误'});
+            logger.info(JSON.stringify(result));
+            return res.send(result);
+        });
+});
+
+function filterEmpty(elem) {
+    return elem != undefined && elem != '';
+}
 
 module.exports = router;
