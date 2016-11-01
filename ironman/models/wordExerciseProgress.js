@@ -14,8 +14,9 @@ function throwIfMissing() {
     throw new Error('Missing parameter');
 }
 
-export function MakeWordExerciseProgress (mail = throwIfMissing(), wordExercise= throwIfMissing(), progress = 0) {
-    "use strict";
+export function MakeWordExerciseProgress (mail = throwIfMissing(),
+                                          wordExercise= throwIfMissing(),
+                                          progress = 0) {
     return new WordExerciseProgressModel({mail, wordExercise, progress})
 }
 

@@ -6,7 +6,7 @@
 
 const mongodb = require('../libs/mongodb');
 
-const WordExerciseModel = mongodb.model('WordExercise', {
+export const WordExerciseModel = mongodb.model('WordExercise', {
     mail: String,
     word: String,
     partOfSpeech: String,
@@ -16,22 +16,26 @@ const WordExerciseModel = mongodb.model('WordExercise', {
     others: String
 });
 
-function WordExercise(wordExercise) {
-    this.mail = wordExercise.mail;
-    this.word = wordExercise.word;
-    this.partOfSpeech = wordExercise.partOfSpeech;
-    this.explanation = wordExercise.explanation;
-    this.example = wordExercise.example;
-    this.exampleExplanation = wordExercise.exampleExplanation;
-    this.others = wordExercise.others;
+export function MakeWordExercise(mail = throwIfMissing(),
+                                 word = throwIfMissing(),
+                                 partOfSpeech = throwIfMissing(),
+                                 explanation = throwIfMissing(),
+                                 example = throwIfMissing(),
+                                 exampleExplanation = throwIfMissing(),
+                                 others = '')
+{
+    return new WordExerciseModel({
+        mail,
+        word,
+        partOfSpeech,
+        explanation,
+        example,
+        exampleExplanation,
+        others});
 }
 
-WordExercise.prototype.save = function () {
-    return WordExerciseModel(this).save();
-};
+function throwIfMissing() {
+    throw new Error('Missing parameter');
+}
 
-WordExercise.getByType = function (type, mail) {
-    return WordExerciseModel.find( {type, mail} ).exec();
-};
 
-module.exports = WordExercise;

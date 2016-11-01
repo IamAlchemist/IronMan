@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b903ec8f-157f-4431-8659-022e2b0cd42a" name="Default" comment="add wordExerciseProgress model">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/wordsExercises.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/wordExerciseProgress.js" />
+    <list default="true" id="b903ec8f-157f-4431-8659-022e2b0cd42a" name="Default" comment="minor refactor">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playgrounds/mongoosePlayground.js" afterPath="$PROJECT_DIR$/playgrounds/mongoosePlayground.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/wordExercise.js" afterPath="$PROJECT_DIR$/models/wordExercise.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/wordExerciseProgress.js" afterPath="$PROJECT_DIR$/models/wordExerciseProgress.js" />
     </list>
     <ignored path="ironman.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,8 +44,8 @@
           <file leaf-file-name="mongoosePlayground.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/playgrounds/mongoosePlayground.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+                <state relative-caret-position="495">
+                  <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -113,11 +112,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="wordExercise.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="wordExercise.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/models/wordExercise.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="240">
-                  <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+                  <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
                   <folding>
                     <element signature="e#0#40#0" expanded="false" />
                   </folding>
@@ -125,11 +124,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="wordExerciseProgress.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="wordExerciseProgress.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/models/wordExerciseProgress.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+                <state relative-caret-position="210">
+                  <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
                   <folding>
                     <element signature="e#0#40#0" expanded="false" />
                   </folding>
@@ -206,10 +205,10 @@
         <option value="$PROJECT_DIR$/public/javascripts/exercises/words/home.js" />
         <option value="$PROJECT_DIR$/routes/exercises.js" />
         <option value="$PROJECT_DIR$/playgrounds/nodeProgress.html" />
-        <option value="$PROJECT_DIR$/models/wordExercise.js" />
         <option value="$PROJECT_DIR$/playgrounds/mongoosePlayground.js" />
         <option value="$PROJECT_DIR$/libs/wordsExercises.js" />
         <option value="$PROJECT_DIR$/models/wordExerciseProgress.js" />
+        <option value="$PROJECT_DIR$/models/wordExercise.js" />
       </list>
     </option>
   </component>
@@ -323,12 +322,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v6.3.1/bin/node" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v6.3.1/bin/node" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="JavaScriptPreferStrict" value="true" />
+    <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="javascript.nodejs.core.library.configured.version" value="6.3.1" />
@@ -430,7 +429,7 @@
       <workItem from="1477785572012" duration="13093000" />
       <workItem from="1477812371196" duration="11195000" />
       <workItem from="1477869974828" duration="14076000" />
-      <workItem from="1477958997391" duration="22046000" />
+      <workItem from="1477958997391" duration="22490000" />
     </task>
     <task id="LOCAL-00001" summary="add nav bar and side bar in profile">
       <created>1477744507070</created>
@@ -607,11 +606,18 @@
       <option name="project" value="LOCAL" />
       <updated>1477985958190</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="add wordExerciseProgress model">
+      <created>1477996577417</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1477996577417</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132098000" />
+    <option name="totallyTimeSpent" value="132542000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -687,11 +693,11 @@
     <MESSAGE value="finish words/create" />
     <MESSAGE value="delete useless css" />
     <MESSAGE value="add ironman lib and bug fix" />
-    <MESSAGE value="minor refactor" />
     <MESSAGE value="minor change" />
     <MESSAGE value="mc" />
     <MESSAGE value="add wordExerciseProgress model" />
-    <option name="LAST_COMMIT_MESSAGE" value="add wordExerciseProgress model" />
+    <MESSAGE value="minor refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1033,14 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/mongodb.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/playgrounds/nodeProgress.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1060,16 +1058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/wordExercise.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/wordsExercises.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1080,21 +1068,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/playgrounds/mongoosePlayground.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/mongodb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/wordExerciseProgress.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        <state relative-caret-position="210">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/playgrounds/mongoosePlayground.js">
+    <entry file="file://$PROJECT_DIR$/models/wordExercise.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="240">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
