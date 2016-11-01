@@ -1,46 +1,61 @@
 'use strict';
+const logger = require('./libs/ironmanLogger');
+const bluebird = require('bluebird');
+const mongoose = require('mongoose');
+mongoose.Promise = bluebird.Promise;
+const mongodb = mongoose.connect('mongodb://localhost/test');
 
-var strings = [" sf ", " mm "];
-strings = strings.map( (str) => { return str.trim() } );
+const WordModel = mongodb.model('Word', {
+    word: String
+});
 
-for (let str of strings) {
-    console.log(str)
+const WordProgressModel = mongodb.model('WordProgress', {
+    progress: Number,
+    word: Object
+});
+
+function insertAWordProgress() {
+    WordModel.findOne({}).exec()
+        .then((word)=>{
+            const progress = new WordProgressModel({
+                progress: 0,
+                word
+            });
+
+            logger.info(JSON.stringify(progress));
+
+            progress.save()
+                .then((progress)=>{
+                    logger.info(JSON.stringify(progress));
+                });
+        })
 }
-// const bluebird = require('bluebird');
-// const mongoose = require('mongoose');
-// mongoose.Promise = bluebird.Promise;
-// const mongodb = mongoose.connect('mongodb://localhost/test');
-//
-// const NothingModel = mongoose.model('nothing', {
-//     mail: String,
-//     password: String
-// });
-//
-// function Nothing(user) {
-//     this.mail = user.mail;
-//     this.password = user.password;
-// }
-//
-// Nothing.prototype.save = function () {
-//     return NothingModel(this).save();
-// };
-//
-// Nothing.getByMail = function (mail) {
-//     return NothingModel.findOne({mail: mail}).exec();
-// };
-//
-// const nothing = new Nothing({mail: "mail", password: "passwd"});
-//
-// nothing.save()
-//     .then((sth)=>{
-//         console.log("1."+JSON.stringify(sth));
-//         throw {err:"err"};
-//     })
-//     .catch((sth)=>{
-//         console.log("2."+JSON.stringify(sth));
-//     });
-//
-//
+
+function insertAWord() {
+    const aWordModel = new WordModel({
+        word: "hello"
+    });
+
+    aWordModel.save()
+        .then((sth)=> {
+            logger.info(JSON.stringify(sth));
+        })
+        .catch((err)=> {
+            logger.info(JSON.stringify(err));
+        });
+}
+
+function showWord() {
+    WordProgressModel.findOne({progress: 0})
+        .then((progress)=>{
+            logger.warn(progress.word.word);
+        });
+}
+
+//insertAWord();
+//insertAWordProgress();
+showWord();
+
 
 // var Q = require('q');
 // /**
