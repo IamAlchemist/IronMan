@@ -52,9 +52,21 @@ function showWord() {
         });
 }
 
+function showChain() {
+    WordProgressModel.findOne({progress: 0}).exec()
+        .then((progress)=>{
+            console.log(progress.progress);
+            return WordModel.findOne({word: progress.word.word}).exec()
+        })
+        .then((word)=>{
+            console.log(word.word)
+        })
+}
+
 //insertAWord();
 //insertAWordProgress();
-showWord();
+//showWord();
+//showChain();
 
 
 // var Q = require('q');
