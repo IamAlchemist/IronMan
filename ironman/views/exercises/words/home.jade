@@ -1,0 +1,23 @@
+//
+   Created by wizard on 11/1/16.
+doctype html
+html
+    head
+        include ../../head
+    body
+        include ../../navbar
+        .container
+            .row
+                #content.col-lg-9
+                    h3 hello
+
+                #sidebar.col-lg-2
+                    .row
+                        .panel.panel-default
+                            .panel-heading
+                                h3.panel-title 单词
+                            .panel-body
+                                button#updateWordsBankButton.btn.btn-block.btn-success 更新
+
+        script(src='/javascripts/require.js' async='true' defer data-main='/javascripts/exercises/words/home.js')
+

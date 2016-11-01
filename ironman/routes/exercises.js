@@ -32,6 +32,10 @@ router.get('/words/create', function (req, res) {
     res.render('exercises/words/create');
 });
 
+router.get('/words', function (req, res) {
+    res.render('exercises/words/home');
+});
+
 router.post('/create', function (req, res) {
     if (!req.session.user) {
         return res.send(new Result(8));
