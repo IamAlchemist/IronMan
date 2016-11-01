@@ -36,6 +36,12 @@ router.get('/words', function (req, res) {
     res.render('exercises/words/home');
 });
 
+router.get('/words/bank/update', function (req, res) {
+    const user = req.session.user;
+
+    res.send(new Result(0));
+});
+
 router.post('/create', function (req, res) {
     if (!req.session.user) {
         return res.send(new Result(8));

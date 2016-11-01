@@ -1,5 +1,5 @@
 'use strict';
-const logger = require('./libs/ironmanLogger');
+const logger = require('./../libs/ironmanLogger');
 const bluebird = require('bluebird');
 const mongoose = require('mongoose');
 mongoose.Promise = bluebird.Promise;
