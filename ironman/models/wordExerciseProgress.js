@@ -4,19 +4,21 @@
 
 const mongodb = require('../libs/mongodb');
 
-export const WordExerciseProgressModel = mongodb.model('WordExerciseProgress', {
+const WordExerciseProgressModel = mongodb.model('WordExerciseProgress', {
     mail: String,
     wordExercise: Object,
     progress: Number
 });
 
+module.exports.WordExerciseProgressModel = WordExerciseProgressModel;
+
 function throwIfMissing() {
     throw new Error('Missing parameter');
 }
 
-export function MakeWordExerciseProgress (mail = throwIfMissing(),
+module.exports.MakeWordExerciseProgress = function MakeWordExerciseProgress (mail = throwIfMissing(),
                                           wordExercise= throwIfMissing(),
                                           progress = 0) {
     return new WordExerciseProgressModel({mail, wordExercise, progress})
-}
+};
 
