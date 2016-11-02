@@ -8,7 +8,7 @@ const Result = require('../libs/api-result');
 const logger = require('../libs/ironmanLogger');
 const Exercise = require('../models/exercise');
 const WordExercise = require('../models/wordExercise');
-
+const wordsExercisesLib = require('../libs/wordsExercisesLib');
 const router = express.Router();
 
 router.get('/', function (req, res) {
@@ -38,8 +38,15 @@ router.get('/words', function (req, res) {
 
 router.get('/words/bank/update', function (req, res) {
     const user = req.session.user;
-
-    res.send(new Result(0));
+    wordsExercisesLib.updateWordsBank(user.mail)
+        .then((progresses)=> {
+            logger.info(`update succeed : ${progresses.length}`);
+            res.send(new Result(0, {count: progresses.length}));
+        })
+        .catch((error)=> {
+            logger.error(JSON.stringify(error));
+            res.send(new Result(103, {error: error}));
+        });
 });
 
 router.post('/create', function (req, res) {
@@ -123,7 +130,7 @@ router.post('/words/create', function (req, res) {
         return res.send(result);
     }
 
-    const newWordExercise = new WordExercise({
+    const newWordExercise = WordExercise.MakeWordExercise(
         mail,
         word,
         partOfSpeech,
@@ -131,7 +138,7 @@ router.post('/words/create', function (req, res) {
         example,
         exampleExplanation,
         others
-    });
+    );
 
     newWordExercise.save()
         .then(()=> {

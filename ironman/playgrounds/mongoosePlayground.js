@@ -20,13 +20,26 @@ class Word {
     }
 
     save() {
-        return WordProgressModel(this).save();
+        return WordModel(this).save();
     }
 }
 
+function query() {
+    WordModel.find({}).sort('-_id')
+        .then((words)=> {
+            console.log(words.length);
+            if (words.length > 0) {
+                console.log(JSON.stringify(words[0]));
+            }
+        })
+        .catch((error)=> {
+            console.log(JSON.stringify(error));
+        });
+}
+
 function insertAWordProgress() {
-    WordModel.findOne({}).exec()
-        .then((word)=>{
+    WordModel.find({}).exec()
+        .then((word)=> {
             const progress = new WordProgressModel({
                 progress: 0,
                 word
@@ -35,47 +48,74 @@ function insertAWordProgress() {
             logger.info(JSON.stringify(progress));
 
             progress.save()
-                .then((progress)=>{
+                .then((progress)=> {
                     logger.info(JSON.stringify(progress));
                 });
-        })
+        });
 }
 
-function insertAWord() {
-    const wordString = 'hello2';
-
+function insertAWord(wordString) {
     const word = new Word(wordString);
     word.save()
         .then((sth)=> {
-            logger.info(JSON.stringify(sth));
+            logger.info('success' + JSON.stringify(sth));
         })
         .catch((err)=> {
-            logger.info(JSON.stringify(err));
+            logger.info('fail' + JSON.stringify(err));
         });
 }
 
 function showWord() {
     WordProgressModel.findOne({progress: 0})
-        .then((progress)=>{
+        .then((progress)=> {
             logger.warn(progress.word.word);
         });
 }
 
 function showChain() {
     WordProgressModel.findOne({progress: 0}).exec()
-        .then((progress)=>{
+        .then((progress)=> {
             console.log(progress.progress);
             return WordModel.findOne({word: progress.word.word}).exec()
         })
-        .then((word)=>{
+        .then((word)=> {
             console.log(word.word)
         })
 }
 
+
+function demo() {
+    const id = '5818b43d515b5aca2ba1662d';
+    WordProgressModel.find({}).sort('-word._id').exec()
+        .then((progresses)=> {
+            const last = progresses[0];
+            console.log("fk 1:");
+            const nice = WordModel.find({}).where('_id').gt(last.word._id).exec();
+            console.log("fk 2:");
+            return nice;
+
+            // console.log(`progresses size : ${progresses.length}`);
+            // console.log(`progresses [0] : ${progresses[0]}`);
+            // let array = progresses.map((prog)=>{
+            //     return WordModel.find({}).where('_id').gt(prog.word._id).exec();
+            // });
+            // console.log("fk ---- :" + JSON.stringify(array));
+            // return Promise.all(array);
+        })
+        .then((words)=>{
+            console.log(`words size : ${words.length}`);
+            console.log(words[0].constructor);
+        })
+        .catch((error)=>{
+            console.log("fk:" + JSON.stringify(error));
+        });
+}
+demo();
 //insertAWord();
 //insertAWordProgress();
 //showWord();
 //showChain();
+//query();
 
 
 // var Q = require('q');
