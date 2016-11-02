@@ -12,7 +12,7 @@ const wordsExercisesLib = require('../libs/wordsExercisesLib');
 const router = express.Router();
 
 router.get('/', function (req, res) {
-    Exercise.getByType(0, req.session.user.mail)
+    Exercise.ExerciseModel.find({type: 0}).exec()
         .then((exercises)=> {
             logger.info(JSON.stringify(exercises));
             res.render('exercises/home', {exercises});
@@ -80,16 +80,15 @@ router.post('/create', function (req, res) {
         return res.send(result);
     }
 
-    const newExercise = new Exercise({
+    const newExercise = new Exercise.makeExercise(
         mail,
         title,
         description,
-        answer: parseInt(answer),
+        parseInt(answer),
         options,
         hints,
-        tags,
-        type: 0
-    });
+        tags
+    );
 
     newExercise.save()
         .then(()=> {
@@ -103,7 +102,8 @@ router.post('/create', function (req, res) {
             return res.send(result);
         });
 
-});
+})
+;
 
 router.post('/words/create', function (req, res) {
     if (!req.session.user) {

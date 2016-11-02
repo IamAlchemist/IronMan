@@ -5,9 +5,11 @@
 'use strict';
 
 const mongodb = require('../libs/mongodb');
+const timestamps = require('../libs/mongoose-timestamp');
+const Schema = mongodb.Schema;
 
 // type: 0 for 选择题; 1 for 填空题
-const ExerciseModel = mongodb.model('Exercise', {
+const ExerciseSchema = new Schema({
     mail: String,
     title: String,
     description: String,
@@ -18,23 +20,28 @@ const ExerciseModel = mongodb.model('Exercise', {
     type: Number
 });
 
-function Exercise(exercise) {
-    this.mail = exercise.mail;
-    this.title = exercise.title;
-    this.description = exercise.description;
-    this.answer = exercise.answer;
-    this.options = exercise.options;
-    this.hints = exercise.hints;
-    this.tags = exercise.tags;
-    this.type = exercise.type;
-}
+ExerciseSchema.plugin(timestamps);
 
-Exercise.prototype.save = function () {
-    return ExerciseModel(this).save();
+const ExerciseModel = mongodb.model('Exercise', ExerciseSchema);
+module.exports.ExerciseModel = ExerciseModel;
+
+module.exports.makeExercise = function (mail,
+                                        title,
+                                        description,
+                                        answer,
+                                        options,
+                                        hints,
+                                        tags,
+                                        type = 0) {
+
+    return new ExerciseModel({
+        mail,
+        title,
+        description,
+        answer,
+        options,
+        hints,
+        tags,
+        type
+    });
 };
-
-Exercise.getByType = function (type, mail) {
-    return ExerciseModel.find( {type, mail} ).exec();
-};
-
-module.exports = Exercise;
