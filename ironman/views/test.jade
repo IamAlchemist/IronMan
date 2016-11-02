@@ -1,0 +1,18 @@
+//
+   Created by wizard on 11/2/16.
+
+doctype html
+html
+    head
+        include head
+        include test-tmpl
+        link(rel='stylesheet', href='/stylesheets/offcanvas.css')
+    body
+        .container
+            .row
+                .col-lg-12
+                    #content
+
+        script(src='/javascripts/require.js' async='true' defer data-main='/javascripts/test.js')
+
+
