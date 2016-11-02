@@ -4,3 +4,13 @@ script#entry-template(type="text/x-handlebars-template")
     .col-lg-12
         h1 {{title}}
         .col-lg-12  {{body}}
+
+script#list-template(type="text/x-handlebars-template")
+    .col-lg-12.
+        {{#list people}}{{firstName}} {{lastName}}{{/list}}
+
+script#path-template(type="text/x-handlebars-template")
+     .col-lg-12
+         h1 {{title}}
+         h2 By {{author.name}}
+         .col-lg-12  {{body}}
