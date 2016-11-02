@@ -14,11 +14,11 @@ html
                     label.col-lg-2.control-label(for='inputTitle') Title
                     .col-lg-10
                         input.form-control#inputTitle(type='text' name='title')
-                .form-group
+                .form-group.required
                     label.col-lg-2.control-label(for='inputDescription') Description
                     .col-lg-10
                         textarea.form-control#inputDescription(rows='4' name='description')
-                .form-group
+                .form-group.required
                     label.col-lg-2.control-label(for='optionA') A
                     .col-lg-10
                         input.form-control#optionA(type='text' name='optionA')
@@ -34,7 +34,7 @@ html
                     label.col-lg-2.control-label(for='optionD') D
                     .col-lg-10
                         input.form-control#optionD(type='text' name='optionD')
-                .form-group
+                .form-group.required
                     label.col-lg-2.control-label(for='answer') Answer
                     .col-lg-10
                         input.form-control#answer(type='text' name='answer' placeholder='0 or 1 or 2 or 3')
@@ -42,7 +42,7 @@ html
                     label.col-lg-2.control-label(for='hint' ) Hint
                     .col-lg-10
                         input.form-control#hint(type='text' name='hints' placeholder='hint1; hint2')
-                .form-group
+                .form-group.required
                     label.col-lg-2.control-label(for='tag') Tag
                     .col-lg-2
                         input.form-control#tag(type='text' name='tags' placeholder='tag1; tag2')
