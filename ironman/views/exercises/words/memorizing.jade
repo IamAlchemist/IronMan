@@ -7,9 +7,11 @@ html
     body
         include ../../navbar
         .container
-            .row
-                #content.col-lg-9
-                    h3 hello
+            .page-header
+                h3 今日单词
+            .jumbotron.jumbotron-white
+                #content
+                    button#startMemorizing.btn.btn-success.center-block(type='button') 开始
 
         script(src='/javascripts/require.js' async='true' defer data-main='/javascripts/exercises/words/memorizing.js')
 

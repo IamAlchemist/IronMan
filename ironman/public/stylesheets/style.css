@@ -13,6 +13,11 @@ body {
     background-color: #eeeeee;
 }
 
+.jumbotron-white{
+    background-color: #ffffff;
+    min-height: 500px;
+}
+
 .form-group.required .control-label:before {
     content:"*";
     color:red;
