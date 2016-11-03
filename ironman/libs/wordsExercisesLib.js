@@ -35,3 +35,9 @@ module.exports.updateWordsBank = function updateWordsBank(mail) {
         });
 };
 
+module.exports.wordExercisesForToday = function (mail) {
+    return WordExerciseProgress.WordExerciseProgressModel
+        .find({mail})
+        .exec();
+};
+

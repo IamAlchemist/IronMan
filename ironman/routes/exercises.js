@@ -40,6 +40,21 @@ router.get('/words/memorizing', function (req, res) {
     res.render('exercises/words/memorizing');
 });
 
+
+/* API */
+router.get('/words/wordExercisesForToday', (req, res)=> {
+    const user = req.session.user;
+    wordsExercisesLib.wordExercisesForToday(user.mail)
+        .then((wordProcesses)=> {
+            const result = new Result(0, wordProcesses);
+            res.send(result);
+        })
+        .catch((error)=> {
+            logger.error(`get wordExercises for today failed: ${logger.str(error)}`);
+            res.send(new Result(104));
+        });
+});
+
 router.get('/words/bank/update', function (req, res) {
     const user = req.session.user;
     wordsExercisesLib.updateWordsBank(user.mail)
@@ -53,7 +68,6 @@ router.get('/words/bank/update', function (req, res) {
         });
 });
 
-/* POST */
 router.post('/create', function (req, res) {
     if (!req.session.user) {
         return res.send(new Result(8));

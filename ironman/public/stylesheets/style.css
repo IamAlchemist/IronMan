@@ -18,6 +18,10 @@ body {
     min-height: 500px;
 }
 
+.jumbotron .jumbotron-hint {
+    margin-top: -30px;
+}
+
 .form-group.required .control-label:before {
     content:"*";
     color:red;

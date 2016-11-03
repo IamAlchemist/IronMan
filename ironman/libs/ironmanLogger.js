@@ -3,4 +3,7 @@
  */
 
 const logger = require('tracer').colorConsole();
+logger.str = function (obj) {
+    return JSON.stringify(obj, null, '  ');
+};
 module.exports = logger;
