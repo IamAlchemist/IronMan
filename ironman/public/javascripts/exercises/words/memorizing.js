@@ -8,10 +8,13 @@ require([], function () {
     var originalWordExerciseProgresses;
     var wordExerciseProgresses = Array();
     var currentWordExercise;
+    var contentElem;
 
     $(document).ready(function () {
         messageElem = $('p#message');
+        contentElem = $('#content');
 
+        initStartMemorizing();
         initStartMemorizingButton();
     });
 
@@ -28,6 +31,12 @@ require([], function () {
 
     function showCurrentWordExercise() {
 
+    }
+
+    function initStartMemorizing() {
+        const source = $('#startMemorizing-template').html();
+        const templ = Handlebars.compile(source);
+        contentElem.html(templ());
     }
 
     function initStartMemorizingButton() {
