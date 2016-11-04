@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h4>{{title}}</h4>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h5>{{description}}</h5>
+                    <ul class="exercise-list">
+                        {{#each options}}
+                        <li class="exercise-section">
+                            <input id="{{../_id}}_{{@index}}" type="radio" name="{{../_id}}"/>
+                            <label for="{{../_id}}_{{@index}}">{{this}}</label>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-xs-6 col-xs-offset-3">
+                            <button id="showTipsButton" type="button" class="btn btn-warning btn-block">提示</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p id="hintMessage"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2">
+                    <button id="#okButton" class="btn btn-success btn-block">OK</button>
+                </div>
+                <div class="col-xs-2">
+                    <button id="#skipButton" class="btn btn-danger btn-block">不认识</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

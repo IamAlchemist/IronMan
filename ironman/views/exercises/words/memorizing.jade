@@ -4,6 +4,9 @@ doctype html
 html
     head
         include ../../head
+        link(rel='stylesheet', href='/icheck/skins/square/green.css')
+        link(rel='stylesheet', href='/stylesheets/exercises.css')
+        script(src='/icheck/icheck.js')
         include memorizingTmpl
     body
         include ../../navbar
@@ -11,9 +14,7 @@ html
             .page-header
                 h3 今日单词
             .jumbotron.jumbotron-white
-                p#message.text-center.text-primary.jumbotron-hint 请开始
                 #content
-                    button#startMemorizing.btn.btn-success.center-block(type='button') 开始
 
         script(src='/javascripts/require.js' async='true' defer data-main='/javascripts/exercises/words/memorizing.js')
 

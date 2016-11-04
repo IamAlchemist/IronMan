@@ -45,6 +45,16 @@ require([], function () {
         var template3 = Handlebars.compile(source3);
         var html3 = template3(pathContext);
 
-        $('#content').html(html3);
+        var exercise = {
+            _id: "_my_id",
+            title: "单选",
+            description: "please choose the right one:",
+            options: ["a", "b", "c", "d"]
+        };
+
+        var source4 = $("#exercise-template").html();
+        var template4 = Handlebars.compile(source4);
+        var html4 = template4(exercise);
+        $('#content').html(html4);
     });
 });

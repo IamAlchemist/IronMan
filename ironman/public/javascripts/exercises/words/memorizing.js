@@ -2,20 +2,24 @@
  * Created by wizard on 11/1/16.
  */
 
-require([], function () {
+require(['../../libs/ironmanLib'], function (ironmanLib) {
     var messageElem;
 
     var originalWordExerciseProgresses;
     var wordExerciseProgresses = Array();
-    var currentWordExercise;
     var contentElem;
+
+    var exerciseTmpl;
+
+    var currentWordExerciseProgress;
+    var currentAnswerIndex;
+    var currentHints;
 
     $(document).ready(function () {
         messageElem = $('p#message');
         contentElem = $('#content');
 
         initStartMemorizing();
-        initStartMemorizingButton();
     });
 
     function startMemorizing() {
@@ -24,26 +28,94 @@ require([], function () {
             wordExerciseProgresses.push(clone);
         }
 
-        currentWordExercise = wordExerciseProgresses[0];
+        currentWordExerciseProgress = wordExerciseProgresses[0];
 
-        showCurrentWordExercise();
+        showCurrentWordExerciseProgress();
     }
 
-    function showCurrentWordExercise() {
+    function showCurrentWordExerciseProgress() {
+        const exercise = {
+            _id: currentWordExerciseProgress._id,
+            title: "单选",
+            description: `${currentWordExerciseProgress.wordExercise.word}的含义是:`,
+            options: generateCurrentOptionsAndSetAnswerIndex(),
+        };
 
+        generateHints();
+
+        if (exerciseTmpl == undefined) {
+            let source = $("#wordExercise-template").html();
+            exerciseTmpl = Handlebars.compile(source);
+        }
+
+        const html = exerciseTmpl(exercise);
+
+        contentElem.html(html);
+
+        ironmanLib.decorateRadioInputs();
+    }
+
+    function generateHints() {
+        currentHints = Array();
+        currentHints.push(currentWordExerciseProgress.wordExercise.example);
+        currentHints.push(currentWordExerciseProgress.wordExercise.exampleExplanation);
+    }
+
+    function generateCurrentOptionsAndSetAnswerIndex() {
+        let otherOptions = Array();
+        const answer = getWordFrom(currentWordExerciseProgress);
+
+        let otherOptionsNumber = originalWordExerciseProgresses.length - 1;
+        otherOptionsNumber = Math.min(3, otherOptionsNumber);
+
+        for (let i = 0; i < otherOptionsNumber; ++i) {
+            let option = getAnOption();
+            if (option == answer) {
+                i -= 1;
+            }
+            else {
+                otherOptions.push(option);
+            }
+        }
+
+        currentAnswerIndex = Math.floor(Math.random() * (otherOptionsNumber + 1));
+
+        var options = Array();
+        for (let i = 0; i < currentAnswerIndex; ++i) {
+            options.push(otherOptions[i]);
+        }
+
+        options.push(answer);
+
+        for (let i = currentAnswerIndex; i < otherOptionsNumber; ++i) {
+            options.push(otherOptions[i]);
+        }
+
+        return options
+    }
+
+    function getAnOption() {
+        let index = Math.floor(Math.random() * originalWordExerciseProgresses.length);
+        return originalWordExerciseProgresses[index].wordExercise.explanation;
+    }
+
+    function getWordFrom(progress) {
+        return progress.wordExercise.explanation;
     }
 
     function initStartMemorizing() {
         const source = $('#startMemorizing-template').html();
-        const templ = Handlebars.compile(source);
-        contentElem.html(templ());
+        const startMemorizingTmpl = Handlebars.compile(source);
+
+        contentElem.html(startMemorizingTmpl());
+        initStartMemorizingButton();
     }
 
     function initStartMemorizingButton() {
         $('button#startMemorizing').click(function () {
             $.getJSON('/exercises/words/wordExercisesForToday')
                 .done(function (result) {
-                    if (result.errorCode == 0){
+                    if (result.errorCode == 0) {
                         originalWordExerciseProgresses = result.content;
                         startMemorizing();
                     }
