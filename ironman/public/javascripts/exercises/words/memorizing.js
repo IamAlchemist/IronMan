@@ -10,11 +10,12 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     var originalWordExerciseProgresses;
     var wordExerciseProgresses = Array();
 
-
     var exerciseTmpl;
     var wordDetailTmpl;
 
     var currentWordExerciseProgress;
+    var currentWordExerciseProgressIndex;
+
     var currentAnswerIndex;
     var currentHints;
     var currentHintIndex = 0;
@@ -35,9 +36,38 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
             wordExerciseProgresses.push(clone);
         }
 
-        currentWordExerciseProgress = wordExerciseProgresses[0];
+        pickNextWordProgress();
 
         showCurrentWordExerciseProgress();
+    }
+
+    function pickNextWordProgress() {
+        if (currentWordExerciseProgressIndex == undefined) {
+            currentWordExerciseProgressIndex = 0;
+            currentWordExerciseProgress = wordExerciseProgresses[0];
+        }
+        else {
+            let i = 0;
+            let l = wordExerciseProgresses.length;
+            for (; i < l; ++i) {
+                currentWordExerciseProgressIndex += 1;
+                if (currentWordExerciseProgressIndex >= wordExerciseProgresses.length) {
+                    currentWordExerciseProgressIndex = 0;
+                }
+
+                if (wordExerciseProgresses[currentWordExerciseProgressIndex].progress
+                    - originalWordExerciseProgresses[currentWordExerciseProgressIndex].progress < 3) {
+                    currentWordExerciseProgress = wordExerciseProgresses[currentWordExerciseProgressIndex];
+                    break;
+                }
+            }
+
+            if (i == l) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     function showCurrentWordDetail() {
@@ -48,6 +78,35 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
 
         const html = wordDetailTmpl(currentWordExerciseProgress.wordExercise);
         contentElem.html(html);
+
+        initNextExerciseButton();
+    }
+
+    function numberOfAvaiableWordProgresses() {
+        let result = 0;
+        for (let i = 0, l = wordExerciseProgresses.length; i < l; ++i) {
+            if (wordExerciseProgresses[i].progress - originalWordExerciseProgresses[i].progress < 3) {
+                result += 1;
+            }
+        }
+
+        return result;
+    }
+
+    function initNextExerciseButton(){
+        let nextButton = $('#nextWordExerciseButton');
+        if (numberOfAvaiableWordProgresses() > 1) {
+            nextButton.removeAttr('disabled');
+        }
+        else {
+            nextButton.attr('disabled', 'disabled');
+        }
+
+        nextButton.click(()=>{
+            if (pickNextWordProgress()) {
+                showCurrentWordExerciseProgress();
+            }
+        });
     }
 
     function showCurrentWordExerciseProgress() {
@@ -211,7 +270,12 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
                 .done(function (result) {
                     if (result.errorCode == 0) {
                         originalWordExerciseProgresses = result.content;
-                        startMemorizing();
+                        if (originalWordExerciseProgresses.length == 0){
+                            messageElem.text('no more exercises');
+                        }
+                        else{
+                            startMemorizing();
+                        }
                     }
                     else {
                         messageElem.text(result.message);
