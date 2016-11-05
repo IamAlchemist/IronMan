@@ -42,9 +42,9 @@ module.exports.wordExercisesForToday = function (mail) {
 };
 
 module.exports.updateWordExerciseProgresses = function (progresses) {
-    let map = new Map();
-    for (let prog in progresses) {
-        map.set(prog._id, prog);
+    var myMap = new Map();
+    for (let prog of progresses) {
+        myMap.set(`${prog._id}`, prog.progress);
     }
 
     let progressIds = progresses.map(progress => mongodb.Types.ObjectId(progress._id));
@@ -58,8 +58,13 @@ module.exports.updateWordExerciseProgresses = function (progresses) {
         .exec()
 
         .then((progresses2) => {
+            logger.info(`find ids : ${progresses2.length}`);
+
             return progresses2.map((p)=> {
-                p.progress = map.get(p._id).progress;
+                let pid = `${p._id}`;
+                let value = myMap.get(pid);
+                p.progress = value == undefined ? p.progress : value;
+
                 return p.save();
             })
         });
