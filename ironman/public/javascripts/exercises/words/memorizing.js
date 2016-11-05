@@ -6,6 +6,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     var messageElem;
     var contentElem;
     var hintElem;
+    var nextButtonCotainerElem;
 
     var originalWordExerciseProgresses;
     var wordExerciseProgresses = Array();
@@ -79,7 +80,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
         const html = wordDetailTmpl(currentWordExerciseProgress.wordExercise);
         contentElem.html(html);
 
-        initNextExerciseButton();
+        initNextExerciseButtonInDetail();
     }
 
     function numberOfAvaiableWordProgresses() {
@@ -93,7 +94,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
         return result;
     }
 
-    function initNextExerciseButton(){
+    function initNextExerciseButtonInDetail(){
         let nextButton = $('#nextWordExerciseButton');
         if (numberOfAvaiableWordProgresses() > 1) {
             nextButton.removeAttr('disabled');
@@ -135,6 +136,8 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
         hintElem = $('#hintMessage');
 
         initOKButton();
+
+        initNextButton();
 
         initSkipButton();
 
@@ -190,6 +193,12 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
         });
     }
 
+    function initNextButton() {
+        nextButtonCotainerElem = $('#nextExerciseContainer').hide();
+//        nextButtonElem = $('#nextExercise');
+//        nextButtonElem.hide();
+    }
+
     function initOKButton() {
         $("#okButton").click( function () {
             if (currentChoosedId != undefined) {
@@ -199,6 +208,9 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
                     && components[1] == currentAnswerIndex) {
 
                     advanceCurrentProgress(3);
+
+                    $(this).parent().hide();
+                    nextButtonCotainerElem.show();
                 }
             }
             else {
