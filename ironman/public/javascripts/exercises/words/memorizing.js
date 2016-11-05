@@ -15,6 +15,8 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     var currentAnswerIndex;
     var currentHints;
 
+    var currentChoosedId;
+
     $(document).ready(function () {
         messageElem = $('p#message');
         contentElem = $('#content');
@@ -52,7 +54,26 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
 
         contentElem.html(html);
 
-        ironmanLib.decorateRadioInputs();
+        ironmanLib.decorateRadioInputs(function (targetId) {
+            currentChoosedId = targetId;
+        });
+
+        initOKButton();
+    }
+
+    function initOKButton() {
+        $("#okButton").click( function () {
+            if (currentChoosedId != undefined) {
+
+                let components = currentChoosedId.split('_');
+                if (components.length == 2
+                    && components[0] == currentWordExerciseProgress._id
+                    && components[1] == currentAnswerIndex) {
+
+                    currentWordExerciseProgress.progress += 3;
+                }
+            }
+        });
     }
 
     function generateHints() {

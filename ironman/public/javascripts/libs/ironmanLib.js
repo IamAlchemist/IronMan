@@ -34,7 +34,7 @@ define(function (){
         });
     }
 
-    function decorateRadioInputs() {
+    function decorateRadioInputs(callback) {
         var inputs = $('input[type=radio]');
         inputs.iCheck({
             radioClass: 'iradio_square-green',
@@ -42,7 +42,12 @@ define(function (){
         });
 
         inputs.on('ifChecked', event => {
-            console.log(event.target.id);
+            if (callback != undefined) {
+                callback(event.target.id);
+            }
+            else {
+                console.log(event.target.id);
+            }
         });
     }
 
