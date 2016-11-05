@@ -47,11 +47,11 @@ router.get('/words/wordExercisesForToday', (req, res)=> {
     wordsExercisesLib.wordExercisesForToday(user.mail)
         .then((wordProcesses)=> {
             const result = new Result(0, wordProcesses);
-            res.send(result);
+            return res.send(result);
         })
         .catch((error)=> {
             logger.error(`get wordExercises for today failed: ${logger.str(error)}`);
-            res.send(new Result(104));
+            return res.send(new Result(104));
         });
 });
 
@@ -60,11 +60,28 @@ router.get('/words/bank/update', function (req, res) {
     wordsExercisesLib.updateWordsBank(user.mail)
         .then((progresses)=> {
             logger.info(`update succeed : ${progresses.length}`);
-            res.send(new Result(0, {count: progresses.length}));
+            return res.send(new Result(0, {count: progresses.length}));
         })
         .catch((error)=> {
             logger.error(JSON.stringify(error));
-            res.send(new Result(103, {error: error}));
+            return res.send(new Result(103, {error: error}));
+        });
+});
+
+router.post('/words/wordExercisesForToday/updateResult', function (req, res) {
+    const progresses = req.body.content;
+    if (progresses == undefined || !(progresses instanceof Array)) {
+        return res.send(new Result(105));
+    }
+
+    wordsExercisesLib.updateWordExerciseProgresses(progresses)
+        .then((saves)=>{
+            logger.info(`update succeed : ${saves.length}`);
+            return res.send(new Result(0, {count: saves.length}));
+        })
+        .catch((error)=>{
+            logger.error(JSON.stringify(error));
+            return res.send(new Result(105, {error: error}));
         });
 });
 

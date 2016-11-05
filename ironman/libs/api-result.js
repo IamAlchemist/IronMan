@@ -16,6 +16,7 @@ errorMessages[101]='创建题目错误';
 errorMessages[102]='创建单词错误';
 errorMessages[103]='创建单词进度错误';
 errorMessages[104]='获取今日单词错误';
+errorMessages[105]='更新今日单词结果错误';
 
 
 function ApiResult(errorCode, content) {

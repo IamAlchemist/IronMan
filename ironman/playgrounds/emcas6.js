@@ -7,4 +7,12 @@ var n = [].concat(...m);
 
 console.log(JSON.stringify(n));
 
+const progress1 = {_id: "this"};
+
+var map = new Map();
+
+map.set(progress1._id, progress1);
+
+console.log(""+map.has("this"));
+
 

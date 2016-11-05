@@ -94,7 +94,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
         return result;
     }
 
-    function initNextExerciseButtonInDetail(){
+    function initNextExerciseButtonInDetail() {
         let nextButton = $('#nextWordExerciseButton');
         if (numberOfAvaiableWordProgresses() > 1) {
             nextButton.removeAttr('disabled');
@@ -103,7 +103,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
             nextButton.attr('disabled', 'disabled');
         }
 
-        nextButton.click(()=>{
+        nextButton.click(()=> {
             if (pickNextWordProgress()) {
                 showCurrentWordExerciseProgress();
             }
@@ -144,7 +144,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
 
         initTipsButton();
     }
-    
+
     function advanceCurrentProgress(advanced) {
         currentWordExerciseProgress.progress += advanced;
         currentWordExerciseProgress.progress = Math.max(currentWordExerciseProgress.progress, 0);
@@ -152,7 +152,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     }
 
     function initSkipButton() {
-        $('#skipButton').click(()=>{
+        $('#skipButton').click(()=> {
             advanceCurrentProgress(-3);
             showCurrentWordDetail();
         });
@@ -197,13 +197,38 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     function initNextButton() {
         nextButtonCotainerElem = $('#nextExerciseContainer').hide();
         nextButtonElem = $('#nextExercise');
-        nextButtonElem.click(()=>{
+        nextButtonElem.click(()=> {
             if (numberOfAvaiableWordProgresses() == 0) {
-                alert("finish!");
+                sendResultToServer();
             }
-            else{
+            else {
                 pickNextWordProgress();
                 showCurrentWordExerciseProgress();
+            }
+        });
+    }
+
+    function showExerciseDonePage() {
+        alert("done");
+    }
+
+    function sendResultToServer() {
+        const url = "/exercises/words/wordExercisesForToday/updateResult";
+        const data = {"content": wordExerciseProgresses};
+        let posting = $.ajax(url,
+            {
+                type: "POST",
+                data: JSON.stringify(data),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+            });
+
+        posting.done(function (response) {
+            if (response.errorCode == 0) {
+                showExerciseDonePage();
+            }
+            else {
+                messageElem.text(response.message);
             }
         });
     }
@@ -211,7 +236,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     function initOKButton() {
         currentChoosedId = undefined;
 
-        $("#okButton").click( function () {
+        $("#okButton").click(function () {
             if (currentChoosedId != undefined) {
                 let components = currentChoosedId.split('_');
 
@@ -222,12 +247,8 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
 
                     advanceCurrentProgress(3);
 
-                    if (numberOfAvaiableWordProgresses() == 0) {
-                        nextButtonElem.text("完成");
-                    }
-
                     $(this).parent().hide();
-                    nextButtonCotainerElem.show();
+                    answerSucceed();
                 }
                 else { //opps, the answer is wrong
                     advanceCurrentProgress(-3);
@@ -238,6 +259,13 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
                 messageElem.text("请做选择");
             }
         });
+    }
+
+    function answerSucceed() {
+        if (numberOfAvaiableWordProgresses() == 0) {
+            nextButtonElem.text("完成");
+        }
+        nextButtonCotainerElem.show();
     }
 
     function generateHints() {
@@ -302,10 +330,10 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
                 .done(function (result) {
                     if (result.errorCode == 0) {
                         originalWordExerciseProgresses = result.content;
-                        if (originalWordExerciseProgresses.length == 0){
+                        if (originalWordExerciseProgresses.length == 0) {
                             messageElem.text('no more exercises');
                         }
-                        else{
+                        else {
                             startMemorizing();
                         }
                     }

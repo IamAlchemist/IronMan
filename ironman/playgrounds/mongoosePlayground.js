@@ -110,7 +110,31 @@ function demo() {
             console.log("fk:" + JSON.stringify(error));
         });
 }
-demo();
+
+function update() {
+    WordProgressModel
+        .find({})
+        .exec()
+        .then((progresses)=>{
+            let ids = progresses.map(prog => prog._id);
+            return WordProgressModel.find({
+                '_id': {
+                     $in: ids
+                 }
+            }).exec();
+        })
+        .then((progresses) => {
+            return progresses.map((progress)=>{
+                progress.progress = 6;
+                return progress.save();
+            });
+        })
+        .then((progresses)=>{
+            console.log(`${progresses.length}`);
+        });
+}
+update();
+//demo();
 //insertAWord();
 //insertAWordProgress();
 //showWord();

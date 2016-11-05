@@ -4,6 +4,25 @@
 
 require([], function () {
     $(document).ready(function () {
+        $('#clickbutton').click(function () {
+            let arrays = Array();
+            arrays.push("hello");
+            arrays.push("world");
+
+            let jObject = JSON.stringify(arrays);
+            let data = {content: arrays};
+
+            $.ajax({
+                url: '/test',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(data)
+            })
+//            $.post('/test', data)
+                .done(function () {
+                    alert("ok");
+                })
+        });
         var source   = $("#entry-template").html();
         var template1 = Handlebars.compile(source);
         var context1 = {title: "My New Post", body: "This is my first post!"};
