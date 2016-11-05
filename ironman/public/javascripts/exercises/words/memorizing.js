@@ -7,6 +7,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     var contentElem;
     var hintElem;
     var nextButtonCotainerElem;
+    var nextButtonElem;
 
     var originalWordExerciseProgresses;
     var wordExerciseProgresses = Array();
@@ -25,7 +26,6 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     var currentChoosedId;
 
     $(document).ready(function () {
-        messageElem = $('p#message');
         contentElem = $('#content');
 
         initStartMemorizing();
@@ -134,6 +134,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
         });
 
         hintElem = $('#hintMessage');
+        messageElem = $('p#message');
 
         initOKButton();
 
@@ -195,27 +196,46 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
 
     function initNextButton() {
         nextButtonCotainerElem = $('#nextExerciseContainer').hide();
-//        nextButtonElem = $('#nextExercise');
-//        nextButtonElem.hide();
+        nextButtonElem = $('#nextExercise');
+        nextButtonElem.click(()=>{
+            if (numberOfAvaiableWordProgresses() == 0) {
+                alert("finish!");
+            }
+            else{
+                pickNextWordProgress();
+                showCurrentWordExerciseProgress();
+            }
+        });
     }
 
     function initOKButton() {
+        currentChoosedId = undefined;
+
         $("#okButton").click( function () {
             if (currentChoosedId != undefined) {
                 let components = currentChoosedId.split('_');
+
+                // now you make the right answer
                 if (components.length == 2
                     && components[0] == currentWordExerciseProgress._id
                     && components[1] == currentAnswerIndex) {
 
                     advanceCurrentProgress(3);
 
+                    if (numberOfAvaiableWordProgresses() == 0) {
+                        nextButtonElem.text("完成");
+                    }
+
                     $(this).parent().hide();
                     nextButtonCotainerElem.show();
                 }
+                else { //opps, the answer is wrong
+                    advanceCurrentProgress(-3);
+                    showCurrentWordDetail();
+                }
             }
             else {
-                advanceCurrentProgress(-3);
-                showCurrentWordDetail();
+                messageElem.text("请做选择");
             }
         });
     }
