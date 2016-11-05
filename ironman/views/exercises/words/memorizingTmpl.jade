@@ -46,3 +46,65 @@ script#wordExercise-template(type="text/x-handlebars-template").
             </div>
         </div>
     </div>
+
+script#wordDetail-template(type="text/x-handlebars-template").
+    <div class="row">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4>单词解释</h4>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <p class="text-right text-panel">单词</p>
+                    </div>
+                    <div class="col-lg-10">
+                        <p class="bg-success text-panel text-panel-boxed">
+                            <strong>{{word}}</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 ">
+                        <p class="text-right text-panel">单词解释</p>
+                    </div>
+                    <div class="col-lg-10">
+                        <p class="bg-success text-panel text-panel-boxed">
+                            <strong>{{explanation}}</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <p class="text-right text-panel">词性</p>
+                    </div>
+                    <div class="col-lg-10">
+                        <p class="bg-warning text-panel text-panel-boxed" text-panel>{{partOfSpeech}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <p class="text-right text-panel">例子</p>
+                    </div>
+                    <div class="col-lg-10">
+                        <p class="bg-info text-panel text-panel-boxed">
+                            {{example}}
+                            <br/>
+                            {{exampleExplanation}}
+                            <br/>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <p class="text-right text-panel">其他</p>
+                    </div>
+                    <div class="col-lg-10">
+                        <p class="bg-info text-panel text-panel-boxed">
+                            {{others}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -4,16 +4,21 @@
 
 require(['../../libs/ironmanLib'], function (ironmanLib) {
     var messageElem;
+    var contentElem;
+    var hintElem;
 
     var originalWordExerciseProgresses;
     var wordExerciseProgresses = Array();
-    var contentElem;
+
 
     var exerciseTmpl;
+    var wordDetailTmpl;
 
     var currentWordExerciseProgress;
     var currentAnswerIndex;
     var currentHints;
+    var currentHintIndex = 0;
+    var hintUsed = false;
 
     var currentChoosedId;
 
@@ -33,6 +38,16 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
         currentWordExerciseProgress = wordExerciseProgresses[0];
 
         showCurrentWordExerciseProgress();
+    }
+
+    function showCurrentWordDetail() {
+        if (wordDetailTmpl == undefined) {
+            let source = $("#wordDetail-template").html();
+            wordDetailTmpl = Handlebars.compile(source);
+        }
+
+        const html = wordDetailTmpl(currentWordExerciseProgress.wordExercise);
+        contentElem.html(html);
     }
 
     function showCurrentWordExerciseProgress() {
@@ -58,20 +73,78 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
             currentChoosedId = targetId;
         });
 
+        hintElem = $('#hintMessage');
+
         initOKButton();
+
+        initSkipButton();
+
+        initTipsButton();
+    }
+    
+    function advanceCurrentProgress(advanced) {
+        currentWordExerciseProgress.progress += advanced;
+        currentWordExerciseProgress.progress = Math.max(currentWordExerciseProgress.progress, 0);
+        currentWordExerciseProgress.progress = Math.min(currentWordExerciseProgress.progress, 9);
+    }
+
+    function initSkipButton() {
+        $('#skipButton').click(()=>{
+            advanceCurrentProgress(-3);
+            showCurrentWordDetail();
+        });
+    }
+
+    function initTipsButton() {
+        currentHintIndex = 0;
+        const tipsButton = $('#showTipsButton');
+        tipsButton.text('提示');
+        tipsButton.removeAttr('disabled');
+        const hintCount = currentHints.length;
+        if (hintCount == 0) {
+            tipsButton.attr('disabled', 'disabled');
+        }
+
+        tipsButton.click(() => {
+            if (!hintUsed) {
+                advanceCurrentProgress(-1);
+                hintUsed = true;
+            }
+
+            if (currentHintIndex == 0 && currentHintIndex < hintCount) {
+                tipsButton.text('下一个提示');
+            }
+
+            let hintMessage = "";
+
+            for (let i = 0; i <= currentHintIndex && i < hintCount; ++i) {
+                hintMessage = hintMessage.concat("<br/>").concat(currentHints[i]);
+            }
+
+            hintElem.html(hintMessage);
+
+            currentHintIndex += 1;
+
+            if (currentHintIndex >= hintCount) {
+                tipsButton.attr('disabled', 'disabled');
+            }
+        });
     }
 
     function initOKButton() {
         $("#okButton").click( function () {
             if (currentChoosedId != undefined) {
-
                 let components = currentChoosedId.split('_');
                 if (components.length == 2
                     && components[0] == currentWordExerciseProgress._id
                     && components[1] == currentAnswerIndex) {
 
-                    currentWordExerciseProgress.progress += 3;
+                    advanceCurrentProgress(3);
                 }
+            }
+            else {
+                advanceCurrentProgress(-3);
+                showCurrentWordDetail();
             }
         });
     }
