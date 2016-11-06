@@ -42,7 +42,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
 
     function showCelebrationPage() {
         if (celebrationTmpl == undefined) {
-            let source = $('celebration-template').html();
+            let source = $('#celebration-template').html();
             celebrationTmpl = Handlebars.compile(source);
         }
 
