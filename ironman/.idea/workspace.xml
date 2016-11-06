@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b903ec8f-157f-4431-8659-022e2b0cd42a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/face-smiley.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/exercises/words/memorizing.js" afterPath="$PROJECT_DIR$/public/javascripts/exercises/words/memorizing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/exercises/words/memorizingTmpl.jade" afterPath="$PROJECT_DIR$/views/exercises/words/memorizingTmpl.jade" />
     </list>
     <ignored path="ironman.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,24 +28,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <file leaf-file-name="memorizingTmpl.jade" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/exercises/words/memorizingTmpl.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="48" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="48" />
+            <state relative-caret-position="577">
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/test.js">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="24" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#40#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="495">
+              <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -51,58 +51,8 @@
       <file leaf-file-name="memorizing.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/exercises/words/memorizing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="232" column="11" selection-start-line="232" selection-start-column="11" selection-end-line="232" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="exercises.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/exercises.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="76" column="50" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wordsExercisesLib.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/libs/wordsExercisesLib.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mongoosePlayground.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playgrounds/mongoosePlayground.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="128" column="30" selection-start-line="128" selection-start-column="30" selection-end-line="128" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nodeProgress.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playgrounds/nodeProgress.html">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="emcas6.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playgrounds/emcas6.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+              <caret line="265" column="46" selection-start-line="265" selection-start-column="46" selection-end-line="265" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -159,7 +109,6 @@
         <option value="$PROJECT_DIR$/models/wordExercise.js" />
         <option value="$PROJECT_DIR$/models/userRecords.js" />
         <option value="$PROJECT_DIR$/models/userPunchingOut.js" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/libs/ironmanLogger.js" />
         <option value="$PROJECT_DIR$/views/exercises/words/wordExerciseTmpl.jade" />
         <option value="$PROJECT_DIR$/public/javascripts/exercises/words/home.js" />
@@ -169,16 +118,17 @@
         <option value="$PROJECT_DIR$/public/javascripts/libs/ironmanLib.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/exercises.css" />
         <option value="$PROJECT_DIR$/test-tmpl.html" />
-        <option value="$PROJECT_DIR$/views/exercises/words/memorizingTmpl.jade" />
         <option value="$PROJECT_DIR$/libs/api-result.js" />
         <option value="$PROJECT_DIR$/views/test.jade" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/public/javascripts/test.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/exercises/words/memorizing.js" />
         <option value="$PROJECT_DIR$/routes/exercises.js" />
         <option value="$PROJECT_DIR$/playgrounds/emcas6.js" />
         <option value="$PROJECT_DIR$/playgrounds/mongoosePlayground.js" />
         <option value="$PROJECT_DIR$/libs/wordsExercisesLib.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/exercises/words/memorizing.js" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
+        <option value="$PROJECT_DIR$/views/exercises/words/memorizingTmpl.jade" />
       </list>
     </option>
   </component>
@@ -285,7 +235,65 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ironman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ironman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="words" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ironman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ironman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ironman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ironman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -550,7 +558,7 @@
       <workItem from="1478053918843" duration="5855000" />
       <workItem from="1478067196816" duration="16144000" />
       <workItem from="1478226907264" duration="26281000" />
-      <workItem from="1478341085095" duration="12028000" />
+      <workItem from="1478341085095" duration="13460000" />
     </task>
     <task id="LOCAL-00001" summary="add nav bar and side bar in profile">
       <created>1477744507070</created>
@@ -885,7 +893,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206556000" />
+    <option name="totallyTimeSpent" value="207988000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1113,14 +1121,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/exercises/words/home.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1233,14 +1233,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/exercises/words/memorizingTmpl.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/api-result.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1280,14 +1272,6 @@
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/exercises/words/memorizing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="232" column="11" selection-start-line="232" selection-start-column="11" selection-end-line="232" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1340,6 +1324,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/exercises/words/memorizing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="265" column="46" selection-start-line="265" selection-start-column="46" selection-end-line="265" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/exercises/words/memorizingTmpl.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding />
         </state>
       </provider>

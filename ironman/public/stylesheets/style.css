@@ -26,3 +26,11 @@ body {
     content:"*";
     color:red;
 }
+
+#positive-reinforcement img {
+    width: 28px;
+    position: absolute;
+    top: 3px;
+    left: 14px;
+    cursor: pointer;
+}

@@ -36,14 +36,17 @@ script#wordExercise-template(type="text/x-handlebars-template").
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-2">
-                        <button id="okButton" class="btn btn-success btn-block" type="button">OK</button>
+                    <div class="col-xs-3">
+                        <button id="okButton" class="btn btn-success btn-block" type="button">检查答案</button>
                     </div>
-                    <div class="col-xs-2" id="nextExerciseContainer">
-                        <button id="nextExercise" class="btn btn-warning btn-block" type="button">下一题</button>
+                    <div class="col-xs-3" id="nextExerciseContainer">
+                        <div id="positive-reinforcement">
+                            <image src="/images/face-smiley.png"/>
+                        </div>
+                        <button id="nextExercise" class="btn btn-warning btn-block" type="button">恭喜，答对了，请继续</button>
                     </div>
-                    <div class="col-xs-2">
-                        <button id="skipButton" class="btn btn-danger btn-block" type="button">不认识</button>
+                    <div class="col-xs-3">
+                        <button id="skipButton" class="btn btn-danger btn-block" type="button">我还没有学过这个呢</button>
                     </div>
                 </div>
             </div>

@@ -263,7 +263,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
 
     function answerSucceed() {
         if (numberOfAvaiableWordProgresses() == 0) {
-            nextButtonElem.text("完成");
+            nextButtonElem.text("恭喜，本轮学习已经全部完成");
         }
         nextButtonCotainerElem.show();
     }
