@@ -18,6 +18,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
 
     var exerciseTmpl;
     var wordDetailTmpl;
+    var celebrationTmpl;
 
     var currentWordExerciseProgress;
     var currentWordExerciseProgressIndex;
@@ -38,6 +39,16 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
 
         initStartMemorizing();
     });
+
+    function showCelebrationPage() {
+        if (celebrationTmpl == undefined) {
+            let source = $('celebration-template').html();
+            celebrationTmpl = Handlebars.compile(source);
+        }
+
+        const html = celebrationTmpl();
+        contentElem.html(html);
+    }
 
     function startMemorizing() {
         for (let progress of originalWordExerciseProgresses) {
@@ -223,10 +234,6 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
         });
     }
 
-    function showExerciseDonePage() {
-        alert("done");
-    }
-
     function sendResultToServer() {
         const url = "/exercises/words/wordExercisesForToday/updateResult";
         const data = {"content": wordExerciseProgresses};
@@ -240,7 +247,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
 
         posting.done(function (response) {
             if (response.errorCode == 0) {
-                showExerciseDonePage();
+                showCelebrationPage();
             }
             else {
                 messageElem.text(response.message);
@@ -290,7 +297,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
         progressBarElem.attr('style', `width: ${p}%;`);
 
         if (correctAnswerNumber == total) {
-            nextButtonElem.text("恭喜，本轮学习已经全部完成");
+            nextButtonElem.text("查看学习结果");
         }
         nextButtonCotainerElem.show();
     }
