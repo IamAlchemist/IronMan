@@ -53,3 +53,28 @@ script#exercise-template(type="text/x-handlebars-template").
             </div>
         </div>
     </div>
+
+script#celebration-template(type="text/x-handlebars-template").
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h4>今日已完成</h4>
+        </div>
+        <div class="panel-body">
+            {{#each this}}
+            <div class="row wordli">
+                <div class="col-xs-4 col-lg-2">
+                    <p id="word" class="text-primary">{{word}}</p>
+                </div>
+                <div class="col-xs-4 col-lg-6">
+                    <p id="explanation">{{explanation}}</p>
+                </div>
+                <div class="col-xs-4 col-lg-4">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success"
+                             style="width: {{progress}}%;"></div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>

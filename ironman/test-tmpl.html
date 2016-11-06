@@ -1,3 +1,23 @@
-<div class="row">
-    <h1>恭喜你，今日任务已经完成</h1>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h4>今日已完成</h4>
+    </div>
+    <div class="panel-body">
+        {{#each options}}
+        <div class="row wordli">
+            <div class="col-xs-4 col-lg-2">
+                <p id="word" class="text-primary">{{word}}</p>
+            </div>
+            <div class="col-xs-4 col-lg-6">
+                <p id="explanation">{{explanation}}</p>
+            </div>
+            <div class="col-xs-4 col-lg-6">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success"
+                         style="width: {{progress}}%;"></div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
 </div>

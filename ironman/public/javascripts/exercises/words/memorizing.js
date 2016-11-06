@@ -46,8 +46,18 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
             celebrationTmpl = Handlebars.compile(source);
         }
 
-        const html = celebrationTmpl();
+        const progresses = wordExerciseProgresses.map((p)=>{
+            const word = p.wordExercise.word;
+            const explanation = p.wordExercise.explanation;
+            const progress = Math.floor(p.progress * 100 / 9);
+
+            return {word, explanation, progress};
+        });
+
+        const html = celebrationTmpl(progresses);
         contentElem.html(html);
+
+        progressElem.hide();
     }
 
     function startMemorizing() {
