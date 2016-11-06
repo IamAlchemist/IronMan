@@ -2,9 +2,9 @@
  * Created by wizard on 11/1/16.
  */
 
-define(function (){
-    var add = function (x,y){
-        return x+y;
+define(function () {
+    var add = function (x, y) {
+        return x + y;
     };
 
     function setupCreateForm(jqElem, callback) {
@@ -41,7 +41,7 @@ define(function (){
             increaseArea: '20%'
         });
 
-        inputs.on('ifChecked', event => {
+        inputs.on('ifChecked', function (event) {
             if (callback != undefined) {
                 callback(event.target.id);
             }

@@ -115,7 +115,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
             nextButton.attr('disabled', 'disabled');
         }
 
-        nextButton.click(()=> {
+        nextButton.click(function () {
             if (pickNextWordProgress()) {
                 showCurrentWordExerciseProgress();
             }
@@ -166,7 +166,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     }
 
     function initSkipButton() {
-        $('#skipButton').click(()=> {
+        $('#skipButton').click(function () {
             advanceCurrentProgress(-3);
             showCurrentWordDetail();
         });
@@ -182,7 +182,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
             tipsButton.attr('disabled', 'disabled');
         }
 
-        tipsButton.click(() => {
+        tipsButton.click(function () {
             if (!hintUsed) {
                 advanceCurrentProgress(-1);
                 hintUsed = true;
@@ -212,7 +212,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     function initNextButton() {
         nextButtonCotainerElem = $('#nextExerciseContainer').hide();
         nextButtonElem = $('#nextExercise');
-        nextButtonElem.click(()=> {
+        nextButtonElem.click( function() {
             if (numberOfAvaiableWordProgresses() == 0) {
                 sendResultToServer();
             }

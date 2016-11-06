@@ -15,7 +15,7 @@ require([], function () {
             increaseArea: '20%'
         });
 
-        inputs.on('ifChecked', event => {
+        inputs.on('ifChecked', function (event) {
             console.log(event.target.id);
         });
     }
