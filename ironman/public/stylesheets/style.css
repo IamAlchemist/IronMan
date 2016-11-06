@@ -13,9 +13,17 @@ body {
     background-color: #eeeeee;
 }
 
-.jumbotron-white{
+.jumbotron.jumbotron-white {
     background-color: #ffffff;
     min-height: 500px;
+}
+.jumbotron.jumbotron-white .panel {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.panel-body .btn {
+    margin: 5px 0 5px 0;
 }
 
 .jumbotron .jumbotron-hint {
@@ -33,4 +41,12 @@ body {
     top: 3px;
     left: 14px;
     cursor: pointer;
+}
+
+.progress {
+    margin-top: 5px;
+}
+
+#hintMessage {
+    margin: 0 15px 10px 15px;
 }

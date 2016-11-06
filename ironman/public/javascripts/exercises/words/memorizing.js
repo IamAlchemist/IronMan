@@ -3,8 +3,12 @@
  */
 
 require(['../../libs/ironmanLib'], function (ironmanLib) {
-    var messageElem;
     var contentElem;
+    var progressElem;
+    var progressBarElem;
+    var totalNumberElem;
+
+    var messageElem;
     var hintElem;
     var nextButtonCotainerElem;
     var nextButtonElem;
@@ -27,6 +31,10 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
 
     $(document).ready(function () {
         contentElem = $('#content');
+        progressElem = $('#progress');
+        progressElem.hide();
+        progressBarElem = $('#progressbar');
+        totalNumberElem = $('#totalNumber');
 
         initStartMemorizing();
     });
@@ -36,6 +44,8 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
             var clone = cloneObject(progress);
             wordExerciseProgresses.push(clone);
         }
+
+        totalNumberElem.text(`共 ${wordExerciseProgresses.length} 题`);
 
         pickNextWordProgress();
 
@@ -72,6 +82,8 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     }
 
     function showCurrentWordDetail() {
+        progressElem.hide();
+
         if (wordDetailTmpl == undefined) {
             let source = $("#wordDetail-template").html();
             wordDetailTmpl = Handlebars.compile(source);
@@ -136,6 +148,8 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
         hintElem = $('#hintMessage');
         messageElem = $('p#message');
 
+        progressElem.show();
+
         initOKButton();
 
         initNextButton();
@@ -181,7 +195,8 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
             let hintMessage = "";
 
             for (let i = 0; i <= currentHintIndex && i < hintCount; ++i) {
-                hintMessage = hintMessage.concat("<br/>").concat(currentHints[i]);
+                const padding = hintMessage == 0 ? "" : "<br/><br/>";
+                hintMessage = hintMessage.concat(padding).concat(currentHints[i]);
             }
 
             hintElem.html(hintMessage);
@@ -236,7 +251,9 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     function initOKButton() {
         currentChoosedId = undefined;
 
-        $("#okButton").click(function () {
+        const okButton = $("#okButton");
+
+        okButton.click(function () {
             if (currentChoosedId != undefined) {
                 let components = currentChoosedId.split('_');
 
@@ -246,13 +263,17 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
                     && components[1] == currentAnswerIndex) {
 
                     advanceCurrentProgress(3);
+                    $('#skipButton').attr('disabled', 'disabled');
 
                     $(this).parent().hide();
                     answerSucceed();
                 }
                 else { //opps, the answer is wrong
+                    okButton.attr('disabled', 'disabled');
+                    okButton.removeClass('btn-success');
+                    okButton.addClass('btn-danger');
+                    okButton.text('选错了呢，右边按钮可以看答案呢...');
                     advanceCurrentProgress(-3);
-                    showCurrentWordDetail();
                 }
             }
             else {
@@ -262,7 +283,13 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     }
 
     function answerSucceed() {
-        if (numberOfAvaiableWordProgresses() == 0) {
+        const total = wordExerciseProgresses.length;
+        const correctAnswerNumber = (total - numberOfAvaiableWordProgresses());
+        const p = Math.floor((correctAnswerNumber / total) * 100);
+
+        progressBarElem.attr('style', `width: ${p}%;`);
+
+        if (correctAnswerNumber == total) {
             nextButtonElem.text("恭喜，本轮学习已经全部完成");
         }
         nextButtonCotainerElem.show();
