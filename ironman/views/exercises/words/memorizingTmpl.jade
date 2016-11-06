@@ -1,0 +1,122 @@
+//
+   Created by wizard on 11/3/16.
+
+script#startMemorizing-template(type="text/x-handlebars-template")
+    p#message.text-center.text-primary.jumbotron-hint 请开始
+    button#startMemorizing.btn.btn-success.center-block(type='button') 开始
+
+script#wordExercise-template(type="text/x-handlebars-template").
+    <div class="row">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4>{{title}}</h4>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h5>{{description}}</h5>
+                        <ul class="exercise-list">
+                            {{#each options}}
+                            <li class="exercise-section">
+                                <input id="{{../_id}}_{{@index}}" type="radio" name="{{../_id}}"/>
+                                <label for="{{../_id}}_{{@index}}">{{this}}</label>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="row">
+                            <div class="col-xs-6 col-xs-offset-3">
+                                <button id="showTipsButton" type="button" class="btn btn-warning btn-block">提示</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p id="hintMessage"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2">
+                        <button id="okButton" class="btn btn-success btn-block" type="button">OK</button>
+                    </div>
+                    <div class="col-xs-2" id="nextExerciseContainer">
+                        <button id="nextExercise" class="btn btn-warning btn-block" type="button">下一题</button>
+                    </div>
+                    <div class="col-xs-2">
+                        <button id="skipButton" class="btn btn-danger btn-block" type="button">不认识</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <p id="message" class="text-danger"></p>
+    </div>
+
+
+script#wordDetail-template(type="text/x-handlebars-template").
+    <div class="row">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4>单词解释</h4>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <p class="text-right text-panel">单词</p>
+                    </div>
+                    <div class="col-lg-10">
+                        <p class="bg-success text-panel text-panel-boxed">
+                            <strong>{{word}}</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 ">
+                        <p class="text-right text-panel">单词解释</p>
+                    </div>
+                    <div class="col-lg-10">
+                        <p class="bg-success text-panel text-panel-boxed">
+                            <strong>{{explanation}}</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <p class="text-right text-panel">词性</p>
+                    </div>
+                    <div class="col-lg-10">
+                        <p class="bg-warning text-panel text-panel-boxed" text-panel>{{partOfSpeech}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <p class="text-right text-panel">例子</p>
+                    </div>
+                    <div class="col-lg-10">
+                        <p class="bg-info text-panel text-panel-boxed">
+                            {{example}}
+                            <br/>
+                            {{exampleExplanation}}
+                            <br/>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <p class="text-right text-panel">其他</p>
+                    </div>
+                    <div class="col-lg-10">
+                        <p class="bg-info text-panel text-panel-boxed">
+                            {{others}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+            <button class="btn btn-success btn-block btn-lg" type="button" id="nextWordExerciseButton">下一题</button>
+        </div>
+    </div>

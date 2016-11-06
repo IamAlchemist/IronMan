@@ -8,11 +8,11 @@ const Result = require('../libs/api-result');
 const logger = require('../libs/ironmanLogger');
 const Exercise = require('../models/exercise');
 const WordExercise = require('../models/wordExercise');
-
+const wordsExercisesLib = require('../libs/wordsExercisesLib');
 const router = express.Router();
 
 router.get('/', function (req, res) {
-    Exercise.getByType(0, req.session.user.mail)
+    Exercise.ExerciseModel.find({type: 0}).exec()
         .then((exercises)=> {
             logger.info(JSON.stringify(exercises));
             res.render('exercises/home', {exercises});
@@ -36,10 +36,53 @@ router.get('/words', function (req, res) {
     res.render('exercises/words/home');
 });
 
+router.get('/words/memorizing', function (req, res) {
+    res.render('exercises/words/memorizing');
+});
+
+
+/* API */
+router.get('/words/wordExercisesForToday', (req, res)=> {
+    const user = req.session.user;
+    wordsExercisesLib.wordExercisesForToday(user.mail)
+        .then((wordProcesses)=> {
+            const result = new Result(0, wordProcesses);
+            return res.send(result);
+        })
+        .catch((error)=> {
+            logger.error(`get wordExercises for today failed: ${logger.str(error)}`);
+            return res.send(new Result(104));
+        });
+});
+
 router.get('/words/bank/update', function (req, res) {
     const user = req.session.user;
+    wordsExercisesLib.updateWordsBank(user.mail)
+        .then((progresses)=> {
+            logger.info(`update succeed : ${progresses.length}`);
+            return res.send(new Result(0, {count: progresses.length}));
+        })
+        .catch((error)=> {
+            logger.error(JSON.stringify(error));
+            return res.send(new Result(103, {error: error}));
+        });
+});
 
-    res.send(new Result(0));
+router.post('/words/wordExercisesForToday/updateResult', function (req, res) {
+    const progresses = req.body.content;
+    if (progresses == undefined || !(progresses instanceof Array)) {
+        return res.send(new Result(105));
+    }
+
+    wordsExercisesLib.updateWordExerciseProgresses(progresses)
+        .then((saves)=>{
+            logger.info(`update succeed : ${saves.length}`);
+            return res.send(new Result(0, {count: saves.length}));
+        })
+        .catch((error)=>{
+            logger.error(JSON.stringify(error));
+            return res.send(new Result(105, {error: error}));
+        });
 });
 
 router.post('/create', function (req, res) {
@@ -73,16 +116,15 @@ router.post('/create', function (req, res) {
         return res.send(result);
     }
 
-    const newExercise = new Exercise({
+    const newExercise = new Exercise.makeExercise(
         mail,
         title,
         description,
-        answer: parseInt(answer),
+        parseInt(answer),
         options,
         hints,
-        tags,
-        type: 0
-    });
+        tags
+    );
 
     newExercise.save()
         .then(()=> {
@@ -96,7 +138,8 @@ router.post('/create', function (req, res) {
             return res.send(result);
         });
 
-});
+})
+;
 
 router.post('/words/create', function (req, res) {
     if (!req.session.user) {
@@ -123,7 +166,7 @@ router.post('/words/create', function (req, res) {
         return res.send(result);
     }
 
-    const newWordExercise = new WordExercise({
+    const newWordExercise = WordExercise.MakeWordExercise(
         mail,
         word,
         partOfSpeech,
@@ -131,7 +174,7 @@ router.post('/words/create', function (req, res) {
         example,
         exampleExplanation,
         others
-    });
+    );
 
     newWordExercise.save()
         .then(()=> {

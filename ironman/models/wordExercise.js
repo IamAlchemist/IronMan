@@ -5,8 +5,10 @@
 'use strict';
 
 const mongodb = require('../libs/mongodb');
+const timestamps = require('../libs/mongoose-timestamp');
+const Schema = mongodb.Schema;
 
-const WordExerciseModel = mongodb.model('WordExercise', {
+const WordExerciseSchema = new Schema({
     mail: String,
     word: String,
     partOfSpeech: String,
@@ -15,23 +17,31 @@ const WordExerciseModel = mongodb.model('WordExercise', {
     exampleExplanation: String,
     others: String
 });
+WordExerciseSchema.plugin(timestamps);
 
-function WordExercise(wordExercise) {
-    this.mail = wordExercise.mail;
-    this.word = wordExercise.word;
-    this.partOfSpeech = wordExercise.partOfSpeech;
-    this.explanation = wordExercise.explanation;
-    this.example = wordExercise.example;
-    this.exampleExplanation = wordExercise.exampleExplanation;
-    this.others = wordExercise.others;
+const WordExerciseModel = mongodb.model('WordExercise', WordExerciseSchema);
+module.exports.WordExerciseModel = WordExerciseModel;
+
+module.exports.MakeWordExercise =
+    function MakeWordExercise(mail = throwIfMissing(),
+                              word = throwIfMissing(),
+                              partOfSpeech = throwIfMissing(),
+                              explanation = throwIfMissing(),
+                              example = throwIfMissing(),
+                              exampleExplanation = throwIfMissing(),
+                              others = '') {
+        return new WordExerciseModel({
+            mail,
+            word,
+            partOfSpeech,
+            explanation,
+            example,
+            exampleExplanation,
+            others
+        });
+    };
+
+function throwIfMissing() {
+    throw new Error('Missing parameter');
 }
 
-WordExercise.prototype.save = function () {
-    return WordExerciseModel(this).save();
-};
-
-WordExercise.getByType = function (type, mail) {
-    return WordExerciseModel.find( {type, mail} ).exec();
-};
-
-module.exports = WordExercise;

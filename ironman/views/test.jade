@@ -1,0 +1,22 @@
+//
+   Created by wizard on 11/2/16.
+
+doctype html
+html
+    head
+        include head
+        link(rel='stylesheet', href='/stylesheets/exercises.css')
+        script(src='/icheck/icheck.js')
+        include test-tmpl
+    body
+        .container
+            .row
+                button#clickbutton.btn.btn-default(type='button') nice
+
+            .row
+                .col-lg-12
+                    #content
+
+        script(src='/javascripts/require.js' async='true' defer data-main='/javascripts/test.js')
+
+

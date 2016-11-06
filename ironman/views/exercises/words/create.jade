@@ -11,25 +11,25 @@ html
             .row.col-lg-12
                 h3 添加新单词
             .row.col-lg-10.col-lg-offset-2
-                p#message.text-primary &nbsp;
+                p#message.text-primary 红色星标选项是必填
             form#create.form-horizontal(role='from' target='/exercises/words/create' method='POST')
-                .form-group
+                .form-group.required
                     label.col-lg-2.control-label(for='word') 单词
                     .col-lg-10
                         input.form-control#word(type='text' name='word')
-                .form-group
+                .form-group.required
                     label.col-lg-2.control-label(for='partOfSpeech') 词性
                     .col-lg-10
                         input.form-control#partOfSpeech(name='partOfSpeech')
-                .form-group
+                .form-group.required
                     label.col-lg-2.control-label(for='explanation') 含义
                     .col-lg-10
                         input.form-control#explanation(type='text' name='explanation')
-                .form-group
+                .form-group.required
                     label.col-lg-2.control-label(for='example') 例句
                     .col-lg-10
                         input.form-control#example(type='text' name='example')
-                .form-group
+                .form-group.required
                     label.col-lg-2.control-label(for='exampleExplanation') 例句含义
                     .col-lg-10
                         input.form-control#exampleExplanation(type='text' name='exampleExplanation')
