@@ -12,30 +12,31 @@ html
                 h3 添加新单词
             .row.col-lg-10.col-lg-offset-2
                 p#message.text-primary 红色星标选项是必填
-            form#create.form-horizontal(role='from' target='/exercises/words/create' method='POST')
-                .form-group.required
-                    label.col-lg-2.control-label(for='word') 单词
-                    .col-lg-10
-                        input.form-control#word(type='text' name='word')
-                .form-group.required
-                    label.col-lg-2.control-label(for='partOfSpeech') 词性
-                    .col-lg-10
-                        input.form-control#partOfSpeech(name='partOfSpeech')
-                .form-group.required
-                    label.col-lg-2.control-label(for='explanation') 含义
-                    .col-lg-10
-                        input.form-control#explanation(type='text' name='explanation')
-                .form-group.required
-                    label.col-lg-2.control-label(for='example') 例句
-                    .col-lg-10
-                        input.form-control#example(type='text' name='example')
-                .form-group.required
-                    label.col-lg-2.control-label(for='exampleExplanation') 例句含义
-                    .col-lg-10
-                        input.form-control#exampleExplanation(type='text' name='exampleExplanation')
-                .form-group
-                    label.col-lg-2.control-label(for='others') 其他
-                    .col-lg-10
-                        input.form-control#others(type='text' name='others')
-                button.btn.btn-success.btn-large.col-lg-4.col-center-block(type='submit') Submit
+
+                form#create.form-horizontal(role='from' target='/exercises/words/create' method='POST')
+                    .form-group.required
+                        label.col-lg-2.control-label(for='word') 单词
+                        .col-lg-10
+                            input.form-control#word(type='text' name='word')
+                    .form-group.required
+                        label.col-lg-2.control-label(for='partOfSpeech') 词性
+                        .col-lg-10
+                            input.form-control#partOfSpeech(name='partOfSpeech')
+                    .form-group.required
+                        label.col-lg-2.control-label(for='explanation') 含义
+                        .col-lg-10
+                            input.form-control#explanation(type='text' name='explanation')
+                    .form-group.required
+                        label.col-lg-2.control-label(for='example') 例句
+                        .col-lg-10
+                            input.form-control#example(type='text' name='example')
+                    .form-group.required
+                        label.col-lg-2.control-label(for='exampleExplanation') 例句含义
+                        .col-lg-10
+                            input.form-control#exampleExplanation(type='text' name='exampleExplanation')
+                    .form-group
+                        label.col-lg-2.control-label(for='others') 其他
+                        .col-lg-10
+                            input.form-control#others(type='text' name='others')
+                    button.btn.btn-success.btn-large.col-lg-4.col-center-block(type='submit') Submit
         script(src='/javascripts/require.js' async='true' defer data-main='/javascripts/exercises/words/create.js')
