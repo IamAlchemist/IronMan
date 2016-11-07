@@ -1,23 +1,24 @@
 'use strict';
 
-const mongoose = require('../libs/mongodb');
+const mongodb = require('../libs/mongodb');
+const timestamps = require('../libs/mongoose-timestamp');
+const Schema = mongodb.Schema;
 
-const UserModel = mongoose.model('User', {
+
+const UserSchema = new Schema({
     mail: String,
-    password: String
+    password: String,
+    isStudent: Boolean
 });
+UserSchema.plugin(timestamps);
 
-function User(user) {
-    this.mail = user.mail;
-    this.password = user.password;
-}
+const UserModel = mongodb.model('User', UserSchema);
+module.exports.UserModel = UserModel;
 
-User.prototype.save = function () {
-    return UserModel(this).save();
+module.exports.makeUser = function (mail, password, isStudent = true) {
+    return new UserModel({
+        mail,
+        password,
+        isStudent
+    });
 };
-
-User.getByMail = function (mail) {
-    return UserModel.findOne({mail: mail}).exec();
-};
-
-module.exports = User;

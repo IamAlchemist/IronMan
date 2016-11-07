@@ -58,10 +58,10 @@ router.post("/login", function (req, res) {
         return res.send(result);
     }
 
-    User.getByMail(mail)
-
+    User.UserModel.findOne({mail}).exec()
         .then((user)=> {
             if (user.password != md5_password) {
+                logger.warn(`passwd is not corrent: ${user.password} != ${md5_password}`);
                 const result = new ApiResult(3);
                 logger.info(result.message);
                 return res.send(result);
@@ -84,9 +84,13 @@ router.post("/register", function (req, res) {
 
     const mail = req.body.mail.trim(),
         password = req.body.password.trim(),
-        repassword = req.body.repassword.trim();
+        repassword = req.body.repassword.trim(),
+        isStudentOrParent = req.body.isStudentOrParent.trim();
 
-    if (mail == "" || password == "" || repassword == "") {
+
+    if (mail == "" || password == "" || repassword == ""
+        || isStudentOrParent == ""
+        || (isStudentOrParent != "student" && isStudentOrParent != "parent")) {
         const result = new ApiResult(4);
         logger.info(result.message);
         return res.send(result);
@@ -101,12 +105,9 @@ router.post("/register", function (req, res) {
     const md5 = crypto.createHash('md5'),
         passwd = md5.update(req.body.password).digest('hex');
 
-    const newUser = new User({
-        mail,
-        password: passwd
-    });
+    const newUser = User.makeUser(mail, passwd, isStudentOrParent == "student");
 
-    User.getByMail(mail)
+    User.UserModel.findOne({mail}).exec()
 
         .then((user) => {
             const result = new ApiResult(6, {mail: user.mail});
