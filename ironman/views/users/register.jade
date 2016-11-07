@@ -22,6 +22,14 @@ html
                         input#re_password.form-control(type='password' name='repassword' placeholder='Password' required=true)
                 .form-group
                     .col-lg-10.col-lg-offset-2
+                        label.radio-inline
+                            input#isStudent(type='radio' name='isStudentOrParent' value='student')
+                            | 我是学生
+                        label.radio-inline
+                            input#isParent(type='radio' name='isStudentOrParent' value='parent')
+                            | 我是家长
+                .form-group
+                    .col-lg-10.col-lg-offset-2
                         button.btn.btn-primary.btn-block(type='submit') 注册
                 .form-group
                     .col-lg-10.col-lg-offset-2
