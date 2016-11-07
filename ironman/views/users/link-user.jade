@@ -1,0 +1,37 @@
+//
+   Created by wizard on 11/7/16.
+doctype html
+html
+    head
+        include ../head
+    body
+        include ../navbar
+        .container
+            .row
+                .col-lg-6.col-center-block
+                    .row
+                        h3.text-center 设置关联账号
+                    .row(style='margin-bottom: 10px')
+                        if linkedUsers == undefined || linkedUsers.length == 0
+                            h6.text-center 暂无关联账号
+                        else
+                            ul.list-unstyled
+                                li 已关联的账号
+                                for linkedUser in linkedUsers
+                                    li #{linkedUser.type}, #{linkedUser.name}
+                    .row(style='margin-bottom: 10px')
+                        form#link-user-form.hidden(role='form' target='/users/link-user' method='POST')
+                            .from-group
+                                h6.form-control-static 学生只能关联家长，家长只能关联学生
+                            .form-group
+                                label.control-label(for='email') 要关联的email
+                                input#email.form-control(type='email' name='email' placeholder='Email address' required=true autofocus=true)
+                            .form-group
+                                button.btn.btn-success.btn-block(type='submit') 提交
+                    .row
+                        .form-group
+                            button#addButton.btn.btn-block.btn-success(type='button' onclick='addNewLink()') 添加
+
+        script(src='/javascripts/require.js' async='true' defer data-main='/javascripts/users/link-user.js')
+
+

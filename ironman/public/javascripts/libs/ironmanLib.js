@@ -7,7 +7,7 @@ define(function () {
         return x + y;
     };
 
-    function setupCreateForm(jqElem, callback) {
+    function setupForm(jqElem, callback) {
 
         jqElem.submit(function (event) {
             event.preventDefault();
@@ -53,7 +53,7 @@ define(function () {
 
     return {
         add: add,
-        setupCreateForm: setupCreateForm,
+        setupForm: setupForm,
         decorateRadioInputs: decorateRadioInputs
     };
 });

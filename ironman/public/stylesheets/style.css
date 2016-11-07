@@ -18,6 +18,13 @@ body {
     margin-right: 0;
 }
 
+.col-center-block {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .jumbotron.jumbotron-white {
     background-color: #ffffff;
     min-height: 500px;

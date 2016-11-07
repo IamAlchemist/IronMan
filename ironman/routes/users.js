@@ -38,13 +38,28 @@ router.get('/profile', function (req, res) {
     res.render('users/profile', options);
 });
 
-router.get("/logout", function (req, res) {
+router.get('/logout', function (req, res) {
     req.session.user = null;
     res.redirect('/');
 });
 
+router.get('/link-user', (req, res)=>{
+    const mail = req.session.user.mail;
+    User.UserModel.findOne({mail}).exec()
+        .then((user)=>{
+            res.render('users/link-user', {'linkedUsers': user.linkedUsers});
+        })
+        .catch(()=>{
+            res.render('users/link-user');
+        });
+});
+
 
 /* POST */
+router.post('/link-user', (req, res)=>{
+    res.send(new ApiResult(0));
+});
+
 router.post("/login", function (req, res) {
 
     var mail = req.body.email.trim(),

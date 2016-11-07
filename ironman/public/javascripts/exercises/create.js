@@ -9,7 +9,7 @@ require(['../libs/ironmanLib'], function (ironmanLib) {
         "use strict";
         messageElem = $('p#message');
 
-        ironmanLib.setupCreateForm($('form#create'), function (data) {
+        ironmanLib.setupForm($('form#create'), function (data) {
             let msg = data.content != undefined ? data.content.message : undefined;
             msg = msg == undefined ? data.message : msg;
             messageElem.text(msg);
