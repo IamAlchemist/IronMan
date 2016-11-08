@@ -2,19 +2,24 @@
  * Created by wizard on 11/8/16.
  */
 
-const mongodb = require('./mongodb');
-const Promise = require('bluebird').Promise;
-const User = require('../models/user');
-const logger = require('../libs/ironmanLogger');
+const mongodb = require('./mongodb'),
+    Promise = mongodb.Promise,
+    User = require('../models/user'),
+    logger = require('../libs/ironmanLogger');
+
+module.exports.getUserFromRequest = function (req) {
+    return req.session.user;
+};
+
 
 module.exports.linkUser = function (mail, linkedUserMail) {
     let originUser;
     return User.UserModel.findOne({mail}).exec()
-        .then((user)=>{
+        .then((user)=> {
             originUser = user;
             return User.UserModel.findOne({mail: linkedUserMail}).exec();
         })
-        .then((linkedUser)=>{
+        .then((linkedUser)=> {
             if (originUser.isStudent == linkedUser.isStudent) {
                 throw new Error("绑定的账户和原账户类型不能相同");
             }
@@ -31,7 +36,7 @@ module.exports.linkUser = function (mail, linkedUserMail) {
 
             return Promise.all([linkedUser.save(), originUser.save()]);
         })
-        .catch((error)=>{
+        .catch((error)=> {
             logger.error(`link user error : ${error}`);
             throw error;
         });

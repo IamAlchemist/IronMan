@@ -31,7 +31,7 @@ module.exports.punchToday = function (mail) {
         });
 };
 
-module.exports.didPunchToday = function (mail) {
+module.exports.isPunchedToday = function (mail) {
     const startOfDay = moment().startOf('day');
     const endOfDay = moment().endOf('day');
 

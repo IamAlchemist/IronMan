@@ -3,13 +3,15 @@
  */
 'use strict';
 
-const express = require('express');
-const Result = require('../libs/api-result');
-const logger = require('../libs/ironmanLogger');
-const Exercise = require('../models/exercise');
-const WordExercise = require('../models/wordExercise');
-const wordsExercisesLib = require('../libs/wordsExercisesLib');
-const router = express.Router();
+const express = require('express'),
+    Result = require('../libs/api-result'),
+    logger = require('../libs/ironmanLogger'),
+    Exercise = require('../models/exercise'),
+    WordExercise = require('../models/wordExercise'),
+    wordsExercisesLib = require('../libs/wordsExercisesLib'),
+    punching = require('../models/punchingRecord'),
+    comonLib = require('../libs/commonLib'),
+    router = express.Router();
 
 router.get('/', function (req, res) {
     Exercise.ExerciseModel.find({type: 0}).exec()
@@ -42,8 +44,33 @@ router.get('/words/memorizing', function (req, res) {
 
 
 /* API */
+router.get('/words/isPunched', (req, res)=> {
+    const user = comonLib.getUserFromRequest(req);
+    if (!user) { return res.send(new Result(8)); }
+
+    punching.isPunchedToday(user.mail)
+        .then((isPunched)=>{
+            return res.send(new Result(0, {isPunched}));
+        });
+});
+
+router.get('/words/punching', (req, res) => {
+    const user = comonLib.getUserFromRequest(req);
+    if (!user) { return res.send(new Result(8)); }
+
+    punching.punchToday(user.mail)
+        .then(()=>{
+            return res.send(new Result(0));
+        })
+        .then(()=>{
+            return res.send(new Result(106));
+        })
+});
+
 router.get('/words/wordExercisesForToday', (req, res)=> {
-    const user = req.session.user;
+    const user = comonLib.getUserFromRequest(req);
+    if (!user) { return res.send(new Result(8)); }
+
     wordsExercisesLib.wordExercisesForToday(user.mail)
         .then((wordProcesses)=> {
             const result = new Result(0, wordProcesses);
@@ -56,7 +83,9 @@ router.get('/words/wordExercisesForToday', (req, res)=> {
 });
 
 router.get('/words/bank/update', function (req, res) {
-    const user = req.session.user;
+    const user = comonLib.getUserFromRequest(req);
+    if (!user) { return res.send(new Result(8)); }
+
     wordsExercisesLib.updateStudentWordsBank(user.mail)
         .then((progresses)=> {
             logger.info(`update succeed : ${progresses.length}`);
@@ -75,22 +104,21 @@ router.post('/words/wordExercisesForToday/updateResult', function (req, res) {
     }
 
     wordsExercisesLib.updateWordExerciseProgresses(progresses)
-        .then((saves)=>{
+        .then((saves)=> {
             logger.info(`update succeed : ${saves.length}`);
             return res.send(new Result(0, {count: saves.length}));
         })
-        .catch((error)=>{
+        .catch((error)=> {
             logger.error(JSON.stringify(error));
             return res.send(new Result(105, {error: error}));
         });
 });
 
 router.post('/create', function (req, res) {
-    if (!req.session.user) {
-        return res.send(new Result(8));
-    }
+    const user = comonLib.getUserFromRequest(req);
+    if (!user) { return res.send(new Result(8)); }
 
-    const mail = req.session.user.mail,
+    const mail = user.mail,
         title = req.body.title.trim(),
         description = req.body.description.trim(),
         answer = req.body.answer;
@@ -142,11 +170,12 @@ router.post('/create', function (req, res) {
 ;
 
 router.post('/words/create', function (req, res) {
-    if (!req.session.user) {
+    const user = comonLib.getUserFromRequest(req);
+    if (!user) {
         return res.send(new Result(8));
     }
 
-    const mail = req.session.user.mail,
+    const mail = user.mail,
         word = req.body.word.trim(),
         partOfSpeech = req.body.partOfSpeech.trim(),
         explanation = req.body.explanation.trim(),
