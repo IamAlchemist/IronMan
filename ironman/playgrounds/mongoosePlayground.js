@@ -1,13 +1,18 @@
 'use strict';
-const logger = require('./../libs/ironmanLogger');
+const logger = require('../libs/ironmanLogger');
 const bluebird = require('bluebird');
 const mongoose = require('mongoose');
+const timestamp = require('../libs/mongoose-timestamp');
+const moment = require('moment');
 mongoose.Promise = bluebird.Promise;
 const mongodb = mongoose.connect('mongodb://localhost/test');
 
-const WordModel = mongodb.model('Word', {
+const WordSchema = new mongodb.Schema({
     word: String
 });
+WordSchema.plugin(timestamp);
+const WordModel = mongodb.model('Word', WordSchema);
+
 
 const WordProgressModel = mongodb.model('WordProgress', {
     progress: Number,
@@ -102,11 +107,11 @@ function demo() {
             // console.log("fk ---- :" + JSON.stringify(array));
             // return Promise.all(array);
         })
-        .then((words)=>{
+        .then((words)=> {
             console.log(`words size : ${words.length}`);
             console.log(words[0].constructor);
         })
-        .catch((error)=>{
+        .catch((error)=> {
             console.log("fk:" + JSON.stringify(error));
         });
 }
@@ -115,61 +120,55 @@ function update() {
     WordProgressModel
         .find({})
         .exec()
-        .then((progresses)=>{
+        .then((progresses)=> {
             let ids = progresses.map(prog => prog._id);
             return WordProgressModel.find({
                 '_id': {
-                     $in: ids
-                 }
+                    $in: ids
+                }
             }).exec();
         })
         .then((progresses) => {
-            return progresses.map((progress)=>{
+            return progresses.map((progress)=> {
                 progress.progress = 6;
                 return progress.save();
             });
         })
-        .then((progresses)=>{
+        .then((progresses)=> {
             console.log(`${progresses.length}`);
         });
 }
-update();
+
+function queryDate() {
+    var startOfDay = moment().startOf('day');
+    var endOfDay = moment().endOf('day');
+
+
+    WordModel.findOne({
+        createdAt: {
+            $gte: startOfDay.toDate(),
+            $lte: endOfDay.toDate()
+        }
+    }).exec()
+        .then((word)=> {
+            console.log(`word : ${JSON.stringify(word)}`);
+        })
+        .catch((error)=> {
+            console.log(JSON.stringify(error, null, "  "));
+        });
+}
+
+function save() {
+    const word = "test";
+    const wordm = WordModel({word});
+    wordm.save();
+}
+save();
+//queryDate();
+//update();
 //demo();
 //insertAWord();
 //insertAWordProgress();
 //showWord();
 //showChain();
 //query();
-
-
-// var Q = require('q');
-// /**
-//  *@private
-//  */
-// function getPromise(msg,timeout,opt) {
-//     var defer = Q.defer();
-//     setTimeout(function(){
-//         console.log(msg);
-//         if(opt)
-//             defer.reject(msg);
-//         else
-//             defer.resolve(msg);
-//     },timeout);
-//     return defer.promise;
-// }
-// /**
-//  *没有用done()结束的promise链
-//  *由于getPromse('2',2000,'opt')返回rejected, getPromise('3',1000)就没有执行
-//  *然后这个异常并没有任何提醒，是一个潜在的bug
-//  */
-// // getPromise('1',3000)
-// //     .then(function(){return getPromise('2',2000,'opt')})
-// //     .then(function(){return getPromise('3',1000)});
-// /**
-//  *用done()结束的promise链
-//  *有异常抛出
-//  */
-// getPromise('1',3000)
-//     .then(function(){return getPromise('2',2000,'opt')})
-//     .then(function(){return getPromise('3',1000)})
-//     .done();
