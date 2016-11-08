@@ -309,7 +309,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
         progressBarElem.attr('style', `width: ${p}%;`);
 
         if (correctAnswerNumber == total) {
-            nextButtonElem.text("查看学习结果");
+            nextButtonElem.text("上传学习结果");
         }
         nextButtonCotainerElem.show();
     }

@@ -11,6 +11,7 @@ const express = require('express'),
     wordsExercisesLib = require('../libs/wordsExercisesLib'),
     punching = require('../models/punchingRecord'),
     comonLib = require('../libs/commonLib'),
+    Promise = require('bluebird').Promise,
     router = express.Router();
 
 router.get('/', function (req, res) {
@@ -54,18 +55,18 @@ router.get('/words/isPunched', (req, res)=> {
         });
 });
 
-router.get('/words/punching', (req, res) => {
-    const user = comonLib.getUserFromRequest(req);
-    if (!user) { return res.send(new Result(8)); }
-
-    punching.punchToday(user.mail)
-        .then(()=>{
-            return res.send(new Result(0));
-        })
-        .then(()=>{
-            return res.send(new Result(106));
-        })
-});
+// router.get('/words/punching', (req, res) => {
+//     const user = comonLib.getUserFromRequest(req);
+//     if (!user) { return res.send(new Result(8)); }
+//
+//     punching.punchToday(user.mail)
+//         .then(()=>{
+//             return res.send(new Result(0));
+//         })
+//         .catch(()=>{
+//             return res.send(new Result(106));
+//         })
+// });
 
 router.get('/words/wordExercisesForToday', (req, res)=> {
     const user = comonLib.getUserFromRequest(req);
@@ -98,16 +99,29 @@ router.get('/words/bank/update', function (req, res) {
 });
 
 router.post('/words/wordExercisesForToday/updateResult', function (req, res) {
+    const user = comonLib.getUserFromRequest(req);
+    if (!user) { return res.send(new Result(8)); }
+
     const progresses = req.body.content;
+
     if (progresses == undefined || !(progresses instanceof Array)) {
         return res.send(new Result(105));
     }
 
     wordsExercisesLib.updateWordExerciseProgresses(progresses)
+
         .then((saves)=> {
             logger.info(`update succeed : ${saves.length}`);
-            return res.send(new Result(0, {count: saves.length}));
+            return new Promise(function (resolve) {
+                resolve(saves.length);
+            });
         })
+
+        .then((count)=>{
+            punching.punchToday(user.mail);
+            return res.send(new Result(0, {count}));
+        })
+
         .catch((error)=> {
             logger.error(JSON.stringify(error));
             return res.send(new Result(105, {error: error}));
