@@ -7,6 +7,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     var progressElem;
     var progressBarElem;
     var totalNumberElem;
+    var messageAlertElem;
 
     var messageElem;
     var hintElem;
@@ -36,6 +37,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
         progressElem.hide();
         progressBarElem = $('#progressbar');
         totalNumberElem = $('#totalNumber');
+        messageAlertElem = $('#messageAlert');
 
         initStartMemorizing();
     });
@@ -388,14 +390,14 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
                     if (result.errorCode == 0) {
                         originalWordExerciseProgresses = result.content;
                         if (originalWordExerciseProgresses.length == 0) {
-                            messageElem.text('no more exercises');
+                            messageAlertElem.html(ironmanLib.alert('no more exercises', 'alert-warning'));
                         }
                         else {
                             startMemorizing();
                         }
                     }
                     else {
-                        messageElem.text(result.message);
+                        messageAlertElem.html(ironmanLib.alert(result.message, 'alert-danger'));
                     }
                 })
                 .fail(function (error) {

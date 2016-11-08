@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b903ec8f-157f-4431-8659-022e2b0cd42a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/commonLib.js" afterPath="$PROJECT_DIR$/libs/commonLib.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/punchingRecord.js" afterPath="$PROJECT_DIR$/models/punchingRecord.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/exercises/words/memorizing.js" afterPath="$PROJECT_DIR$/public/javascripts/exercises/words/memorizing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/exercises/words/memorizing.jade" afterPath="$PROJECT_DIR$/views/exercises/words/memorizing.jade" />
     </list>
     <ignored path="ironman.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,8 +32,8 @@
           <file leaf-file-name="memorizing.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/javascripts/exercises/words/memorizing.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+                <state relative-caret-position="355">
+                  <caret line="390" column="33" selection-start-line="390" selection-start-column="33" selection-end-line="390" selection-end-column="33" />
                   <folding />
                 </state>
               </provider>
@@ -43,8 +42,8 @@
           <file leaf-file-name="memorizing.jade" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/views/exercises/words/memorizing.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+                <state relative-caret-position="225">
+                  <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
                   <folding />
                 </state>
               </provider>
@@ -53,7 +52,7 @@
           <file leaf-file-name="memorizingTmpl.jade" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/views/exercises/words/memorizingTmpl.jade">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="412">
+                <state relative-caret-position="1965">
                   <caret line="131" column="32" selection-start-line="131" selection-start-column="32" selection-end-line="131" selection-end-column="32" />
                   <folding />
                 </state>
@@ -87,8 +86,8 @@
           <file leaf-file-name="commonLib.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/libs/commonLib.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+                <state relative-caret-position="105">
+                  <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
                   <folding>
                     <element signature="e#0#40#0" expanded="false" />
                   </folding>
@@ -147,7 +146,6 @@
         <option value="$PROJECT_DIR$/views/exercises/home.jade" />
         <option value="$PROJECT_DIR$/views/test.jade" />
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/views/exercises/words/memorizing.jade" />
         <option value="$PROJECT_DIR$/public/javascripts/users/profile.js" />
         <option value="$PROJECT_DIR$/views/exercises/words/create.jade" />
         <option value="$PROJECT_DIR$/public/javascripts/exercises/home.js" />
@@ -176,9 +174,10 @@
         <option value="$PROJECT_DIR$/playgrounds/mongoosePlayground.js" />
         <option value="$PROJECT_DIR$/libs/api-result.js" />
         <option value="$PROJECT_DIR$/routes/exercises.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/exercises/words/memorizing.js" />
         <option value="$PROJECT_DIR$/models/punchingRecord.js" />
         <option value="$PROJECT_DIR$/libs/commonLib.js" />
+        <option value="$PROJECT_DIR$/views/exercises/words/memorizing.jade" />
+        <option value="$PROJECT_DIR$/public/javascripts/exercises/words/memorizing.js" />
       </list>
     </option>
   </component>
@@ -381,14 +380,7 @@
       <workItem from="1478524660870" duration="5056000" />
       <workItem from="1478571087301" duration="4418000" />
       <workItem from="1478597999317" duration="7680000" />
-      <workItem from="1478637754030" duration="6080000" />
-    </task>
-    <task id="LOCAL-00015" summary="minor fix: change the db name &quot;IronMan&quot;">
-      <created>1477874033567</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1477874033567</updated>
+      <workItem from="1478637754030" duration="6639000" />
     </task>
     <task id="LOCAL-00016" summary="add docs.css">
       <created>1477875865254</created>
@@ -726,17 +718,24 @@
       <option name="project" value="LOCAL" />
       <updated>1478645259514</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="minor fix">
+      <created>1478646354292</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1478646354292</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244811000" />
+    <option name="totallyTimeSpent" value="245370000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22057787" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17195208" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44578314" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -788,7 +787,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="finish update words" />
     <MESSAGE value="minor ui change,  exercises/words/create, exercises/create" />
     <MESSAGE value="learn handlebar" />
     <MESSAGE value="add time stamp in word exercises" />
@@ -813,7 +811,8 @@
     <MESSAGE value="finish &quot;学生可以看到父母提交的单词&quot;" />
     <MESSAGE value="finish punching record" />
     <MESSAGE value="mc" />
-    <option name="LAST_COMMIT_MESSAGE" value="mc" />
+    <MESSAGE value="minor fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1144,22 +1143,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/exercises/words/memorizingTmpl.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="131" column="32" selection-start-line="131" selection-start-column="32" selection-end-line="131" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/exercises/words/memorizing.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/exercises.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1184,20 +1167,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/exercises/words/memorizingTmpl.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1965">
+          <caret line="131" column="32" selection-start-line="131" selection-start-column="32" selection-end-line="131" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/libs/commonLib.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+        <state relative-caret-position="105">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/exercises/words/memorizing.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/exercises/words/memorizing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        <state relative-caret-position="355">
+          <caret line="390" column="33" selection-start-line="390" selection-start-column="33" selection-end-line="390" selection-end-column="33" />
           <folding />
         </state>
       </provider>
