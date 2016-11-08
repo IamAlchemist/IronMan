@@ -1,18 +1,14 @@
 /**
  * Created by wizard on 11/2/16.
  */
+const className = 'alert-warning',
+    message = 'hello';
 
-var m = [[1], [2,3], [4], [5,6]];
-var n = [].concat(...m);
+const text = `<div class="alert ${className} alert-dismissible" role="alert">
+                  <button type="button" class="close" data-dismiss="alert">
+                      <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                  </button>
+                  ${message}
+                </div>`;
 
-console.log(JSON.stringify(n));
-
-const progress1 = {_id: "this"};
-
-var map = new Map();
-
-map.set(progress1._id, progress1);
-
-console.log(""+map.has("this"));
-
-
+console.log(text);

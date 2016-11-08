@@ -57,14 +57,14 @@ router.get('/words/wordExercisesForToday', (req, res)=> {
 
 router.get('/words/bank/update', function (req, res) {
     const user = req.session.user;
-    wordsExercisesLib.updateWordsBank(user.mail)
+    wordsExercisesLib.updateStudentWordsBank(user.mail)
         .then((progresses)=> {
             logger.info(`update succeed : ${progresses.length}`);
             return res.send(new Result(0, {count: progresses.length}));
         })
         .catch((error)=> {
             logger.error(JSON.stringify(error));
-            return res.send(new Result(103, {error: error}));
+            return res.send(new Result(103, {message: error.message}));
         });
 });
 

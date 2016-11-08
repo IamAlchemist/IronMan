@@ -6,31 +6,71 @@ const mongodb = require('./mongodb');
 const Promise = require('bluebird').Promise;
 const WordExerciseProgress = require('../models/wordExerciseProgress');
 const WordExercise = require('../models/wordExercise');
+const User = require('../models/user');
 const logger = require('../libs/ironmanLogger');
 
-module.exports.updateWordsBank = function updateWordsBank(mail) {
-    return WordExerciseProgress.WordExerciseProgressModel
-        .find({mail})
-        .sort('-_id')
-        .exec()
-        .then((progresses)=> {
-            logger.info(`progresses size : ${progresses.length}`);
+module.exports.updateStudentWordsBank = function (mail) {
+    let cacheWordMails = [];
+
+    return User.UserModel.findOne({mail}).exec()
+
+        .then((user)=> {
+            if (!user.isStudent) {
+                throw Error('should be student account');
+            }
+            logger.info('user is a student');
+
+            let allUserMails = [];
+
+            if (user.linkedUserMails != undefined && user.linkedUserMails.length != 0) {
+                allUserMails = user.linkedUserMails.slice(0);
+            }
+
+            allUserMails.push(user.mail);
+
+            return new Promise(function (resolve) {
+                resolve(allUserMails);
+            });
+        })
+
+        .then((wordMails)=> {
+
+            if (wordMails.length == 0) {
+                throw Error('no related account');
+            }
+
+            logger.info(`find words from mails, mails count: ${wordMails.length}`);
+
+            cacheWordMails = wordMails;
+
+            return WordExerciseProgress.WordExerciseProgressModel
+                .find({mail})
+                .sort('-_id')
+                .exec()
+        })
+
+        .then((progresses)=>{
+
+            logger.info(`find progresses size : ${progresses.length}`);
             if (progresses.length == 0) {
-                return WordExercise.WordExerciseModel.find({}).exec();
+                return WordExercise.WordExerciseModel.find({mail: {$in: cacheWordMails}})
+                    .exec();
             }
             else {
                 const progress = progresses[0];
-                return WordExercise.WordExerciseModel.find({mail})
+                return WordExercise.WordExerciseModel.find({mail: {$in: cacheWordMails}})
                     .where('_id').gt(progress.wordExercise._id)
                     .exec();
-
             }
         })
-        .then((words)=> {
-            logger.info(`words size : ${words.length}`);
-            return Promise.all(words.map((word)=> WordExerciseProgress.MakeWordExerciseProgress(mail, word).save()));
+
+        .then((wordExercises)=>{
+            logger.info(`wordExercises size : ${wordExercises.length}`);
+            return new Promise.all(wordExercises.map((word)=> WordExerciseProgress.MakeWordExerciseProgress(mail, word).save()));
         })
-        .catch((error)=> {
+
+        .catch((error)=>{
+            logger.error(`error : ${error.message}`);
             throw error;
         });
 };
