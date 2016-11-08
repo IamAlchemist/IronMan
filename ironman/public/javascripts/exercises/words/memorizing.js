@@ -40,7 +40,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
         initStartMemorizing();
     });
 
-    function showCelebrationPage() {
+    function showCelebrationPage(wordExerciseProgresses) {
         if (celebrationTmpl == undefined) {
             let source = $('#celebration-template').html();
             celebrationTmpl = Handlebars.compile(source);
@@ -257,7 +257,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
 
         posting.done(function (response) {
             if (response.errorCode == 0) {
-                showCelebrationPage();
+                showCelebrationPage(wordExerciseProgresses);
             }
             else {
                 messageElem.text(response.message);
@@ -361,11 +361,24 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     }
 
     function initStartMemorizing() {
-        const source = $('#startMemorizing-template').html();
-        const startMemorizingTmpl = Handlebars.compile(source);
+        $.getJSON('/exercises/words/isPunched')
+            .done((result)=>{
+                if (result.errorCode == 0) {
+                    if (result.content.isPunched) {
 
-        contentElem.html(startMemorizingTmpl());
-        initStartMemorizingButton();
+                    }
+                    else {
+                        const source = $('#startMemorizing-template').html();
+                        const startMemorizingTmpl = Handlebars.compile(source);
+
+                        contentElem.html(startMemorizingTmpl());
+                        initStartMemorizingButton();
+                    }
+                }
+                else {
+                    messageElem.text(result.message);
+                }
+            });
     }
 
     function initStartMemorizingButton() {

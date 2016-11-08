@@ -3,7 +3,7 @@
  */
 
 const mongodb = require('./mongodb'),
-    Promise = mongodb.Promise,
+    Promise = require('bluebird'),
     User = require('../models/user'),
     logger = require('../libs/ironmanLogger');
 

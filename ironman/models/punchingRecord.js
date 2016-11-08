@@ -2,9 +2,11 @@
  * Created by wizard on 11/9/16.
  */
 
-const moment = require('moment');
-const logger = require('../libs/ironmanLogger');
-const mongodb = require('../libs/mongodb');
+const moment = require('moment'),
+    logger = require('../libs/ironmanLogger'),
+    Promise = require('bluebird').Promise,
+    mongodb = require('../libs/mongodb');
+
 const timestamps = require('../libs/mongoose-timestamp');
 const Schema = mongodb.Schema;
 
@@ -25,7 +27,7 @@ module.exports.punchToday = function (mail) {
     const punch = new PunchingRecordModel({mail});
     return punch.save()
 
-        .catch((error)=>{
+        .catch((error)=> {
             logger.error(error.message);
             throw error;
         });
@@ -45,7 +47,7 @@ module.exports.isPunchedToday = function (mail) {
         }).exec()
 
         .then((punching)=> {
-            return new mongodb.Promise(function (resolve) {
+            return new Promise(function (resolve) {
                 resolve(punching != null)
             });
         })
