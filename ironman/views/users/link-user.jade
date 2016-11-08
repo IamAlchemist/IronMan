@@ -18,7 +18,7 @@ html
                             ul.list-unstyled
                                 li 已关联的账号
                                 for linkedUser in linkedUsers
-                                    li #{linkedUser.type}, #{linkedUser.name}
+                                    li #{linkedUser.name},#{linkedUser.type}
                     .row(style='margin-bottom: 10px')
                         form#link-user-form.hidden(role='form' target='/users/link-user' method='POST')
                             .from-group

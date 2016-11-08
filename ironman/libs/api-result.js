@@ -11,6 +11,7 @@ errorMessages[5]='注册错误: 两次密码输入不一样';
 errorMessages[6]='注册错误: 用户已经存在';
 errorMessages[7]='注册错误: 保存用户错误';
 errorMessages[8]='需要重新登录';
+errorMessages[9]='绑定账户异常';
 
 errorMessages[101]='创建题目错误';
 errorMessages[102]='创建单词错误';

@@ -8,17 +8,20 @@ const Schema = mongodb.Schema;
 const UserSchema = new Schema({
     mail: String,
     password: String,
-    isStudent: Boolean
+    isStudent: Boolean,
+    linkedUserMails: [String]
 });
+
 UserSchema.plugin(timestamps);
 
 const UserModel = mongodb.model('User', UserSchema);
 module.exports.UserModel = UserModel;
 
-module.exports.makeUser = function (mail, password, isStudent = true) {
+module.exports.makeUser = function (mail, password, isStudent = true, linkedUserMails = []) {
     return new UserModel({
         mail,
         password,
-        isStudent
+        isStudent,
+        linkedUserMails
     });
 };

@@ -4,6 +4,7 @@ const express = require('express');
 const crypto = require('crypto');
 const User = require('../models/user');
 const logger = require('../libs/ironmanLogger');
+const ironmanLib = require('../libs/commonLib');
 const ApiResult = require('../libs/api-result');
 
 const router = express.Router();
@@ -47,7 +48,11 @@ router.get('/link-user', (req, res)=>{
     const mail = req.session.user.mail;
     User.UserModel.findOne({mail}).exec()
         .then((user)=>{
-            res.render('users/link-user', {'linkedUsers': user.linkedUsers});
+            const linkedUsers = user.linkedUserMails.map((mail)=>{
+                return {name:mail, type: user.isStudent ? "家长" : "学生"};
+            });
+
+            res.render('users/link-user', {linkedUsers});
         })
         .catch(()=>{
             res.render('users/link-user');
@@ -57,7 +62,17 @@ router.get('/link-user', (req, res)=>{
 
 /* POST */
 router.post('/link-user', (req, res)=>{
-    res.send(new ApiResult(0));
+    const linkedUserMail = req.body.email.trim();
+    const user = req.session.user;
+
+    ironmanLib.linkUser(user.mail, linkedUserMail)
+        .then((users)=>{
+            const message = "关联成功";
+            res.send(new ApiResult(0, {message, users}));
+        })
+        .catch(()=>{
+            res.send(new ApiResult(9));
+        });
 });
 
 router.post("/login", function (req, res) {
