@@ -87,9 +87,7 @@ router.get('/words/achievementToday', (req, res)=> {
 
 router.get('/words/wordExercisesForToday', (req, res)=> {
     const user = comonLib.getUserFromRequest(req);
-    if (!user) {
-        return res.send(new Result(8));
-    }
+    if (!user) { return res.send(new Result(8)); }
 
     wordsExercisesLib.wordExercisesForToday(user.mail)
         .then((wordProcesses)=> {

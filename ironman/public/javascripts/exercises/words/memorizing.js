@@ -183,9 +183,10 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     }
 
     function advanceCurrentProgress(advanced) {
+        const maxPoint = 15;
         currentWordExerciseProgress.progress += advanced;
         currentWordExerciseProgress.progress = Math.max(currentWordExerciseProgress.progress, 0);
-        currentWordExerciseProgress.progress = Math.min(currentWordExerciseProgress.progress, 9);
+        currentWordExerciseProgress.progress = Math.min(currentWordExerciseProgress.progress, maxPoint);
     }
 
     function initSkipButton() {

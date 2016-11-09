@@ -10,6 +10,8 @@ const mongodb = require('./mongodb'),
     moment = require('moment'),
     logger = require('../libs/ironmanLogger');
 
+const maxProgress = 15;
+
 module.exports.updateStudentWordsBank = function (mail) {
     let cacheWordMails = [];
 
@@ -77,9 +79,42 @@ module.exports.updateStudentWordsBank = function (mail) {
 };
 
 module.exports.wordExercisesForToday = function (mail) {
+    let result = [];
+
     return WordExerciseProgress.WordExerciseProgressModel
         .find({mail})
-        .exec();
+        .where('progress').equals(0)
+        .sort('updatedAt')
+        .limit(10)
+        .exec()
+
+        .then((progresses)=> {
+            logger.info(`progress 0 count: ${progresses.length}`);
+            result = progresses.slice(0);
+            const leftedLimit = 20 - progresses.length;
+
+            return WordExerciseProgress.WordExerciseProgressModel
+                .find({mail})
+                .where('progress').gt(0).lte(maxProgress)
+                .sort('updatedAt')
+                .limit(leftedLimit)
+                .exec()
+        })
+
+        .then((progresses2)=> {
+            logger.info(`progress non-zero count: ${progresses2.length}`);
+            result = result.concat(progresses2.slice(0));
+
+            return new Promise(function (resolve) {
+                resolve(result);
+            })
+        })
+
+        .catch((error)=> {
+            logger.error(error.message);
+            throw error;
+        })
+
 };
 
 module.exports.updateWordExerciseProgresses = function (progresses) {
