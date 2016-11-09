@@ -47,11 +47,28 @@ router.get('/words/memorizing', function (req, res) {
 /* API */
 router.get('/words/isPunched', (req, res)=> {
     const user = comonLib.getUserFromRequest(req);
-    if (!user) { return res.send(new Result(8)); }
+    if (!user) {
+        return res.send(new Result(8));
+    }
 
     punching.isPunchedToday(user.mail)
-        .then((isPunched)=>{
+        .then((isPunched)=> {
             return res.send(new Result(0, {isPunched}));
+        });
+});
+
+router.get('/words/achievementToday', (req, res)=> {
+    const user = comonLib.getUserFromRequest(req);
+    if (!user) {
+        return res.send(new Result(8));
+    }
+
+    wordsExercisesLib.achievementToday(user.mail)
+        .then((progresses)=> {
+            res.send(new Result(0, {progressesToday: progresses}));
+        })
+        .catch(()=> {
+            res.send(new Result(107));
         });
 });
 
@@ -70,7 +87,9 @@ router.get('/words/isPunched', (req, res)=> {
 
 router.get('/words/wordExercisesForToday', (req, res)=> {
     const user = comonLib.getUserFromRequest(req);
-    if (!user) { return res.send(new Result(8)); }
+    if (!user) {
+        return res.send(new Result(8));
+    }
 
     wordsExercisesLib.wordExercisesForToday(user.mail)
         .then((wordProcesses)=> {
@@ -85,7 +104,9 @@ router.get('/words/wordExercisesForToday', (req, res)=> {
 
 router.get('/words/bank/update', function (req, res) {
     const user = comonLib.getUserFromRequest(req);
-    if (!user) { return res.send(new Result(8)); }
+    if (!user) {
+        return res.send(new Result(8));
+    }
 
     wordsExercisesLib.updateStudentWordsBank(user.mail)
         .then((progresses)=> {
@@ -100,7 +121,9 @@ router.get('/words/bank/update', function (req, res) {
 
 router.post('/words/wordExercisesForToday/updateResult', function (req, res) {
     const user = comonLib.getUserFromRequest(req);
-    if (!user) { return res.send(new Result(8)); }
+    if (!user) {
+        return res.send(new Result(8));
+    }
 
     const progresses = req.body.content;
 
@@ -117,7 +140,7 @@ router.post('/words/wordExercisesForToday/updateResult', function (req, res) {
             });
         })
 
-        .then((count)=>{
+        .then((count)=> {
             punching.punchToday(user.mail);
             return res.send(new Result(0, {count}));
         })
@@ -130,7 +153,9 @@ router.post('/words/wordExercisesForToday/updateResult', function (req, res) {
 
 router.post('/create', function (req, res) {
     const user = comonLib.getUserFromRequest(req);
-    if (!user) { return res.send(new Result(8)); }
+    if (!user) {
+        return res.send(new Result(8));
+    }
 
     const mail = user.mail,
         title = req.body.title.trim(),

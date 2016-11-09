@@ -2,12 +2,13 @@
  * Created by wizard on 11/1/16.
  */
 
-const mongodb = require('./mongodb');
-const Promise = require('bluebird').Promise;
-const WordExerciseProgress = require('../models/wordExerciseProgress');
-const WordExercise = require('../models/wordExercise');
-const User = require('../models/user');
-const logger = require('../libs/ironmanLogger');
+const mongodb = require('./mongodb'),
+    Promise = require('bluebird').Promise,
+    WordExerciseProgress = require('../models/wordExerciseProgress'),
+    WordExercise = require('../models/wordExercise'),
+    User = require('../models/user'),
+    moment = require('moment'),
+    logger = require('../libs/ironmanLogger');
 
 module.exports.updateStudentWordsBank = function (mail) {
     let cacheWordMails = [];
@@ -49,7 +50,7 @@ module.exports.updateStudentWordsBank = function (mail) {
                 .exec()
         })
 
-        .then((progresses)=>{
+        .then((progresses)=> {
 
             logger.info(`find progresses size : ${progresses.length}`);
             if (progresses.length == 0) {
@@ -64,12 +65,12 @@ module.exports.updateStudentWordsBank = function (mail) {
             }
         })
 
-        .then((wordExercises)=>{
+        .then((wordExercises)=> {
             logger.info(`wordExercises size : ${wordExercises.length}`);
             return new Promise.all(wordExercises.map((word)=> WordExerciseProgress.MakeWordExerciseProgress(mail, word).save()));
         })
 
-        .catch((error)=>{
+        .catch((error)=> {
             logger.error(`error : ${error.message}`);
             throw error;
         });
@@ -107,6 +108,20 @@ module.exports.updateWordExerciseProgresses = function (progresses) {
 
                 return p.save();
             })
+        });
+};
+
+module.exports.achievementToday = function (mail) {
+    const startOfDay = moment().startOf('day');
+    const endOfDay = moment().endOf('day');
+
+    return WordExerciseProgress.WordExerciseProgressModel
+        .find({mail})
+        .where('updatedAt').gte(startOfDay.toDate()).lte(endOfDay.toDate())
+        .exec()
+        .catch((error)=> {
+            logger.error(error.message);
+            throw error;
         });
 };
 

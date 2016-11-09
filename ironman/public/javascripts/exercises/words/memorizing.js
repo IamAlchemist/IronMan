@@ -364,10 +364,21 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
 
     function initStartMemorizing() {
         $.getJSON('/exercises/words/isPunched')
+
             .done((result)=>{
                 if (result.errorCode == 0) {
                     if (result.content.isPunched) {
 
+                        $.getJSON('/exercises/words/achievementToday')
+                            .done((res)=>{
+                                if (res.errorCode == 0) {
+                                    const progress = res.content.progressesToday;
+                                    showCelebrationPage(progress);
+                                }
+                                else {
+                                    ironmanLib.alert(res.message, 'alert-danger');
+                                }
+                            })
                     }
                     else {
                         const source = $('#startMemorizing-template').html();
@@ -378,7 +389,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
                     }
                 }
                 else {
-                    messageElem.text(result.message);
+                    ironmanLib.alert(result.message, 'alert-danger');
                 }
             });
     }
