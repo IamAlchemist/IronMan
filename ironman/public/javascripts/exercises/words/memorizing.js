@@ -20,6 +20,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     var exerciseTmpl;
     var wordDetailTmpl;
     var celebrationTmpl;
+    var inspectionTmpl;
 
     var currentWordExerciseProgress;
     var currentWordExerciseProgressIndex;
@@ -42,13 +43,13 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
         initStartMemorizing();
     });
 
-    function showCelebrationPage(wordExerciseProgresses) {
+    function htmlFromWordExercisProgresses(wordExerciseProgresses, title) {
         if (celebrationTmpl == undefined) {
             let source = $('#celebration-template').html();
             celebrationTmpl = Handlebars.compile(source);
         }
 
-        const progresses = wordExerciseProgresses.map((p)=>{
+        const progresses = wordExerciseProgresses.map((p)=> {
             const word = p.wordExercise.word;
             const explanation = p.wordExercise.explanation;
             const progress = Math.floor(p.progress * 100 / 9);
@@ -56,7 +57,13 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
             return {word, explanation, progress};
         });
 
-        const html = celebrationTmpl(progresses);
+        return  celebrationTmpl({title,progresses});
+    }
+
+    function showCelebrationPage(wordExerciseProgresses) {
+        htmlFromWordExercisProgresses(wordExerciseProgresses);
+
+        const html = htmlFromWordExercisProgresses(wordExerciseProgresses);
         contentElem.html(html);
 
         progressElem.hide();
@@ -408,11 +415,25 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
                         messageAlertElem.html(ironmanLib.alert('还没有结果', 'alert-info'));
                     }
                     else {
-                        const wordProgresses = content[0].progresses;
-                        showCelebrationPage(wordProgresses);
+                        showInspectionPage(content);
                     }
                 }
             });
+    }
+
+    function showInspectionPage(content) {
+        if (inspectionTmpl == undefined) {
+            const source = $('#inspection-template').html();
+            inspectionTmpl = Handlebars.compile(source);
+        }
+
+        const html = inspectionTmpl(content);
+        contentElem.html(html);
+
+        for (let [index, item] of content.entries()) {
+            const html = htmlFromWordExercisProgresses(item.progresses, item.mail);
+            $(`#progress_panel_${index}`).html(html);
+        }
     }
 
     function initStartMemorizingButton() {
