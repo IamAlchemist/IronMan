@@ -45,10 +45,35 @@ router.get('/words/memorizing', function (req, res) {
 
 
 /* API */
+router.get('/words/inspect/progressToday', (req, res)=>{
+    const user = comonLib.getUserFromRequest(req);
+    if (!user) { return res.send(new Result(8)); }
+
+    if (user.isStudent) {
+        return res.send(new Result(109));
+    }
+
+    if (user.linkedUserMails.length == 0) {
+        return res.send(new Result(111));
+    }
+
+    wordsExercisesLib.inspectAchievementToday(user)
+        .then((content)=>{
+            return res.send(new Result(0, content))
+        })
+        .catch(()=>{
+            return res.send(new Result(110));
+        })
+});
+
 router.get('/words/isPunched', (req, res)=> {
     const user = comonLib.getUserFromRequest(req);
     if (!user) {
         return res.send(new Result(8));
+    }
+
+    if (!user.isStudent) {
+        return res.send(new Result(108));
     }
 
     punching.isPunchedToday(user.mail)

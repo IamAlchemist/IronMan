@@ -160,3 +160,34 @@ module.exports.achievementToday = function (mail) {
         });
 };
 
+module.exports.inspectAchievementToday = function (user) {
+    const startOfDay = moment().startOf('day');
+    const endOfDay = moment().endOf('day');
+
+    return WordExerciseProgress.WordExerciseProgressModel
+        .find({})
+        .where('mail').in(user.linkedUserMails)
+        .where('updatedAt').gte(startOfDay.toDate()).lte(endOfDay.toDate())
+        .exec()
+
+        .then((progresses)=>{
+            let result = [];
+            for (let m of user.linkedUserMails ) {
+                let mp = progresses.filter(p => p.mail == m);
+                if (mp.length != 0) {
+                    result.push({mail:m, progresses: mp})
+                }
+            }
+
+            return new Promise((resolve)=>{
+                resolve(result);
+            });
+        })
+
+        .catch((error)=> {
+            logger.error(error.message);
+            throw error;
+        });
+
+};
+

@@ -20,6 +20,11 @@ errorMessages[104]='获取今日单词错误';
 errorMessages[105]='更新今日单词结果错误';
 errorMessages[106]='今日单词打卡失败';
 errorMessages[107]='获取今日单词结果失败';
+errorMessages[108]='获取单词打卡失败，账户是家长';
+errorMessages[109]='inspection账户是学生';
+errorMessages[110]='inspection每日获取失败';
+errorMessages[111]='未关联账号';
+
 
 
 function ApiResult(errorCode, content) {

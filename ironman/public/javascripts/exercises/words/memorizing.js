@@ -389,8 +389,28 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
                         initStartMemorizingButton();
                     }
                 }
+                else if (result.errorCode == 108) {
+                    inspectWordProgressToday();
+                }
                 else {
-                    ironmanLib.alert(result.message, 'alert-danger');
+                    messageAlertElem.html(ironmanLib.alert(result.message, 'alert-danger'));
+                }
+            });
+    }
+
+    function inspectWordProgressToday() {
+        $.getJSON('/exercises/words/inspect/progressToday')
+            .done((result)=>{
+                if (result.errorCode == 0) {
+
+                    const content = result.content;
+                    if (content.length == 0) {
+                        messageAlertElem.html(ironmanLib.alert('还没有结果', 'alert-info'));
+                    }
+                    else {
+                        const wordProgresses = content[0].progresses;
+                        showCelebrationPage(wordProgresses);
+                    }
                 }
             });
     }
