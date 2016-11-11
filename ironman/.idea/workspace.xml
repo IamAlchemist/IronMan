@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b903ec8f-157f-4431-8659-022e2b0cd42a" name="Default" comment="add pronunciation in word exercise">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playgrounds/nine-grade-half-a.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playgrounds/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playgrounds/processWords.js" />
+    <list default="true" id="b903ec8f-157f-4431-8659-022e2b0cd42a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../spider/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../spider/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playgrounds/nine-grade-half-a.csv" afterPath="$PROJECT_DIR$/playgrounds/nine-grade-half-a.csv" />
     </list>
     <ignored path="ironman.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,8 +39,8 @@
       <file leaf-file-name="processWords.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/playgrounds/processWords.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+            <state relative-caret-position="287">
+              <caret line="79" column="42" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
               </folding>
@@ -386,14 +383,7 @@
       <workItem from="1478637754030" duration="11152000" />
       <workItem from="1478737786796" duration="7289000" />
       <workItem from="1478786040615" duration="64000" />
-      <workItem from="1478831269440" duration="3708000" />
-    </task>
-    <task id="LOCAL-00022" summary="add ironman lib and bug fix">
-      <created>1477979574016</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1477979574016</updated>
+      <workItem from="1478831269440" duration="3756000" />
     </task>
     <task id="LOCAL-00023" summary="minor refactor">
       <created>1477979707822</created>
@@ -731,11 +721,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478831416258</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="show 2 words snathed">
+      <created>1478835565826</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1478835565826</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260944000" />
+    <option name="totallyTimeSpent" value="260992000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -793,7 +790,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="get all the word exercises" />
     <MESSAGE value="finish exercise ui" />
     <MESSAGE value="finish word detail page" />
     <MESSAGE value="mc&#10;" />
@@ -818,7 +814,8 @@
     <MESSAGE value="优化拉取题目算法" />
     <MESSAGE value="inspect" />
     <MESSAGE value="add pronunciation in word exercise" />
-    <option name="LAST_COMMIT_MESSAGE" value="add pronunciation in word exercise" />
+    <MESSAGE value="show 2 words snathed" />
+    <option name="LAST_COMMIT_MESSAGE" value="show 2 words snathed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1174,8 +1171,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/playgrounds/processWords.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        <state relative-caret-position="287">
+          <caret line="79" column="42" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
           </folding>
