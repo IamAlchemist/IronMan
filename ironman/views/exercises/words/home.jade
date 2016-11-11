@@ -18,9 +18,17 @@ html
                     .row
                         .panel.panel-default
                             .panel-heading
-                                h3.panel-title 单词
+                                h3.panel-title 自定义的单词
                             .panel-body
                                 button#updateWordsBankButton.btn.btn-block.btn-success 更新
+                    .row
+                        p 从预定义库中导入单词
+                    .row
+                        .panel.panel-default
+                            .panel-heading
+                                h3.panel-title 预定义的单词
+                            .panel-body
+                                button#importWordsFromNineGradeHalfA.btn.btn-block.btn-success 导入九年级上
 
         script(src='/javascripts/require.js' async='true' defer data-main='/javascripts/exercises/words/home.js')
 

@@ -170,16 +170,16 @@ module.exports.inspectAchievementToday = function (user) {
         .where('updatedAt').gte(startOfDay.toDate()).lte(endOfDay.toDate())
         .exec()
 
-        .then((progresses)=>{
+        .then((progresses)=> {
             let result = [];
-            for (let m of user.linkedUserMails ) {
+            for (let m of user.linkedUserMails) {
                 let mp = progresses.filter(p => p.mail == m);
                 if (mp.length != 0) {
-                    result.push({mail:m, progresses: mp})
+                    result.push({mail: m, progresses: mp})
                 }
             }
 
-            return new Promise((resolve)=>{
+            return new Promise((resolve)=> {
                 resolve(result);
             });
         })
@@ -189,5 +189,36 @@ module.exports.inspectAchievementToday = function (user) {
             throw error;
         });
 
+};
+
+module.exports.importWords = function (mail, grademail) {
+    return WordExerciseProgress.WordExerciseProgressModel
+        .find({mail})
+        .where('wordExercise.mail').equals(grademail)
+
+        .exec()
+
+        .then((progresses)=> {
+            if (progresses.length != 0) {
+                return new Promise(function (resolve) {
+                    resolve([]);
+                });
+            }
+            else {
+                return WordExercise.WordExerciseModel
+                    .find({mail: grademail})
+                    .exec()
+            }
+        })
+
+        .then((wordExercises) => {
+            logger.info(`will add wordExercises : ${wordExercises.length}`);
+            return new Promise.all(wordExercises.map((word)=> WordExerciseProgress.MakeWordExerciseProgress(mail, word).save()));
+        })
+
+        .catch((error)=> {
+            logger.error(error.message);
+            throw error;
+        });
 };
 

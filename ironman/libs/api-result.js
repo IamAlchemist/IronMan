@@ -24,6 +24,7 @@ errorMessages[108]='获取单词打卡失败，账户是家长';
 errorMessages[109]='inspection账户是学生';
 errorMessages[110]='inspection每日获取失败';
 errorMessages[111]='未关联账号';
+errorMessages[112]='导入单词错误';
 
 
 

@@ -45,9 +45,11 @@ router.get('/words/memorizing', function (req, res) {
 
 
 /* API */
-router.get('/words/inspect/progressToday', (req, res)=>{
+router.get('/words/inspect/progressToday', (req, res)=> {
     const user = comonLib.getUserFromRequest(req);
-    if (!user) { return res.send(new Result(8)); }
+    if (!user) {
+        return res.send(new Result(8));
+    }
 
     if (user.isStudent) {
         return res.send(new Result(109));
@@ -58,10 +60,10 @@ router.get('/words/inspect/progressToday', (req, res)=>{
     }
 
     wordsExercisesLib.inspectAchievementToday(user)
-        .then((content)=>{
+        .then((content)=> {
             return res.send(new Result(0, content))
         })
-        .catch(()=>{
+        .catch(()=> {
             return res.send(new Result(110));
         })
 });
@@ -112,7 +114,9 @@ router.get('/words/achievementToday', (req, res)=> {
 
 router.get('/words/wordExercisesForToday', (req, res)=> {
     const user = comonLib.getUserFromRequest(req);
-    if (!user) { return res.send(new Result(8)); }
+    if (!user) {
+        return res.send(new Result(8));
+    }
 
     wordsExercisesLib.wordExercisesForToday(user.mail)
         .then((wordProcesses)=> {
@@ -123,6 +127,29 @@ router.get('/words/wordExercisesForToday', (req, res)=> {
             logger.error(`get wordExercises for today failed: ${logger.str(error)}`);
             return res.send(new Result(104));
         });
+});
+
+router.get('/words/bank/import', (req, res)=> {
+    const user = comonLib.getUserFromRequest(req);
+    if (!user) {
+        return res.send(new Result(8));
+    }
+
+    if (req.query == undefined || req.query.grade == undefined) {
+        logger.error(JSON.stringify(req.query));
+        return res.send(new Result(112));
+    }
+
+    wordsExercisesLib.importWords(user.mail, req.query.grade)
+        .then(()=> {
+            res.send(new Result(0));
+        })
+        .catch((e) => {
+            logger.error(e.message);
+            return res.send(new Result(112));
+        })
+    ;
+
 });
 
 router.get('/words/bank/update', function (req, res) {
