@@ -15,6 +15,7 @@ const WordExerciseSchema = new Schema({
     explanation: String,
     example: String,
     exampleExplanation: String,
+    pronunciation:String,
     others: String
 });
 WordExerciseSchema.plugin(timestamps);
@@ -29,6 +30,7 @@ module.exports.MakeWordExercise =
                               explanation = throwIfMissing(),
                               example = throwIfMissing(),
                               exampleExplanation = throwIfMissing(),
+                              pronunciation,
                               others = '') {
         return new WordExerciseModel({
             mail,
@@ -37,6 +39,7 @@ module.exports.MakeWordExercise =
             explanation,
             example,
             exampleExplanation,
+            pronunciation,
             others
         });
     };
