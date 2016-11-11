@@ -66,7 +66,7 @@ function process(word) {
 }
 
 
-readFile("./nine-grade-half-a.csv", "utf8")
+readFile("./nine_grade_half_a.csv", "utf8")
 
     .then((contents) => {
         const words = contents.split('\r\n');
