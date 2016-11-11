@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3cbcfe4-4209-4fb6-a2ad-c5b41cdb8e0f" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../ironman/playgrounds/nine-grade-half-a.csv" afterPath="$PROJECT_DIR$/../ironman/playgrounds/nine_grade_half_a.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ironman/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ironman/.idea/workspace.xml" />
     </list>
     <list id="751db0cb-c795-4690-b2f2-390dc492624f" name="Rejected commit: Default" comment="test snatch" />
@@ -41,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/spider2.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="625">
-              <caret line="60" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -260,7 +259,7 @@
       <workItem from="1478786105666" duration="250000" />
       <workItem from="1478786560761" duration="4626000" />
       <workItem from="1478830192966" duration="451000" />
-      <workItem from="1478833135323" duration="612000" />
+      <workItem from="1478833135323" duration="1105000" />
     </task>
     <task id="LOCAL-00001" summary="get all the urls of khan">
       <created>1476446214494</created>
@@ -287,7 +286,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37310000" />
+    <option name="totallyTimeSpent" value="37803000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -705,7 +704,7 @@
     <entry file="file://$PROJECT_DIR$/spider2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
-          <caret line="60" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding />
         </state>
       </provider>

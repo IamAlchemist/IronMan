@@ -3,20 +3,26 @@
  */
 
 const Promise = require('bluebird').Promise,
-    readFile = Promise.promisify(require('fs').readFile),
+    fs = require('fs'),
+    readFile = Promise.promisify(fs.readFile),
     superagent = require('superagent'),
     cheerio = require('cheerio'),
     logger = require('../libs/ironmanLogger');
 
 function process(word) {
     const wordURL = `http://dict.cn/${word}`;
-    logger.info("... working on url : " + wordURL);
 
     return new Promise(function (resolve) {
         superagent
             .get(wordURL)
             .end((err, sres)=> {
-                if (err) { throw err; }
+                logger.info(`word: ${word}`);
+
+                if (err) {
+                    logger.error(err.message);
+                    throw err;
+                }
+
 
                 let $ = cheerio.load(sres.text, {decodeEntities: false});
 
@@ -40,9 +46,13 @@ function process(word) {
                     explanation = node.find('strong').html();
                 }
 
+                // logger.info(`explanation : ${explanation}, part: ${partOfSpeech}`);
+
                 const prononceNode = $('.phonetic');
                 const value = prononceNode.find('span').slice(1).eq(0).find('.sound.fsound').attr('naudio').split('?')[0];
                 pronunciation = `http://audio.dict.cn/${value}`;
+
+                // logger.info(`explanation : ${pronunciation}`);
 
                 const moreNode = $('.shape');
 
@@ -53,36 +63,103 @@ function process(word) {
                     others += ";"
                 });
 
+                // logger.info(`others : ${others}`);
+
                 const exampleNode = $('.layout.sort');
                 const texts = exampleNode.children('ol').slice(0).eq(0).children('li').slice(0).eq(0).text().split('\n');
                 let length = texts.length;
-                if (length > 0) { example = texts[0].trim(); }
-                if (length > 1) { exampleExplanation = texts[1].trim(); }
+                if (length > 0) {
+                    example = texts[0].trim();
+                }
+                if (length > 1) {
+                    exampleExplanation = texts[1].trim();
+                }
+                // logger.info(`example : ${example}`);
 
-
-                resolve({word, explanation, partOfSpeech, pronunciation, others, example, exampleExplanation });
+                resolve({word, explanation, partOfSpeech, pronunciation, others, example, exampleExplanation});
             });
     });
 }
 
 
+var wordExercises = [];
+var allwords = [];
+
 readFile("./nine_grade_half_a.csv", "utf8")
 
     .then((contents) => {
-        const words = contents.split('\r\n');
-        const testwords = words.slice(0,2);
-        const promises = testwords.map(word => process(word));
-        return Promise.all(promises)
+        allwords = contents.split('\r\n');
+        logger.warn(`all words count : ${allwords.length}`);
+        let words = allwords.slice(0,50);
+        const promises = words.map(word => process(word));
+        return Promise.all(promises);
     })
 
-    .then((things)=>{
-        for (thing of things){
-            logger.warn(JSON.stringify(thing, null, 2));
-        }
+    .then((things)=> {
+        logger.warn(`total : ${wordExercises.length}`);
+        wordExercises = wordExercises.concat(things);
+        let words = allwords.slice(50,100);
+        const promises = words.map(word => process(word));
+        return Promise.all(promises);
     })
 
-    .catch( (e) => {
-        logger.error(`Error reading file, ${e}`);
+    .then((things)=> {
+        logger.warn(`total : ${wordExercises.length}`);
+        wordExercises = wordExercises.concat(things);
+        let words = allwords.slice(100,150);
+        const promises = words.map(word => process(word));
+        return Promise.all(promises);
+    })
+
+    .then((things)=> {
+        logger.warn(`total : ${wordExercises.length}`);
+        wordExercises = wordExercises.concat(things);
+        let words = allwords.slice(150,200);
+        const promises = words.map(word => process(word));
+        return Promise.all(promises);
+    })
+
+    .then((things)=> {
+        logger.warn(`total : ${wordExercises.length}`);
+        wordExercises = wordExercises.concat(things);
+        let words = allwords.slice(200,250);
+        const promises = words.map(word => process(word));
+        return Promise.all(promises);
+    })
+
+    .then((things)=> {
+        logger.warn(`total : ${wordExercises.length}`);
+        wordExercises = wordExercises.concat(things);
+        let words = allwords.slice(250,300);
+        const promises = words.map(word => process(word));
+        return Promise.all(promises);
+    })
+
+    .then((things)=> {
+        logger.warn(`total : ${wordExercises.length}`);
+        wordExercises = wordExercises.concat(things);
+        let words = allwords.slice(300,350);
+        const promises = words.map(word => process(word));
+        return Promise.all(promises);
+    })
+
+    .then((things)=> {
+        logger.warn(`total : ${wordExercises.length}`);
+        wordExercises = wordExercises.concat(things);
+        let words = allwords.slice(350);
+        const promises = words.map(word => process(word));
+        return Promise.all(promises);
+    })
+
+    .then((things)=> {
+        wordExercises = wordExercises.concat(things);
+        logger.warn(`total : ${wordExercises.length}`);
+        fs.writeFile('./nine_grade_half_a.json', JSON.stringify(wordExercises, null, 2));
+    })
+
+
+    .catch((e) => {
+        logger.error(`e: ${e.message}`);
     });
 
 
