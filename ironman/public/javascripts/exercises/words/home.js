@@ -9,15 +9,17 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
         messageAlertElem = $('#messageAlert');
         setupWordsBandUpdateButton();
         setupImportWordsFromNineHalfA();
+        setupImportWordsFromEightHalfB();
+        setupImportWordsFromEightHalfA();
     });
 
-    function setupImportWordsFromNineHalfA() {
-        $('#importWordsFromNineGradeHalfA').click(()=> {
+    function setupImportButton(elem, gradeMail) {
+        elem.click(()=> {
             const button = $(this);
             button.attr({disabled: true});
 
-            $.getJSON('/exercises/words/bank/import?grade=nine.grade.half.a@gmail.com')
-                .done((json)=>{
+            $.getJSON(`/exercises/words/bank/import?grade=${gradeMail}`)
+                .done((json)=> {
                     let message = json.content != undefined && json.content.message != undefined ?
                         json.content.message : json.message;
 
@@ -27,6 +29,25 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
                     button.attr({disabled: false});
                 });
         });
+    }
+
+
+    function setupImportWordsFromEightHalfB() {
+        const elem = $('#importWordsFromEightGradeHalfB');
+        const gradeMail = 'eight.grade.half.b@gmail.com';
+        setupImportButton(elem, gradeMail);
+    }
+
+    function setupImportWordsFromEightHalfA() {
+        const elem = $('#importWordsFromEightGradeHalfA');
+        const gradeMail = "eight.grade.half.a@gmail.com";
+        setupImportButton(elem, gradeMail);
+    }
+
+    function setupImportWordsFromNineHalfA() {
+        const elem = $('#importWordsFromNineGradeHalfA');
+        const gradeMail = "nine.grade.half.a@gmail.com";
+        setupImportButton(elem, gradeMail);
     }
 
     function setupWordsBandUpdateButton() {
