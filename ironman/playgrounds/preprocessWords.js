@@ -13,14 +13,15 @@ function preprocess() {
     readFile(`./eight_grade_half_a2.txt`, "utf8")
         .then((content)=>{
             let alllines = content.split('\n');
-            logger.warn(`${alllines.length}`);
+            logger.warn(`all lines count : ${alllines.length}`);
 
             let string = "";
             for (let line of alllines) {
-                string += line.trim().split('[')[0].trim() + '\n';
+                const word = line.trim().split('.')[1].trim();
+                string += word + '\n';
             }
 
-            fs.writeFile(`./eight_grade_half_a2.txt`, string);
+            fs.writeFile(`./eight_grade_half_b.txt`, string);
         });
 }
 
