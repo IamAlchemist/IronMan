@@ -1,23 +1,745 @@
-<div class="panel panel-primary">
-    <div class="panel-heading">
-        <h4>今日已完成</h4>
-    </div>
-    <div class="panel-body">
-        {{#each options}}
-        <div class="row wordli">
-            <div class="col-xs-4 col-lg-2">
-                <p id="word" class="text-primary">{{word}}</p>
-            </div>
-            <div class="col-xs-4 col-lg-6">
-                <p id="explanation">{{explanation}}</p>
-            </div>
-            <div class="col-xs-4 col-lg-6">
-                <div class="progress">
-                    <div class="progress-bar progress-bar-success"
-                         style="width: {{progress}}%;"></div>
-                </div>
-            </div>
-        </div>
-        {{/each}}
-    </div>
-</div>
+　flashcard/'flæʃ,kɑ:d/n. 教学用的抽认卡
+　　vocabulary/və'kæbjuləri/n. 词汇
+　　aloud/ə'laud/adv. 大声地;出声地
+　　pronunciation/prəu,nʌnsi'eiʃən/n. 发音;发音法
+　　specific/spə'sifik/a. 具体的
+　　memorize/'meməraiz/v. 记住;熟记
+　　grammar/'ɡræmə/n. 语法
+　　differently/'difərəntli/adv. 不同地;有区别地
+　　frustrate/frʌs'treit/v. 使失望;使沮丧;使厌烦
+　　frustrating/frʌ'streitiŋ/a.令人失望的;令人沮丧的
+　　quickly/'kwikli/adv. 快地;迅速地
+　　add/æd/v.补充;继续说
+　　excited adj. 激动的;兴奋的
+　　not at all 根本不;一点也不
+　　end up 结束;告终
+　　pronounce/prəu'nauns/vt. 发音
+　　spoken/'spəukən/a. 口语的;口头的
+　　slowly/'sləuli/adv. 慢地;缓慢地
+　　mistake/mi'steik/n. 错误;过失
+　　make mistakes犯错，出错
+　　comma/'kɔmə/n. 逗号
+　　challenge/'tʃæləndʒ/n. 挑战
+　　solution/sə'lju:ʃən/n. 解决;解答
+　　later on以后;随后
+　　realize/'riəlaiz/vt. 认识到;了解到
+　　matter/'mætə/v.重要;要紧;有关系
+　　it doesn't matter没关系
+　　afraid/ə'freid/a. 害怕的;犯愁的
+　　be afraid to害怕去做;不敢去做
+　　laugh at嘲笑;取笑
+　　complete/kəm'pli:t/a. 完整的;完全的
+　　sentence ['sentəns]n. 句子
+　　secret/'si:krit/n. 秘密;秘诀;秘密
+　　learner/'lə:nə/n. 学习者
+　　take notes做笔记;做记录
+　　term/tə:m/n. 学期
+　　impress/im'pres/vt.使感动;使印象深刻
+　　trouble/'trʌbl/n. 困难;苦恼;忧虑
+　　fast/fɑ:st/adv. 快的，迅速的
+　　look up查阅;查找
+　　soft/sɔft/a. 软的，柔软的
+　　make up组成;编造;拼凑成
+　　essay/'esei/n. 文章
+　　deal/di:l/v.处理，应付
+　　deal with处理，应付
+　　unless/ʌn'les/conj. 如果不，除非
+　　unfair/ʌn'fεə/a. 不公平的，不公正的
+　　solve/sɔlv/v. 解决;解答(难题等)
+　　regard/ri'ɡɑ:d/v.将……视为
+　　duty/'dju:ti/n. 责任;义务
+　　easily/'i:zili/adv.容易地;简单地
+　　influence/'influəns/vt. 影响;对……起作用
+　　be angry with生…的气;对…感到气愤
+　　go by过去;消逝
+　　friendship/'frendʃip/n. 友谊，友情，友爱
+　　lose/lu:z/vt. 失去;丧失
+　　disagreement/disə'ɡri:mənt/n. 意见不一致;分歧;意见不合
+　　development/di'veləpmənt/n.发育;成长;发展;进展
+　　adult/ə'dʌlt/n. 成年人
+　　try one's best尽力做…
+　　unimportant/ʌnim'pɔ:tnt/a. 不重要的
+　　face/feis/v.面临;面对;正视
+　　soldier/'səuldʒə/n. 士兵;军人
+　　break off中断;突然中止
+　　psychologist/sai'kɔlədʒist/n. 心理学家
+　　Stephen ['sti:vən] 史蒂芬·霍金(物理学家)
+　　used to过去经常;以前常常
+　　airplane/'εəplein/n. 飞机
+　　terrify/'terifai/vt. 使恐惧;使害怕
+　　be terrified of非常害怕;极度恐惧的
+　　go to sleep入睡
+　　on/ɔn/adj.开着的;接通的;工作着的
+　　insect/'insekt/n.昆虫
+　　candy/kændi/n. 糖果
+　　chew/tʃu:/vt. 咀嚼
+　　gum/ɡʌm/n. 口香糖
+　　chat/tʃæt/v. 聊天;闲谈
+　　daily/'deili/a. 日常的;每日的
+　　comic/'kɔmik/n.连环漫画;连环漫画杂志& adj. 喜剧的;连环画的
+　　death/deθ/n. 死，死亡
+　　cause/kɔ:z/v.造成;使发生
+　　himself/him'self/pron. 他自己,他本身
+　　patient/'peiʃənt/adj.有耐心的;忍耐的
+　　in the end最后，终于
+　　make a decision做决定;下决心
+　　head teacher校长
+　　to one's surprise令某人惊奇的是……
+　　exactly/iɡ'zæktli/adv. 正;恰恰
+　　even though即使，纵然;尽管
+　　no longer不再;已不
+　　take pride in对…感到自豪
+　　attention/ə'tenʃn/n. 注意;专心;留心
+　　pay attention to对……注意;留心
+　　give up放弃
+　　waste/weist/vt. 浪费
+　　not...any more 不再、已不
+　　Murray ['mʌri; 'mə:-] 默里
+　　pierce/piəs/v. 刺穿，刺破
+　　license/'laisəns/n. 执照;许可证
+　　silly/'sili/a. 愚蠢的;傻的
+　　earring/'iəriŋ/n. 耳环
+　　instead of代替;而不是
+　　stay up熬夜;不睡觉
+　　concentrate/'kɔnsəntreit/v. 集中;聚集
+　　concentrate on专心于;全神贯注
+　　study/'stʌdi/v. 学习;研究
+　　design/di'zain/n. 设计;构思
+　　present/'prezənt]n.目前;现在
+　　at present目前，现在
+　　opportunity/ɔpə'tju:niti/n. 机会;时机
+　　volunteer/vɔlən'tiə/n. 志愿者
+　　local/'ləukəl/a. 当地的;地方的
+　　experience/ik'spiəriəns/n.&v.经历;体验
+　　member/'membə/n. 成员;会员
+　　mess/mes/n. 混乱;脏乱
+　　old people's home养老院
+　　sleepy/'sli:pi/a.不活跃的;困倦的
+　　reply/ri'plai/v. 回答;答复
+　　newsletter/'nju:z,letə/n. 时事通讯;简报
+　　obey/ə'bei/v. 服从，顺从
+　　in the way妨碍人的;挡道的
+　　achiev/ə'tʃi:v/vt.实现;完成
+　　race/reis/v.赛跑;比赛n.与...比赛;参加赛跑
+　　realistic/riə'listik/a. 现实的;注重实际的
+　　taught/tɔ:t/v. 教(teach的过去式和过去分词)
+　　importance/im'pɔ:təns/n. 重要性
+　　care about关心;担心
+　　succeed/sək'si:d/vi. 成功
+　　point/pɔint/v. 指，指向n.要点;论点
+　　million/'miljən/n. 百万
+　　medical/'medikəl/a. 医学的;医疗的
+　　research/ri'sə:tʃ/n. 研究;调查
+　　tie/tai/n.领带
+　　worry/'wʌri/n.烦恼;忧虑
+　　what if如果…将会怎么样
+　　pimple/'pimpl/n. 小脓疱;丘疹
+　　exam n. 考试
+　　energetic/,enə'dʒetik/a. 精力充沛的;有活力的
+　　confident/'kɔnfidənt/a. 自信的;有把握的
+　　permission/pə'miʃən/n. 允许，许可;准许
+　　herself/hə:'self/pron. 她自己
+　　bother/'bɔeə/v. 打扰;使恼怒
+　　not...in the slightest/'slaitlist/一点也不，根本不
+　　annoy/ə'nɔi/vt. (使)烦恼，使生气
+　　fairly/'fεəli/adv. 相当地;还算
+　　plenty/'plenti/pron. 大量;充足
+　　plenty of足够的;很多的
+　　get along with与…相处
+　　circle/'sə:kl/n. 圈子;阶层
+　　listener/'lisənə/n.听者;收听者
+　　knowledgeable/'nɔlidʒəbl/a. 知识渊博的;有见识的
+　　represent/,repri'zent/vt. 代表;表示
+　　let...down使……失望或沮丧
+　　come up with提出;想出(主意、看法)
+　　rest/rest/n. 其余;剩余的部分
+　　aid/[eid/n. 帮助;救助;援助;救护
+　　first-aid 急救
+　　nearby/'niə'bai/a. 附近的;近处的
+　　shelf/ʃelf/n. 架子;搁板
+　　come out发表;(书等)出版
+　　cover/'kʌvə/v.覆盖;遮掩
+　　press/pres/vt. 压，按;挤
+　　deep/di:p/a. 深的
+　　downstairs/'daun'stεəz/adv. 在楼下;顺楼梯而下
+　　correct/kə'rekt/a. 正确的;准确的;对的
+　　burn/bə:n/v.烧伤;烧坏
+　　knee/ni:/n. 膝盖
+　　pain/pein/n. 疼痛
+　　hurt/hə:t/v. 感到疼痛;受伤
+　　safety n. 安全
+　　offer/'ɔfə/v.提供
+　　refuse/ri'fju:z/v.拒绝;回绝
+　　helpful/'helpful/a. 有帮助的;有用的
+　　treat/tri:t/vt. 对待
+　　burn/bə:n/n.火,热或酸所造成的伤害或伤痕
+　　belong/bi'lɔŋ/vi. 属于
+　　belong to属于
+　　uthor/'ɔ:θə/n. 作者，作家
+　　picnic/'piknik/n. 野餐
+　　hair band发带
+　　possible/'pɔsəbl/a. 可能地;也许
+　　drop/drɔp/v.掉下，落下;放弃
+　　symphony/'simfəni/n. 交响乐，交响曲
+　　optometrist/ɔp'tɔmitrist/n. 验光师;配镜师
+　　crucial/'kru:ʃəl/a.关键的;至关重要的
+　　make up 形成;组成;构成
+　　final/'fainl/a. 最后的;最终的
+　　anxious/'æŋkʃəs/a. 焦虑的;担忧的;不安的
+　　worried/'wʌrid/a.焦虑的;烦恼的
+　　owner/'əunə/n. 物主;所有者
+　　Oxford/'ɔksfəd/n. 牛津大学;牛津(英国城市)
+　　Oxford University/'ɔksfəd ,ju:ni'və:səti/牛津大学
+　　chase/tʃeis/v. 追逐;追赶
+　　sky/skai/n. 天空
+　　helicopter/'helikɔptə/n.直升机
+　　creature/'kri:tʃə/n. 生物;动物
+　　catch/kætʃ/v.捕获;赶上
+　　unhappy/,ʌn'hæpi/a. 不高兴的;伤心的
+　　extremely/ik'stri:mli/adv.极其，非常
+　　interview/'intəvju:/n. 采访;面试;会见
+　　noise/nɔiz/n. 噪音;喧闹声;嘈杂声
+　　wind/wind/n. 风
+　　neighbor/'neibə/n. 邻居
+　　footstep/'fut'step/n. 脚步声;足迹
+　　garbage/'ɡɑ:bidʒ/n. 垃圾;废料
+　　mystery/'mistəri/n. 神秘的事物;谜
+　　director/di'rektə/n. 主管;主任
+　　monkey/'mʌŋki/n. 猴子
+　　escape/i'skeip/vi. 逃脱;逃走
+　　bark/bɑ:k/v. 狗叫
+　　smell/smel/v. 嗅，闻;发出…气味
+　　finger/'fiŋɡə/n. 手指
+　　lift/lift/v. 举起，抬起;提升
+　　stone/stəun/n. 石头，石块
+　　ant/ænt/n. 蚂蚁
+　　ocean/'əuʃən/n.海洋
+　　dishonest/dis'ɔnist/a. 不诚实的
+　　pretend/pri'tend/vi. 假装
+　　use up用完，耗尽
+　　attempt/ə'tempt/vt. 企图，试图
+　　Hemingway 海明威(Ernest Hemingway,欧内斯特·海明威 1899-1961，美国作家)
+　　Mark Twain [ˈmɑ:kˈtwein]马克·吐温(1835-1910,美国作家)
+　　net n. 网;网状物
+　　turn off 关掉
+　　polar [ˈpəʊlə(r)] bear 北极熊
+　　Vietnam [ˌvjet'næm] 越南
+　　prefer/pri'fə:/vt. 更喜欢;更喜爱
+　　lyric/'lirik/n. 抒情诗;歌词
+　　gentle/'dʒentl/a.轻柔的;柔和的
+　　dislike/dis'laik/vt.不喜欢
+　　remind/ri'maind/vt. 提醒;使记起
+　　remind sb. of sth. 提醒某人某事;使记起
+　　heart/hɑ:t/n. 心;内心
+　　string/striŋ/n. 线;细绳
+　　sink/siŋk/vi. 下沉;沉没
+　　Yellow River黄河
+　　fisherman/'fiʃəmən/n. 渔民，渔夫
+　　latest/'leitist/a. 最近的
+　　entertainment/,entə'teinmənt/n. 娱乐;乐趣;快乐
+　　feature/'fi:tʃə/n. 特点;特征
+　　photography/fə'tɔɡrəfi/n. 摄影;照相
+　　gallery/'ɡæləri/n. 画廊，美术馆
+　　photographer/fə'tɔɡrəfə/n. 摄影师
+　　display/dis'plei/v. 展览;陈列
+　　on display展览;陈列
+　　photograph/'fəutəɡrɑ:f/n. 照片;相片
+　　interest/'intrist/v.引起……关注;使……感兴趣
+　　class/klɑ:s/n. 班级;等级;课
+　　whatever/wɔt'evə/pron. 无论什么，不管什么
+　　miss/mis/vt.遗漏;错过
+　　suggest/sə'dʒest/v.显示;间接表示;暗示
+　　energy/'enədʒi/n. 活力;力量
+　　okay/'əu'kei/a. 好的(=OK)
+　　pro/prəu/n. 赞成的观点
+　　con/kɔn/n. 反对的观点
+　　honest/'ɔnist/a. 诚实的;真诚的
+　　course/'kɔ:s/n.课程
+　　suit/sju:t/vt. 适合;使感到满意
+　　suit sb.(fine)(口语)很合某人的意;对某人很合适
+　　expect/ik'spekt/vt. 预料;期待
+　　sweet/swi:t/a. 甜的
+　　taste/teist/v.品尝;尝起来
+　　to be honest(作插入语)老实说;说实在的
+　　be bad for对…有害
+　　actually/'æktʃuəli/adv. 实际上;说实在的
+　　fry/frai/vt.油煎;油炸
+　　mainly/'meinli/adv. 主要地;首要地
+　　stay away from与……保持距离
+　　be in agreement意见一致
+　　itself/it'self/pron. 它自己
+　　laboratory/lə'bɔrətri/n. 实验室
+　　type/taip/n.种类;类型
+　　cancer/'kænsə/n. 癌症
+　　barbecue/'bɑ:bikju:/n. 烧烤;烤肉野餐
+　　increase/in'kri:s/v. 增加;增大
+　　risk/risk/n. 风险;危险
+　　biscuit/'biskit/n. 饼干
+　　main/mein/a. 主要的
+　　exclamation/,eksklə'meiʃən/n.感叹语
+　　tag/tæg/ question附加疑问句
+　　contraction/kən'trækʃən/n. 缩略语;缩略形式
+　　tasty/'teisti/adj.味道好的;味美可口的
+　　vegetarian/vedʒi'tεəriən/n.素食主义者
+　　shock/ʃɔk/vt. 使……震惊
+　　tiring/'taiəriŋ/a.引起疲劳的;累人的
+　　educational/,edju:'keiʃənəl/a. 教育的;有教育意义的
+　　peaceful/'pi:sful/a. 和平的;平静的;宁静的
+　　fascinating/'fæsineitiŋ/a. 迷人的;吸引人的
+　　thrilling/'θriliŋ/a. 毛骨悚然的;令人激动的
+　　take it easy从容;轻松;不紧张
+　　Florida/'flɔridə/(美国)佛罗里达
+　　trek/trek/v.旅行;长途跋涉
+　　Amazon/'æməzɔn/(南美洲)亚马逊河
+　　jungle/'dʒʌŋgl/n.热带丛林(常pl.)
+　　fall/fɔ:l/n.瀑布
+　　Niagara/nai'ægərə/ Falls /fɔ:lz/(北美洲)尼亚加拉大瀑布
+　　touristy/'tuəristi/a. 适宜游览的;游客很多的
+　　spotlight/'spɔtlait/n. 公众注意的中心
+　　consider/kən'sidə/v. 考虑;认为;思考
+　　lively/'laivli/a. 活泼的;充满生气的
+　　sight/sait/n.名胜;风景
+　　including/in'klu:diŋ/prep.包含;包括
+　　54tower/'tauə/n. 塔，塔楼
+　　Eiffel/'aifəl/ Tower (法国)埃菲尔铁塔
+　　cathedral/kə'θi:drəl/n. 大教堂(天主教)
+　　Notre Dame Cathedral/notrə'deim,kə'θi:drəl/ (法国)巴黎圣母院
+　　church/tʃə:tʃ/n. 教堂
+　　convenient/kən'vi:niənt/a. 方便的;便利的
+　　underground/'ʌndəɡraund/adv. 在地下
+　　general/'dʒenərəl/a. 一般事物;一般原则
+　　in general通常;大体上;一般而言
+　　wine/wain/n. 酒;葡萄酒
+　　translate/træns'leit/v. 翻译
+　　pack/pæk/v.把……打包;把……装箱
+　　light/'lait/adj.轻的
+　　wonderful adj. 令人惊叹的;绝妙的
+　　eastern/'i:stən/adj.东部的;来自东部的
+　　provide/prəu'vaid/vt. 提供;供应;供给
+　　firm/'fə:m/n.公司
+　　spot/spɔt/n.场所，地点
+　　Confucius/kən'fju:ʃjəs/孔子(中国哲学家，教育家)
+　　sail/seil/v. 航行;在……上航行
+　　Pacific/pə'sifik/n. 太平洋
+　　finding/'faindiŋ/n. 发现;发现物;调查结果
+　　thousands of 数以千计的;许许多多的
+　　as soon as possible尽快地
+　　continue/kən'tinju:/v. 继续;坚持下去
+　　programming/'prəuɡræmiŋ/n. 编程
+　　translator/træns'leitə/n. 翻译员
+　　reporter/ri'pɔ:t/v.报道;报告
+　　willing/'wiliŋ/adj.乐意的;自愿的;心甘情愿的
+　　be willing to 乐意(做某事)
+　　quite a few 相当多,不少
+　　dream/dri:m/v.做梦;梦到n.梦想;幻想
+　　dream of 梦想;幻想;向往
+　　sportspeople/'spɔ:ʦˌpi:pəl/n. 运动员;爱好运动的人
+　　conclusion/kən'klu:ʒən/n. 结论;推论
+　　hold on to 继续;坚持;保持
+　　come true (预言、期望等)实现;成为事实 attitude/'ætitju:d/n. 态度
+　　clean up/kli:n ʌp/(把…)打扫干净;(把…)收拾
+　　hunger/'hʌŋɡə/n. 饥饿;饿
+　　homeless/'həumləs/a. 无家可归的
+　　cheer/tʃiə/up使振奋;使高兴起来
+　　give out = hand out分发;发放
+　　clean-up/kli:nʌp/n. 清洁;打扫
+　　sign/sain/n.招牌;标牌
+　　advertisement/əd'və:tismənt/n. 广告;广告活动
+　　put off推迟
+　　set/set/v.摆放;放置
+　　set up建立，创立;开办
+　　establish/i'stæbliʃ/v. 建立;建造;设立
+　　think up想出
+　　major/'meidʒə/a. 主要的;重大的
+　　commitment/kə'mitmənt/n.忠诚;辛劳;奉献
+　　elementary/ˌeli'mentəri/a. 基本的;初级的;小学的
+　　veterinarian/ˌvetəri'nεəriən/n. 兽医
+　　coach/kəutʃ/v.训练;指导
+　　take after (在外貌、性格等方面)与(父母等)相像
+　　fix/fiks/v. 修理
+　　fix up/fiks ʌp/修理;修补
+　　repair/ri'pεə/v. 修理;修补
+　　similar/'similə/a. 相似的;相仿的
+　　put up张贴;搭建
+　　ask for 要;要求;请求
+　　hand out分发;发放
+　　call-in/'kɔ:l in/n. 听(观)众来电直播节目
+　　strategy/'strætədʒi/n. 策略;方法
+　　work out产生结果;发展;成功
+　　website/'websait/n.(互联网的)站点
+　　disabled/dis'eibld/a. 肢体有残疾的
+　　organization/,ɔ:ɡənai'zeiʃən/n. 组织;机构;系统
+　　fill/fil/v.装满;填满
+　　pleasure/'pleʒə/n. 高兴，愉快，快乐
+　　blind/blaind/a. 盲的
+　　deaf/def/a. 聋的
+　　unable/ʌn'eibl/a. 不能的;不会的
+　　cannot/'kænɔt/v. 不能;无法
+　　imagine/i'madʒin/v.想象
+　　shut/ʃʌt/v. 关上(门、盖、窗户等)
+　　carry/'kæri/vt.搬运;携带
+　　help out 帮助(某人)解决困难
+　　specially/'speʃəli/adv. 特意地;专门地
+　　fetch/fetʃ/vt. (去)取来;(去)带来
+　　at once立刻，马上
+　　support/sə'pɔ:t/vt. 支持;赞助
+　　appreciate/ə'pri:ʃieit/v.感激
+　　donation/dəu'neiʃən/n. 捐款;捐赠物
+　　part of speech词性;词类
+　　pronoun/'prəunaun/n. 代词
+　　adverb/'ædvə:b/n. 副词
+　　preposition/,prepə'ziʃən/n. 介词
+　　conjunction/kən'dʒʌŋkʃən/n.连接词
+　　donate/dəu'neit/v. 捐赠;捐献
+　　invent/in'vent/vt. 发明;创造
+　　calculator/'kælkjuleitə/n.计算器
+　　be used for用来做…
+　　scoop/sku:p/n. 勺子;v.用勺舀
+　　adjustable/ə'dʒʌstəbl/a. 可调整的
+　　heel/hi:l/n. 脚后跟
+　　battery/'bætəri/n. 电池
+　　operate/'ɔpəreit/v. 作业;操作
+　　battery-operated电池供电的
+　　slipper/'slipə/n. 拖鞋
+　　heat/ hi:t / v.加热;使变热
+　　bulb/bʌlb/n. 电灯泡;电灯
+　　light bulbn. 电灯泡
+　　microwave/'maikrəweiv/n. 微波
+　　microwave oven/ 'ʌvən/n. 微波炉
+　　crispy/'krispi/a. 脆的;易碎的
+　　salty/'sɔ:lti/a. 咸的;含盐的
+　　sour/'sauə/a. 酸的;发酵的
+　　by mistake错误地
+　　chef/ʃef/n. 厨师
+　　sprinkle/'spriŋkl/v. 撒(粉末状物);洒(液体)
+　　by accident = by chance偶然地;意外地
+　　beverage/'bevəridʒ/n. 饮料
+　　according to 根据;按照
+　　ancient/'einʃənt/a. 古代的;古老的
+　　legend/'ledʒənd/n. 传说;传奇故事
+　　bush/buʃ/n. 灌木;灌木丛
+　　fall into 落入;陷入
+　　remain/ri'mein/v. 保持不变;留下;余留
+　　notice/'nəutis / v.注意到;察觉到
+　　produce/prəu'dju:s/v. 生产;制造
+　　pleasant/'plezənt/a. 令人愉快的;舒适的;讨人喜欢的
+　　in this way这样，用这种方法
+　　pie/pai/n.馅饼
+　　flying/'faiiŋ/ disk/disk/飞碟;飞盘
+　　bakery/'beikəri/n. 面包店
+　　throw/θrəu/v. 扔;掷
+　　taste/teist/ n. 味道;风味
+　　lemon/'lemən/n. 柠檬
+　　cookie/'kuki/n. 饼干;曲奇饼
+　　abacus/'æbəkəs/n. 算盘
+　　binoculars/bai'nɔkjuləz/n. 双筒望远镜
+　　century/'sentʃəri/n. 世纪，百年
+　　rank/ræŋk/n.顺序;级别
+　　active/'æktiv/adj. 活动的;活泼的;积极的
+　　indoors/in'dɔ:z/adv. 在户内
+　　create/kri'eit/vt. 创造;创作;创建
+　　wooden/'wudn/a. 木制的
+　　knock/nɔk/v. 敲;碰撞;击
+　　knock into与…相撞
+　　divide/di'vaid/vt. 分开，划分
+　　aim/eim/n. 目的，目标
+　　basket/'bɑ:skit/n. 篮子
+　　equipment/i'kwipmənt/n. 装备，设备
+　　metal/'metl/n. 金属
+　　hoop/hu:p/n. 环;圈;篮圈
+　　shoot/ʃu:t/v. 射击;投篮
+　　below/bi'ləu/prep. 在. . . 下面;低于
+　　backboard/'bækbɔ:d/n. 篮板;背板
+　　guide/ɡaid/v.指导;带领
+　　towards/tə'wɔ:dz/prep. 向着，朝着
+　　court/kɔ:t/n.球场
+　　Berlin/bə:'lin/n. 柏林
+　　develop/di'veləp/v. (使)发展;(使)成长;(使)发达
+　　popularity/,pɔpju'lærəti/n. 普及;流行
+　　rise/raiz/v.上升;达到较高水平等
+　　risen/'rizən/v. 上升;上涨(rise的过去词)
+　　worldwide/'wə:ld,waid/a. 世界范围的;世界性的
+　　association/ə,səusi'eiʃən/n. 协会
+　　equipment/i'kwipment/n.装备;器材
+　　by the time到…的时候;到……之前
+　　gotten/'ɡɔtn/v. 得到;达到(get的过去分词)
+　　oversleep/,əuvə'sli:p/v. 睡过头;睡得过久
+　　go off发出响声
+　　rush/rʌʃ/v. 冲;赶紧
+　　run off跑掉;迅速离开
+　　on time准时
+　　lock/lɔk/v. 锁，锁上
+　　relative/'relətiv/n. 亲属，亲戚
+　　broke/brəuk/v. 打破(断，碎);损坏
+　　break down停止运转;出故障
+　　fool/fu:l/n. 傻瓜;愚人v.愚弄;欺骗
+　　costume/'kɔstju:m/n. 成套服装;戏装
+　　embarrassed/im'bærəst/a. 尴尬的;为难的
+　　empty/'empti/a. 空的v.排空;倒出
+　　show up露面;出席
+　　exhausted/iɡ'zɔ:stid/a. 极其疲惫的;精疲力竭的
+　　April Fool's Day愚人节(4月1日)
+　　announce/ə'nauns/vt. 宣布，宣告
+　　Mars/mɑ:z/n. 火星
+　　convincing/kən'vinsiŋ/vt.令人信服的;有说服力的
+　　panic/'pænik/n. 恐慌;惊恐
+　　set off 引起;激起
+　　authority/ɔ:'θɔrəti/n. 权威机构;行政管理机构
+　　reveal/ri'vi:l/v. 揭示;揭露
+　　hoax/həuks/n. 骗局;恶作剧;玩笑
+　　flee/fli:/v. 逃走;逃
+　　fled/fled/v. 逃走(flee的过去式和过去分词)
+　　spaghetti/spə'ɡeti/n. 意大利式细面条
+　　farmer/'fɑ:mə/n. 农夫;农场主
+　　girlfriend/'ɡə:lfrend/n. 女朋友
+　　marry/'mæri/v. 与…结婚;嫁;娶
+　　thrill/θril/v. (使)非常激动;(使)非常紧张
+　　get married结婚
+　　ending/'endiŋ/n. 结局;结尾
+　　embarrassing/im'bærəsiŋ/a. 令人尴尬的;令人为难的
+　　a piece of一块;一张;一根;一片
+　　Halloween [ˌhæləʊ'iːn] n. 万圣节前夕
+　　Holland ['hɒlənd] 荷兰
+　　Qomolangma [kɔməu'leima] 珠穆朗玛峰(世界第一高峰)
+　　restroom/'restru:m/n. 公共厕所;休息室
+　　shampoo/ʃæm'pu:/n. 洗发精
+　　drugstore/'drʌɡstɔ:/n. 药店
+　　cafe/'kæfei/n.咖啡馆;小餐馆
+　　department/di'pɑ:tmənt/n. 部门;(大学的)系
+　　department store 百货公司;百货商店
+　　escalator/'eskəleitə/n. 电动扶梯;自动扶梯
+　　magic/'mædʒik/a. 有魔力的;魔术的
+　　fresh/freʃ/a. 新鲜的;清新的
+　　block/blɔk/n.街区;街段
+　　oak/əuk/n. 橡树;橡木
+　　kind of 有点儿，有几分
+　　hang out 闲逛，闲荡
+　　uncrowded/ʌn'kraudid/a. 宽敞的;不拥挤的
+　　safe adj. 安全的
+　　slide/slaid/n.滑道;滑槽;滑动装置
+　　water slide水滑道
+　　clown/klaun/n. 小丑;丑角
+　　staff/stɑ:f/n. 职员;全体职员
+　　organized/'ɔ:gənaizd/adj.有组织的;安排有序的
+　　dress up穿上盛装;装扮
+　　market/'mɑ:kit/n. 市场;集市广场
+　　lend/lend/vt. 借(出);借给
+　　park/pɑ:k/v.停车
+　　alright/ɔ:l'rait/a.合适的;可以的
+　　direct/di'rect/adj.直接的;直率的;直截了当的
+　　order/'ɔ:də/n.命令;指示
+　　wonder/'wʌndə/v. 觉得奇怪;想知道
+　　lead/li:d/v.引导;引诱
+　　trouble/'trʌbl/n. 麻烦;烦恼
+　　offend/ə'fend/v. 冒犯;得罪;使生气
+　　certain/'sə:tn/adj.某;某些;某个
+　　structure/'strʌktʃə/n. 结构;构造;
+　　hand in交上;提交;呈送
+　　shake/ʃeik/v.摇动;震动
+　　shake hands握手
+　　custom/'kʌstəm/n. 习俗;风俗;习惯
+　　bow/bəu/v. 鞠躬;弯腰
+　　kiss/kis/n. 吻，亲吻
+　　Cali/'kɑ:li/(哥伦比亚城市)卡利
+　　Colombia/kə'lʌmbiə/(拉丁美洲国家)哥伦比亚
+　　relaxed/ri'lækst/a. 放松的;轻松的
+　　drop by顺便拜访
+　　Lausanne/ləu'zæn/(瑞士西部城市)洛桑
+　　Switzerland/'switsələnd/n. 瑞士
+　　land/lænd/n. 国家;国土;土地
+　　after all毕竟;终究;究竟
+　　towards/tə'wɔ:dz/prep.对于;关于
+　　greet/gri:t/v.问候; 向……打招呼
+　　Peru/pəˈru/秘鲁
+　　wipe/waip/v. 擦;揩;抹
+　　napkin/'næpkin/n. 餐巾
+　　make noise发出噪音
+　　stick/stik/v.刺;戳;插
+　　rude/ru:d/a. 粗鲁的;无礼的
+　　point/pɔint/v. 指，指向
+　　go out of one's way to do sth.特地(不怕麻烦地)做某事
+　　make sb. feel at home 使某人感到宾到如归
+　　manner/'mænə/n.礼貌;礼义;规矩
+　　table manners餐桌礼仪
+　　be/get used to习惯于
+　　fork/fɔ:/n. 餐叉
+　　full/ful/a.吃饱的;过饱的
+　　lap/læp/n. (人坐时)腰以下到膝这止的部分;大腿
+　　elbow/'elbəu/n. 肘，肘部
+　　gradually/'grædjuəli/adv. 逐渐地;渐渐地
+　　particular/pə'tikjulə/a. 特别的;独特的
+　　compliment/'kɔmplimənt/n. 称赞;恭维
+　　toast/təust/n.敬酒;祝酒
+　　unfamiliar/,ʌnfə'miliə/a. 不熟悉的;陌生的
+　　spoon/spu:n/n. 匙，调羹b
+　　knife/naif/n. 刀;餐刀
+　　crowd/kraud/v.挤满;充满
+　　rubbish/'rʌbiʃ/n. 垃圾;废物
+　　seek/si:k/vt. 寻找;探究
+　　online/'ɔnlain/n. (计算机)在线;联机
+　　type/taip/v.打字
+　　mostly/'məustli/adv. 主要地;通常;多半
+　　abbreviation/ə,bri:vi'eiʃən/n. 缩写;缩略词
+　　form/fɔ:m/n. 表格;形式
+　　phrase/freiz/n. 短语;词组
+　　homophone/'hɔməufəun/n. 同音异形异义词
+　　combine/kəm'bain/vt. 结合;组合
+　　symbol/'simbəl/n. 象征;标志;符号
+　　punctuation/,pʌŋktju'eiʃən/n. 标点符号
+　　mark/mɑ:k/n. 符号;记号
+　　emotion/i'məuʃən/n. 情感;感情
+　　colon/'kəulən/n. 冒号
+　　bracket/'brækit/n. 括号
+　　beside/bi'said/prep. 在…旁边;在……附近
+　　e-mail/'i:meil/n. (=email)电子邮件;v.发电子邮件
+　　riddle/'ridl/n. 谜语
+　　learn……by oneself 自学
+　　experiment/ik'speriment/v.试验;实验
+　　proper/'prɔpə/a. 恰当的，合适的;适宜的
+　　pleased/pli:zd/adj.高兴的;满意的
+　　queue/kju:/n.(排队等候的)一队人v.排队
+　　normally/'nɔ:məli/adv. 通常;正常地.
+　　whose/hu:z/pron. 谁的(疑问代词)
+　　lagoon/lə'ɡu:n/n. 泻湖;环礁湖
+　　scientific/,saiən'tifik/a. 科学的
+　　therefore/'eεəfɔ:/adv. 因此，所以
+　　pink/piŋk/n. 粉红色
+　　lighting/'laitiŋ/n.光线;照明
+　　hard/hɑ:d/a. 坚硬的;坚固的
+　　serve/sə:v/vt. 招待，服务
+　　fair/feə/a. 公平的，公道的
+　　campaign/kæm'pein/n. 运动
+　　endangered/in'deindʒəd/a. 濒临灭绝的
+　　slogan/'sləuɡən/n. 标语;口号
+　　mysterious/mi'stiəriəs/a. 神秘的;不可思议的
+　　shiny/'ʃaini/a. 有光泽的;发亮的
+　　skin/skin/n. 皮，皮肤
+　　product/'prɔdəkt/n. 产品
+　　lookout/'lukaut/n. 前景;远景
+　　beauty/'bju:ti/n. 美;美貌
+　　toothpaste/'tu:θpeist/n.牙膏
+　　keep out (使)不进入;(使)留在外面
+　　stardust/'stɑ:dʌst/n. 星团;幻觉
+　　advertising/'ædvətaiziŋ/n. 广告;广告活动;广告业
+　　pros and cons[kɔns]正面和反面;赞成与反对
+　　aim/eim/v.瞄准;对准
+　　aim at针对;致力于;旨在
+　　specifically/spə'sifikli/adv. 特别地;明确地
+　　instance/'instəns/n. 例子，实例
+　　for instance例如，比如
+　　list/list/v.列出;列举;列表
+　　confusing/kən'fju:ziŋ/adj.令人困惑的;含糊不清的
+　　misleading/mis'li:diŋ/adj.令人误解的;骗人的
+　　truth/tru:θ/n. 真相，事实
+　　at times 有时;偶尔
+　　to start with首先
+　　tense/tens/adj.紧张的;焦虑的
+　　home-made/'həum'meid/a. 自制的;家里做的
+　　schoolbag/'sku:lbæɡ/n. 书包
+　　purple/'pə:pl/adj.紫色的
+　　purse/pə:s/n. 钱包
+　　guilty/'ɡilti/a. 有罪的;内疚的
+　　taste/teist/n. 品味;审美力;鉴赏力
+　　saying/'sei-iŋ/n.格言;谚语;警句
+　　thought/θɔ:t/n. 思想;想法;考虑;关心
+　　count/kaunt/v.有价值;重要
+　　bathing/'beieiŋ/n. 洗澡;游泳
+　　suit/sju:t/n.(一套)衣服
+　　bathing suit 游泳衣;泳装
+　　towel/'tauəl/n. 毛巾;手巾
+　　water/'wɔ:tə/v.浇灌;浇水
+　　guidebook/'ɡaidbuk/n. 指南;手册
+　　clean out清除;打扫干净
+　　refrigerator/ri'fridʒəreitə/n. 冰箱
+　　garage/'ɡæridʒ/n. 汽车库
+　　suitcase/'sju:tkeis/n. 小提箱;衣箱
+　　get back to sb.(口语)过一会再与某人通话
+　　chop/tʃɔp/v. 砍;劈;剁
+　　wood/wud/n. 木头，木材;(复)树木，
+　　light/lait/v.点燃;点着
+　　well/wel/n.水井
+　　farm/fɑ:m/n. 农场;农庄
+　　anyway/'eniwei/adv. 不管怎样，无论如何
+　　award/ə'wɔ:d/n.奖赏;奖金;奖品
+　　wave/weiv/n. 波浪;波涛
+　　scene/si:n/n.舞台
+　　hit/hit/vt. 打击;碰撞
+　　appear/ə'piə/v. 出现;似乎;显得
+　　lead/li:d/v.主角
+　　lead singer主唱者
+　　some day来日;将来有一日;有朝一日
+　　be off离开，走开
+　　poem/'pəuim/n. 诗;韵文
+　　cupboard/'kʌbəd/n. 碗柜;橱柜
+　　turn/tə:n/n.一次机会
+　　mail/'meil/n.邮件;邮包;邮政
+　　ancestor/'ænsestə/n. 祖宗，祖先
+　　root/ru:t/n. 根，根源
+　　overseas/'əuvə'si:z/a. 海外的;国外的
+　　homeland/'həumlænd/n. 祖国;故乡
+　　government/'ɡʌvənmənt/n. 政府
+　　so far到目前为止
+　　southern/'sʌeən/a. 南部的，南方的
+　　villager/'vilidʒə、n. 村民
+　　thanks to幸亏;由于;因为
+　　strongly/'strɔŋli/adv.坚定地;坚决地
+　　purpose/'pə:pəs/n. 目的，意图
+　　step/step/n. 脚步;步骤;步
+　　look forward (to)期待
+　　manatee/'mænəti:/n. 海牛
+　　furry/'fə:ri/a. 毛皮的;似毛皮的;长有毛皮的
+　　enormous/i'nɔ:məs/a. 巨大的，庞大的
+　　playful/'pleiful/a. 顽皮的;爱玩耍的
+　　aggressive/ə'ɡresiv/a. 侵略性的;挑衅的
+　　gray/grei/a. 灰色的;苍白的
+　　spotted/'spɔtid/a. 有斑点的;有点子的
+　　kangaroo/,kænɡə'ru:/n. 袋鼠
+　　chimpanzee/,tʃimpæn'zi:/n. 黑猩猩
+　　cheetah/'tʃi:tə/n. 猎豹
+　　mangrove/'mæŋɡrəuv/n. 红树林
+　　swamp/swɔmp/n. 沼泽;沼泽地
+　　habitat/'hæbitæt/n. 栖息地;生长环境
+　　aquatic/ə'kwɔtik/a. 水生的;水栖的
+　　feed/fi:d/n.动物的食物;饲料
+　　underwater/'ʌndə'wɔ:tə/a. 在水下的;在水中的
+　　vegetation/,vedʒi'teiʃən/n. 植被;植物
+　　weigh/wei/vt. 称…的重量;称
+　　pound/paund/n. 磅
+　　polluted/pə'lju:tid/a. 被污染的
+　　present progressive/'preznt prəˈgresiv/现在进行时
+　　present simple/simpl/一般现在时
+　　infinitive/in'finitiv/n. 原形动词;不定式
+　　passive voice/'pæsiv vɔis/被动语态
+　　present perfect/'preznt pɜ:fikt/现在完成时
+　　suitable/'sju:təbl/a. 合适的;适宜的
+　　tiny/'taini/a. 极小的，微小的
+　　cage/keidʒ/n. 笼子
+　　disgusted/dis'ɡʌstid/a. 厌恶的;憎恶的
+　　educate/'edju:keit/v. 教育;培养
+　　care for照顾;关心;喜欢
+　　urge/ə:dʒ/v. 强烈要求;竭力主张
+　　expression/ik'spreʃən/n. 表达;表情
+　　recycle/,ri:'saikl/vt. 回收;使再循环
+　　built/bilt/v. 建造(build的过去式和过去分词
+　　stuff/stʌf/n. 材料;原料
+　　pull/pul/v. 拉;拖;拔
+　　glue/ɡlu:/n. 胶水;v.粘贴;粘合
+　　roof/ru:f/n. 屋顶;顶
+　　discard/dis'kɑ:d/v. 丢弃;抛弃
+　　tile/tail/n. 瓦片;瓷砖
+　　fence/'fens/n. 栅栏;围栏;篱笆
+　　can/kæn/aux. 能，可以
+　　recently/recentli/adv. 最近
+　　planet/'plænit/n. 行星
+　　society/sə'saiəti/n. 社会;社团
+　　president/'prezidənt/n.总统;总裁;会长
+　　inspiration/,inspə'reiʃən/n. 鼓舞人心的人;灵感
+　　spare/speə/a. 空闲的;多余的
+　　model/'mɔdəl/n. 模型
+　　material n. 材料;物质;原料
+　　business ['biznis]n. 商业;生意
+　　plastic ['plæstɪk] adj. 塑料(制)的; n.塑料
+　　certainly ['sə:tənli]adv. 确实地;无疑地;(口语)当然
+　　proud [praud]adj. 自豪的;骄傲的
+　　flag [flæg] n. 旗帜;旗
+　　national flag 国旗

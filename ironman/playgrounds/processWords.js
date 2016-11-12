@@ -23,12 +23,11 @@ function process(word) {
                     throw err;
                 }
 
-
                 let $ = cheerio.load(sres.text, {decodeEntities: false});
 
                 let explanation = null;
                 let partOfSpeech = null;
-                let pronunciation;
+                let pronunciation = null;
                 let others = "";
                 let example = null;
                 let exampleExplanation = null;
@@ -49,8 +48,11 @@ function process(word) {
                 // logger.info(`explanation : ${explanation}, part: ${partOfSpeech}`);
 
                 const prononceNode = $('.phonetic');
-                const value = prononceNode.find('span').slice(1).eq(0).find('.sound.fsound').attr('naudio').split('?')[0];
-                pronunciation = `http://audio.dict.cn/${value}`;
+                const prononceElem = prononceNode.find('span').slice(1).eq(0).find('.sound.fsound').attr('naudio');
+                if (prononceElem != undefined ) {
+                    const value = prononceElem.split('?')[0];
+                    pronunciation = `http://audio.dict.cn/${value}`;
+                }
 
                 // logger.info(`explanation : ${pronunciation}`);
 
@@ -85,78 +87,40 @@ function process(word) {
 var wordExercises = [];
 var allwords = [];
 
-readFile("./nine_grade_half_a.csv", "utf8")
+function processWords(start) {
+    logger.warn(`start to handle : ${start}`);
+    if (start + 50 <= allwords.length) {
+        let toProcess = allwords.slice(start, start+50);
+        const promises = toProcess.map(word => process(word));
 
-    .then((contents) => {
-        allwords = contents.split('\r\n');
-        logger.warn(`all words count : ${allwords.length}`);
-        let words = allwords.slice(0,50);
-        const promises = words.map(word => process(word));
-        return Promise.all(promises);
-    })
+        return Promise.all(promises)
+            .then((things)=>{
+                wordExercises = wordExercises.concat(things);
+                processWords(start+50);
+            });
+    }
+    else if (start < allwords.length){
+        let toProcess = allwords.slice(start);
+        const promises = toProcess.map(word => process(word));
 
-    .then((things)=> {
-        logger.warn(`total : ${wordExercises.length}`);
-        wordExercises = wordExercises.concat(things);
-        let words = allwords.slice(50,100);
-        const promises = words.map(word => process(word));
-        return Promise.all(promises);
-    })
-
-    .then((things)=> {
-        logger.warn(`total : ${wordExercises.length}`);
-        wordExercises = wordExercises.concat(things);
-        let words = allwords.slice(100,150);
-        const promises = words.map(word => process(word));
-        return Promise.all(promises);
-    })
-
-    .then((things)=> {
-        logger.warn(`total : ${wordExercises.length}`);
-        wordExercises = wordExercises.concat(things);
-        let words = allwords.slice(150,200);
-        const promises = words.map(word => process(word));
-        return Promise.all(promises);
-    })
-
-    .then((things)=> {
-        logger.warn(`total : ${wordExercises.length}`);
-        wordExercises = wordExercises.concat(things);
-        let words = allwords.slice(200,250);
-        const promises = words.map(word => process(word));
-        return Promise.all(promises);
-    })
-
-    .then((things)=> {
-        logger.warn(`total : ${wordExercises.length}`);
-        wordExercises = wordExercises.concat(things);
-        let words = allwords.slice(250,300);
-        const promises = words.map(word => process(word));
-        return Promise.all(promises);
-    })
-
-    .then((things)=> {
-        logger.warn(`total : ${wordExercises.length}`);
-        wordExercises = wordExercises.concat(things);
-        let words = allwords.slice(300,350);
-        const promises = words.map(word => process(word));
-        return Promise.all(promises);
-    })
-
-    .then((things)=> {
-        logger.warn(`total : ${wordExercises.length}`);
-        wordExercises = wordExercises.concat(things);
-        let words = allwords.slice(350);
-        const promises = words.map(word => process(word));
-        return Promise.all(promises);
-    })
-
-    .then((things)=> {
-        wordExercises = wordExercises.concat(things);
+        return Promise.all(promises)
+            .then((things)=>{
+                wordExercises = wordExercises.concat(things);
+                processWords(start+50);
+            });
+    }
+    else {
         logger.warn(`total : ${wordExercises.length}`);
         fs.writeFile('./nine_grade_half_a.json', JSON.stringify(wordExercises, null, 2));
-    })
+    }
+}
 
+readFile("./nine_grade_half_a.txt", "utf8")
+
+    .then((contents) => {
+        allwords = contents.split('\n');
+        return processWords(0);
+    })
 
     .catch((e) => {
         logger.error(`e: ${e.message}`);
