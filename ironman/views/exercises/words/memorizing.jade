@@ -4,9 +4,9 @@ doctype html
 html
     head
         include ../../head
-        link(rel='stylesheet', href='/icheck/skins/square/green.css')
+        link(rel='stylesheet', href='http://cdn.bootcss.com/iCheck/1.0.2/skins/line/green.css')
         link(rel='stylesheet', href='/stylesheets/exercises.css')
-        script(src='/icheck/icheck.js')
+        script(src='http://cdn.bootcss.com/iCheck/1.0.2/icheck.min.js')
         include memorizingTmpl
     body
         include ../../navbar
@@ -24,5 +24,5 @@ html
                         .progress
                             #progressbar.progress-bar.progress-bar-success(aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;")
 
-        script(src='/javascripts/require.js' async='true' defer data-main='/javascripts/exercises/words/memorizing.js')
+        script(src='http://cdn.bootcss.com/require.js/2.3.2/require.min.js' async='true' defer data-main='/javascripts/exercises/words/memorizing.js')
 
