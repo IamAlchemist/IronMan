@@ -49,7 +49,7 @@ function process(word) {
 
                 const prononceNode = $('.phonetic');
                 const prononceElem = prononceNode.find('span').slice(1).eq(0).find('.sound.fsound').attr('naudio');
-                if (prononceElem != undefined ) {
+                if (prononceElem != undefined) {
                     const value = prononceElem.split('?')[0];
                     pronunciation = `http://audio.dict.cn/${value}`;
                 }
@@ -83,30 +83,29 @@ function process(word) {
     });
 }
 
-
 var wordExercises = [];
 var allwords = [];
 
 function processWords(start) {
     logger.warn(`start to handle : ${start}`);
     if (start + 50 <= allwords.length) {
-        let toProcess = allwords.slice(start, start+50);
+        let toProcess = allwords.slice(start, start + 50);
         const promises = toProcess.map(word => process(word));
 
         return Promise.all(promises)
-            .then((things)=>{
+            .then((things)=> {
                 wordExercises = wordExercises.concat(things);
-                processWords(start+50);
+                processWords(start + 50);
             });
     }
-    else if (start < allwords.length){
+    else if (start < allwords.length) {
         let toProcess = allwords.slice(start);
         const promises = toProcess.map(word => process(word));
 
         return Promise.all(promises)
-            .then((things)=>{
+            .then((things)=> {
                 wordExercises = wordExercises.concat(things);
-                processWords(start+50);
+                processWords(start + 50);
             });
     }
     else {
@@ -115,16 +114,20 @@ function processWords(start) {
     }
 }
 
-readFile("./nine_grade_half_a.txt", "utf8")
+function processAll() {
 
-    .then((contents) => {
-        allwords = contents.split('\n');
-        return processWords(0);
-    })
+    readFile("./nine_grade_half_a.txt", "utf8")
 
-    .catch((e) => {
-        logger.error(`e: ${e.message}`);
-    });
+        .then((contents) => {
+            allwords = contents.split('\n');
+            return processWords(0);
+        })
+
+        .catch((e) => {
+            logger.error(`e: ${e.message}`);
+        });
+
+}
 
 
 

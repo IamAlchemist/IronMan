@@ -9,17 +9,19 @@ const Promise = require('bluebird').Promise,
     cheerio = require('cheerio'),
     logger = require('../libs/ironmanLogger');
 
-function preprocess(from, to) {
-    readFile(`./${from}`, "utf8")
+function preprocess() {
+    readFile(`./eight_grade_half_a2.txt`, "utf8")
         .then((content)=>{
             let alllines = content.split('\n');
             logger.warn(`${alllines.length}`);
 
             let string = "";
             for (let line of alllines) {
-                string += line.trim().split('/')[0] + '\n';
+                string += line.trim().split('[')[0].trim() + '\n';
             }
 
-            fs.writeFile(`./${to}`, string);
+            fs.writeFile(`./eight_grade_half_a2.txt`, string);
         });
 }
+
+preprocess();
