@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b903ec8f-157f-4431-8659-022e2b0cd42a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playgrounds/importToDB.js" afterPath="$PROJECT_DIR$/playgrounds/importToDB.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/wordsExercisesLib.js" afterPath="$PROJECT_DIR$/libs/wordsExercisesLib.js" />
     </list>
     <ignored path="ironman.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,13 +68,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="importToDB.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="importToDB.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/playgrounds/importToDB.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="772">
-              <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+            <state relative-caret-position="637">
+              <caret line="72" column="7" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exercises.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/exercises.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="142" column="33" selection-start-line="142" selection-start-column="22" selection-end-line="142" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wordsExercisesLib.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/libs/wordsExercisesLib.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="682">
+              <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+              <folding>
+                <element signature="e#446#2420#0" expanded="false" />
+                <element signature="e#3595#4326#0" expanded="false" />
+                <element signature="e#4379#4752#0" expanded="false" />
+                <element signature="e#4812#5639#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -130,7 +155,6 @@
         <option value="$PROJECT_DIR$/models/punchingRecord.js" />
         <option value="$PROJECT_DIR$/libs/commonLib.js" />
         <option value="$PROJECT_DIR$/libs/api-result.js" />
-        <option value="$PROJECT_DIR$/libs/wordsExercisesLib.js" />
         <option value="$PROJECT_DIR$/routes/exercises.js" />
         <option value="$PROJECT_DIR$/views/exercises/words/memorizingTmpl.jade" />
         <option value="$PROJECT_DIR$/public/javascripts/exercises/words/memorizing.js" />
@@ -161,6 +185,7 @@
         <option value="$PROJECT_DIR$/playgrounds/eight_grade_half_a2.txt" />
         <option value="$PROJECT_DIR$/playgrounds/eight_grade_half_b.txt" />
         <option value="$PROJECT_DIR$/playgrounds/importToDB.js" />
+        <option value="$PROJECT_DIR$/libs/wordsExercisesLib.js" />
       </list>
     </option>
   </component>
@@ -266,7 +291,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="playgrounds" />
+              <option name="myItemId" value="routes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -280,7 +305,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
+              <option name="myItemId" value="playgrounds" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -421,14 +446,7 @@
       <workItem from="1478786040615" duration="64000" />
       <workItem from="1478831269440" duration="3885000" />
       <workItem from="1478870193748" duration="5061000" />
-      <workItem from="1478882298713" duration="11533000" />
-    </task>
-    <task id="LOCAL-00030" summary="minor ui change,  exercises/words/create, exercises/create">
-      <created>1478045907576</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1478045907576</updated>
+      <workItem from="1478882298713" duration="11634000" />
     </task>
     <task id="LOCAL-00031" summary="minor ui change,  exercises/words/create, exercises/create">
       <created>1478046632539</created>
@@ -766,11 +784,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478961046407</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="mc">
+      <created>1478961250862</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1478961250862</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277715000" />
+    <option name="totallyTimeSpent" value="277816000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -842,7 +867,6 @@
     <MESSAGE value="finish link user feature" />
     <MESSAGE value="finish &quot;学生可以看到父母提交的单词&quot;" />
     <MESSAGE value="finish punching record" />
-    <MESSAGE value="mc" />
     <MESSAGE value="minor fix" />
     <MESSAGE value="punch after finish upload word exercises data" />
     <MESSAGE value="let's show the today's words achievement if we already finished the exercises" />
@@ -853,7 +877,8 @@
     <MESSAGE value="change the word to word exercises" />
     <MESSAGE value="use cdn" />
     <MESSAGE value="minor change" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor change" />
+    <MESSAGE value="mc" />
+    <option name="LAST_COMMIT_MESSAGE" value="mc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -947,13 +972,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/exercises.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="59" column="45" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/playgrounds/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -992,20 +1010,6 @@
         <state relative-caret-position="75">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/wordsExercisesLib.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="88" column="15" selection-start-line="88" selection-start-column="15" selection-end-line="88" selection-end-column="15" />
-          <folding>
-            <element signature="e#446#2420#0" expanded="false" />
-            <element signature="e#3595#4326#0" expanded="false" />
-            <element signature="e#4379#4752#0" expanded="false" />
-            <element signature="e#4812#5639#0" expanded="false" />
-            <element signature="e#5698#6580#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1257,10 +1261,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/playgrounds/importToDB.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="772">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        <state relative-caret-position="637">
+          <caret line="72" column="7" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/exercises.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="142" column="33" selection-start-line="142" selection-start-column="22" selection-end-line="142" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/wordsExercisesLib.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+          <folding>
+            <element signature="e#446#2420#0" expanded="false" />
+            <element signature="e#3595#4326#0" expanded="false" />
+            <element signature="e#4379#4752#0" expanded="false" />
+            <element signature="e#4812#5639#0" expanded="false" />
           </folding>
         </state>
       </provider>

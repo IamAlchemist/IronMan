@@ -191,10 +191,10 @@ module.exports.inspectAchievementToday = function (user) {
 
 };
 
-module.exports.importWords = function (mail, grademail) {
+module.exports.importWords = function (mail, gradeMail) {
     return WordExerciseProgress.WordExerciseProgressModel
         .find({mail})
-        .where('wordExercise.mail').equals(grademail)
+        .where('wordExercise.mail').equals(gradeMail)
 
         .exec()
 
@@ -206,7 +206,7 @@ module.exports.importWords = function (mail, grademail) {
             }
             else {
                 return WordExercise.WordExerciseModel
-                    .find({mail: grademail})
+                    .find({mail: gradeMail})
                     .exec()
             }
         })
