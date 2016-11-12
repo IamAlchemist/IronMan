@@ -9,33 +9,69 @@ const mongodb = require('../libs/mongodb'),
     logger = require('../libs/ironmanLogger');
 
 
-var words = JSON.parse(fs.readFileSync('./nine_grade_half_a.json', 'utf8'));
+function import_eight_a() {
+    var words = JSON.parse(fs.readFileSync('./eight_grade_half_a.json', 'utf8'));
 
-logger.info(`count: ${words.length}`);
+    logger.info(`count: ${words.length}`);
 
-words = words.map((word)=> {
-    word.mail = 'nine.grade.half.a@gmail.com';
-    return word;
-});
+    words = words.map((word)=> {
+        word.mail = 'eight.grade.half.a@gmail.com';
+        return word;
+    });
 
-var promises = words.map((word)=> {
-//    logger.info(JSON.stringify(word, null, 2));
+    var promises = words.map((word)=> {
 
-    return WordExercise.MakeWordExercise(
-        word.mail,
-        word.word,
-        word.partOfSpeech,
-        word.explanation,
-        word.example,
-        word.exampleExplanation,
-        word.pronunciation,
-        word.others
-    ).save();
+        return WordExercise.MakeWordExercise(
+            word.mail,
+            word.word,
+            word.partOfSpeech,
+            word.explanation,
+            word.example,
+            word.exampleExplanation,
+            word.pronunciation,
+            word.others
+        ).save();
 
-});
+    });
 
-const final = new Promise.all(promises);
+    const final = new Promise.all(promises);
 
-final.then((results)=> {
-    logger.info(`succeed: ${results.length}`)
-});
+    final.then((results)=> {
+        logger.info(`eight_grade_half_a succeed: ${results.length}`)
+    });
+}
+
+function import_eight_b() {
+    var words = JSON.parse(fs.readFileSync('./eight_grade_half_b.json', 'utf8'));
+
+    logger.info(`count: ${words.length}`);
+
+    words = words.map((word)=> {
+        word.mail = 'eight.grade.half.b@gmail.com';
+        return word;
+    });
+
+    var promises = words.map((word)=> {
+
+        return WordExercise.MakeWordExercise(
+            word.mail,
+            word.word,
+            word.partOfSpeech,
+            word.explanation,
+            word.example,
+            word.exampleExplanation,
+            word.pronunciation,
+            word.others
+        ).save();
+
+    });
+
+    const final = new Promise.all(promises);
+
+    final.then((results)=> {
+        logger.info(`eight_grade_half_b succeed: ${results.length}`)
+    });
+}
+
+//import_eight_a();
+//import_eight_b();
