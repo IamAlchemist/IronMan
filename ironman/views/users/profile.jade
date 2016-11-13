@@ -7,18 +7,45 @@ html
         .container
             .row
                 h3.text-center 欢迎, #{mail}
+
+            .row
+                .col-lg-6.col-center-block
+                    .panel.panel-primary
+                        .panel-heading
+                            h4.panel-title.text-center 家庭作业
+                        .panel-body
+                            p.text-success
+                                | 你已经按时完成作业
+                                span.lead
+                                    ins
+                                        strong#punchingCount 0
+                                | 次
+
+                            a.btn.btn-block.btn-info(href='/exercises/punching/homework') 按时完成打卡
+
+            .row
+                .col-lg-6.col-center-block
+                    .panel.panel-primary
+                        .panel-heading
+                            h4.panel-title.text-center 练习
+                        .panel-body
+                            .list-group
+                                a.list-group-item(href='/exercises/create') 创建题目
+                                a.list-group-item(href='/exercises') 我的题目(TBC)
+
+                    .panel.panel-primary
+                        .panel-heading
+                            h4.panel-title.text-center 单词
+                        .panel-body
+                            .list-group
+                                a.list-group-item(href='/exercises/words') 单词控制台
+                                a.list-group-item(href='/exercises/words/memorizing') 今日单词
+                                a.list-group-item(href='/exercises/words/create') 创建单词
+
             .row
                 .col-lg-6.col-center-block
                     a.btn.btn-block.btn-success(href='/users/link-user' style='margin-bottom: 10px;') 设置关联账号
-            .row
-                .col-lg-6.col-center-block
-                    .list-group
-                        a.list-group-item.active(href='/users/profile') 基本信息
-                        a.list-group-item(href='/exercises/create') 创建题目
-                        a.list-group-item(href='/exercises') 我的题目(TBC)
-                        a.list-group-item(href='/exercises/words') 单词控制台
-                        a.list-group-item(href='/exercises/words/memorizing') 今日单词
-                        a.list-group-item(href='/exercises/words/create') 创建单词
+
             .row
                 .col-lg-6.col-center-block
                     a.btn.btn-danger.btn-block(href='/users/logout') 注销

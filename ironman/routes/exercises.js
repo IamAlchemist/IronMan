@@ -99,18 +99,18 @@ router.get('/words/achievementToday', (req, res)=> {
         });
 });
 
-// router.get('/words/punching', (req, res) => {
-//     const user = comonLib.getUserFromRequest(req);
-//     if (!user) { return res.send(new Result(8)); }
-//
-//     punching.punchToday(user.mail)
-//         .then(()=>{
-//             return res.send(new Result(0));
-//         })
-//         .catch(()=>{
-//             return res.send(new Result(106));
-//         })
-// });
+router.get('/exercises/punching/homework', (req, res) => {
+    const user = comonLib.getUserFromRequest(req);
+    if (!user) { return res.send(new Result(8)); }
+
+    punching.punchToday(user.mail, punching.PunchingType.homework)
+        .then(()=>{
+            return res.send(new Result(0));
+        })
+        .catch(()=>{
+            return res.send(new Result(106));
+        })
+});
 
 router.get('/words/wordExercisesForToday', (req, res)=> {
     const user = comonLib.getUserFromRequest(req);

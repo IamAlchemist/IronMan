@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b903ec8f-157f-4431-8659-022e2b0cd42a" name="Default" comment="">
+    <list default="true" id="b903ec8f-157f-4431-8659-022e2b0cd42a" name="Default" comment="punching homework ui">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/punchingRecord.js" afterPath="$PROJECT_DIR$/models/punchingRecord.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/exercises.js" afterPath="$PROJECT_DIR$/routes/exercises.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/users/profile.jade" afterPath="$PROJECT_DIR$/views/users/profile.jade" />
     </list>
     <ignored path="ironman.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,61 +26,12 @@
     <favorites_list name="ironman" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="commonLib.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/commonLib.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-              <folding>
-                <element signature="e#252#284#0" expanded="false" />
-                <element signature="e#346#1454#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="authentication.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/authentication.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api-result.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/api-result.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wordsExercisesLib.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/wordsExercisesLib.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-              <folding>
-                <element signature="e#446#2420#0" expanded="false" />
-                <element signature="e#2478#3524#0" expanded="false" />
-                <element signature="e#3595#4326#0" expanded="false" />
-                <element signature="e#4379#4752#0" expanded="false" />
-                <element signature="e#4812#5639#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file leaf-file-name="exercises.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/exercises.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+            <state relative-caret-position="292">
+              <caret line="101" column="40" selection-start-line="101" selection-start-column="22" selection-end-line="101" selection-end-column="40" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
                 <element signature="e#554#885#0" expanded="false" />
@@ -103,54 +55,51 @@
                 <element signature="e#2370#2417#0" expanded="false" />
                 <element signature="e#2498#2577#0" expanded="false" />
                 <element signature="e#2599#2649#0" expanded="false" />
-                <element signature="e#2657#2705#0" expanded="false" />
-                <element signature="e#3090#3573#0" expanded="false" />
-                <element signature="e#3158#3205#0" expanded="false" />
-                <element signature="e#3294#3399#0" expanded="false" />
-                <element signature="e#3426#3569#0" expanded="false" />
-                <element signature="e#3623#4161#0" expanded="false" />
-                <element signature="e#3691#3738#0" expanded="false" />
-                <element signature="e#3804#3902#0" expanded="false" />
-                <element signature="e#3985#4033#0" expanded="false" />
-                <element signature="e#4057#4151#0" expanded="false" />
-                <element signature="e#4218#4732#0" expanded="false" />
-                <element signature="e#4286#4333#0" expanded="false" />
-                <element signature="e#4420#4569#0" expanded="false" />
-                <element signature="e#4596#4728#0" expanded="false" />
-                <element signature="e#4813#5646#0" expanded="false" />
-                <element signature="e#4881#4928#0" expanded="false" />
-                <element signature="e#5039#5088#0" expanded="false" />
-                <element signature="e#5178#5357#0" expanded="false" />
-                <element signature="e#5291#5345#0" expanded="false" />
-                <element signature="e#5384#5492#0" expanded="false" />
-                <element signature="e#5520#5642#0" expanded="false" />
-                <element signature="e#5693#7231#0" expanded="false" />
-                <element signature="e#5761#5808#0" expanded="false" />
-                <element signature="e#6066#6107#0" expanded="false" />
-                <element signature="e#6164#6205#0" expanded="false" />
-                <element signature="e#6260#6301#0" expanded="false" />
-                <element signature="e#6491#6662#0" expanded="false" />
-                <element signature="e#6886#7044#0" expanded="false" />
-                <element signature="e#7066#7226#0" expanded="false" />
-                <element signature="e#7285#8623#0" expanded="false" />
-                <element signature="e#7353#7400#0" expanded="false" />
-                <element signature="e#7861#8033#0" expanded="false" />
-                <element signature="e#8279#8437#0" expanded="false" />
-                <element signature="e#8459#8619#0" expanded="false" />
+                <element signature="e#3100#3583#0" expanded="false" />
+                <element signature="e#3168#3215#0" expanded="false" />
+                <element signature="e#3304#3409#0" expanded="false" />
+                <element signature="e#3436#3579#0" expanded="false" />
+                <element signature="e#3633#4171#0" expanded="false" />
+                <element signature="e#3701#3748#0" expanded="false" />
+                <element signature="e#3814#3912#0" expanded="false" />
+                <element signature="e#3995#4043#0" expanded="false" />
+                <element signature="e#4067#4161#0" expanded="false" />
+                <element signature="e#4228#4742#0" expanded="false" />
+                <element signature="e#4296#4343#0" expanded="false" />
+                <element signature="e#4430#4579#0" expanded="false" />
+                <element signature="e#4606#4738#0" expanded="false" />
+                <element signature="e#4823#5656#0" expanded="false" />
+                <element signature="e#4891#4938#0" expanded="false" />
+                <element signature="e#5049#5098#0" expanded="false" />
+                <element signature="e#5188#5367#0" expanded="false" />
+                <element signature="e#5301#5355#0" expanded="false" />
+                <element signature="e#5394#5502#0" expanded="false" />
+                <element signature="e#5530#5652#0" expanded="false" />
+                <element signature="e#5703#7241#0" expanded="false" />
+                <element signature="e#5771#5818#0" expanded="false" />
+                <element signature="e#6076#6117#0" expanded="false" />
+                <element signature="e#6174#6215#0" expanded="false" />
+                <element signature="e#6270#6311#0" expanded="false" />
+                <element signature="e#6501#6672#0" expanded="false" />
+                <element signature="e#6896#7054#0" expanded="false" />
+                <element signature="e#7076#7236#0" expanded="false" />
+                <element signature="e#7295#8633#0" expanded="false" />
+                <element signature="e#7363#7410#0" expanded="false" />
+                <element signature="e#7871#8043#0" expanded="false" />
+                <element signature="e#8289#8447#0" expanded="false" />
+                <element signature="e#8469#8629#0" expanded="false" />
                 <element signature="n#!!block;n#filterEmpty#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="punchingRecord.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/models/punchingRecord.js">
+      <file leaf-file-name="profile.jade" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/users/profile.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding>
-                <element signature="e#1038#1493#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="375">
+              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -192,7 +141,6 @@
         <option value="$PROJECT_DIR$/playgrounds/mongoosePlayground.js" />
         <option value="$PROJECT_DIR$/libs/commonLib.js" />
         <option value="$PROJECT_DIR$/libs/api-result.js" />
-        <option value="$PROJECT_DIR$/routes/exercises.js" />
         <option value="$PROJECT_DIR$/views/exercises/words/memorizingTmpl.jade" />
         <option value="$PROJECT_DIR$/public/javascripts/exercises/words/memorizing.js" />
         <option value="$PROJECT_DIR$/models/wordExercise.js" />
@@ -204,7 +152,6 @@
         <option value="$PROJECT_DIR$/views/test.jade" />
         <option value="$PROJECT_DIR$/views/users/link-user.jade" />
         <option value="$PROJECT_DIR$/views/users/login.jade" />
-        <option value="$PROJECT_DIR$/views/users/profile.jade" />
         <option value="$PROJECT_DIR$/views/users/register.jade" />
         <option value="$PROJECT_DIR$/test-tmpl.html" />
         <option value="$PROJECT_DIR$/node_modules/nine_grade_half_a.js" />
@@ -226,6 +173,8 @@
         <option value="$PROJECT_DIR$/views/exercises/words/memorizing.jade" />
         <option value="$PROJECT_DIR$/views/exercises/home.jade" />
         <option value="$PROJECT_DIR$/models/punchingRecord.js" />
+        <option value="$PROJECT_DIR$/routes/exercises.js" />
+        <option value="$PROJECT_DIR$/views/users/profile.jade" />
       </list>
     </option>
   </component>
@@ -333,7 +282,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="users" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -347,7 +300,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exercises" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ironman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ironman" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -487,14 +458,7 @@
       <workItem from="1478831269440" duration="3885000" />
       <workItem from="1478870193748" duration="5061000" />
       <workItem from="1478882298713" duration="12690000" />
-      <workItem from="1478998433984" duration="4774000" />
-    </task>
-    <task id="LOCAL-00036" summary="make the empty memorizing">
-      <created>1478101495487</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1478101495487</updated>
+      <workItem from="1478998433984" duration="7909000" />
     </task>
     <task id="LOCAL-00037" summary="make the memorizing start page">
       <created>1478133362631</created>
@@ -832,19 +796,26 @@
       <option name="project" value="LOCAL" />
       <updated>1479002319158</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="minor fix">
+      <created>1479028125935</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1479028125935</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283646000" />
+    <option name="totallyTimeSpent" value="286781000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20789288" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44457832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44457832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32771084" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -894,7 +865,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="minor bug fix&#10;" />
     <MESSAGE value="update fix" />
     <MESSAGE value="&#10;" />
     <MESSAGE value="minor css change" />
@@ -905,7 +875,6 @@
     <MESSAGE value="finish link user feature" />
     <MESSAGE value="finish &quot;学生可以看到父母提交的单词&quot;" />
     <MESSAGE value="finish punching record" />
-    <MESSAGE value="minor fix" />
     <MESSAGE value="punch after finish upload word exercises data" />
     <MESSAGE value="let's show the today's words achievement if we already finished the exercises" />
     <MESSAGE value="优化拉取题目算法" />
@@ -919,7 +888,9 @@
     <MESSAGE value="generate word exercises for eight grade" />
     <MESSAGE value="change import db" />
     <MESSAGE value="minor bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor bug fix" />
+    <MESSAGE value="minor fix" />
+    <MESSAGE value="punching homework ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="punching homework ui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -928,14 +899,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/playgrounds/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/playgrounds/word2.json" />
     <entry file="file://$PROJECT_DIR$/playgrounds/nine_grade_half_a.csv" />
     <entry file="file://$PROJECT_DIR$/models/exercise.js">
@@ -981,6 +944,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1207,34 +1171,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/exercises/home.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/exercises/words/memorizing.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/exercises/words/home.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="34" column="38" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/users/profile.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1280,10 +1220,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/punchingRecord.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="56" column="0" selection-start-line="17" selection-start-column="11" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <element signature="e#1038#1493#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/exercises/home.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/phrase.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/exercises/words/home.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="60" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/exercises.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+        <state relative-caret-position="292">
+          <caret line="101" column="40" selection-start-line="101" selection-start-column="22" selection-end-line="101" selection-end-column="40" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
             <element signature="e#554#885#0" expanded="false" />
@@ -1307,52 +1281,49 @@
             <element signature="e#2370#2417#0" expanded="false" />
             <element signature="e#2498#2577#0" expanded="false" />
             <element signature="e#2599#2649#0" expanded="false" />
-            <element signature="e#2657#2705#0" expanded="false" />
-            <element signature="e#3090#3573#0" expanded="false" />
-            <element signature="e#3158#3205#0" expanded="false" />
-            <element signature="e#3294#3399#0" expanded="false" />
-            <element signature="e#3426#3569#0" expanded="false" />
-            <element signature="e#3623#4161#0" expanded="false" />
-            <element signature="e#3691#3738#0" expanded="false" />
-            <element signature="e#3804#3902#0" expanded="false" />
-            <element signature="e#3985#4033#0" expanded="false" />
-            <element signature="e#4057#4151#0" expanded="false" />
-            <element signature="e#4218#4732#0" expanded="false" />
-            <element signature="e#4286#4333#0" expanded="false" />
-            <element signature="e#4420#4569#0" expanded="false" />
-            <element signature="e#4596#4728#0" expanded="false" />
-            <element signature="e#4813#5646#0" expanded="false" />
-            <element signature="e#4881#4928#0" expanded="false" />
-            <element signature="e#5039#5088#0" expanded="false" />
-            <element signature="e#5178#5357#0" expanded="false" />
-            <element signature="e#5291#5345#0" expanded="false" />
-            <element signature="e#5384#5492#0" expanded="false" />
-            <element signature="e#5520#5642#0" expanded="false" />
-            <element signature="e#5693#7231#0" expanded="false" />
-            <element signature="e#5761#5808#0" expanded="false" />
-            <element signature="e#6066#6107#0" expanded="false" />
-            <element signature="e#6164#6205#0" expanded="false" />
-            <element signature="e#6260#6301#0" expanded="false" />
-            <element signature="e#6491#6662#0" expanded="false" />
-            <element signature="e#6886#7044#0" expanded="false" />
-            <element signature="e#7066#7226#0" expanded="false" />
-            <element signature="e#7285#8623#0" expanded="false" />
-            <element signature="e#7353#7400#0" expanded="false" />
-            <element signature="e#7861#8033#0" expanded="false" />
-            <element signature="e#8279#8437#0" expanded="false" />
-            <element signature="e#8459#8619#0" expanded="false" />
+            <element signature="e#3100#3583#0" expanded="false" />
+            <element signature="e#3168#3215#0" expanded="false" />
+            <element signature="e#3304#3409#0" expanded="false" />
+            <element signature="e#3436#3579#0" expanded="false" />
+            <element signature="e#3633#4171#0" expanded="false" />
+            <element signature="e#3701#3748#0" expanded="false" />
+            <element signature="e#3814#3912#0" expanded="false" />
+            <element signature="e#3995#4043#0" expanded="false" />
+            <element signature="e#4067#4161#0" expanded="false" />
+            <element signature="e#4228#4742#0" expanded="false" />
+            <element signature="e#4296#4343#0" expanded="false" />
+            <element signature="e#4430#4579#0" expanded="false" />
+            <element signature="e#4606#4738#0" expanded="false" />
+            <element signature="e#4823#5656#0" expanded="false" />
+            <element signature="e#4891#4938#0" expanded="false" />
+            <element signature="e#5049#5098#0" expanded="false" />
+            <element signature="e#5188#5367#0" expanded="false" />
+            <element signature="e#5301#5355#0" expanded="false" />
+            <element signature="e#5394#5502#0" expanded="false" />
+            <element signature="e#5530#5652#0" expanded="false" />
+            <element signature="e#5703#7241#0" expanded="false" />
+            <element signature="e#5771#5818#0" expanded="false" />
+            <element signature="e#6076#6117#0" expanded="false" />
+            <element signature="e#6174#6215#0" expanded="false" />
+            <element signature="e#6270#6311#0" expanded="false" />
+            <element signature="e#6501#6672#0" expanded="false" />
+            <element signature="e#6896#7054#0" expanded="false" />
+            <element signature="e#7076#7236#0" expanded="false" />
+            <element signature="e#7295#8633#0" expanded="false" />
+            <element signature="e#7363#7410#0" expanded="false" />
+            <element signature="e#7871#8043#0" expanded="false" />
+            <element signature="e#8289#8447#0" expanded="false" />
+            <element signature="e#8469#8629#0" expanded="false" />
             <element signature="n#!!block;n#filterEmpty#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/punchingRecord.js">
+    <entry file="file://$PROJECT_DIR$/views/users/profile.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="e#1038#1493#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="375">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
