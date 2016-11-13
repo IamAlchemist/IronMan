@@ -99,16 +99,43 @@ router.get('/words/achievementToday', (req, res)=> {
         });
 });
 
+router.get('/punching/count', (req, res) => {
+    const user = comonLib.getUserFromRequest(req);
+    if (!user) { return res.send(new Result(8)); }
+
+    const type = req.query.punchingType;
+
+    let typeIsCorrect = false;
+    for (let key in punching.PunchingType) {
+        if (punching.PunchingType[key] == type) {
+            typeIsCorrect = true;
+            break;
+        }
+    }
+
+    if (!typeIsCorrect) {
+        return res.send(new Result(10));
+    }
+
+    punching.punchingCountHomework(user.mail, type)
+        .then((count)=>{
+            return res.send(new Result(0, {count}));
+        })
+        .catch((error)=>{
+            return res.send(new Result(114, {message: error.message}));
+        })
+});
+
 router.get('/exercises/punching/homework', (req, res) => {
     const user = comonLib.getUserFromRequest(req);
     if (!user) { return res.send(new Result(8)); }
 
-    punching.punchToday(user.mail, punching.PunchingType.homework)
+    punching.punchForHomework(user.mail, punching.PunchingType.homework)
         .then(()=>{
             return res.send(new Result(0));
         })
-        .catch(()=>{
-            return res.send(new Result(106));
+        .catch((error)=>{
+            return res.send(new Result(113, {message: error.message}));
         })
 });
 

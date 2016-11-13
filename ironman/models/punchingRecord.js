@@ -24,7 +24,45 @@ module.exports.MakePunchingRecord = function (mail = mongodb.throwIfMissing(), t
     return new PunchingRecordModel({mail, type});
 };
 
-module.exports.punchToday = function (mail, type = PunchingType.word) {
+module.exports.punchingCountHomework = function punchingCountHomework(mail, type) {
+    return PunchingRecordModel.count(
+        {
+            mail,
+            type
+        }).exec()
+
+        .then((num)=> {
+            return new Promise(function (resolve) {
+                resolve(num);
+            });
+        })
+
+        .catch((e)=>{
+            logger.error(e.message);
+            throw e;
+        });
+};
+
+module.exports.punchForHomework = function (mail) {
+    const current = moment();
+    const hour = current.hour();
+    const min = current.minute();
+    if (hour < 22 || (hour == 22 && min < 30)) {
+        return isPunchedToday(mail, PunchingType.homework)
+            .then((punched)=> {
+                if (punched) {
+                    throw new Error('already punched');
+                }
+
+                return punchToday(mail, PunchingType.homework);
+            });
+    }
+    else {
+        throw new Error('time is out');
+    }
+};
+
+module.exports.punchToday = function punchToday(mail, type = PunchingType.word) {
     const punch = new PunchingRecordModel({mail, type});
     return punch.save()
 
@@ -34,13 +72,14 @@ module.exports.punchToday = function (mail, type = PunchingType.word) {
         });
 };
 
-module.exports.isPunchedToday = function (mail) {
+module.exports.isPunchedToday = function isPunchedToday(mail, type = PunchingType.word) {
     const startOfDay = moment().startOf('day');
     const endOfDay = moment().endOf('day');
 
     return PunchingRecordModel.findOne(
         {
             mail,
+            type,
             createdAt: {
                 $gte: startOfDay.toDate(),
                 $lte: endOfDay.toDate()
@@ -51,7 +90,7 @@ module.exports.isPunchedToday = function (mail) {
             return new Promise(function (resolve) {
                 resolve(punching != null)
             });
-        })
+        });
 };
 
 

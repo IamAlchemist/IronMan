@@ -6,6 +6,7 @@ const timestamp = require('../libs/mongoose-timestamp');
 const moment = require('moment');
 mongoose.Promise = bluebird.Promise;
 const mongodb = mongoose.connect('mongodb://localhost/test');
+const assert = require('assert');
 
 const WordSchema = new mongodb.Schema({
     word: String
@@ -163,7 +164,19 @@ function save() {
     const wordm = WordModel({word});
     wordm.save();
 }
-save();
+
+function count() {
+    const query = WordModel.count({});
+    const promise = query.exec();
+    assert.ok(promise instanceof bluebird.Promise);
+
+    promise.then((num)=>{
+        console.log(`num: ${num}`);
+    });
+
+}
+count();
+//save();
 //queryDate();
 //update();
 //demo();

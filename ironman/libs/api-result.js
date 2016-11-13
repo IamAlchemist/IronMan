@@ -12,6 +12,7 @@ errorMessages[6]='注册错误: 用户已经存在';
 errorMessages[7]='注册错误: 保存用户错误';
 errorMessages[8]='需要重新登录';
 errorMessages[9]='绑定账户异常';
+errorMessages[10]='参数异常';
 
 errorMessages[101]='创建题目错误';
 errorMessages[102]='创建单词错误';
@@ -25,6 +26,8 @@ errorMessages[109]='inspection账户是学生';
 errorMessages[110]='inspection每日获取失败';
 errorMessages[111]='未关联账号';
 errorMessages[112]='导入单词错误';
+errorMessages[113]='今日家庭作业打卡失败';
+errorMessages[114]='查询打卡数据异常';
 
 
 
