@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b903ec8f-157f-4431-8659-022e2b0cd42a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playgrounds/importToDB.js" afterPath="$PROJECT_DIR$/playgrounds/importToDB.js" />
     </list>
     <ignored path="ironman.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -354,14 +353,7 @@
       <workItem from="1478831269440" duration="3885000" />
       <workItem from="1478870193748" duration="5061000" />
       <workItem from="1478882298713" duration="12690000" />
-      <workItem from="1478998433984" duration="2163000" />
-    </task>
-    <task id="LOCAL-00034" summary="mc">
-      <created>1478100175452</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1478100175452</updated>
+      <workItem from="1478998433984" duration="2195000" />
     </task>
     <task id="LOCAL-00035" summary="add time stamp in word exercises">
       <created>1478100836615</created>
@@ -699,11 +691,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479000009502</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="change import db">
+      <created>1479000768026</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1479000768026</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="281035000" />
+    <option name="totallyTimeSpent" value="281067000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -761,7 +760,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="finish detail page&#10;" />
     <MESSAGE value="minor bug fix&#10;" />
     <MESSAGE value="update fix" />
     <MESSAGE value="minor bug fix" />
@@ -786,7 +784,8 @@
     <MESSAGE value="minor change" />
     <MESSAGE value="mc" />
     <MESSAGE value="generate word exercises for eight grade" />
-    <option name="LAST_COMMIT_MESSAGE" value="generate word exercises for eight grade" />
+    <MESSAGE value="change import db" />
+    <option name="LAST_COMMIT_MESSAGE" value="change import db" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
