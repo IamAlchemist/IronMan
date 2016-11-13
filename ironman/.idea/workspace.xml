@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b903ec8f-157f-4431-8659-022e2b0cd42a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ironman.iml" afterPath="$PROJECT_DIR$/.idea/ironman.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playgrounds/emcas6.js" afterPath="$PROJECT_DIR$/playgrounds/emcas6.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playgrounds/generateWordExercise.js" afterPath="$PROJECT_DIR$/playgrounds/generateWordExercise.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playgrounds/package.json" afterPath="$PROJECT_DIR$/playgrounds/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playgrounds/importToDB.js" afterPath="$PROJECT_DIR$/playgrounds/importToDB.js" />
     </list>
     <ignored path="ironman.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,8 +29,8 @@
       <file leaf-file-name="generateWordExercise.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/playgrounds/generateWordExercise.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
+            <state relative-caret-position="240">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="24" selection-end-column="1" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
               </folding>
@@ -42,52 +38,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="eight_grade_half_b.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playgrounds/eight_grade_half_b.txt">
+      <file leaf-file-name="importToDB.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/playgrounds/importToDB.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5933">
-              <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="eight_grade_half_b.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playgrounds/eight_grade_half_b.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="eight_grade_half_a.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playgrounds/eight_grade_half_a.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="316" column="5" selection-start-line="316" selection-start-column="5" selection-end-line="316" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="eight_grade_half_a.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/playgrounds/eight_grade_half_a.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="emcas6.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playgrounds/emcas6.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
-              <folding />
+            <state relative-caret-position="682">
+              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#41#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -159,10 +117,10 @@
         <option value="$PROJECT_DIR$/libs/wordsExercisesLib.js" />
         <option value="$PROJECT_DIR$/public/javascripts/exercises/words/home.js" />
         <option value="$PROJECT_DIR$/views/exercises/words/home.jade" />
-        <option value="$PROJECT_DIR$/playgrounds/importToDB.js" />
         <option value="$PROJECT_DIR$/playgrounds/emcas6.js" />
         <option value="$PROJECT_DIR$/playgrounds/preprocessWords.js" />
         <option value="$PROJECT_DIR$/playgrounds/generateWordExercise.js" />
+        <option value="$PROJECT_DIR$/playgrounds/importToDB.js" />
       </list>
     </option>
   </component>
@@ -396,14 +354,7 @@
       <workItem from="1478831269440" duration="3885000" />
       <workItem from="1478870193748" duration="5061000" />
       <workItem from="1478882298713" duration="12690000" />
-      <workItem from="1478998433984" duration="1527000" />
-    </task>
-    <task id="LOCAL-00033" summary="mc">
-      <created>1478065570647</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1478065570647</updated>
+      <workItem from="1478998433984" duration="2163000" />
     </task>
     <task id="LOCAL-00034" summary="mc">
       <created>1478100175452</created>
@@ -741,11 +692,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478962151197</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="generate word exercises for eight grade">
+      <created>1479000009501</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1479000009502</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280399000" />
+    <option name="totallyTimeSpent" value="281035000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -803,7 +761,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="mc&#10;" />
     <MESSAGE value="finish detail page&#10;" />
     <MESSAGE value="minor bug fix&#10;" />
     <MESSAGE value="update fix" />
@@ -828,7 +785,8 @@
     <MESSAGE value="use cdn" />
     <MESSAGE value="minor change" />
     <MESSAGE value="mc" />
-    <option name="LAST_COMMIT_MESSAGE" value="mc" />
+    <MESSAGE value="generate word exercises for eight grade" />
+    <option name="LAST_COMMIT_MESSAGE" value="generate word exercises for eight grade" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1127,16 +1085,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/playgrounds/importToDB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/playgrounds/preprocessWords.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1150,16 +1098,6 @@
         <state relative-caret-position="255">
           <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playgrounds/generateWordExercise.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1192,6 +1130,26 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playgrounds/generateWordExercise.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="24" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playgrounds/importToDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
