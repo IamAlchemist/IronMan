@@ -11,7 +11,8 @@ const timestamps = require('../libs/mongoose-timestamp');
 const Schema = mongodb.Schema;
 
 const PunchingRecordSchema = new Schema({
-    mail: String
+    mail: String,
+    type: String,
 });
 
 PunchingRecordSchema.plugin(timestamps);
@@ -19,12 +20,12 @@ PunchingRecordSchema.plugin(timestamps);
 const PunchingRecordModel = mongodb.model('PunchingRecord', PunchingRecordSchema);
 module.exports.PunchingRecordModel = PunchingRecordModel;
 
-module.exports.MakePunchingRecord = function (mail = mongodb.throwIfMissing()) {
-    return new PunchingRecordModel({mail});
+module.exports.MakePunchingRecord = function (mail = mongodb.throwIfMissing(), type = PunchingType.word) {
+    return new PunchingRecordModel({mail, type});
 };
 
-module.exports.punchToday = function (mail) {
-    const punch = new PunchingRecordModel({mail});
+module.exports.punchToday = function (mail, type = PunchingType.word) {
+    const punch = new PunchingRecordModel({mail, type});
     return punch.save()
 
         .catch((error)=> {
@@ -52,4 +53,8 @@ module.exports.isPunchedToday = function (mail) {
             });
         })
 };
+
+
+const PunchingType = {word: "word", homework: "homework"};
+module.exports.PunchingType = PunchingType;
 
