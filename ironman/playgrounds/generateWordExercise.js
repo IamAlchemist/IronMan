@@ -7,9 +7,24 @@ const Promise = require('bluebird').Promise,
     readFile = Promise.promisify(fs.readFile),
     superagent = require('superagent'),
     cheerio = require('cheerio'),
+    program = require('commander'),
     logger = require('../libs/ironmanLogger');
 
-function process(word) {
+program
+    .version('0.0.1')
+    .option('-S, --source [file]', 'source Of words [file]', '')
+    .option('-D, --destination [file]', 'json of wordExercises [file]', '')
+    .parse(process.argv);
+
+console.log('generate word exercises:');
+console.log(`from : ${program.source}`);
+console.log(`to : ${program.destination}`);
+if (!program.source || !program.destination) {
+    console.log('need parameter');
+    process.exit(1);
+}
+
+function processAWord(word) {
     const wordURL = `http://dict.cn/${word}`;
 
     return new Promise(function (resolve) {
@@ -90,7 +105,7 @@ function processWords(start) {
     logger.warn(`start to handle : ${start}`);
     if (start + 50 <= allwords.length) {
         let toProcess = allwords.slice(start, start + 50);
-        const promises = toProcess.map(word => process(word));
+        const promises = toProcess.map(word => processAWord(word));
 
         return Promise.all(promises)
             .then((things)=> {
@@ -100,7 +115,7 @@ function processWords(start) {
     }
     else if (start < allwords.length) {
         let toProcess = allwords.slice(start);
-        const promises = toProcess.map(word => process(word));
+        const promises = toProcess.map(word => processAWord(word));
 
         return Promise.all(promises)
             .then((things)=> {
@@ -110,13 +125,13 @@ function processWords(start) {
     }
     else {
         logger.warn(`total : ${wordExercises.length}`);
-        fs.writeFile('./nine_grade_half_a.json', JSON.stringify(wordExercises, null, 2));
+        fs.writeFile(`./${program.destination}`, JSON.stringify(wordExercises, null, 2));
     }
 }
 
 function processAll() {
 
-    readFile("./nine_grade_half_a.txt", "utf8")
+    readFile(`./${program.source}`, "utf8")
 
         .then((contents) => {
             allwords = contents.split('\n');
@@ -128,6 +143,8 @@ function processAll() {
         });
 
 }
+
+processAll();
 
 
 
