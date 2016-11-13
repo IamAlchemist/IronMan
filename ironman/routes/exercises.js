@@ -126,7 +126,7 @@ router.get('/punching/count', (req, res) => {
         })
 });
 
-router.get('/exercises/punching/homework', (req, res) => {
+router.get('/punching/homework', (req, res) => {
     const user = comonLib.getUserFromRequest(req);
     if (!user) { return res.send(new Result(8)); }
 

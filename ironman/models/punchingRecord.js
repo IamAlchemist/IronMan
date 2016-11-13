@@ -62,7 +62,7 @@ module.exports.punchForHomework = function (mail) {
     }
 };
 
-module.exports.punchToday = function punchToday(mail, type = PunchingType.word) {
+function punchToday(mail, type = PunchingType.word) {
     const punch = new PunchingRecordModel({mail, type});
     return punch.save()
 
@@ -70,9 +70,10 @@ module.exports.punchToday = function punchToday(mail, type = PunchingType.word) 
             logger.error(error.message);
             throw error;
         });
-};
+}
+module.exports.punchToday = punchToday;
 
-module.exports.isPunchedToday = function isPunchedToday(mail, type = PunchingType.word) {
+function isPunchedToday(mail, type = PunchingType.word) {
     const startOfDay = moment().startOf('day');
     const endOfDay = moment().endOf('day');
 
@@ -91,8 +92,8 @@ module.exports.isPunchedToday = function isPunchedToday(mail, type = PunchingTyp
                 resolve(punching != null)
             });
         });
-};
-
+}
+module.exports.isPunchedToday = isPunchedToday;
 
 const PunchingType = {word: "word", homework: "homework"};
 module.exports.PunchingType = PunchingType;
