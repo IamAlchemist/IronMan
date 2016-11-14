@@ -411,7 +411,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
 
                     const content = result.content;
                     if (content.length == 0) {
-                        messageAlertElem.html(ironmanLib.alert('还没有结果', 'alert-info'));
+                        messageAlertElem.html(ironmanLib.alert('小朋友今天还没有背单词呢', 'alert-info'));
                     }
                     else {
                         showInspectionPage(content);
