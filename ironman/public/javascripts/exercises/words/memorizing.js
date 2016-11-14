@@ -63,8 +63,6 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     }
 
     function showCelebrationPage(wordExerciseProgresses) {
-        htmlFromWordExercisProgresses(wordExerciseProgresses);
-
         const html = htmlFromWordExercisProgresses(wordExerciseProgresses);
         contentElem.html(html);
 

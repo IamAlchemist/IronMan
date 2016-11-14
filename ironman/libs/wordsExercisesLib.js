@@ -153,6 +153,7 @@ module.exports.achievementToday = function (mail) {
     return WordExerciseProgress.WordExerciseProgressModel
         .find({mail})
         .where('updatedAt').gte(startOfDay.toDate()).lte(endOfDay.toDate())
+        .where('progress').gt(0)
         .exec()
         .catch((error)=> {
             logger.error(error.message);
@@ -168,6 +169,7 @@ module.exports.inspectAchievementToday = function (user) {
         .find({})
         .where('mail').in(user.linkedUserMails)
         .where('updatedAt').gte(startOfDay.toDate()).lte(endOfDay.toDate())
+        .where('progress').gt(0)
         .exec()
 
         .then((progresses)=> {
