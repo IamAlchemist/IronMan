@@ -96,7 +96,7 @@ module.exports.wordExercisesForToday = function (mail) {
             return WordExerciseProgress.WordExerciseProgressModel
                 .find({mail})
                 .where('progress').gt(0).lte(maxProgress)
-                .sort('updatedAt')
+                .sort('-updatedAt')
                 .limit(leftedLimit)
                 .exec()
         })
