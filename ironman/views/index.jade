@@ -6,4 +6,9 @@ block content
         .jumbotron
             h1= title
         .row
-            a.btn.btn-success(href='/users/login') 登录
+            button#loginButton.btn.btn-success(type='button') 登录
+
+    script(src='http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js')
+    script(src='http://cdn.bootcss.com/handlebars.js/4.0.5/handlebars.min.js')
+    script(src='http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    script(src='http://cdn.bootcss.com/require.js/2.3.2/require.min.js' async='true' defer data-main='/javascripts/index.js')
