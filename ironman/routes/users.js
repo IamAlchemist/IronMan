@@ -5,6 +5,7 @@ const crypto = require('crypto');
 const User = require('../models/user');
 const logger = require('../libs/ironmanLogger');
 const ironmanLib = require('../libs/commonLib');
+const exercisesLib = require('../libs/exercisesLib');
 const ApiResult = require('../libs/api-result');
 
 const router = express.Router();
@@ -32,7 +33,6 @@ router.get('/register', function (req, res) {
 
 router.get('/profile', function (req, res) {
     var options = {
-        title: 'IronMan Profile',
         mail: req.session.user.mail
     };
 
@@ -40,19 +40,17 @@ router.get('/profile', function (req, res) {
         return res.render('users/profile', options);
     }
     else {
-        options.punchingHomeworks = [
-            {
-                mail: "282539259@qq.com",
-                count: 100,
-                today: false
-            },
-            {
-                mail: "282539259@qq.com",
-                count: 50,
-                today: true
-            }
-        ];
-        return res.render('users/profile_parent', options);
+        exercisesLib.punchingHomeworkForParent(req.session.user)
+            .then((datas)=>{
+                logger.info(JSON.stringify(datas, null, 2));
+                options.punchingHomeworks = datas;
+                return res.render('users/profile_parent', options);
+            })
+
+            .catch(()=>{
+                options.punchingHomeworks = [{mail: "282539259@qq.com",count: 100,today: false}];
+                return res.render('users/profile_parent', options);
+            });
     }
 });
 
