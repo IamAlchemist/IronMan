@@ -79,6 +79,7 @@ module.exports.updateStudentWordsBank = function (mail) {
 };
 
 module.exports.wordExercisesForToday = function (mail) {
+    let maxWordsCount = 40;
     let result = [];
 
     return WordExerciseProgress.WordExerciseProgressModel
@@ -91,7 +92,7 @@ module.exports.wordExercisesForToday = function (mail) {
         .then((progresses)=> {
             logger.info(`progress 0 count: ${progresses.length}`);
             result = progresses.slice(0);
-            const leftedLimit = 20 - progresses.length;
+            const leftedLimit = maxWordsCount - progresses.length;
 
             return WordExerciseProgress.WordExerciseProgressModel
                 .find({mail})
