@@ -36,7 +36,24 @@ router.get('/profile', function (req, res) {
         mail: req.session.user.mail
     };
 
-    res.render('users/profile', options);
+    if (req.session.user.isStudent) {
+        return res.render('users/profile', options);
+    }
+    else {
+        options.punchingHomeworks = [
+            {
+                mail: "282539259@qq.com",
+                count: 100,
+                today: false
+            },
+            {
+                mail: "282539259@qq.com",
+                count: 50,
+                today: true
+            }
+        ];
+        return res.render('users/profile_parent', options);
+    }
 });
 
 router.get('/logout', function (req, res) {
@@ -44,33 +61,33 @@ router.get('/logout', function (req, res) {
     res.redirect('/');
 });
 
-router.get('/link-user', (req, res)=>{
+router.get('/link-user', (req, res)=> {
     const mail = req.session.user.mail;
     User.UserModel.findOne({mail}).exec()
-        .then((user)=>{
-            const linkedUsers = user.linkedUserMails.map((mail)=>{
-                return {name:mail, type: user.isStudent ? "家长" : "学生"};
+        .then((user)=> {
+            const linkedUsers = user.linkedUserMails.map((mail)=> {
+                return {name: mail, type: user.isStudent ? "家长" : "学生"};
             });
 
             res.render('users/link-user', {linkedUsers});
         })
-        .catch(()=>{
+        .catch(()=> {
             res.render('users/link-user');
         });
 });
 
 
 /* POST */
-router.post('/link-user', (req, res)=>{
+router.post('/link-user', (req, res)=> {
     const linkedUserMail = req.body.email.trim();
     const user = req.session.user;
 
     ironmanLib.linkUser(user.mail, linkedUserMail)
-        .then((users)=>{
+        .then((users)=> {
             const message = "关联成功";
             res.send(new ApiResult(0, {message, users}));
         })
-        .catch(()=>{
+        .catch(()=> {
             res.send(new ApiResult(9));
         });
 });

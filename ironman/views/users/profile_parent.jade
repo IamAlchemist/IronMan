@@ -14,13 +14,19 @@ html
                         .panel-heading
                             h4.panel-title.text-center 家庭作业
                         .panel-body
-                            p.text-success
-                                | 你已经按时完成作业
-                                span.lead
-                                    ins
-                                        strong#punchingCount 0
-                                | 次
-                            button#punchingButton.btn.btn-block.btn-info(type='button') 按时完成打卡
+                            for punchingHomework in punchingHomeworks
+                                p
+                                    strong #{punchingHomework.mail}
+                                    br
+                                    | 已经按时完成作业
+                                    span.lead
+                                        ins
+                                            strong.text-success #{punchingHomework.count}
+                                    |  次
+                                if punchingHomework.today
+                                    .alert.alert-success 今天已经按时完成打卡
+                                else
+                                    .alert.alert-warning 今天还没有打卡
 
             .row
                 .col-lg-6.col-center-block
@@ -51,6 +57,6 @@ html
                 .col-lg-6.col-center-block
                     a.btn.btn-danger.btn-block(href='/users/logout') 注销
 
-        script(src='http://cdn.bootcss.com/require.js/2.3.2/require.min.js' async='true' defer data-main='/javascripts/users/profile.js')
+        script(src='http://cdn.bootcss.com/require.js/2.3.2/require.min.js' async='true' defer data-main='/javascripts/users/profile_parent.js')
 
 
