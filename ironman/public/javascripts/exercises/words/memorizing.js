@@ -32,6 +32,8 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
 
     var currentChoosedId;
 
+    const maxPoint = 15;
+
     $(document).ready(function () {
         contentElem = $('#content');
         progressElem = $('#progress');
@@ -52,7 +54,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
         const progresses = wordExerciseProgresses.map((p)=> {
             const word = p.wordExercise.word;
             const explanation = p.wordExercise.explanation;
-            const progress = Math.floor(p.progress * 100 / 9);
+            const progress = Math.floor(p.progress * 100 / maxPoint);
 
             return {word, explanation, progress};
         });
@@ -190,7 +192,6 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     }
 
     function advanceCurrentProgress(advanced) {
-        const maxPoint = 15;
         currentWordExerciseProgress.progress += advanced;
         currentWordExerciseProgress.progress = Math.max(currentWordExerciseProgress.progress, 0);
         currentWordExerciseProgress.progress = Math.min(currentWordExerciseProgress.progress, maxPoint);
