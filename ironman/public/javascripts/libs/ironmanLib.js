@@ -60,10 +60,17 @@ define(function () {
                 </div>`;
     }
 
+    function getMessageFromJson(json) {
+        return json.content != undefined && json.content.message != undefined ?
+            json.content.message : json.message;
+    }
+
     return {
         add: add,
         alert: alert,
         setupForm: setupForm,
-        decorateRadioInputs: decorateRadioInputs
+        decorateRadioInputs: decorateRadioInputs,
+        getMessageFromJson: getMessageFromJson
+
     };
 });

@@ -7,7 +7,7 @@ html
         .container
             .row
                 h3.text-center 欢迎, #{mail}
-
+                #messageAlert
             .row
                 .col-lg-6.col-center-block
                     .panel.panel-primary
@@ -21,7 +21,7 @@ html
                                         strong#punchingCount 0
                                 | 次
 
-                            a.btn.btn-block.btn-info(href='/exercises/punching/homework') 按时完成打卡
+                            button#punchingButton.btn.btn-block.btn-info(type='button') 按时完成打卡
 
             .row
                 .col-lg-6.col-center-block
