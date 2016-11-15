@@ -29,13 +29,15 @@ const mails = ["nine.grade.half.a@gmail.com", "eight.grade.half.b@gmail.com"];
 //         logger.info(`import : ${progresses.length}`);
 //     });
 
-wordExerciseLib.wordExercisesForToday("2892764440@qq.com")
+wordExerciseLib.wordExercisesForToday("1427609882@qq.com")
     .then(progresses => {
         console.log(progresses.length);
         const datas = progresses.map(progress => {
             let result = {};
             result.mail = progress.wordExercise.mail;
             result.word = progress.wordExercise.word;
+            result.progress = progress.progress;
+            console.log(JSON.stringify(result));
             return result
         });
 
