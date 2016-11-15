@@ -23,23 +23,23 @@ const mails = ["nine.grade.half.a@gmail.com", "eight.grade.half.b@gmail.com"];
 //     console.log(datas.length);
 // });
 
-const mail = "1427609882@qq.com";
-wordExerciseLib.importWords(mail, "nine.grade.half.a@gmail.com")
-    .then((progresses)=>{
-        logger.info(`import : ${progresses.length}`);
-    });
-
-// wordExerciseLib.wordExercisesForToday("1427609882@qq.com")
-//     .then(progresses => {
-//         console.log(progresses.length);
-//         const datas = progresses.map(progress => {
-//             let result = {};
-//             result.mail = progress.wordExercise.mail;
-//             result.word = progress.wordExercise.word;
-//             result.progress = progress.progress;
-//             console.log(JSON.stringify(result));
-//             return result
-//         });
-//
-//         //console.log(JSON.stringify(datas, null, 2));
+// const mail = "1427609882@qq.com";
+// wordExerciseLib.importWords(mail, "nine.grade.half.a@gmail.com")
+//     .then((progresses)=>{
+//         logger.info(`import : ${progresses.length}`);
 //     });
+
+wordExerciseLib.wordExercisesForToday("1427609882@qq.com")
+    .then(progresses => {
+        console.log(progresses.length);
+        const datas = progresses.map(progress => {
+            let result = {};
+            result.mail = progress.wordExercise.mail;
+            result.word = progress.wordExercise.word;
+            result.progress = progress.progress;
+            console.log(JSON.stringify(result));
+            return result
+        });
+
+        //console.log(JSON.stringify(datas, null, 2));
+    });

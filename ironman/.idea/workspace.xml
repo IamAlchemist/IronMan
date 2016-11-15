@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b903ec8f-157f-4431-8659-022e2b0cd42a" name="Default" comment="">
+    <list default="true" id="b903ec8f-157f-4431-8659-022e2b0cd42a" name="Default" comment="mc">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playgrounds/query.js" afterPath="$PROJECT_DIR$/playgrounds/query.js" />
     </list>
@@ -149,8 +149,8 @@
       <file leaf-file-name="query.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/playgrounds/query.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="645">
+              <caret line="45" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
               </folding>
@@ -487,14 +487,7 @@
       <workItem from="1478870193748" duration="5061000" />
       <workItem from="1478882298713" duration="12690000" />
       <workItem from="1478998433984" duration="16993000" />
-      <workItem from="1479097728191" duration="25849000" />
-    </task>
-    <task id="LOCAL-00053" summary="mc">
-      <created>1478426919795</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1478426919795</updated>
+      <workItem from="1479097728191" duration="25946000" />
     </task>
     <task id="LOCAL-00054" summary="mc">
       <created>1478431827802</created>
@@ -832,19 +825,26 @@
       <option name="project" value="LOCAL" />
       <updated>1479196595878</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="mc">
+      <created>1479197060348</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1479197060348</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="321714000" />
+    <option name="totallyTimeSpent" value="321811000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16903633" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44424778" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44424778" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44578314" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1398,8 +1398,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/playgrounds/query.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state relative-caret-position="645">
+          <caret line="45" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
           </folding>
