@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b903ec8f-157f-4431-8659-022e2b0cd42a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/wordsExercisesLib.js" afterPath="$PROJECT_DIR$/libs/wordsExercisesLib.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playgrounds/emcas6.js" afterPath="$PROJECT_DIR$/playgrounds/emcas6.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playgrounds/query.js" afterPath="$PROJECT_DIR$/playgrounds/query.js" />
     </list>
     <ignored path="ironman.iws" />
@@ -101,8 +99,8 @@
       <file leaf-file-name="wordsExercisesLib.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libs/wordsExercisesLib.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="670">
-              <caret line="132" column="28" selection-start-line="132" selection-start-column="28" selection-end-line="132" selection-end-column="28" />
+            <state relative-caret-position="715">
+              <caret line="112" column="24" selection-start-line="112" selection-start-column="24" selection-end-line="112" selection-end-column="24" />
               <folding>
                 <element signature="e#637#2656#0" expanded="false" />
                 <element signature="e#4801#5532#0" expanded="false" />
@@ -151,8 +149,8 @@
       <file leaf-file-name="query.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/playgrounds/query.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+            <state relative-caret-position="435">
+              <caret line="31" column="37" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="37" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
               </folding>
@@ -239,8 +237,8 @@
         <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/models/wordExerciseSource.js" />
         <option value="$PROJECT_DIR$/playgrounds/emcas6.js" />
-        <option value="$PROJECT_DIR$/libs/wordsExercisesLib.js" />
         <option value="$PROJECT_DIR$/playgrounds/query.js" />
+        <option value="$PROJECT_DIR$/libs/wordsExercisesLib.js" />
       </list>
     </option>
   </component>
@@ -489,14 +487,7 @@
       <workItem from="1478870193748" duration="5061000" />
       <workItem from="1478882298713" duration="12690000" />
       <workItem from="1478998433984" duration="16993000" />
-      <workItem from="1479097728191" duration="24835000" />
-    </task>
-    <task id="LOCAL-00050" summary="minor css change">
-      <created>1478417419659</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1478417419660</updated>
+      <workItem from="1479097728191" duration="25336000" />
     </task>
     <task id="LOCAL-00051" summary="minor css change">
       <created>1478418030097</created>
@@ -834,11 +825,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479136304399</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="change pick words algorithm">
+      <created>1479195704333</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1479195704333</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="320700000" />
+    <option name="totallyTimeSpent" value="321201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="6" />
@@ -896,7 +894,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change register ui to add the option to select parent or student" />
     <MESSAGE value="add the isStudent property when register" />
     <MESSAGE value="finish link-user ui" />
     <MESSAGE value="finish link user feature" />
@@ -921,7 +918,8 @@
     <MESSAGE value="ui change" />
     <MESSAGE value="finish" />
     <MESSAGE value="mc" />
-    <option name="LAST_COMMIT_MESSAGE" value="mc" />
+    <MESSAGE value="change pick words algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="change pick words algorithm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1387,8 +1385,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/playgrounds/query.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+        <state relative-caret-position="435">
+          <caret line="31" column="37" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="37" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
           </folding>
@@ -1397,8 +1395,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/wordsExercisesLib.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="132" column="28" selection-start-line="132" selection-start-column="28" selection-end-line="132" selection-end-column="28" />
+        <state relative-caret-position="715">
+          <caret line="112" column="24" selection-start-line="112" selection-start-column="24" selection-end-line="112" selection-end-column="24" />
           <folding>
             <element signature="e#637#2656#0" expanded="false" />
             <element signature="e#4801#5532#0" expanded="false" />

@@ -31,6 +31,7 @@ const mails = ["nine.grade.half.a@gmail.com", "eight.grade.half.b@gmail.com"];
 
 wordExerciseLib.wordExercisesForToday("2892764440@qq.com")
     .then(progresses => {
+        console.log(progresses.length);
         const datas = progresses.map(progress => {
             let result = {};
             result.mail = progress.wordExercise.mail;
@@ -38,5 +39,5 @@ wordExerciseLib.wordExercisesForToday("2892764440@qq.com")
             return result
         });
 
-        console.log(JSON.stringify(datas, null, 2));
+        //console.log(JSON.stringify(datas, null, 2));
     });
