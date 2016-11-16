@@ -313,6 +313,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
         const correctAnswerNumber = (total - numberOfAvaiableWordProgresses());
         const p = Math.floor((correctAnswerNumber / total) * 100);
 
+        totalNumberElem.text(`共 ${correctAnswerNumber}/${originalWordExerciseProgresses.length} 题`);
         progressBarElem.attr('style', `width: ${p}%;`);
 
         if (correctAnswerNumber == total) {
