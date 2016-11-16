@@ -13,8 +13,8 @@ const mongodb = require('./mongodb'),
     logger = require('../libs/ironmanLogger');
 
 const maxProgress = 15;
-const totalWordMaxToday = 40;
-const singleSourceWordMaxToday = 20;
+const totalWordMaxToday = 50;
+const singleSourceWordMaxToday = 25;
 
 module.exports.updateStudentWordsBank = function (mail) {
     let cacheWordMails = [];
@@ -111,7 +111,7 @@ module.exports.wordExercisesForToday = function (mail) {
             .then((progresses)=> {
                 logger.info(`${mail},${accumulator.length}`);
                 accumulator = accumulator.concat(progresses);
-                leftedCount -= accumulator.length;
+                leftedCount = totalWordMaxToday - accumulator.length;
                 logger.info(`${mail}, progress 0 count: ${progresses.length}, ${accumulator.length}`);
 
                 const progress_non_zero_count = Math.min(leftedCount, singleSourceWordMaxToday);
@@ -126,6 +126,7 @@ module.exports.wordExercisesForToday = function (mail) {
 
             .then((progresses2)=> {
                 accumulator = accumulator.concat(progresses2);
+                leftedCount = totalWordMaxToday - accumulator.length;
                 logger.info(`progress non-zero count: ${progresses2.length}, ${accumulator.length}`);
                 return Promise.resolve(accumulator);
             })
