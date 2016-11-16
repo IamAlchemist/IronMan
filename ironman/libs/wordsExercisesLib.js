@@ -12,7 +12,7 @@ const mongodb = require('./mongodb'),
     wordExerciseSource = require('../models/wordExerciseSource'),
     logger = require('../libs/ironmanLogger');
 
-const maxProgress = 15;
+const maxProgress = 24;
 const totalWordMaxToday = 50;
 const singleSourceWordMaxToday = 25;
 

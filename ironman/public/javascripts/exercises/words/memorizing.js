@@ -32,7 +32,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
 
     var currentChoosedId;
 
-    const maxPoint = 15;
+    const maxPoint = 24;
 
     $(document).ready(function () {
         contentElem = $('#content');
