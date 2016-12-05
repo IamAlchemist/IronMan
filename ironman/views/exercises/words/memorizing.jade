@@ -6,7 +6,11 @@ html
         include ../../head
         link(rel='stylesheet', href='http://cdn.bootcss.com/iCheck/1.0.2/skins/square/green.css')
         link(rel='stylesheet', href='/stylesheets/exercises.css')
+        link(rel='stylesheet', href='http://cdn.bootcss.com/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.min.css')
+        link(rel='stylesheet', href='/stylesheets/bootstrap-year-calendar.min.css')
         script(src='http://cdn.bootcss.com/iCheck/1.0.2/icheck.min.js')
+        script(src='/javascripts/libs/bootstrap-year-calendar.min.js')
+        script(src='http://cdn.bootcss.com/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js')
         include memorizingTmpl
     body
         include ../../navbar
@@ -15,6 +19,8 @@ html
                 h3 今日单词
                 #messageAlert
             .jumbotron.jumbotron-white
+                .row
+                    .calendar
                 .row
                     #content
                 #progress.row
