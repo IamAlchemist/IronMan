@@ -1,8 +1,7 @@
 /**
  * Created by wizard on 11/14/16.
  */
-const mongodb = require('./mongodb'),
-    Promise = require('bluebird').Promise,
+const Promise = require('bluebird').Promise,
     Punching = require('../models/punchingRecord'),
     logger = require('../libs/ironmanLogger');
 
@@ -52,3 +51,25 @@ module.exports.punchingHomeworkForParent = function (user) {
             throw e;
         })
 };
+
+module.exports.wordPunchingRecordsForParent = function (user) {
+    if (user.linkedUserMails == undefined || user.linkedUserMails.length == 0) {
+        return new Promise(function (resolve) {
+            resolve([]);
+        });
+    }
+
+    const mails = user.linkedUserMails;
+
+    let promises = mails.map((mail)=> {
+        let type = Punching.PunchingType.word;
+        return Punching.PunchingRecordModel.find({mail, type}).exec();
+    });
+
+    return Promise.all(promises)
+        .catch((e)=>{
+            logger.error(e.message);
+            throw e;
+        })
+};
+

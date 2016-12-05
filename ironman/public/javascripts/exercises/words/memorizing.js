@@ -2,7 +2,7 @@
  * Created by wizard on 11/1/16.
  */
 
-require(['../../libs/ironmanLib'], function (ironmanLib) {
+require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/moment.min.js'], function (ironmanLib, moment) {
     var contentElem;
     var progressElem;
     var progressBarElem;
@@ -59,7 +59,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
             return {word, explanation, progress};
         });
 
-        return  celebrationTmpl({title,progresses});
+        return celebrationTmpl({title, progresses});
     }
 
     function showCelebrationPage(wordExerciseProgresses) {
@@ -242,7 +242,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     function initNextButton() {
         nextButtonCotainerElem = $('#nextExerciseContainer').hide();
         nextButtonElem = $('#nextExercise');
-        nextButtonElem.click( function() {
+        nextButtonElem.click(function () {
             if (numberOfAvaiableWordProgresses() == 0) {
                 sendResultToServer();
             }
@@ -373,12 +373,12 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     function initStartMemorizing() {
         $.getJSON('/exercises/words/isPunched')
 
-            .done((result)=>{
+            .done((result)=> {
                 if (result.errorCode == 0) {
                     if (result.content.isPunched) {
 
                         $.getJSON('/exercises/words/achievementToday')
-                            .done((res)=>{
+                            .done((res)=> {
                                 if (res.errorCode == 0) {
                                     const progress = res.content.progressesToday;
                                     showCelebrationPage(progress);
@@ -407,9 +407,12 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
 
     function inspectWordProgressToday() {
         $.getJSON('/exercises/words/inspect/progressToday')
-            .done((result)=>{
+            .done((result)=> {
                 if (result.errorCode == 0) {
                     $('.calendar').calendar();
+
+                    decorateCalendars();
+
                     const content = result.content;
                     if (content.length == 0) {
                         messageAlertElem.html(ironmanLib.alert('小朋友今天还没有背单词呢', 'alert-info'));
@@ -419,6 +422,37 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
                     }
                 }
             });
+    }
+
+    function decorateCalendars() {
+        $.getJSON('/exercises/punching/recordsForParent')
+            .done((result) => {
+                if (result.errorCode == 0) {
+                    let arrayOfPunchings = result.content;
+                    if (arrayOfPunchings.length > 0) {
+                        let punchings = arrayOfPunchings[0];
+                        let createdAts = punchings.map(punching => punching.createdAt);
+                        let momentStrings = createdAts.map(createdAt => moment(createdAt));
+
+                        $('.calendar').calendar({
+                            customDayRenderer: function (element, date) {
+                                var calendarMoment = moment(date);
+                                for (let str of momentStrings) {
+                                    let m = moment(str);
+                                    if (m.year() == calendarMoment.year()
+                                        && m.month() == calendarMoment.month()
+                                        && m.date() == calendarMoment.date()) {
+
+                                        $(element).css('background-color', 'red');
+                                        $(element).css('color', 'white');
+                                        $(element).css('border-radius', '15px');
+                                    }
+                                }
+                            }
+                        });
+                    }
+                }
+            })
     }
 
     function showInspectionPage(content) {

@@ -9,6 +9,7 @@ const express = require('express'),
     Exercise = require('../models/exercise'),
     WordExercise = require('../models/wordExercise'),
     wordsExercisesLib = require('../libs/wordsExercisesLib'),
+    exercisesLib = require('../libs/exercisesLib'),
     punching = require('../models/punchingRecord'),
     comonLib = require('../libs/commonLib'),
     Promise = require('bluebird').Promise,
@@ -99,7 +100,7 @@ router.get('/words/achievementToday', (req, res)=> {
         });
 });
 
-router.get('/punching/isPunched', (req, res)=>{
+router.get('/punching/isPunched', (req, res)=> {
     const user = comonLib.getUserFromRequest(req);
     if (!user) {
         return res.send(new Result(8));
@@ -110,7 +111,7 @@ router.get('/punching/isPunched', (req, res)=>{
     }
 
     let type = req.query.punchingType;
-    if(!checkPunchingType(type)) {
+    if (!checkPunchingType(type)) {
         return res.send(new Result(10));
     }
 
@@ -123,7 +124,9 @@ router.get('/punching/isPunched', (req, res)=>{
 
 router.get('/punching/count', (req, res) => {
     const user = comonLib.getUserFromRequest(req);
-    if (!user) { return res.send(new Result(8)); }
+    if (!user) {
+        return res.send(new Result(8));
+    }
 
     const type = req.query.punchingType;
 
@@ -132,24 +135,42 @@ router.get('/punching/count', (req, res) => {
     }
 
     punching.punchingCountHomework(user.mail, type)
-        .then((count)=>{
+        .then((count)=> {
             return res.send(new Result(0, {count}));
         })
-        .catch((error)=>{
+        .catch((error)=> {
             return res.send(new Result(114, {message: error.message}));
         })
 });
 
 router.get('/punching/homework', (req, res) => {
     const user = comonLib.getUserFromRequest(req);
-    if (!user) { return res.send(new Result(8)); }
+    if (!user) {
+        return res.send(new Result(8));
+    }
 
     punching.punchForHomework(user.mail)
-        .then(()=>{
+        .then(()=> {
             return res.send(new Result(0));
         })
-        .catch((error)=>{
-            return res.send(new Result(113, {message: error.message}));
+        .catch((error)=> {
+            return res.send(new Result(114, {message: error.message}));
+        })
+});
+
+router.get('/punching/recordsForParent', (req, res)=> {
+    const user = comonLib.getUserFromRequest(req);
+    if (!user) {
+        return res.send(new Result(8));
+    }
+
+    exercisesLib.wordPunchingRecordsForParent(user)
+        .then((arrayOfPunchings) => {
+            const result = new Result(0, arrayOfPunchings);
+            return res.send(result);
+        })
+        .catch((error)=> {
+            return res.send(new Result(115, {message: error.message}));
         })
 });
 
