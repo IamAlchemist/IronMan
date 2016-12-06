@@ -1,0 +1,24 @@
+//
+   Created by wizard on 12/6/16.
+doctype html
+html
+    head
+        include ../head
+        link(rel='stylesheet', href='/stylesheets/exercises.css')
+        link(rel='stylesheet', href='http://cdn.bootcss.com/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.min.css')
+        link(rel='stylesheet', href='/stylesheets/bootstrap-year-calendar.min.css')
+        script(src='/javascripts/libs/bootstrap-year-calendar.min.js')
+        script(src='http://cdn.bootcss.com/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js')
+        include calendarsTmpl
+    body
+        include ../navbar
+        .container
+            .page-header
+                h3#pageHeader #{mail} #{punchingType} 打卡记录
+                #messageAlert
+            .jumbotron.jumbotron-white
+                #panels(data= "#{punchingType}")
+
+        script(src='http://cdn.bootcss.com/require.js/2.3.2/require.min.js' async='true' defer data-main='/javascripts/exercises/punching.records.js')
+
+

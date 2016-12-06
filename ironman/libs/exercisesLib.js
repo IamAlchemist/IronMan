@@ -52,10 +52,9 @@ module.exports.punchingHomeworkForParent = function (user) {
         })
 };
 
-module.exports.wordPunchingRecords = function (user) {
+function punchingRecords(user, type) {
     if (user.isStudent) {
         let mail = user.mail;
-        let type = Punching.PunchingType.word;
         const promise = Punching.PunchingRecordModel.find({mail,type}).exec();
         return Promise.all([promise]);
     }
@@ -69,7 +68,6 @@ module.exports.wordPunchingRecords = function (user) {
     const mails = user.linkedUserMails;
 
     let promises = mails.map((mail)=> {
-        let type = Punching.PunchingType.word;
         return Punching.PunchingRecordModel.find({mail, type}).exec();
     });
 
@@ -78,5 +76,14 @@ module.exports.wordPunchingRecords = function (user) {
             logger.error(e.message);
             throw e;
         })
+}
+
+module.exports.homeworkPunchingRecords = function (user) {
+    return punchingRecords(user, Punching.PunchingType.homework);
+};
+
+
+module.exports.wordPunchingRecords = function (user) {
+    return punchingRecords(user, Punching.PunchingType.word);
 };
 

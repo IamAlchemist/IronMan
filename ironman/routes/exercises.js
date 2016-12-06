@@ -44,6 +44,16 @@ router.get('/words/memorizing', function (req, res) {
     res.render('exercises/words/memorizing');
 });
 
+router.get('/punching/records/homeworkPage', function (req, res) {
+    let punchingType = "homework";
+    let mail = comonLib.getUserFromRequest(req).mail;
+    var params = {
+        punchingType,
+        mail
+    };
+    res.render('users/records_page', params);
+});
+
 
 /* API */
 router.get('/words/inspect/progressToday', (req, res)=> {
@@ -158,9 +168,27 @@ router.get('/punching/homework', (req, res) => {
         })
 });
 
+router.get('/punching/records/homework', (req, res) => {
+    const user = comonLib.getUserFromRequest(req);
+    if (!user) {
+        return res.send(new Result(8));
+    }
+
+    exercisesLib.homeworkPunchingRecords(user)
+        .then((arrayOfPunchings)=> {
+            const result = new Result(0, arrayOfPunchings);
+            return res.send(result);
+        })
+        .catch((error)=> {
+            return res.send(new Result(115, {message: error.message}));
+        })
+});
+
 router.get('/punching/records/word', (req, res) => {
     const user = comonLib.getUserFromRequest(req);
-    if (!user) { return res.send(new Result(8)); }
+    if (!user) {
+        return res.send(new Result(8));
+    }
 
     exercisesLib.wordPunchingRecords(user)
         .then((arrayOfPunchings) => {
