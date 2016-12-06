@@ -63,6 +63,7 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/momen
     }
 
     function showCelebrationPage(wordExerciseProgresses) {
+        decorateCalendars();
         const html = htmlFromWordExercisProgresses(wordExerciseProgresses);
         contentElem.html(html);
 
@@ -424,7 +425,7 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/momen
     }
 
     function decorateCalendars() {
-        $.getJSON('/exercises/punching/recordsForParent')
+        $.getJSON('/exercises/punching/records')
             .done((result) => {
                 if (result.errorCode == 0) {
                     let arrayOfPunchings = result.content;

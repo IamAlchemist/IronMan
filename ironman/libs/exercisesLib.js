@@ -53,6 +53,13 @@ module.exports.punchingHomeworkForParent = function (user) {
 };
 
 module.exports.wordPunchingRecordsForParent = function (user) {
+    if (user.isStudent) {
+        let mail = user.mail;
+        let type = Punching.PunchingType.word;
+        const promise = Punching.PunchingRecordModel.find({mail,type}).exec();
+        return Promise.all([promise]);
+    }
+
     if (user.linkedUserMails == undefined || user.linkedUserMails.length == 0) {
         return new Promise(function (resolve) {
             resolve([]);
