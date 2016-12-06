@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b903ec8f-157f-4431-8659-022e2b0cd42a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/exercises/words/memorizing.js" afterPath="$PROJECT_DIR$/public/javascripts/exercises/words/memorizing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/exercises/words/memorizingTmpl.jade" afterPath="$PROJECT_DIR$/views/exercises/words/memorizingTmpl.jade" />
     </list>
     <ignored path="ironman.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,8 +38,8 @@
       <file leaf-file-name="memorizing.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/exercises/words/memorizing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="446" column="13" selection-start-line="446" selection-start-column="13" selection-end-line="446" selection-end-column="13" />
+            <state relative-caret-position="528">
+              <caret line="457" column="28" selection-start-line="457" selection-start-column="28" selection-end-line="457" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -529,14 +527,7 @@
       <workItem from="1479097728191" duration="27071000" />
       <workItem from="1479304076069" duration="1075000" />
       <workItem from="1480919445845" duration="12416000" />
-      <workItem from="1480984003824" duration="964000" />
-    </task>
-    <task id="LOCAL-00058" summary="add the isStudent property when register">
-      <created>1478482050490</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1478482050490</updated>
+      <workItem from="1480984003824" duration="991000" />
     </task>
     <task id="LOCAL-00059" summary="finish link-user ui">
       <created>1478530846141</created>
@@ -874,11 +865,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479305310396</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="mc">
+      <created>1480985077341</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1480985077341</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="337391000" />
+    <option name="totallyTimeSpent" value="337418000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -959,9 +957,9 @@
     <MESSAGE value="ui change" />
     <MESSAGE value="finish" />
     <MESSAGE value="change pick words algorithm" />
-    <MESSAGE value="mc" />
     <MESSAGE value="minor change" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor change" />
+    <MESSAGE value="mc" />
+    <option name="LAST_COMMIT_MESSAGE" value="mc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1362,8 +1360,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/exercises/words/memorizing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="446" column="13" selection-start-line="446" selection-start-column="13" selection-end-line="446" selection-end-column="13" />
+        <state relative-caret-position="528">
+          <caret line="457" column="28" selection-start-line="457" selection-start-column="28" selection-end-line="457" selection-end-column="28" />
           <folding />
         </state>
       </provider>
