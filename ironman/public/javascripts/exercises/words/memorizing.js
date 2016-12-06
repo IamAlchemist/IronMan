@@ -409,7 +409,6 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/momen
         $.getJSON('/exercises/words/inspect/progressToday')
             .done((result)=> {
                 if (result.errorCode == 0) {
-                    $('.calendar').calendar();
 
                     decorateCalendars();
 
@@ -430,7 +429,7 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/momen
                 if (result.errorCode == 0) {
                     let arrayOfPunchings = result.content;
                     if (arrayOfPunchings.length > 0) {
-
+                        showCalendars(arrayOfPunchings);
                     }
                 }
             })
@@ -438,16 +437,21 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/momen
 
     function showCalendars(arrayOfPunchings) {
         const source = $('#wordInspection-template').html();
-        let inspectionTmpl = Handlebars.compile(source);
-        let panels = Array();
+        let template = Handlebars.compile(source);
+        let panelTitles = Array();
         for (let item of arrayOfPunchings) {
-
+            if (item.length > 0) {
+                let punching = item[0];
+                let title = punching.mail;
+                panelTitles.push(title);
+            }
         }
-        let html = inspectionTmpl();
-        $('panels').html(inspectionTmpl);
+        let html = template(panelTitles);
+        $('#panels').html(html);
 
-        for ((idx) in ) {
-            showACalendar('#calendar_' + , )
+        const len = arrayOfPunchings.length;
+        for (let i = 0; i < len; ++i ) {
+            showACalendar(`#calendar_${i}`, arrayOfPunchings[i])
         }
     }
 
