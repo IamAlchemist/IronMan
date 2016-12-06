@@ -430,29 +430,48 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/momen
                 if (result.errorCode == 0) {
                     let arrayOfPunchings = result.content;
                     if (arrayOfPunchings.length > 0) {
-                        let punchings = arrayOfPunchings[0];
-                        let createdAts = punchings.map(punching => punching.createdAt);
-                        let momentStrings = createdAts.map(createdAt => moment(createdAt));
 
-                        $('.calendar').calendar({
-                            customDayRenderer: function (element, date) {
-                                var calendarMoment = moment(date);
-                                for (let str of momentStrings) {
-                                    let m = moment(str);
-                                    if (m.year() == calendarMoment.year()
-                                        && m.month() == calendarMoment.month()
-                                        && m.date() == calendarMoment.date()) {
-
-                                        $(element).css('background-color', 'red');
-                                        $(element).css('color', 'white');
-                                        $(element).css('border-radius', '15px');
-                                    }
-                                }
-                            }
-                        });
                     }
                 }
             })
+    }
+
+    function showCalendars(arrayOfPunchings) {
+        const source = $('#wordInspection-template').html();
+        let inspectionTmpl = Handlebars.compile(source);
+        let panels = Array();
+        for (let item of arrayOfPunchings) {
+
+        }
+        let html = inspectionTmpl();
+        $('panels').html(inspectionTmpl);
+
+        for ((idx) in ) {
+            showACalendar('#calendar_' + , )
+        }
+    }
+
+    function showACalendar(calendarId, punchings) {
+        let createdAts = punchings.map(punching => punching.createdAt);
+        let momentStrings = createdAts.map(createdAt => moment(createdAt));
+
+        $(calendarId).calendar({
+            customDayRenderer: function (element, date) {
+                var calendarMoment = moment(date);
+                for (let str of momentStrings) {
+                    let m = moment(str);
+                    if (m.year() == calendarMoment.year()
+                        && m.month() == calendarMoment.month()
+                        && m.date() == calendarMoment.date()) {
+
+                        $(element).css('background-color', 'red');
+                        $(element).css('color', 'white');
+                        $(element).css('border-radius', '15px');
+                    }
+                }
+            }
+        });
+
     }
 
     function showInspectionPage(content) {
