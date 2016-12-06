@@ -16,20 +16,29 @@ require(['../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/moment.m
     });
 
     function showCalendarsWithType(punchingType) {
+        let url = "";
         if (punchingType == "homework") {
-            $.getJSON('/exercises/punching/records/homework')
-                .done((result) => {
-                    if (result.errorCode == 0) {
-                        let arrayOfPunchings = result.content;
-                        if (arrayOfPunchings.length > 0) {
-                            showCalendars(arrayOfPunchings);
-                        }
-                    }
-                })
+            url = '/exercises/punching/records/homework';
         }
         else if (punchingType == "word") {
-
+            url = '/exercises/punching/records/word';
         }
+
+        if (url.length != 0) {
+            showCalendarWithURL(url);
+        }
+    }
+
+    function showCalendarWithURL(url) {
+        $.getJSON(url)
+            .done((result) => {
+                if (result.errorCode == 0) {
+                    let arrayOfPunchings = result.content;
+                    if (arrayOfPunchings.length > 0) {
+                        showCalendars(arrayOfPunchings);
+                    }
+                }
+            })
     }
 
     function showCalendars(arrayOfPunchings) {
