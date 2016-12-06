@@ -158,11 +158,11 @@ router.get('/punching/homework', (req, res) => {
         })
 });
 
-router.get('/punching/records', (req, res) => {
+router.get('/punching/records/word', (req, res) => {
     const user = comonLib.getUserFromRequest(req);
     if (!user) { return res.send(new Result(8)); }
 
-    exercisesLib.wordPunchingRecordsForParent(user)
+    exercisesLib.wordPunchingRecords(user)
         .then((arrayOfPunchings) => {
             const result = new Result(0, arrayOfPunchings);
             return res.send(result);

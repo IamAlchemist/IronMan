@@ -425,7 +425,7 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/momen
     }
 
     function decorateCalendars() {
-        $.getJSON('/exercises/punching/records')
+        $.getJSON('/exercises/punching/records/word')
             .done((result) => {
                 if (result.errorCode == 0) {
                     let arrayOfPunchings = result.content;

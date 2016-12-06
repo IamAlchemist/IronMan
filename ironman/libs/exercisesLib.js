@@ -52,7 +52,7 @@ module.exports.punchingHomeworkForParent = function (user) {
         })
 };
 
-module.exports.wordPunchingRecordsForParent = function (user) {
+module.exports.wordPunchingRecords = function (user) {
     if (user.isStudent) {
         let mail = user.mail;
         let type = Punching.PunchingType.word;
