@@ -29,6 +29,9 @@ errorMessages[112] = '导入单词错误';
 errorMessages[113] = '今日家庭作业打卡失败';
 errorMessages[114] = '查询打卡数据异常';
 errorMessages[115] = '查询打卡数据失败';
+errorMessages[116] = '帐户应该是家长帐户';
+errorMessages[117] = '帐户应该是学生帐户';
+errorMessages[118] = '打卡失败';
 
 
 function ApiResult(errorCode, content) {

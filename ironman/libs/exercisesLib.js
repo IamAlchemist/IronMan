@@ -87,3 +87,6 @@ module.exports.wordPunchingRecords = function (user) {
     return punchingRecords(user, Punching.PunchingType.word);
 };
 
+module.exports.punchForChild = function(user, childMail, type) {
+    return Punching.punchToday(childMail, type);
+};

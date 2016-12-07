@@ -110,6 +110,35 @@ router.get('/words/achievementToday', (req, res)=> {
         });
 });
 
+router.get('/punching/punchForChild', (req, res)=> {
+    const user = comonLib.getUserFromRequest(req);
+    if (!user) {
+        return res.send(new Result(8));
+    }
+
+    if (user.isStudent) {
+        return res.send(new Result(116));
+    }
+
+    let type = req.query.type;
+    if (!checkPunchingType(type)) {
+        return res.send(new Result(10, {message: "type参数不对"}));
+    }
+
+    let childMail = req.query.child;
+    if (!childMail) {
+        return res.send(new Result(10));
+    }
+
+    exercisesLib.punchForChild(user, childMail, punching.PunchingType.homework)
+        .then(()=>{
+            res.send(new Result(0));
+        })
+        .catch((error)=> {
+            return res.send(new Result(118, {message: error.message}));
+        });
+});
+
 router.get('/punching/isPunched', (req, res)=> {
     const user = comonLib.getUserFromRequest(req);
     if (!user) {
@@ -164,7 +193,7 @@ router.get('/punching/homework', (req, res) => {
             return res.send(new Result(0));
         })
         .catch((error)=> {
-            return res.send(new Result(114, {message: error.message}));
+            return res.send(new Result(118, {message: error.message}));
         })
 });
 
