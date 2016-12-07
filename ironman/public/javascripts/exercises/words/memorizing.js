@@ -193,7 +193,9 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/momen
     }
 
     function initForceCloseButton() {
-        $('#forceCloseButton').click(()=> {
+        const button = $('#forceCloseButton')
+        button.removeClass('hidden');
+        button.click(()=> {
             sendResultToServer(true);
         });
     }
