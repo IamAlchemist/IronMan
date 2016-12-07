@@ -458,6 +458,7 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/momen
                         let message = json.content != undefined && json.content.message != undefined ?
                             json.content.message : json.message;
                         alert(message);
+                        window.location.reload();
                     });
             });
         }

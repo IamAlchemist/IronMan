@@ -130,7 +130,7 @@ router.get('/punching/punchForChild', (req, res)=> {
         return res.send(new Result(10));
     }
 
-    exercisesLib.punchForChild(user, childMail, punching.PunchingType.homework)
+    exercisesLib.punchForChild(user, childMail, type)
         .then(()=>{
             res.send(new Result(0));
         })
