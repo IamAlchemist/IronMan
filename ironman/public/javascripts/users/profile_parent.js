@@ -7,3 +7,6 @@ require(['../libs/ironmanLib'], function (ironmanLib) {
     });
 });
 
+function punchingHomeworkFor(mail) {
+    alert(mail);
+}

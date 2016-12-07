@@ -14,7 +14,7 @@ html
                         .panel-heading
                             h4.panel-title.text-center 家庭作业
                         .panel-body
-                            for punchingHomework in punchingHomeworks
+                            for punchingHomework,index in punchingHomeworks
                                 p
                                     strong #{punchingHomework.mail}
                                     br
@@ -27,6 +27,7 @@ html
                                     .alert.alert-success 今天已经按时完成打卡
                                 else
                                     .alert.alert-warning 今天还没有打卡
+                                    button.btn.btn-block.btn-danger(id='punching_#{index}' type='button' onclick='punchingHomeworkFor(\"#{punchingHomework.mail}\")') 帮他打卡
 
                             a#recordsButton.btn.btn-block.btn-info(type='button' href='/exercises/punching/records/homeworkPage') 打卡记录
 
