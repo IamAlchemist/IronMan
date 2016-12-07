@@ -130,13 +130,18 @@ script#wordDetail-template(type="text/x-handlebars-template").
     </div>
 
 script#celebration-template(type="text/x-handlebars-template").
+    <div class="row" style="margin-bottom: 10px">
+        <div class="col-xs-3 col-center-block">
+            <button id="punchButton_{{index}}" class="btn btn-block btn-danger">帮他打卡</button>
+        </div>
+    </div>
     <div class="panel panel-primary">
         <div class="panel-heading">
             <h4>{{title}}今日已经完成</h4>
         </div>
         <div class="panel-body">
             {{#each progresses}}
-            <div class="row wordli">
+            <div class="row">
                 <div class="col-xs-4 col-lg-2">
                     <p id="word" class="text-primary">{{word}}</p>
                 </div>

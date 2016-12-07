@@ -45,7 +45,7 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/momen
         initStartMemorizing();
     });
 
-    function htmlFromWordExercisProgresses(wordExerciseProgresses, title) {
+    function htmlFromWordExercisProgresses(index, wordExerciseProgresses, title) {
         if (celebrationTmpl == undefined) {
             let source = $('#celebration-template').html();
             celebrationTmpl = Handlebars.compile(source);
@@ -59,7 +59,7 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/momen
             return {word, explanation, progress};
         });
 
-        return celebrationTmpl({title, progresses});
+        return celebrationTmpl({index, title, progresses});
     }
 
     function showCelebrationPage(wordExerciseProgresses) {
@@ -448,8 +448,18 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/momen
         contentElem.html(html);
 
         for (let [index, item] of content.entries()) {
-            const html = htmlFromWordExercisProgresses(item.progresses, item.mail);
+            const html = htmlFromWordExercisProgresses(index, item.progresses, item.mail);
             $(`#progress_panel_${index}`).html(html);
+            $(`#punchButton_${index}`).click(()=> {
+                let child = item.mail;
+                let type = "word";
+                $.getJSON(`/exercises/punching/punchForChild?child=${child}&type=${type}`)
+                    .done((json)=>{
+                        let message = json.content != undefined && json.content.message != undefined ?
+                            json.content.message : json.message;
+                        alert(message);
+                    });
+            });
         }
     }
 
