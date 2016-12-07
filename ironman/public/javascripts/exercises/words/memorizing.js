@@ -188,6 +188,14 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/momen
         initSkipButton();
 
         initTipsButton();
+
+        initForceCloseButton();
+    }
+
+    function initForceCloseButton() {
+        $('#forceCloseButton').click(()=> {
+            sendResultToServer(true);
+        });
     }
 
     function advanceCurrentProgress(advanced) {
@@ -245,7 +253,7 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/momen
         nextButtonElem = $('#nextExercise');
         nextButtonElem.click(function () {
             if (numberOfAvaiableWordProgresses() == 0) {
-                sendResultToServer();
+                sendResultToServer(false);
             }
             else {
                 pickNextWordProgress();
@@ -254,9 +262,9 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/momen
         });
     }
 
-    function sendResultToServer() {
+    function sendResultToServer(isForced) {
         const url = "/exercises/words/wordExercisesForToday/updateResult";
-        const data = {"content": wordExerciseProgresses};
+        const data = {"content": wordExerciseProgresses, "isForced": isForced};
         let posting = $.ajax(url,
             {
                 type: "POST",

@@ -293,12 +293,15 @@ router.post('/words/wordExercisesForToday/updateResult', function (req, res) {
     }
 
     const progresses = req.body.content;
+    const isForced = req.body.isForced;
+
+    console.log(isForced);
 
     if (progresses == undefined || !(progresses instanceof Array)) {
         return res.send(new Result(105));
     }
 
-    wordsExercisesLib.updateWordExerciseProgresses(progresses)
+    wordsExercisesLib.updateWordExerciseProgresses(progresses, isForced)
 
         .then((saves)=> {
             logger.info(`update succeed : ${saves.length}`);
@@ -308,7 +311,10 @@ router.post('/words/wordExercisesForToday/updateResult', function (req, res) {
         })
 
         .then((count)=> {
-            punching.punchToday(user.mail);
+            if (isForced == false) {
+                punching.punchToday(user.mail);
+                console.log("punch word today!");
+            }
             return res.send(new Result(0, {count}));
         })
 

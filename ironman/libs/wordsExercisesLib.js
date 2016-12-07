@@ -138,7 +138,7 @@ module.exports.wordExercisesForToday = function (mail) {
     }
 };
 
-module.exports.updateWordExerciseProgresses = function (progresses) {
+module.exports.updateWordExerciseProgresses = function (progresses, isForced) {
     var myMap = new Map();
     for (let prog of progresses) {
         myMap.set(`${prog._id}`, prog.progress);

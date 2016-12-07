@@ -1,18 +1,52 @@
-.row
-    .panel.panel-default
-        .panel-heading
-            h3#calendarName.panel-title
-        .panel-body
-            .calendar
-
-
 <div class="row">
-    <div class="panel panel-default">
+    <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title" id="calendarName"></h3>
+            <h4>{{title}}</h4>
         </div>
         <div class="panel-body">
-            <div id="calendar_{{title}}"></div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <h5>{{description}}</h5>
+                    <ul class="exercise-list">
+                        {{#each options}}
+                        <li class="exercise-section">
+                            <input id="{{../_id}}_{{@index}}" type="radio" name="{{../_id}}"/>
+                            <label for="{{../_id}}_{{@index}}">{{this}}</label>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-xs-8 col-xs-offset-2">
+                            <button id="showTipsButton" type="button" class="btn btn-warning btn-block">提示</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h6 id="hintMessage"></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <button id="okButton" class="btn btn-success btn-block" type="button">检查答案</button>
+                </div>
+                <div class="col-lg-3" id="nextExerciseContainer">
+                    <div id="positive-reinforcement">
+                        <image src="/images/face-smiley.png"/>
+                    </div>
+                    <button id="nextExercise" class="btn btn-warning btn-block" type="button">恭喜，答对了，请继续</button>
+                </div>
+                <div class="col-lg-3">
+                    <button id="skipButton" class="btn btn-danger btn-block" type="button">我还没有学过这个呢</button>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+<div class="row">
+    <button type="button" class="btn btn-block btn-danger">强制结束</button>
+</div>
+<div class="row" style="margin-left: 10px">
+    <p id="message" class="text-danger"></p>
 </div>
