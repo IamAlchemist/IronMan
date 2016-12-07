@@ -36,7 +36,7 @@ module.exports.punchingHomeworkForParent = function (user) {
             return Promise.all(ps);
         })
 
-        .then((arrayOfIsPunched)=>{
+        .then((arrayOfIsPunched)=> {
             arrayOfIsPunched.map((isPunched, index) => {
                 datas[index]["today"] = isPunched;
             });
@@ -46,7 +46,7 @@ module.exports.punchingHomeworkForParent = function (user) {
             });
         })
 
-        .catch((e)=>{
+        .catch((e)=> {
             logger.error(e.message);
             throw e;
         })
@@ -55,7 +55,7 @@ module.exports.punchingHomeworkForParent = function (user) {
 function punchingRecords(user, type) {
     if (user.isStudent) {
         let mail = user.mail;
-        const promise = Punching.PunchingRecordModel.find({mail,type}).exec();
+        const promise = Punching.PunchingRecordModel.find({mail, type}).exec();
         return Promise.all([promise]);
     }
 
@@ -72,7 +72,7 @@ function punchingRecords(user, type) {
     });
 
     return Promise.all(promises)
-        .catch((e)=>{
+        .catch((e)=> {
             logger.error(e.message);
             throw e;
         })
@@ -87,6 +87,14 @@ module.exports.wordPunchingRecords = function (user) {
     return punchingRecords(user, Punching.PunchingType.word);
 };
 
-module.exports.punchForChild = function(user, childMail, type) {
-    return Punching.punchToday(childMail, type);
+module.exports.punchForChild = function (user, childMail, type) {
+    return Punching.isPunchedToday(childMail, type)
+        .then((succeed)=> {
+            if (succeed) {
+                return Promise.resolve(succeed);
+            }
+            else {
+                return Punching.punchToday(childMail, type);
+            }
+        });
 };

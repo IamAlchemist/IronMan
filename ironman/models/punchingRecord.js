@@ -63,6 +63,7 @@ module.exports.punchForHomework = function (mail) {
 };
 
 function punchToday(mail, type = PunchingType.word) {
+
     const punch = new PunchingRecordModel({mail, type});
     return punch.save()
 
@@ -88,9 +89,7 @@ function isPunchedToday(mail, type = PunchingType.word) {
         }).exec()
 
         .then((punching)=> {
-            return new Promise(function (resolve) {
-                resolve(punching != null)
-            });
+            return Promise.resolve(punching != null);
         });
 }
 module.exports.isPunchedToday = isPunchedToday;
