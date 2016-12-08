@@ -156,6 +156,7 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/momen
     function showCurrentWordExerciseProgress() {
         const exercise = {
             _id: currentWordExerciseProgress._id,
+            audio: currentWordExerciseProgress.wordExercise.pronunciation,
             title: "单选",
             description: `${currentWordExerciseProgress.wordExercise.word}的含义是:`,
             options: generateCurrentOptionsAndSetAnswerIndex(),
