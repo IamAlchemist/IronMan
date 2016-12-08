@@ -64,7 +64,7 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/momen
 
     function showCelebrationPage(wordExerciseProgresses) {
         decorateCalendars();
-        const html = htmlFromWordExercisProgresses(wordExerciseProgresses);
+        const html = htmlFromWordExercisProgresses(0, wordExerciseProgresses, "");
         contentElem.html(html);
 
         progressElem.hide();
