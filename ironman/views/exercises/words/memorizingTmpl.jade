@@ -78,10 +78,15 @@ script#wordDetail-template(type="text/x-handlebars-template").
                     <div class="col-lg-2">
                         <p class="text-left text-panel">单词</p>
                     </div>
-                    <div class="col-lg-10">
+                    <div class="col-lg-5">
                         <p class="bg-success text-panel text-panel-boxed">
                             <strong>{{word}}</strong>
                         </p>
+                    </div>
+                    <div class="col-lg-5">
+                        <audio controls="controls">
+                            <source src="{{pronunciation}}" type="audio/mpeg">
+                        </audio>
                     </div>
                 </div>
                 <div class="row">
