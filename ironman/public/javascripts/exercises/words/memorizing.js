@@ -66,6 +66,7 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/momen
         decorateCalendars();
         const html = htmlFromWordExercisProgresses(0, wordExerciseProgresses, "");
         contentElem.html(html);
+        $('#punchButton_0').hide();
 
         progressElem.hide();
     }
