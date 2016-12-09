@@ -423,7 +423,7 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/momen
             .done((result)=> {
                 if (result.errorCode == 0) {
 
-                    ironmanLib.showCalendarsWithType('word', $('#panels'), $('#wordInspection-template').html());
+                    ironmanLib.showHeatWithType('word', $('#panels'), $('#wordInspection-template').html());
 
                     const content = result.content;
                     if (content.length == 0) {
@@ -437,7 +437,7 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/momen
     }
 
     function decorateCalendars() {
-        ironmanLib.showCalendarsWithType('word', $('#panels'), $('#wordInspection-template').html());
+        ironmanLib.showHeatWithType('word', $('#panels'), $('#wordInspection-template').html());
     }
 
     function showInspectionPage(content) {
