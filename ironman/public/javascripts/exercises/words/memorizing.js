@@ -2,7 +2,7 @@
  * Created by wizard on 11/1/16.
  */
 
-require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/moment.js/2.17.0/moment.min.js'], function (ironmanLib, moment) {
+require(['../../libs/ironmanLib'], function (ironmanLib) {
     var contentElem;
     var progressElem;
     var progressBarElem;
