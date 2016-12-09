@@ -178,8 +178,6 @@ require(['../libs/ironmanLib'], function (ironmanLib) {
         };
 
         function chart() {
-            moment.locale('zh-cn');
-
             d3.select(chart.selector()).selectAll('svg.calendar-heatmap').remove(); // remove the existing chart, if it exists
 
             var dateRange = d3.time.days(yearAgo, now); // generates an array of date objects within the specified range
@@ -320,7 +318,7 @@ require(['../libs/ironmanLib'], function (ironmanLib) {
             }
 
             function tooltipHTMLForDate(d) {
-                var dateStr = moment(d).format('LL');
+                var dateStr = moment(d).locale('zh-cn').format('LL');
                 var count = countForDate(d);
                 return '<span>' + dateStr + '</span>';
             }
