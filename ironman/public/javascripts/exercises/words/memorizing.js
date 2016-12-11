@@ -456,7 +456,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
                 let child = item.mail;
                 let type = "word";
                 $.getJSON(`/exercises/punching/punchForChild?child=${child}&type=${type}`)
-                    .done((json)=>{
+                    .done((json)=> {
                         let message = json.content != undefined && json.content.message != undefined ?
                             json.content.message : json.message;
                         alert(message);
@@ -467,7 +467,9 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     }
 
     function initStartMemorizingButton() {
-        $('button#startMemorizing').click(function () {
+        let button = $('button#startMemorizing');
+        button.click(function () {
+            button.attr('disabled', 'disabled');
             $.getJSON('/exercises/words/wordExercisesForToday')
                 .done(function (result) {
                     if (result.errorCode == 0) {
