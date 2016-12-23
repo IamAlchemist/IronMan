@@ -54,6 +54,15 @@ router.get('/punching/records/homeworkPage', function (req, res) {
     res.render('users/records_page', params);
 });
 
+router.get('/words/statistics', (req, res) => {
+    const user = comonLib.getUserFromRequest(req);
+    let params = {
+        "mail": user.mail
+    };
+
+    res.render('exercises/words/statistics', params);
+});
+
 
 /* API */
 router.get('/words/inspect/progressToday', (req, res)=> {
