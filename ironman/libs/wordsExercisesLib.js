@@ -267,7 +267,14 @@ function statisticsDataForMail(mail) {
                 total += count;
             }
 
-            let data = [...result];
+            let data = Array();
+
+            for (let [key, value] of result.entries()) {
+                let item = {};
+                item.name = `熟练度 ${key}`;
+                item.y = value;
+                data.push(item);
+            }
 
             return Promise.resolve(data);
         });

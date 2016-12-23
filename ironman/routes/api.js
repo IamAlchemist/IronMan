@@ -22,7 +22,7 @@ router.get('/words/statistics', (req, res) => {
     wordsExercisesLib.statisticsDataForUser(user)
         .then((dataSets)=>{
             return res.send(new Result(0, dataSets));
-        })
+        });
 });
 
 module.exports = router;

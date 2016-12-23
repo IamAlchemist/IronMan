@@ -10,27 +10,24 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/highcharts/5.0.6/highc
         messageElem = $('p#message');
 
         $.getJSON('/api/words/statistics')
-            .done((data)=> {
-                console.log(JSON.stringify(data));
-            });
+            .done((result)=> {
+                const elem = $('#pieChart');
+                const dataSets = result.content;
+                let html = "";
+                for (let i = 0; i < dataSets.length; ++i) {
+                    html += `<div id="pieChart_${i}"></div>`
+                }
 
-        let data = [
-            ['Firefox', 45.0],
-            ['IE', 26.8],
-            {
-                name: 'Chrome',
-                y: 12.8,
-                sliced: true,
-                selected: true
-            },
-            ['Safari', 8.5],
-            ['Opera', 6.2],
-            ['Others', 0.7]
-        ];
-        showPieChart(data);
+                elem.html(html);
+
+                for (let i = 0; i < dataSets.length; ++i) {
+                    let nodeId = `#pieChart_${i}`;
+                    showPieChart(nodeId, dataSets[i]);
+                }
+            });
     });
 
-    function showPieChart(data) {
+    function showPieChart(nodeId, data) {
         var chart = {
             plotBackgroundColor: null,
             plotBorderWidth: null,
@@ -51,7 +48,7 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/highcharts/5.0.6/highc
                 cursor: 'pointer',
                 dataLabels: {
                     enabled: true,
-                    format: '<b>{point.name}%</b>: {point.percentage:.1f} %',
+                    format: '<b>{point.name}</b>: {point.percentage:.1f}%, 共计: {point.y}个',
                     style: {
                         color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
                     }
@@ -61,7 +58,7 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/highcharts/5.0.6/highc
 
         var series = [{
             type: 'pie',
-            name: '掌握单词比例',
+            name: '比例',
             data: data
         }];
 
@@ -72,6 +69,6 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/highcharts/5.0.6/highc
         json.series = series;
         json.plotOptions = plotOptions;
 
-        $('#pieChart').highcharts(json);
+        $(nodeId).highcharts(json);
     }
 });
