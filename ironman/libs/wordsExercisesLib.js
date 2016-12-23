@@ -276,7 +276,11 @@ function statisticsDataForMail(mail) {
                 data.push(item);
             }
 
-            return Promise.resolve(data);
+            let item = {
+                mail,
+                data
+            };
+            return Promise.resolve(item);
         });
 }
 module.exports.statisticsDataForMail = statisticsDataForMail;

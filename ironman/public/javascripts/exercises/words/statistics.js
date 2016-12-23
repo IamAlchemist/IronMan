@@ -35,7 +35,7 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/highcharts/5.0.6/highc
         };
 
         var title = {
-            text: '掌握单词比例'
+            text: `${data.mail}掌握单词比例`
         };
 
         var tooltip = {
@@ -59,7 +59,7 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/highcharts/5.0.6/highc
         var series = [{
             type: 'pie',
             name: '比例',
-            data: data
+            data: data.data
         }];
 
         var json = {};
