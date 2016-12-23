@@ -48,7 +48,7 @@ require(['../../libs/ironmanLib', 'http://cdn.bootcss.com/highcharts/5.0.6/highc
                 cursor: 'pointer',
                 dataLabels: {
                     enabled: true,
-                    format: '<b>{point.name}</b>: {point.percentage:.1f}%, 共计: {point.y}个',
+                    format: '<b style="color: red">{point.name}</b>: {point.percentage:.1f}%, 共计: {point.y}个',
                     style: {
                         color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
                     }
