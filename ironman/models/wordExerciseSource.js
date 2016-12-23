@@ -32,17 +32,12 @@ module.exports.updateWordOwnersOf = function (mail = mongodb.throwIfMissing(),
         })
 };
 
-module.exports.wordOwnersOf = function (mail = mongodb.throwIfMissing()) {
+module.exports.wordSourcesOf = function (mail = mongodb.throwIfMissing()) {
     return WordExerciseSourceModel.findOne({mail})
+        .exec()
         .then((source)=>{
-            return new Promise(function (resolve) {
-                if (source == null) {
-                    return resolve([]);
-                }
-                else {
-                    return resolve(source.wordOwners);
-                }
-            });
+            let result = source == null ? [] : source.wordOwners;
+            return Promise.resolve(result);
         });
 };
 

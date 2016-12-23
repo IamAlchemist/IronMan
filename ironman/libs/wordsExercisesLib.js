@@ -85,7 +85,7 @@ module.exports.wordExercisesForToday = function (mail) {
     let leftedCount = totalWordMaxToday;
     let accumulator = [];
 
-    return wordSource.wordOwnersOf(mail)
+    return wordSource.wordSourcesOf(mail)
 
         .then(sources => {
             return Promise.each(sources, function (source) {
@@ -94,7 +94,7 @@ module.exports.wordExercisesForToday = function (mail) {
                 return wordsPickedIn(mail, source, maxWordsCount)
             });
         })
-        .then(()=>{
+        .then(()=> {
             return Promise.resolve(accumulator);
         });
 
@@ -102,7 +102,7 @@ module.exports.wordExercisesForToday = function (mail) {
         let progress_zero_count = Math.floor(maxWordsCount / 2);
 
         return WordExerciseProgress.WordExerciseProgressModel
-            .find({mail, "wordExercise.mail":source})
+            .find({mail, "wordExercise.mail": source})
             .where('progress').equals(0)
             .sort('updatedAt')
             .limit(progress_zero_count)
@@ -244,5 +244,49 @@ module.exports.importWords = function (mail, gradeMail) {
             logger.error(error.message);
             throw error;
         });
+};
+
+function statisticsDataForMail(mail) {
+    return WordExerciseProgress.WordExerciseProgressModel
+        .find({mail})
+        .exec()
+        .then((wordProgresses)=> {
+            let result = new Map();
+            for (let progress of wordProgresses) {
+                let key = `${progress.progress}`;
+                if (!result.has(key)) {
+                    result.set(key, 1);
+                }
+                else {
+                    result.set(key, result.get(key) + 1);
+                }
+            }
+
+            let total = 0;
+            for (let count of result.values()) {
+                total += count;
+            }
+
+            let data = [...result];
+
+            return Promise.resolve(data);
+        });
+}
+module.exports.statisticsDataForMail = statisticsDataForMail;
+
+module.exports.statisticsDataForUser = function (user) {
+    if (user.isStudent) {
+        return statisticsDataForMail(user.mail)
+            .then((data)=> {
+                return Promise.resolve([data]);
+            })
+    }
+    else {
+        const promises = user.linkedUserMails.map((mail)=> {
+            return statisticsDataForMail(mail);
+        });
+
+        return Promise.all(promises);
+    }
 };
 

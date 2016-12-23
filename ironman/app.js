@@ -14,6 +14,7 @@ const express = require('express'),
     users = require('./routes/users'),
     exercises = require('./routes/exercises'),
     learn = require('./routes/learn'),
+    api = require('./routes/api'),
     auth = require('./libs/authentication');
 
 const tracer = require('./libs/ironmanLogger');
@@ -47,6 +48,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/exercises', exercises);
 app.use('/learn', learn);
+app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
