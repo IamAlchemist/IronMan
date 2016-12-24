@@ -253,7 +253,7 @@ function statisticsDataForMail(mail) {
         .then((wordProgresses)=> {
             let result = new Map();
             for (let progress of wordProgresses) {
-                let key = `${progress.progress}`;
+                let key = `${Math.round(progress.progress / 3)}`;
                 if (!result.has(key)) {
                     result.set(key, 1);
                 }
@@ -271,8 +271,7 @@ function statisticsDataForMail(mail) {
 
             for (let [key, value] of result.entries()) {
                 let item = {};
-                let count = Math.round(key / 3);
-                item.name = `记忆次数 ${count}`;
+                item.name = `记忆次数 ${key}`;
                 item.y = value;
                 data.push(item);
             }
