@@ -271,7 +271,8 @@ function statisticsDataForMail(mail) {
 
             for (let [key, value] of result.entries()) {
                 let item = {};
-                item.name = `熟练度 ${key}`;
+                let count = Math.round(key / 3);
+                item.name = `记忆次数 ${count}`;
                 item.y = value;
                 data.push(item);
             }
