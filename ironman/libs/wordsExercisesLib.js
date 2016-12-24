@@ -89,7 +89,6 @@ module.exports.wordExercisesForToday = function (mail) {
 
         .then(sources => {
             return Promise.each(sources, function (source) {
-                logger.error(leftedCount);
                 const maxWordsCount = Math.min(leftedCount, singleSourceWordMaxToday);
                 return wordsPickedIn(mail, source, maxWordsCount)
             });
@@ -109,10 +108,10 @@ module.exports.wordExercisesForToday = function (mail) {
             .exec()
 
             .then((progresses)=> {
-                logger.info(`${mail},${accumulator.length}`);
+                logger.info(`pick from ${source}, for ${mail}`);
                 accumulator = accumulator.concat(progresses);
+                logger.info(`${progresses.length} progress 0 are picked.`);
                 leftedCount = totalWordMaxToday - accumulator.length;
-                logger.info(`${mail}, progress 0 count: ${progresses.length}, ${accumulator.length}`);
 
                 const progress_non_zero_count = Math.min(leftedCount, singleSourceWordMaxToday);
 
@@ -127,7 +126,7 @@ module.exports.wordExercisesForToday = function (mail) {
             .then((progresses2)=> {
                 accumulator = accumulator.concat(progresses2);
                 leftedCount = totalWordMaxToday - accumulator.length;
-                logger.info(`progress non-zero count: ${progresses2.length}, ${accumulator.length}`);
+                logger.info(`${progresses2.length} progress non-0 are picked.`);
                 return Promise.resolve(accumulator);
             })
 
