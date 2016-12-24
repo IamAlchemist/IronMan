@@ -98,7 +98,7 @@ module.exports.wordExercisesForToday = function (mail) {
         });
 
     function wordsPickedIn(mail, source, maxWordsCount) {
-        let progress_zero_count = Math.floor(maxWordsCount / 2);
+        const progress_zero_count = Math.max(Math.floor(maxWordsCount / 2), 1);
 
         return WordExerciseProgress.WordExerciseProgressModel
             .find({mail, "wordExercise.mail": source})
@@ -113,7 +113,7 @@ module.exports.wordExercisesForToday = function (mail) {
                 logger.info(`${progresses.length} p-0 are picked.`);
                 leftedCount = totalWordMaxToday - accumulator.length;
 
-                const progress_non_zero_count = Math.min(leftedCount, singleSourceWordMaxToday);
+                const progress_non_zero_count = Math.max(Math.min(leftedCount, singleSourceWordMaxToday), 1);
 
                 return WordExerciseProgress.WordExerciseProgressModel
                     .find({mail, "wordExercise.mail": source})
