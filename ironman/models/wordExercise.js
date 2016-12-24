@@ -22,27 +22,26 @@ WordExerciseSchema.plugin(timestamps);
 
 const WordExerciseModel = mongodb.model('WordExercise', WordExerciseSchema);
 module.exports.WordExerciseModel = WordExerciseModel;
-
-module.exports.MakeWordExercise =
-    function MakeWordExercise(mail = throwIfMissing(),
-                              word = throwIfMissing(),
-                              partOfSpeech = throwIfMissing(),
-                              explanation = throwIfMissing(),
-                              example = throwIfMissing(),
-                              exampleExplanation = throwIfMissing(),
-                              pronunciation,
-                              others = '') {
-        return new WordExerciseModel({
-            mail,
-            word,
-            partOfSpeech,
-            explanation,
-            example,
-            exampleExplanation,
-            pronunciation,
-            others
-        });
-    };
+function MakeWordExercise(mail = throwIfMissing(),
+                          word = throwIfMissing(),
+                          partOfSpeech = throwIfMissing(),
+                          explanation = throwIfMissing(),
+                          example = throwIfMissing(),
+                          exampleExplanation = throwIfMissing(),
+                          pronunciation,
+                          others = '') {
+    return new WordExerciseModel({
+        mail,
+        word,
+        partOfSpeech,
+        explanation,
+        example,
+        exampleExplanation,
+        pronunciation,
+        others
+    });
+}
+module.exports.MakeWordExercise = MakeWordExercise;
 
 function throwIfMissing() {
     throw new Error('Missing parameter');

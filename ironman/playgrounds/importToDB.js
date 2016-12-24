@@ -35,22 +35,36 @@ function importWordExercises(jsonFile, mail) {
 
     var promises = words.map((word)=> {
 
-        return WordExercise.MakeWordExercise(
-            word.mail,
-            word.word,
-            word.partOfSpeech,
-            word.explanation,
-            word.example,
-            word.exampleExplanation,
-            word.pronunciation,
-            word.others
-        ).save();
+        return WordExercise.WordExerciseModel.find({word: word.word})
+            .exec()
+            .then((exercises)=> {
+                if (exercises.length == 0) {
 
+                    let exerciseModel = WordExercise.MakeWordExercise(
+                        word.mail,
+                        word.word,
+                        word.partOfSpeech,
+                        word.explanation,
+                        word.example,
+                        word.exampleExplanation,
+                        word.pronunciation,
+                        word.others
+                    );
+
+                    return exerciseModel.save();
+                }
+                else {
+                    return Promise.resolve(undefined);
+                }
+            });
     });
 
     const final = new Promise.all(promises);
 
     final.then((results)=> {
+        results = results.filter((exercise) => {
+            return exercise != undefined;
+        });
         logger.info(`${jsonFile} succeed: ${results.length}`)
     });
 }
