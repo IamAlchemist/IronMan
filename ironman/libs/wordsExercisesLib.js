@@ -110,7 +110,7 @@ module.exports.wordExercisesForToday = function (mail) {
             .then((progresses)=> {
                 logger.info(`pick from ${source}, for ${mail}`);
                 accumulator = accumulator.concat(progresses);
-                logger.info(`${progresses.length} progress 0 are picked.`);
+                logger.info(`${progresses.length} p-0 are picked.`);
                 leftedCount = totalWordMaxToday - accumulator.length;
 
                 const progress_non_zero_count = Math.min(leftedCount, singleSourceWordMaxToday);
@@ -126,7 +126,7 @@ module.exports.wordExercisesForToday = function (mail) {
             .then((progresses2)=> {
                 accumulator = accumulator.concat(progresses2);
                 leftedCount = totalWordMaxToday - accumulator.length;
-                logger.info(`${progresses2.length} progress non-0 are picked.`);
+                logger.info(`${progresses2.length} p-non-0 are picked.`);
                 return Promise.resolve(accumulator);
             })
 
