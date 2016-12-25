@@ -83,12 +83,13 @@ module.exports.updateStudentWordsBank = function (mail) {
 module.exports.wordExercisesForToday = function (mail) {
     let leftedCount = totalWordMaxToday;
     let accumulator = [];
+    let singleSourceWordMaxToday = 25;
 
     return wordSource.wordSourcesOf(mail)
 
         .then(sources => {
             return Promise.each(sources, function (source) {
-                let singleSourceWordMaxToday = Math.floor(totalWordMaxToday / sources.length) + 1;
+                singleSourceWordMaxToday = Math.floor(totalWordMaxToday / sources.length) + 1;
                 const maxWordsCount = Math.min(leftedCount, singleSourceWordMaxToday);
                 return wordsPickedIn(mail, source, maxWordsCount)
             });
