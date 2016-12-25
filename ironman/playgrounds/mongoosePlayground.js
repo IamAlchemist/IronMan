@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const timestamp = require('../libs/mongoose-timestamp');
 const moment = require('moment');
 mongoose.Promise = bluebird.Promise;
+const Promise = bluebird.Promise;
 const mongodb = mongoose.connect('mongodb://localhost/test');
 const assert = require('assert');
 
@@ -170,12 +171,26 @@ function count() {
     const promise = query.exec();
     assert.ok(promise instanceof bluebird.Promise);
 
-    promise.then((num)=>{
+    promise.then((num)=> {
         console.log(`num: ${num}`);
     });
 
 }
-count();
+
+function promiseTest() {
+    const p1 = Promise.resolve("hello");
+    const p2 = Promise.resolve();
+    Promise.all([p1, p2])
+        .then((array)=> {
+            console.log(`length : ${array.length}`);
+            for (let value of array) {
+                console.log(`${value}`);
+            }
+        })
+}
+
+promiseTest();
+//count();
 //save();
 //queryDate();
 //update();

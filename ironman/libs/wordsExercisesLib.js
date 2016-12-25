@@ -214,29 +214,26 @@ module.exports.inspectAchievementToday = function (user) {
 };
 
 module.exports.importWords = function (mail, gradeMail) {
-    return WordExerciseProgress.WordExerciseProgressModel
-        .find({mail})
-        .where('wordExercise.mail').equals(gradeMail)
-
+    return WordExercise.WordExerciseModel
+        .find({mail: gradeMail})
         .exec()
-
-        .then((progresses)=> {
-            if (progresses.length != 0) {
-                return new Promise(function (resolve) {
-                    resolve([]);
-                });
-            }
-            else {
-                return WordExercise.WordExerciseModel
-                    .find({mail: gradeMail})
-                    .exec()
-            }
-        })
-
         .then((wordExercises) => {
             logger.info(`will add wordExercises : ${wordExercises.length}`);
             wordExerciseSource.updateWordOwnersOf(mail, [gradeMail]);
-            return new Promise.all(wordExercises.map((word)=> WordExerciseProgress.MakeWordExerciseProgress(mail, word).save()));
+
+            return Promise.each(wordExercises, (wordExercise) => {
+                return WordExerciseProgress.WordExerciseProgressModel
+                    .find({'wordExercise.word': wordExercise.word})
+                    .exec()
+                    .then((progresses)=> {
+                        if (progresses.length != 0) {
+                            return Promise.resolve();
+                        }
+                        else {
+                            return WordExerciseProgress.MakeWordExerciseProgress(mail, wordExercise).save();
+                        }
+                    });
+            });
         })
 
         .catch((error)=> {
