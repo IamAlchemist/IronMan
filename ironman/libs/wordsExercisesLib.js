@@ -14,7 +14,6 @@ const mongodb = require('./mongodb'),
 
 const maxProgress = 24;
 const totalWordMaxToday = 50;
-const singleSourceWordMaxToday = 25;
 
 module.exports.updateStudentWordsBank = function (mail) {
     let cacheWordMails = [];
@@ -89,6 +88,7 @@ module.exports.wordExercisesForToday = function (mail) {
 
         .then(sources => {
             return Promise.each(sources, function (source) {
+                let singleSourceWordMaxToday = Math.floor(totalWordMaxToday / sources.length) + 1;
                 const maxWordsCount = Math.min(leftedCount, singleSourceWordMaxToday);
                 return wordsPickedIn(mail, source, maxWordsCount)
             });
