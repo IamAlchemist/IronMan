@@ -1,0 +1,1838 @@
+[
+  {
+    "word": "helmet",
+    "explanation": "头盔；安全帽",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30XLd12cf61d00df6cdd710185f174e0cb75.mp3",
+    "others": "形容词:helmeted;过去式:helmeted;过去分词:helmeted;现在分词:helmeting;第三人称单数:helmets;",
+    "example": "The sword bit the knight's helmet.",
+    "exampleExplanation": "剑刺穿了武士的头盔。"
+  },
+  {
+    "word": "robot",
+    "explanation": "机器人；机械呆板的人；自动机；（非洲南部）自动交通信号灯",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30bn59dd329279b18ae158e4d8a758759b67.mp3",
+    "others": "形容词:robotic;",
+    "example": "The toy robot moved forward with quick jerky steps.",
+    "exampleExplanation": "玩具机器人一颠一颠地走得很快。"
+  },
+  {
+    "word": "pill",
+    "explanation": "药丸；药片",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30dz1dccd48190477cc792c96e7700a89143.mp3",
+    "others": "过去式:pilled;过去分词:pilled;现在分词:pilling;第三人称单数:pills;",
+    "example": "Father must take his pill on the hour.",
+    "exampleExplanation": "父亲必须在每点钟准点吃药丸。"
+  },
+  {
+    "word": "net",
+    "explanation": "网；网状物",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30r8f22a1199b68436a11937210bed59043a.mp3",
+    "others": "名词:netter;过去式:netted;过去分词:netted;现在分词:netting;第三人称单数:nets;",
+    "example": "This area has not been covered by the communication net.",
+    "exampleExplanation": "这个地区还不在通讯网的覆盖之内。"
+  },
+  {
+    "word": "guitar",
+    "explanation": "吉他",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd301ce5b2f8b275981f856844dfce23b2dc11.mp3",
+    "others": "名词:guitarist;",
+    "example": "He plays the guitar and sings too.",
+    "exampleExplanation": "他会弹吉他，也会唱歌。"
+  },
+  {
+    "word": "sunglasses",
+    "explanation": "墨镜；太阳镜",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30Ac5b1e1a16445dd7596aceb3ce2594f341.mp3",
+    "others": "",
+    "example": "Her eyes were masked by huge round sunglasses.",
+    "exampleExplanation": "她的双眼被一副圆形大墨镜遮住了。"
+  },
+  {
+    "word": "tent",
+    "explanation": "帐篷",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30cP78378e85954c2e1244b0e20cedd5efc3.mp3",
+    "others": "过去式:tented;过去分词:tented;现在分词:tenting;第三人称单数:tents;",
+    "example": "They set up a tent near the seashore.",
+    "exampleExplanation": "他们在海滨附近搭起了一个帐篷。"
+  },
+  {
+    "word": "imagine",
+    "explanation": "想像；设想；料想；猜想；认为",
+    "partOfSpeech": "vt.",
+    "pronunciation": "http://audio.dict.cn/fuk0tv279434f26e8075f38d8d06063a3050bb.mp3",
+    "others": "名词:imaginer;过去式:imagined;过去分词:imagined;现在分词:imagining;第三人称单数:imagines;",
+    "example": "You can imagine how surprised I was.",
+    "exampleExplanation": "你可以想象我是多么惊讶。"
+  },
+  {
+    "word": "planet",
+    "explanation": "行星",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30b495c86f38b4b8497564551d6b66a55251.mp3",
+    "others": "",
+    "example": "The Earth is a planet.",
+    "exampleExplanation": "地球是一颗行星。"
+  },
+  {
+    "word": "crowded",
+    "explanation": "拥挤的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30Zb2730375f7173d9f9767d3a26d7dc7d12.mp3",
+    "others": "",
+    "example": "Guests were crowded into the few remaining rooms.",
+    "exampleExplanation": "把客人都挤在剩余的几个房间里了。"
+  },
+  {
+    "word": "polluted",
+    "explanation": "被污染的；喝醉的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30KV84163485e459799c8ed6d4eee9225813.mp3",
+    "others": "",
+    "example": "Polluted air hangs over the city.",
+    "exampleExplanation": "城市上空被污染的空气所笼罩。"
+  },
+  {
+    "word": "hopefully",
+    "explanation": "怀着希望地；但愿",
+    "partOfSpeech": "adv.",
+    "pronunciation": "http://audio.dict.cn/fuTd30cx565ae5d136ce163597443be5d7fdc80b.mp3",
+    "others": "",
+    "example": "Hopefully, Naomi will enjoy being married.",
+    "exampleExplanation": "但愿娜欧蜜会喜欢婚姻生活。"
+  },
+  {
+    "word": "spacecraft",
+    "explanation": "宇宙飞船",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30Ovc4b08ebff112a545f196d38bb906b6d9.mp3",
+    "others": "名词复数:spacecraft;",
+    "example": "The spacecraft is orbiting the moon.",
+    "exampleExplanation": "宇宙飞船正绕月球飞行。"
+  },
+  {
+    "word": "space shuttle",
+    "explanation": "航天飞机",
+    "partOfSpeech": null,
+    "pronunciation": "http://audio.dict.cn/fuTd30Ft5e55a4aa9e32aaf557fa30fc23588fb8.mp3",
+    "others": "",
+    "example": "After Apollo, NASA's leaders turned their backs on the stars and planets. They delayed or canceled astronomy and space missions, gambling the agency's future on hardware like the space shuttle and space station.",
+    "exampleExplanation": "阿波罗［探测外太空火箭］过后，美国宇航局的领导放弃了对星球的探测。他们搁置或取消了天文及太空任务，而将该局的前途赌在航天飞机及太空站一类的硬件上。"
+  },
+  {
+    "word": "human",
+    "explanation": "人的；人类的；有人性的；人本性的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuk0xj676322f611f2baf386a5ea1bf4a887dc.mp3",
+    "others": "名词:humanhood;",
+    "example": "The accident was caused by human error.",
+    "exampleExplanation": "这宗事故是人为过失造成的。"
+  },
+  {
+    "word": "develop",
+    "explanation": "发展；发育；开发；冲洗(照片)",
+    "partOfSpeech": "v.",
+    "pronunciation": "http://audio.dict.cn/fuk03e1c945b86d18e4127cf72b96c108cf142.mp3",
+    "others": "形容词:developable;过去式:developed;过去分词:developed;现在分词:developing;第三人称单数:develops;",
+    "example": "Modern music was first developed in Italy.",
+    "exampleExplanation": "现代音乐最初是在意大利发展起来的。"
+  },
+  {
+    "word": "oxygen",
+    "explanation": "氧；氧气",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30iTa17e07f4e3debe4e47b5303dae669bd5.mp3",
+    "others": "形容词:oxygenic;副词:oxygenically;简写符号:O;",
+    "example": "Water contains hydrogen and oxygen.",
+    "exampleExplanation": "水含有氢和氧。"
+  },
+  {
+    "word": "sure",
+    "explanation": "肯定的；确信的；必定；可靠的；沉着自信的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuk0dp86565462c81f1a1d40da40ec2ca376a1.mp3",
+    "others": "",
+    "example": "I think you are not quite sure about it.",
+    "exampleExplanation": "我认为,你们对这一点并不能完全肯定。"
+  },
+  {
+    "word": "gravity",
+    "explanation": "重力；庄重；严重；严肃",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd304s7576f749b7bfee9b55de635d23c3af52.mp3",
+    "others": "",
+    "example": "He discoursed impressively on Newton's theory of gravity.",
+    "exampleExplanation": "他讲述了牛顿的引力定律，给人以深刻的印象。"
+  },
+  {
+    "word": "settler",
+    "explanation": "【C】移居者；定居者",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30vR66dc5fbbc035909238fe83c5386d3e8f.mp3",
+    "others": "",
+    "example": "The settlers were soon acclimated.",
+    "exampleExplanation": "移居者很快就适应了。"
+  },
+  {
+    "word": "float",
+    "explanation": "漂浮；浮现；飘动；提出",
+    "partOfSpeech": "v.",
+    "pronunciation": "http://audio.dict.cn/fuTd30uS0c032bb52436cc86ca8752c626e9d7b3.mp3",
+    "others": "形容词:floatable;过去式:floated;过去分词:floated;现在分词:floating;第三人称单数:floats;",
+    "example": "There is not enough water to float the ship.",
+    "exampleExplanation": "没有足够的水使船漂浮起来。"
+  },
+  {
+    "word": "fashionable",
+    "explanation": "流行的；时髦的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30bo4659fbf1310a904ae750e6012bf9f968.mp3",
+    "others": "副词:fashionably;名词:fashionability;",
+    "example": "We have some fashionable patterns here.",
+    "exampleExplanation": "我们这儿有些流行的款式。"
+  },
+  {
+    "word": "various",
+    "explanation": "各种各样的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuk0Jjd92bea3c02816af65380c1bb42b695f9.mp3",
+    "others": "副词:variously;名词:variousness;",
+    "example": "There are various ways of solving the problem.",
+    "exampleExplanation": "有各种各样解决问题的方法。"
+  },
+  {
+    "word": "compare",
+    "explanation": "比较；对比；比喻",
+    "partOfSpeech": "v.",
+    "pronunciation": "http://audio.dict.cn/fuTd30rfe4a2a829ca4dd5ea86a1721ad83c0aa6.mp3",
+    "others": "名词:comparer;过去式:compared;过去分词:compared;现在分词:comparing;第三人称单数:compares;",
+    "example": "I compared the copy with the original, but there was not much difference.",
+    "exampleExplanation": "我比较了复印件和原件，但是差别不是很大。"
+  },
+  {
+    "word": "dome",
+    "explanation": "圆屋顶；苍穹；<俚>脑袋；圆形的火山口</俚>",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd308S6b56a5e38b0ee81d6dd28c003122c468.mp3",
+    "others": "过去式:domed;过去分词:domed;现在分词:doming;第三人称单数:domes;",
+    "example": "A transparent dome on the top of an aircraft, through which celestial observations are made for navigation.",
+    "exampleExplanation": "天文观测舱，领航舱飞机顶部的一个透明圆顶形结构，航行时可通过它作天文观测"
+  },
+  {
+    "word": "interplanetary",
+    "explanation": "行星间的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30kv5008506f0f2894ca1280ff9b08127295.mp3",
+    "others": "",
+    "example": "The remnant nebular gas pervades the interplanetary space.",
+    "exampleExplanation": "星云的残余气体充斥星际空间。"
+  },
+  {
+    "word": "network",
+    "explanation": "网点；网络；网状系统；广播公司",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30mg0cb8a4632c1f96603500aea3295ccf5b.mp3",
+    "others": "名词:networker;过去式:networked;过去分词:networked;现在分词:networking;第三人称单数:networks;",
+    "example": "The fabrics are merchandised through a network of dealers.",
+    "exampleExplanation": "通过经销网点销售纺织品。"
+  },
+  {
+    "word": "force",
+    "explanation": "武力；暴力；力量；影响力；力量大的人或（事物）；权力；（为某目的组织起来的）一群人；军队；部队；武装力量；警察部门；力；风力",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0XK3c7a8c601dae54f7cd161b3441335cb5.mp3",
+    "others": "形容词:forceable;名词:forcer;过去式:forced;过去分词:forced;现在分词:forcing;第三人称单数:forces;",
+    "example": "When persuasion failed they used force.",
+    "exampleExplanation": "劝说无效时,他们就使用武力了。"
+  },
+  {
+    "word": "vehicle",
+    "explanation": "车辆；交通工具；传播媒介；手段；工具",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30A98f07c74e996c83de317476b8dc24d158.mp3",
+    "others": "",
+    "example": "No entry for vehicle!",
+    "exampleExplanation": "禁止车辆入内！"
+  },
+  {
+    "word": "star",
+    "explanation": "星；明星",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30NHf566a678fbf70cc5ea7a979e8e9b5181.mp3",
+    "others": "过去式:starred;过去分词:starred;现在分词:starring;第三人称单数:stars;",
+    "example": "A lonely star shone out against the black sky.",
+    "exampleExplanation": "一颗孤星在黑色的夜空中闪闪发亮。"
+  },
+  {
+    "word": "population",
+    "explanation": "人口；(全体)居民；群体",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0QSce3f25cb5c631700490e0aa96e2bd84f.mp3",
+    "others": "",
+    "example": "What is the population of this country?",
+    "exampleExplanation": "这个国家的人口是多少？"
+  },
+  {
+    "word": "enjoyable",
+    "explanation": "有趣的；愉快的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30k7a511db4b94394ce37eb2f45c707bfe6a.mp3",
+    "others": "",
+    "example": "I do not think that movie is very enjoyable.",
+    "exampleExplanation": "我看那部电影并不怎么有趣。"
+  },
+  {
+    "word": "tank",
+    "explanation": "箱；罐；槽；贮水池；坦克",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30dI1d019eb8b5c7b83ed6447ad46cd62d8e.mp3",
+    "others": "形容词:tankless;名词:tankful;过去式:tanked;过去分词:tanked;现在分词:tanking;第三人称单数:tanks;",
+    "example": "Is there any water left in the water tank?",
+    "exampleExplanation": "水箱里还有水剩下吗？"
+  },
+  {
+    "word": "normal",
+    "explanation": "正常的；正规的；精神健全的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuk0JAbb9504203fe7d3e97c069fdf7d8447df.mp3",
+    "others": "副词:normally;",
+    "example": "Everything is absolutely normal.",
+    "exampleExplanation": "一切完全正常。"
+  },
+  {
+    "word": "astronaut",
+    "explanation": "宇航员",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30lA702ebb962158ebd4f640216c7fbc0cc1.mp3",
+    "others": "",
+    "example": "The astronaut can send out a robot which will work on the unknown planet, collecting rocks and minerals, putting up a permanent observation station or traveling far and wide.",
+    "exampleExplanation": "宇航员可以派出机器人在这颗陌生的行星上工作，收集岩石和矿物; 建立永久性观察站，或向四面八方走动。"
+  },
+  {
+    "word": "image",
+    "explanation": "印象；形象；影像；图像；肖像",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0Cm77849923ed393608f5bd54050fa41e28.mp3",
+    "others": "形容词:imageless;过去式:imaged;过去分词:imaged;现在分词:imaging;第三人称单数:images;",
+    "example": "We have an image of the U.S. as a very rich country.",
+    "exampleExplanation": "我们印象中的美国是个富国。"
+  },
+  {
+    "word": "store",
+    "explanation": "商店；贮藏；充裕",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0e1146d9425efe050b235b716a195c2d105.mp3",
+    "others": "形容词:storable;名词:storer;过去式:stored;过去分词:stored;现在分词:storing;第三人称单数:stores;",
+    "example": "He always keeps several cases of wine in store.",
+    "exampleExplanation": "他总是备有几箱酒。"
+  },
+  {
+    "word": "fix",
+    "explanation": "使 ... 固定；修理，处理，解决；确定；准备；操纵",
+    "partOfSpeech": "v.",
+    "pronunciation": "http://audio.dict.cn/fuTd30KF9e4a9d025e776ecaaf16548f01883af7.mp3",
+    "others": "形容词:fixable;名词:fixer;过去式:fixed;过去分词:fixed;现在分词:fixing;第三人称单数:fixes;",
+    "example": "He fixed a shelf to the wall.",
+    "exampleExplanation": "他把架子装在墙上。"
+  },
+  {
+    "word": "surface",
+    "explanation": "表面；外表；平面",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0VRe2045892eb9abcfd3dc1236c58d0b114.mp3",
+    "others": "过去式:surfaced;过去分词:surfaced;现在分词:surfacing;第三人称单数:surfaces;",
+    "example": "The scheme seems on the surface to be quite practical.",
+    "exampleExplanation": "这方案表面上看来似乎很实际。"
+  },
+  {
+    "word": "spacesuit",
+    "explanation": "太空服；航天服",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30896e33ae1d8e54e1ab6a41756faac619ec.mp3",
+    "others": "",
+    "example": "The new-style spacesuit is much lighter than the older one.",
+    "exampleExplanation": "新式的太空服比老式的那种轻便了许多。"
+  },
+  {
+    "word": "digital",
+    "explanation": "数字的；数码的；手指的；计数的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd305C529783d477fd5516c907ead06429c03e.mp3",
+    "others": "副词:digitally;",
+    "example": "Most of the computers we are using are digital computers.",
+    "exampleExplanation": "我们正在使用的计算机大多数是数字计算机。"
+  },
+  {
+    "word": "dried",
+    "explanation": "弄干了的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30LS2db2dedb288199293b17398402485f5b.mp3",
+    "others": "",
+    "example": "Leave the dried beans to soak overnight.",
+    "exampleExplanation": "把这些干豆子泡一夜。"
+  },
+  {
+    "word": "pack",
+    "explanation": "一群；一副；包裹；一包",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30KKdfc74093cc8635d8e1d81404c878c3d8.mp3",
+    "others": "形容词:packable;名词:packability;过去式:packed;过去分词:packed;现在分词:packing;第三人称单数:packs;",
+    "example": "The hare could find no safety, a pack of jackals had it in the wind.",
+    "exampleExplanation": "野兔无处逃生,一群豺狗在追踪它。"
+  },
+  {
+    "word": "solar",
+    "explanation": "太阳的；太阳能的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30pvd263388da83abe82cdcb73a12a925935.mp3",
+    "others": "",
+    "example": "The sun is the center of our solar system.",
+    "exampleExplanation": "太阳是太阳系的中心"
+  },
+  {
+    "word": "certain",
+    "explanation": "确定的；肯定的；某事；某人；某种；（与人名连用；表示不认识此人）一位叫...；特定的；轻微的；微小的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuk02v1b60ef65532b8a17c534eeee42843d1d.mp3",
+    "others": "",
+    "example": "It's certain that every effect must have a cause.",
+    "exampleExplanation": "无疑，每个结果必定有其原因。"
+  },
+  {
+    "word": "survey",
+    "explanation": "问卷；测量；调查；纵览；视察",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30jVd5ac001bed2914a275f64eea616280ab.mp3",
+    "others": "名词:surveyor;名词复数:surveys;过去式:surveyed;过去分词:surveyed;现在分词:surveying;第三人称单数:surveys;",
+    "example": "A recent survey of public opinions shows that most people are worried about the increasing crime.",
+    "exampleExplanation": "一份最近的民意调查表明,大多数人对不断增长的犯罪率表示忧虑。"
+  },
+  {
+    "word": "conduct",
+    "explanation": "行为；举动；品行",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30lUe113511fe8442a3cccc17561796ee2c3.mp3",
+    "others": "形容词:conductible;名词:conductibility;过去式:conducted;过去分词:conducted;现在分词:conducting;第三人称单数:conducts;",
+    "example": "Your conduct is not consistent with what you say.",
+    "exampleExplanation": "你的言行不一致。"
+  },
+  {
+    "word": "percentage",
+    "explanation": "百分率；比例；部分；好处",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30y17460021a02887e8617c2679fe9b6bf88.mp3",
+    "others": "",
+    "example": "The percentage at grade E and above for day school candidates in the HKCEE was 67.5 compared with 65.6 in 1998.",
+    "exampleExplanation": "中学会考日校考生报考的科目成绩达E级或以上的有67."
+  },
+  {
+    "word": "disadvantage",
+    "explanation": "不利；不利条件；损害；损失",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd306764d8cbf5d88c731bf9c0de72b19e2106.mp3",
+    "others": "过去式:disadvantaged;过去分词:disadvantaged;现在分词:disadvantaging;第三人称单数:disadvantages;",
+    "example": "The situation put us at a serious disadvantage.",
+    "exampleExplanation": "形势使我们处于非常不利的地位。"
+  },
+  {
+    "word": "alien",
+    "explanation": "外侨；外国人；外星人",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30rbae60ee629a38ac6d9a4c7cd068e49214.mp3",
+    "others": "过去式:aliened;过去分词:aliened;现在分词:aliening;第三人称单数:aliens;",
+    "example": "Immigrant workers were classed as resident aliens.",
+    "exampleExplanation": "移民来的工人已归入外侨类。"
+  },
+  {
+    "word": "discussion",
+    "explanation": "讨论；谈论",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0o41b9e8c9a4d4203f5f28e222a79b1164e.mp3",
+    "others": "",
+    "example": "In their discussion, I was in favor of Mr. Li.",
+    "exampleExplanation": "在他们的争论中，我支持李先生。"
+  },
+  {
+    "word": "skim",
+    "explanation": "撇去；略读；掠过；滑过",
+    "partOfSpeech": "vt.",
+    "pronunciation": "http://audio.dict.cn/fuTd30rK610868f5ec8507c9feddbccc5616ce81.mp3",
+    "others": "过去式:skimmed;过去分词:skimmed;现在分词:skimming;第三人称单数:skims;",
+    "example": "A seagull skims the water.",
+    "exampleExplanation": "海鸥掠过水面。"
+  },
+  {
+    "word": "scan",
+    "explanation": "扫描；浏览；审视；细看",
+    "partOfSpeech": "vt.",
+    "pronunciation": "http://audio.dict.cn/fuTd30jR839659ae9333c8d0e123e451e7e06bb7.mp3",
+    "others": "形容词:scannable;名词:scanner;过去式:scanned;过去分词:scanned;现在分词:scanning;第三人称单数:scans;",
+    "example": "Could you teach me how to scan an image?",
+    "exampleExplanation": "你可以教我如何扫描一个影像吗?"
+  },
+  {
+    "word": "atmosphere",
+    "explanation": "大气；空气；气氛；气压",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0OK6ebfbab32bce7ce0e01e68e42bfdf022.mp3",
+    "others": "",
+    "example": "The burning of fossil fuels results in the pollution of the atmosphere.",
+    "exampleExplanation": "矿物燃料的燃烧导致了大气污染。"
+  },
+  {
+    "word": "carbon dioxide",
+    "explanation": "二氧化碳",
+    "partOfSpeech": null,
+    "pronunciation": "http://audio.dict.cn/fuTd30Inbe9a504552b773148a6696b5ec5872c1.mp3",
+    "others": "",
+    "example": "Synthesis of carbohydrate from carbon dioxide and water using energy obtained from the chemical oxidation of simple inorganic compounds. This form of synthesis is limited to certain bacteria and fungi.",
+    "exampleExplanation": "化学合成用简单无机化合物的化学氧化所产生的能量将二氧化碳和水合成碳水化合物。这种化学合成形式只限于某些细菌和真菌"
+  },
+  {
+    "word": "moon",
+    "explanation": "月亮；月球",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0Rmf9ed286aa1f04b99fe0de346b547101b.mp3",
+    "others": "过去式:mooned;过去分词:mooned;现在分词:mooning;第三人称单数:moons;",
+    "example": "The moon goes round the earth.",
+    "exampleExplanation": "月亮绕着地球转。"
+  },
+  {
+    "word": "mile",
+    "explanation": "英里；海里；一英里赛跑",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk01bf55d7f225d7d91f43dfcebb3d49ecda5.mp3",
+    "others": "",
+    "example": "My son hoofs a mile to school each day.",
+    "exampleExplanation": "我的儿子每天步行一英里去上学。"
+  },
+  {
+    "word": "laser",
+    "explanation": "激光；镭射",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30d4bef56d9d94be87cbe59c5ee7decd1caa.mp3",
+    "others": "",
+    "example": "Lasers can be used to perform operations nowadays.",
+    "exampleExplanation": "现在激光可以用来做手术。"
+  },
+  {
+    "word": "electronic",
+    "explanation": "电子的；电子学的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuk0A827ef76ae9ada18b0798d5f6a7251ebb9.mp3",
+    "others": "副词:electronically;",
+    "example": "This dictionary is available in electronic version.",
+    "exampleExplanation": "这部词典有电子版。"
+  },
+  {
+    "word": "entertainment",
+    "explanation": "娱乐",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30FIc35544a7c843f8a402cf57b3d3475d61.mp3",
+    "others": "",
+    "example": "There are few entertainments in that town.",
+    "exampleExplanation": "那个镇上几乎没有娱乐设施。"
+  },
+  {
+    "word": "specially",
+    "explanation": "特别地；专门地；尤其",
+    "partOfSpeech": "adv.",
+    "pronunciation": "http://audio.dict.cn/fuTd30BO2aa6428f368294b3a49030b5f5dbb429.mp3",
+    "others": "",
+    "example": "I made this cake specially, with brown sugar instead of white.",
+    "exampleExplanation": "我特别地以红糖代替白糖做了这个蛋糕。"
+  },
+  {
+    "word": "complaint",
+    "explanation": "抱怨；疾病；诉苦；控告；投诉",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30EDffd967b0d0d753ad18e55b3a784aa5aa.mp3",
+    "others": "动词:complain;",
+    "example": "You have no cause for complaint.",
+    "exampleExplanation": "你没有理由抱怨。"
+  },
+  {
+    "word": "complain",
+    "explanation": "抱怨；控诉；诉说",
+    "partOfSpeech": "vi.",
+    "pronunciation": "http://audio.dict.cn/fuTd30bn7fbd94758763b3f8fe0052153a538203.mp3",
+    "others": "名词:complainer;过去式:complained;过去分词:complained;现在分词:complaining;第三人称单数:complains;",
+    "example": "The tourist complained that the room was too dirty.",
+    "exampleExplanation": "游客抱怨说房间太脏了。"
+  },
+  {
+    "word": "post",
+    "explanation": "职位；邮件；标竿",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0Mh6336b94b6a190b0b2e0faf67a57a203f.mp3",
+    "others": "过去式:posted;过去分词:posted;现在分词:posting;第三人称单数:posts;",
+    "example": "He has no qualifications for the post.",
+    "exampleExplanation": "他没有资格担任该职位。"
+  },
+  {
+    "word": "laundry",
+    "explanation": "洗衣店；洗衣；要洗的衣服",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30k6aa11a2f6cc469e68a40c39109d589838.mp3",
+    "others": "名词复数:laundries;",
+    "example": "Send these clothed over to the laundry.",
+    "exampleExplanation": "把这些衣服送到洗衣店去洗。"
+  },
+  {
+    "word": "explore",
+    "explanation": "探测；探险；考察；探究",
+    "partOfSpeech": "v.",
+    "pronunciation": "http://audio.dict.cn/fuTd30lG7bd81f7e13e8a83da76023eaec027c00.mp3",
+    "others": "过去式:explored;过去分词:explored;现在分词:exploring;第三人称单数:explores;名词:exploration;",
+    "example": "The experts are exploring every part of the island.",
+    "exampleExplanation": "专家们正在勘查这个岛的各个部分。"
+  },
+  {
+    "word": "iron",
+    "explanation": "熨斗；铁；刚强",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30Gh3e62edcdf567fdbf8e71742510cb0892.mp3",
+    "others": "过去式:ironed;过去分词:ironed;现在分词:ironing;第三人称单数:irons;",
+    "example": "The iron hissed as it pressed the wet cloth.",
+    "exampleExplanation": "熨斗压在湿布上时发出嘶嘶声。"
+  },
+  {
+    "word": "sweep",
+    "explanation": "打扫；掠过；扫视；席卷；全胜；清除",
+    "partOfSpeech": "v.",
+    "pronunciation": "http://audio.dict.cn/fuTd30arfef319d595c99d19652e15ed51bd8b49.mp3",
+    "others": "名词:sweeper;过去式:swept;过去分词:swept;现在分词:sweeping;第三人称单数:sweeps;",
+    "example": "He picked up the broom to help me sweep the floor.",
+    "exampleExplanation": "他拿起扫帚帮我扫地。"
+  },
+  {
+    "word": "outer space",
+    "explanation": "太空； 外层空间",
+    "partOfSpeech": null,
+    "pronunciation": "http://audio.dict.cn/fuTd30v0c56dbb6f4ec52dab50c87ceb05dff526.mp3",
+    "others": "",
+    "example": "It looks as if she had just come back from outer space.",
+    "exampleExplanation": "她看起来彷佛刚从外太空回来似的。"
+  },
+  {
+    "word": "salesman",
+    "explanation": "销售人员；推销员",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30IJd6a16876568f4d60f5e6131679b6ec45.mp3",
+    "others": "名词:salesmanship;",
+    "example": "At first John served as a salesman.",
+    "exampleExplanation": "起初约翰是一个销售人员。"
+  },
+  {
+    "word": "everyday",
+    "explanation": "日常的；平常的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30Wn53c1616e648284a52b34ca942fa2f303.mp3",
+    "others": "名词:everydayness;",
+    "example": "Slowly insidiously the fog of the everyday has returned to enshroud me.",
+    "exampleExplanation": "慢慢地，不知不觉地，日常的迷雾又回来笼罩了我。"
+  },
+  {
+    "word": "air",
+    "explanation": "空气；天空；空中；感觉；神态；曲调；装腔作势",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0Igda7a8075723d9807561128359c52bd5e.mp3",
+    "others": "过去式:aired;过去分词:aired;现在分词:airing;第三人称单数:airs;",
+    "example": "The fresh air in the morning made him feel glad.",
+    "exampleExplanation": "早晨的新鲜空气使他觉得愉快。"
+  },
+  {
+    "word": "virus",
+    "explanation": "病毒；病原体",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30f889a0136f0157f9debb7da65da26a606d.mp3",
+    "others": "名词复数:viruses;",
+    "example": "Scientists have isolated the virus causing the epidemic.",
+    "exampleExplanation": "科学家们已分离出引起这种流行病的病毒。"
+  },
+  {
+    "word": "dustbin",
+    "explanation": "垃圾箱",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30jScf0145a326c43864c134f8fe8311533d.mp3",
+    "others": "",
+    "example": "Please put the garbage in the dustbin.",
+    "exampleExplanation": "请把垃圾放在桶里。"
+  },
+  {
+    "word": "mess",
+    "explanation": "混乱；混杂；脏乱；一份食品；粪便；（军队的）食堂",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30iscbd456e6694af3ab50c305252059769e.mp3",
+    "others": "过去式:messed;过去分词:messed;现在分词:messing;第三人称单数:messes;",
+    "example": "The local economy is now in a mess.",
+    "exampleExplanation": "当地的经济现在很混乱。"
+  },
+  {
+    "word": "rice cooker",
+    "explanation": "电饭煲",
+    "partOfSpeech": null,
+    "pronunciation": "http://audio.dict.cn/fuTd30hH9cd85b66442064bb0edf330c34ffd6c7.mp3",
+    "others": "",
+    "example": "There is something wrong with my rice cooker.",
+    "exampleExplanation": "我的电饭煲有些问题。"
+  },
+  {
+    "word": "mirror",
+    "explanation": "镜子；反映",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30Raabab8b1a362c92df0b8e2724c656ee4f.mp3",
+    "others": "过去式:mirrored;过去分词:mirrored;现在分词:mirroring;第三人称单数:mirrors;",
+    "example": "Steam has fogged the bathroom mirror.",
+    "exampleExplanation": "水蒸气把浴室里的镜子遮住了。"
+  },
+  {
+    "word": "coin",
+    "explanation": "硬币；金钱",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30MR052f2b4fb3524845ad31c4a488fe5fa1.mp3",
+    "others": "形容词:coinable;名词:coiner;过去式:coined;过去分词:coined;现在分词:coining;第三人称单数:coins;",
+    "example": "He put a coin into the insertion slot.",
+    "exampleExplanation": "他往投币孔投入一枚硬币。"
+  },
+  {
+    "word": "spread",
+    "explanation": "传播；展开；散布；铺开；伸展；涂撒",
+    "partOfSpeech": "v.",
+    "pronunciation": "http://audio.dict.cn/fuk0wc18edc3b46640731d0866c7db916ef361.mp3",
+    "others": "形容词:spreadable;副词:spreadably;名词:spreadability;过去式:spread;过去分词:spread;现在分词:spreading;第三人称单数:spreads;",
+    "example": "The radio spread the news as soon as the accident happened .",
+    "exampleExplanation": "事故一发生,收音机就把这条消息传播出去了。"
+  },
+  {
+    "word": "untidy",
+    "explanation": "不整齐的；懒散的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30HX6c173e3a54a0860ff34c29cd88b0df6e.mp3",
+    "others": "副词:untidily;比较级:untidier;最高级:untidiest;名词:untidiness;",
+    "example": "The presentation of the material was untidy.",
+    "exampleExplanation": "所提交的资料缺乏条理。"
+  },
+  {
+    "word": "smooth",
+    "explanation": "光滑的；平稳的；流畅的；圆滑的；可口的；安祥的；均匀的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30eE2282daabde92a6478cacdd9638c56cdb.mp3",
+    "others": "副词:smoothly;比较级:smoother;最高级:smoothest;名词:smoother;过去式:smoothed;过去分词:smoothed;现在分词:smoothing;第三人称单数:smoothes;",
+    "example": "Her skin is as smooth as silk.",
+    "exampleExplanation": "她的皮肤像丝绸一样光滑。"
+  },
+  {
+    "word": "rubbish",
+    "explanation": "垃圾；废物；废话；碎屑",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30AP7c73b1f7f9a742c73e9ae1558549ed8b.mp3",
+    "others": "",
+    "example": "The dustman comes once a week to collect the rubbish.",
+    "exampleExplanation": "垃圾工每周来收一次垃圾。"
+  },
+  {
+    "word": "dry",
+    "explanation": "干的；干燥的；干旱的；口渴的；枯燥的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuk0zL917f10cdb05c51891b7447f0812f132c.mp3",
+    "others": "副词:dryly;比较级:drierdryer;最高级:driestdryest;名词:dryness;名词复数:drys;过去式:dried;过去分词:dried;现在分词:drying;第三人称单数:dries;",
+    "example": "The soil is too dry for planting.",
+    "exampleExplanation": "土太干了，不能种东西。"
+  },
+  {
+    "word": "battery",
+    "explanation": "电池；一系列；炮兵连；排炮；[律]殴打",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30yOb9bc4d6460fcf1a5ed119009cd41e24a.mp3",
+    "others": "名词复数:batteries;",
+    "example": "They are electrifying the battery.",
+    "exampleExplanation": "他们正给电池充电。"
+  },
+  {
+    "word": "whatever",
+    "explanation": "无论什么；任何事物",
+    "partOfSpeech": "pron.",
+    "pronunciation": "http://audio.dict.cn/fuk0vP36c6c4a0ca0f2db5c92caeaa9084009d.mp3",
+    "others": "",
+    "example": "We shall remain friends whatever may betide.",
+    "exampleExplanation": "无论发生什么事，我们将永远是朋友。"
+  },
+  {
+    "word": "wheel",
+    "explanation": "方向盘；车轮；旋转；周期",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0EOf6ea4c08c841fb16685fb04287b57bed.mp3",
+    "others": "过去式:wheeled;过去分词:wheeled;现在分词:wheeling;第三人称单数:wheels;",
+    "example": "They found her slumped over the steering wheel.",
+    "exampleExplanation": "他们发现她倒伏在方向盘上。"
+  },
+  {
+    "word": "chest",
+    "explanation": "胸部；胸腔；箱子；金库",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0prbc0ea49ecbff13ebf54055ead44db5bf.mp3",
+    "others": "形容词:chested;",
+    "example": "The soldier received a serious wound on the chest.",
+    "exampleExplanation": "这名士兵胸部受了重伤。"
+  },
+  {
+    "word": "absorb",
+    "explanation": "吸收；吸引 ... 的注意；吞并；承受",
+    "partOfSpeech": "vt.",
+    "pronunciation": "http://audio.dict.cn/fuTd306Yb4aae01e25581d801c66f122577235ff.mp3",
+    "others": "形容词:absorbable;副词:absorbingly;名词:absorbability;过去式:absorbed;过去分词:absorbed;现在分词:absorbing;第三人称单数:absorbs;",
+    "example": "Dry sand absorbs water.",
+    "exampleExplanation": "干沙吸收水份。"
+  },
+  {
+    "word": "connection",
+    "explanation": "联系；关系；连接；亲戚",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk06h2fbface1a3915f0e6048d7d3bcd6f359.mp3",
+    "others": "形容词:connectional;",
+    "example": "What is the connection between the two ideas?",
+    "exampleExplanation": "这两个概念之间有何联系？"
+  },
+  {
+    "word": "nod",
+    "explanation": "点头；打盹；（使）摆动",
+    "partOfSpeech": "v.",
+    "pronunciation": "http://audio.dict.cn/fuTd30uobe1a45281b8bf52c3c44dc3e3643fb7d.mp3",
+    "others": "名词:nodder;过去式:nodded;过去分词:nodded;现在分词:nodding;第三人称单数:nods;",
+    "example": "She nodded when she passed me in the street.",
+    "exampleExplanation": "她在街上走过我身旁时向我点了点头。"
+  },
+  {
+    "word": "bend",
+    "explanation": "弯曲；使弯曲；屈服；屈从；集中于",
+    "partOfSpeech": "v.",
+    "pronunciation": "http://audio.dict.cn/fuTd30Sndb9105a03c2129dd3db38be3b4f08830.mp3",
+    "others": "过去式:bent;过去分词:bent;现在分词:bending;第三人称单数:bends;",
+    "example": "The branches bent in the wind.",
+    "exampleExplanation": "树枝被风吹弯了。"
+  },
+  {
+    "word": "knee",
+    "explanation": "膝盖；膝关节",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30Mxb6070132853bf1e0f24c8b72e3a1d0e9.mp3",
+    "others": "过去式:kneed;过去分词:kneed;现在分词:kneeing;第三人称单数:knees;",
+    "example": "I've bumped my knee on the wall.",
+    "exampleExplanation": "我的膝盖撞上了墙壁。"
+  },
+  {
+    "word": "either",
+    "explanation": "任一的；两方的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuk0x0dedc5ecb5753ddf419d52015779c62cd.mp3",
+    "others": "",
+    "example": "The thief was put in the police car with a policeman on either side of him.",
+    "exampleExplanation": "窃贼被送到警车上，身旁各坐着一个警察。"
+  },
+  {
+    "word": "copy",
+    "explanation": "复制品；抄本；副本；一册；一份",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30ep8f24db343bc7ccf1617ded347c071c1a.mp3",
+    "others": "形容词:copyable;名词复数:copies;过去式:copied;过去分词:copied;现在分词:copying;第三人称单数:copies;",
+    "example": "The painting is a copy of one in the museum.",
+    "exampleExplanation": "这幅画是博物馆中的一幅画的复制品。"
+  },
+  {
+    "word": "highlight",
+    "explanation": "强调；照亮；加亮；使 ... 显得重要；使突出",
+    "partOfSpeech": "vt.",
+    "pronunciation": "http://audio.dict.cn/fuTd30Fpb88e805d4477b3e180ca2c9663b03048.mp3",
+    "others": "过去式:highlighted;过去分词:highlighted;现在分词:highlighting;第三人称单数:highlights;",
+    "example": "Both books highlight the human element of science.",
+    "exampleExplanation": "两本书都重点谈到科学中人的因素。"
+  },
+  {
+    "word": "lifespan",
+    "explanation": "寿命；使用期限",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30lb4bf38f6bc1c3d3b3e96327d5abfa98b3.mp3",
+    "others": "",
+    "example": "Men have a shorter lifespan than women.",
+    "exampleExplanation": "男人的寿命比女人短。"
+  },
+  {
+    "word": "order",
+    "explanation": "顺序；条理；订单；命令；秩序；阶层；[生]目；点的东西",
+    "partOfSpeech": null,
+    "pronunciation": "http://audio.dict.cn/fuk0yJ79d8f6825ffcb6097dade0d97b684b6c.mp3",
+    "others": "名词:orderer;过去式:ordered;过去分词:ordered;现在分词:ordering;第三人称单数:orders;",
+    "example": "Today we'll reverse the usual order of the lesson.",
+    "exampleExplanation": "今天我们将把通常的上课顺序倒过来。"
+  },
+  {
+    "word": "although",
+    "explanation": "虽然；尽管；然而；可是",
+    "partOfSpeech": "conj.",
+    "pronunciation": "http://audio.dict.cn/fuk0K8d050757ea4fa318bad5adf935796ae37.mp3",
+    "others": "",
+    "example": "Although my uncle is old, he looks very strong and healthy.",
+    "exampleExplanation": "我的叔叔虽然老了，但他看上去还是很健壮。"
+  },
+  {
+    "word": "Chinese knot",
+    "explanation": "中国结",
+    "partOfSpeech": null,
+    "pronunciation": "http://audio.dict.cn/fuTd30i137542ea41b996a3673f7ac28f67729b8.mp3",
+    "others": "",
+    "example": "The bridge, which is modelled after the Chinese knots, will have a total span of more than 150 metres and will be 24 metres high.",
+    "exampleExplanation": "这座桥以中国结造型为设计原型，长约150米、高24米。"
+  },
+  {
+    "word": "kung fu",
+    "explanation": "中国功夫",
+    "partOfSpeech": null,
+    "pronunciation": "http://audio.dict.cn/fuTd30NNdc8eb6fa380eb8f4c47f4f6ee97dd270.mp3",
+    "others": "",
+    "example": "His Chinese kung fu is peerless.",
+    "exampleExplanation": "他的中国功夫是无敌的。"
+  },
+  {
+    "word": "paper",
+    "explanation": "纸；文件；报纸；论文；票据；壁纸",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0uj55e98384852629ac6d0e613123d40687.mp3",
+    "others": "名词:paperer;过去式:papered;过去分词:papered;现在分词:papering;第三人称单数:papers;",
+    "example": "That paper has yellowed with age.",
+    "exampleExplanation": "那张纸因年代久远而泛黄了。"
+  },
+  {
+    "word": "chopstick",
+    "explanation": "（常复数）筷子",
+    "partOfSpeech": null,
+    "pronunciation": "http://audio.dict.cn/fuTd30P0787e9ee11c1030f6684eeea539292532.mp3",
+    "others": "",
+    "example": "She was not familiar to use chopstick.",
+    "exampleExplanation": "她用筷子还不熟练。"
+  },
+  {
+    "word": "unless",
+    "explanation": "除非；如果不",
+    "partOfSpeech": "conj.",
+    "pronunciation": "http://audio.dict.cn/fuk0Tx34432af3c5883e54d1799884e5385105.mp3",
+    "others": "",
+    "example": "I won't go to the party unless I'm invited.",
+    "exampleExplanation": "除非我被邀请，否则我不会去参加晚会的。"
+  },
+  {
+    "word": "emperor",
+    "explanation": "皇帝",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30Ya0481eee13546afd857fbd556ed081446.mp3",
+    "others": "名词:emperorship;",
+    "example": "The emperor was actually a political eunuch.",
+    "exampleExplanation": "那个皇帝实际上没有政治实权。"
+  },
+  {
+    "word": "dynasty",
+    "explanation": "朝代；王朝",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30oX3e7b5d70fd56368058d507ce94ee8424.mp3",
+    "others": "形容词:dynastic;副词:dynastically;名词复数:dynasties;",
+    "example": "How many dynasties are there in China's history?",
+    "exampleExplanation": "中国历史上有多少个朝代？"
+  },
+  {
+    "word": "furniture",
+    "explanation": "家具；设备，装置；床罩；必要的附属品；【会计】家俬",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30b007c8040af63fae3f7409d95fb3ed135c.mp3",
+    "others": "",
+    "example": "We will buy some furniture for our new house.",
+    "exampleExplanation": "我们得给我们的新房子买些家具。"
+  },
+  {
+    "word": "heavenly",
+    "explanation": "天上的；天国似的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30C12085a9241e830700bb9154ea348aecae.mp3",
+    "others": "名词:heavenliness;",
+    "example": "The sun, moon and stars are heavenly bodies.",
+    "exampleExplanation": "太阳、月亮和星星都是天体。"
+  },
+  {
+    "word": "fill",
+    "explanation": "装满；弥漫；填充；担任",
+    "partOfSpeech": "vt.",
+    "pronunciation": "http://audio.dict.cn/fuk0M121e108a8665261d28e7e595bb0477a08.mp3",
+    "others": "过去式:filled;过去分词:filled;现在分词:filling;第三人称单数:fills;",
+    "example": "Please fill the cup with water.",
+    "exampleExplanation": "请把这个杯子装满水。"
+  },
+  {
+    "word": "gather",
+    "explanation": "聚集；集合；收集；推测",
+    "partOfSpeech": "v.",
+    "pronunciation": "http://audio.dict.cn/fuTd30v0ce454e206c7c247a3a01544ab860215d.mp3",
+    "others": "名词:gatherer;过去式:gathered;过去分词:gathered;现在分词:gathering;第三人称单数:gathers;",
+    "example": "Clouds gather before a thunderstorm.",
+    "exampleExplanation": "在风暴来临之前云层聚集。"
+  },
+  {
+    "word": "raise",
+    "explanation": "上升；增高；高地",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0mfe355267597822512e9bbeb14844e7fbf.mp3",
+    "others": "名词:raiser;过去式:raised;过去分词:raised;现在分词:raising;第三人称单数:raises;",
+    "example": "The percentage of the pay raise equals the increase in prices.",
+    "exampleExplanation": "薪水的提高比率和物价的上升一致。"
+  },
+  {
+    "word": "national",
+    "explanation": "民族的；国家的；全国性的；国立的；国有的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30077796167b2b17414f3ecf61b230cb928f.mp3",
+    "others": "副词:nationally;",
+    "example": "These ancient buildings are part of the national heritage.",
+    "exampleExplanation": "这些古建是民族遗产的一部分。"
+  },
+  {
+    "word": "flag",
+    "explanation": "旗；旗帜；信号旗",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30iV45f41fd3105047eba061ae9d81da37a6.mp3",
+    "others": "名词:flagger;过去式:flagged;过去分词:flagged;现在分词:flagging;第三人称单数:flags;",
+    "example": "Flags are fluttering in the breeze.",
+    "exampleExplanation": "旗子在风中飘扬。"
+  },
+  {
+    "word": "landscape",
+    "explanation": "风景；风景画；山水；[计]横向",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30YQ02c63db7e3e5b20b3974379a72aea08a.mp3",
+    "others": "名词:landscaper;过去式:landscaped;过去分词:landscaped;现在分词:landscaping;第三人称单数:landscapes;",
+    "example": "The landscape unfolded before us.",
+    "exampleExplanation": "那景色展现在我们面前。"
+  },
+  {
+    "word": "consist",
+    "explanation": "由 ... 组成；构成；在于；符合",
+    "partOfSpeech": "vi.",
+    "pronunciation": "http://audio.dict.cn/fuTd307Cdf898ea30de53cc9bb7ceea4b192a247.mp3",
+    "others": "过去式:consisted;过去分词:consisted;现在分词:consisting;第三人称单数:consists;",
+    "example": "The United Kingdom consists of Great Britain and Northern Ireland.",
+    "exampleExplanation": "联合王国由大不列颠和北爱尔兰组成。"
+  },
+  {
+    "word": "mainly",
+    "explanation": "主要地；大部分地",
+    "partOfSpeech": "adv.",
+    "pronunciation": "http://audio.dict.cn/fuTd30kAd18190b64dd81f48c502be4c52ac7fce.mp3",
+    "others": "",
+    "example": "Oats mainly grow in cool climate.",
+    "exampleExplanation": "燕麦主要生长在气候凉爽的地区。"
+  },
+  {
+    "word": "man-made",
+    "explanation": "人造的；人为的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30mF862a81d2a1f7bac22c54439885da1e12.mp3",
+    "others": "异体字:manmade;",
+    "example": "The rumor has been traced back to a bad man.",
+    "exampleExplanation": "那谣言经追查是个坏人造的。"
+  },
+  {
+    "word": "pagoda",
+    "explanation": "（尤指佛教或者印度教的）宝塔，佛塔，舍利塔；浮屠",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30mr6017cba8a8053665917052d9149f6b1f.mp3",
+    "others": "",
+    "example": "Do you see the slim pagoda on that hill?",
+    "exampleExplanation": "你看到山上的那座细长的宝塔了吗？"
+  },
+  {
+    "word": "ancient",
+    "explanation": "古老的；古代的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuk0Lzf512cb4b6590ffc7858ba10033b3ae9d.mp3",
+    "others": "副词:anciently;名词:ancientness;",
+    "example": "This is an ancient parable.",
+    "exampleExplanation": "这是一个古老的寓言。"
+  },
+  {
+    "word": "border",
+    "explanation": "边界；边境；边缘",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30gwb7d00f96dab1f995cc14efac5d27468a.mp3",
+    "others": "名词:borderer;过去式:bordered;过去分词:bordered;现在分词:bordering;第三人称单数:borders;",
+    "example": "We have a herbaceous border round our garden.",
+    "exampleExplanation": "我们的花园四周种有草本植物。"
+  },
+  {
+    "word": "greatness",
+    "explanation": "伟大；崇高；巨大",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30866066d1282513abedb9ed1f1331537d9a.mp3",
+    "others": "",
+    "example": "The statue is a lasting reminder of Churchill's greatness.",
+    "exampleExplanation": "这尊塑像使人永远缅怀邱吉尔的伟大功绩。"
+  },
+  {
+    "word": "tiring",
+    "explanation": "令人疲倦的；麻烦的；无聊的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30E4edf03d89874801eaaff5f2bd1cc97665.mp3",
+    "others": "",
+    "example": "It's been a long and tiring negotiation.",
+    "exampleExplanation": "真是一场冗长而令人疲倦的谈判。"
+  },
+  {
+    "word": "lie",
+    "explanation": "躺下；位于；在于；平放；存在；延伸；说谎",
+    "partOfSpeech": "v.",
+    "pronunciation": "http://audio.dict.cn/fuk0jpdcc7519461336d8c91188fba2857804c.mp3",
+    "others": "过去式:laylied;过去分词:lainlied;现在分词:lying;第三人称单数:lies;",
+    "example": "If you feel unwell, go and lie down.",
+    "exampleExplanation": "如果你感到不舒服，就去躺下。"
+  },
+  {
+    "word": "shape",
+    "explanation": "形状；形式；身材；定形",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0pbe59a3d86033f2f3d5f3fe1788edb85d3.mp3",
+    "others": "形容词:shapable;名词:shaper;过去式:shaped;过去分词:shaped;现在分词:shaping;第三人称单数:shapes;",
+    "example": "This island is triangular in shape.",
+    "exampleExplanation": "这个岛的外形呈三角形。"
+  },
+  {
+    "word": "cave",
+    "explanation": "洞穴；山洞",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30IS903d8753c51e9278f26f9891971f16b9.mp3",
+    "others": "名词:caver;过去式:caved;过去分词:caved;现在分词:caving;第三人称单数:caves;",
+    "example": "This cave was used by smugglersin the eighteenth century.",
+    "exampleExplanation": "这个洞穴是十八世纪走私的人使用的。"
+  },
+  {
+    "word": "underground",
+    "explanation": "地下的；秘密的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd3063eaa185ce8df009b79693ba1e45fe0d93.mp3",
+    "others": "过去式:undergrounded;过去分词:undergrounded;现在分词:undergrounding;第三人称单数:undergrounds;",
+    "example": "Listen to the Sound From Underground.",
+    "exampleExplanation": "听听地下的声音。"
+  },
+  {
+    "word": "cycle",
+    "explanation": "循环；周期；自行车；摩托车",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30yc2f2a1e8efc2c60f936b0b50ffd9a671d.mp3",
+    "others": "名词:cycler;过去式:cycled;过去分词:cycled;现在分词:cycling;第三人称单数:cycles;",
+    "example": "The seasons of the year make a cycle.",
+    "exampleExplanation": "一年四季构成一个循环。"
+  },
+  {
+    "word": "hire",
+    "explanation": "雇用；出租",
+    "partOfSpeech": "v.",
+    "pronunciation": "http://audio.dict.cn/fuTd30Bmcab1ca8717569cae6778d544455462a5.mp3",
+    "others": "形容词:hirable;名词:hirer;过去式:hired;过去分词:hired;现在分词:hiring;第三人称单数:hires;",
+    "example": "We don't want to hire inexperienced worker.",
+    "exampleExplanation": "我们不想聘用没有经验的工人。"
+  },
+  {
+    "word": "ruler",
+    "explanation": "尺子；划线板",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30rbca39f59471bb702397786758a09b0f86.mp3",
+    "others": "",
+    "example": "The ruler is divided into centimetres.",
+    "exampleExplanation": "在尺子上分厘米刻度。"
+  },
+  {
+    "word": "surprise",
+    "explanation": "惊奇；惊喜；惊讶；突然",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0PR6f3aef45ad32d38a2be7ff198f36655a.mp3",
+    "others": "形容词:surprising;副词:surprisingly;名词:surpriser;",
+    "example": "John turned around and looked at me in surprise.",
+    "exampleExplanation": "约翰转过身来,惊奇地望着我。"
+  },
+  {
+    "word": "sunrise",
+    "explanation": "【U】日出",
+    "partOfSpeech": null,
+    "pronunciation": "http://audio.dict.cn/fuTd30vn606af903548558f532df16120e38902b.mp3",
+    "others": "",
+    "example": "The beauty of the sunrise is beyond description.",
+    "exampleExplanation": "日出的美景难以描述。"
+  },
+  {
+    "word": "eastern",
+    "explanation": "东部的；东方的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30vK0c033915ae1ddf656603cd734e4c7e6a.mp3",
+    "others": "名词:easternness;",
+    "example": "The eastern situation is similarly intense.",
+    "exampleExplanation": "东部的情况同样紧张。"
+  },
+  {
+    "word": "desert",
+    "explanation": "沙漠；荒地；应得(的惩罚或奖励)",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd303F36f407615628aa912b278facbfe1d74d.mp3",
+    "others": "名词:deserter;过去式:deserted;过去分词:deserted;现在分词:deserting;第三人称单数:deserts;",
+    "example": "Two thirds of the country is dry or desert.",
+    "exampleExplanation": "这个国家有三分之二的地方气候干燥,或者是沙漠。"
+  },
+  {
+    "word": "jungle",
+    "explanation": "丛林的；垃圾的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30w2e867411eb4e49c9ea25569cd965291ce.mp3",
+    "others": "形容词:jungly;",
+    "example": "We should have cut away the jungle brush.",
+    "exampleExplanation": "我们本应该把丛林的灌木砍掉。"
+  },
+  {
+    "word": "ocean",
+    "explanation": "海洋；海量",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30qj2a8fa88d78adadcd11b746f90f969c70.mp3",
+    "others": "",
+    "example": "These creatures live in the depth of the Pacific Ocean.",
+    "exampleExplanation": "这些生物生活在太平洋的海底。"
+  },
+  {
+    "word": "valley",
+    "explanation": "山谷；溪谷；流域",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0L95a193e26bc941488397d82e98a3595f9.mp3",
+    "others": "形容词:valleyed;名词复数:valleys;",
+    "example": "The river twines through the valley.",
+    "exampleExplanation": "这条河流蜿蜒穿过山谷。"
+  },
+  {
+    "word": "waterfall",
+    "explanation": "瀑布",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd3099df0c45712c6f5ec8f5a074a2a13c7b1c.mp3",
+    "others": "",
+    "example": "We saw a few salmon jumping in the waterfall there.",
+    "exampleExplanation": "我们看到那边瀑布里几条鲑鱼在跳。"
+  },
+  {
+    "word": "sweaty",
+    "explanation": "汗流浃背的；出汗的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30F81ea61277c48d94eebabec7ad3d07d622.mp3",
+    "others": "副词:sweatily;比较级:sweatier;最高级:sweatiest;名词:sweatiness;",
+    "example": "He is sweaty after running home.",
+    "exampleExplanation": "他一路小跑赶回了家，身上汗津津的。"
+  },
+  {
+    "word": "healthily",
+    "explanation": "健康地",
+    "partOfSpeech": "adv.",
+    "pronunciation": "http://audio.dict.cn/fuTd30g78d14c4dfa97c5f08d5de60237d03f8e9.mp3",
+    "others": "",
+    "example": "We have to eat and drink healthily.",
+    "exampleExplanation": "我们必须健康地饮食。"
+  },
+  {
+    "word": "suggest",
+    "explanation": "建议；暗示；使想起；表明；要求",
+    "partOfSpeech": "vt.",
+    "pronunciation": "http://audio.dict.cn/fuk0YF248b17c62727b7df8717827bac678d5b.mp3",
+    "others": "名词:suggester;过去式:suggested;过去分词:suggested;现在分词:suggesting;第三人称单数:suggests;",
+    "example": "I suggested to him that we should tackle the problem another way.",
+    "exampleExplanation": "我向他建议我们用另一种方式处理这个问题。"
+  },
+  {
+    "word": "forecast",
+    "explanation": "预测；预报",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30hY1a3e4c602c18b46adcb48c3bf2c70429.mp3",
+    "others": "形容词:forecastable;名词:forecaster;过去式:forecastforecasted;过去分词:forecastforecasted;现在分词:forecasting;第三人称单数:forecasts;",
+    "example": "Share prices plunged as a result of the gloomy economic forecast.",
+    "exampleExplanation": "关于经济前景暗淡的预测导致股票价格大跌。"
+  },
+  {
+    "word": "sights",
+    "explanation": "风景；名胜；瞄准器",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd302j4446a5a0dcde7d20f4cedf9f541f61a5.mp3",
+    "others": "",
+    "example": "He took me out to see the sights.",
+    "exampleExplanation": "他带我出去欣赏了风景。"
+  },
+  {
+    "word": "wherever",
+    "explanation": "无论什么地方",
+    "partOfSpeech": "adv.",
+    "pronunciation": "http://audio.dict.cn/fuTd30rE288a52187c8e05413ffd785619f8121a.mp3",
+    "others": "",
+    "example": "I can fall asleep wherever and in any position.",
+    "exampleExplanation": "我可以在任何地方任何位置睡着。"
+  },
+  {
+    "word": "culture",
+    "explanation": "栽培；文化；教养",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0I7af6df4b701d2474025f99a6a68f820ce.mp3",
+    "others": "过去式:cultured;过去分词:cultured;现在分词:culturing;第三人称单数:cultures;",
+    "example": "He has to learn the culture of bees.",
+    "exampleExplanation": "他得学养蜂。"
+  },
+  {
+    "word": "region",
+    "explanation": "地区；范围；领域；地带；地域",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0Bz64eee474d1f875fedb7fa362a5b5a2c0.mp3",
+    "others": "",
+    "example": "Most of the countries in the region have unstable economies.",
+    "exampleExplanation": "这个地区大多数国家的经济都不稳定。"
+  },
+  {
+    "word": "in",
+    "explanation": "在 ... 里；在 ... 地方；在 ... 期间；在 ... 方面；进入...里面；处于...状态；穿着...；以...的方式",
+    "partOfSpeech": "prep.",
+    "pronunciation": "http://audio.dict.cn/fuk0LO43fbd5bdab3c16f24e96c30d6f9d7681.mp3",
+    "others": "",
+    "example": "The telephone was in the little study on the ground floor.",
+    "exampleExplanation": "电话在底楼的小书房里。"
+  },
+  {
+    "word": "event",
+    "explanation": "大事；事件；项目",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0l894a89d366246f7998713502f72a5d1f0.mp3",
+    "others": "形容词:eventless;",
+    "example": "It was quite an event when a woman first became prime minister.",
+    "exampleExplanation": "首次由女人任首相倒是件大事。"
+  },
+  {
+    "word": "dash",
+    "explanation": "猛冲；猛掷；泼溅；匆忙完成",
+    "partOfSpeech": "v.",
+    "pronunciation": "http://audio.dict.cn/fuTd30Fgf827aade40a258cc8613ebe07b507c5f.mp3",
+    "others": "过去式:dashed;过去分词:dashed;现在分词:dashing;第三人称单数:dashes;",
+    "example": "He dashed across the street and ran towards me.",
+    "exampleExplanation": "他冲过马路，向我跑过来。"
+  },
+  {
+    "word": "drug",
+    "explanation": "毒品；药",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30S646399277043ada84af8f606aaccdaa9b.mp3",
+    "others": "过去式:drugged;过去分词:drugged;现在分词:drugging;第三人称单数:drugs;",
+    "example": "They were arrested for drug offences.",
+    "exampleExplanation": "他们因贩卖毒品罪而被逮捕。"
+  },
+  {
+    "word": "athlete",
+    "explanation": "运动员",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30wQefa1140fa1e7c540eff12dd4f5eaa42d.mp3",
+    "others": "",
+    "example": "The athlete is suffering from muscular strain.",
+    "exampleExplanation": "这名运动员正受肌肉劳损之苦。"
+  },
+  {
+    "word": "Korean",
+    "explanation": "韩国人；韩语；朝鲜人；朝鲜语",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30I8314c7e8c78ed8c162c13e14ab80bdd33.mp3",
+    "others": "",
+    "example": "My mother is full of feeling, just like a Korean.",
+    "exampleExplanation": "我妈妈的感情非常丰富,就像一个韩国人。"
+  },
+  {
+    "word": "currency",
+    "explanation": "货币；流通",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30pd0834f3d73306e462bda38d83278ca5b9.mp3",
+    "others": "名词复数:currencies;",
+    "example": "The president proclaimed that a new currency would be issued.",
+    "exampleExplanation": "总统宣布将发行新货币。"
+  },
+  {
+    "word": "exchange",
+    "explanation": "交换；兑换",
+    "partOfSpeech": "v.",
+    "pronunciation": "http://audio.dict.cn/fuk0Wu323c435f9b6554fda16006eadb59654c.mp3",
+    "others": "形容词:exchangeable;过去式:exchanged;过去分词:exchanged;现在分词:exchanging;第三人称单数:exchanges;",
+    "example": "You can exchange your car at our nearest office.",
+    "exampleExplanation": "你可以到我们附近的公司换车。"
+  },
+  {
+    "word": "surely",
+    "explanation": "无疑；一定；稳当地；显然",
+    "partOfSpeech": "adv.",
+    "pronunciation": "http://audio.dict.cn/fuk0Cuf621a06f6e0955a610d516b57e41c7da.mp3",
+    "others": "",
+    "example": "Surely the most sensible thing would be to consult a doctor.",
+    "exampleExplanation": "最明智的办法无疑是去看医生。"
+  },
+  {
+    "word": "serve",
+    "explanation": "服务；侍候；担任；可作 ... 用；度过；对待",
+    "partOfSpeech": "v.",
+    "pronunciation": "http://audio.dict.cn/fuTd30Bxd41445f950ddae3c336f028835b0a482.mp3",
+    "others": "过去式:served;过去分词:served;现在分词:serving;第三人称单数:serves;",
+    "example": "We must serve the people heart and soul.",
+    "exampleExplanation": "我们必须全心全意地为人民服务。"
+  },
+  {
+    "word": "invent",
+    "explanation": "发明；捏造",
+    "partOfSpeech": "vt.",
+    "pronunciation": "http://audio.dict.cn/fuTd30ex73372433fe04a9fcbae52b337f29a478.mp3",
+    "others": "形容词:inventible;名词:inventor;过去式:invented;过去分词:invented;现在分词:inventing;第三人称单数:invents;",
+    "example": "Can you tell me who invented the telephone?",
+    "exampleExplanation": "你能告诉我是谁发明了电话？"
+  },
+  {
+    "word": "explorer",
+    "explanation": "探测者；探险者",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30fe6eb7714d03a6ad6ef4a27aa8d712f1f1.mp3",
+    "others": "",
+    "example": "The explorer mapped the new territory .",
+    "exampleExplanation": "那位探测者绘制那块新土地的地图。"
+  },
+  {
+    "word": "nun",
+    "explanation": "尼姑；修女",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30Kle5be99d41ef71d32f125365dcdae0087.mp3",
+    "others": "",
+    "example": "A nun and a man in overalls got off.",
+    "exampleExplanation": "一个尼姑和一名身着工装的男人走下了火车。"
+  },
+  {
+    "word": "rock",
+    "explanation": "岩石；摇滚乐；困境",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0Sp1035600f4b53a492dc33c358c8c9c48a.mp3",
+    "others": "副词:rockingly;过去式:rocked;过去分词:rocked;现在分词:rocking;第三人称单数:rocks;",
+    "example": "The ship struck on a rock and sank.",
+    "exampleExplanation": "船触礁沉没。"
+  },
+  {
+    "word": "flight",
+    "explanation": "飞行；航班；镖尾；逃走，逃离，溃逃",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30Dn63a96f513f8e0c1f21c7dc25130170b4.mp3",
+    "others": "过去式:flighted;过去分词:flighted;现在分词:flighting;第三人称单数:flights;",
+    "example": "She photographed the birds in flight.",
+    "exampleExplanation": "她拍摄鸟儿飞行的照片。"
+  },
+  {
+    "word": "pilot",
+    "explanation": "飞行员；领航员；试播节目；<美>排障器；[机]导向器</美>",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30bd971456e57def62eb47cbaa7653afc778.mp3",
+    "others": "过去式:piloted;过去分词:piloted;现在分词:piloting;第三人称单数:pilots;",
+    "example": "A pilot must be awake to the changes in the weather.",
+    "exampleExplanation": "飞行员必须警觉天气的变化。"
+  },
+  {
+    "word": "licence",
+    "explanation": "执照；许可；特许；自由；放纵",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30mYa486219fa0c3ba78f7c341f35f25ee07.mp3",
+    "others": "",
+    "example": "His licence was suspended for drunk driving.",
+    "exampleExplanation": "他的驾驶执照因酗酒开车被暂时吊销。"
+  },
+  {
+    "word": "engineering",
+    "explanation": "工程学；工程",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30K8274973bac7a219dadb1126f675624983.mp3",
+    "others": "",
+    "example": "That bridge was a miracle of engineering.",
+    "exampleExplanation": "那座桥是工程学上的一个奇迹。"
+  },
+  {
+    "word": "navy",
+    "explanation": "海军；船队；海军蓝",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30iE081f5bd6d5338e8c92304d2364fcb260.mp3",
+    "others": "名词复数:navies;",
+    "example": "He is a gunner of the British navy.",
+    "exampleExplanation": "他是英国海军的一名炮手。"
+  },
+  {
+    "word": "naval",
+    "explanation": "海军的；军舰的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30Zv91c79f782205f0e3019c1846699d9b39.mp3",
+    "others": "",
+    "example": "It was unable to turn around at the West end of Chambers Field at the Norfolk Naval Station.",
+    "exampleExplanation": "它是不能在诺福克海军的车站室领域的西繁华区回过头的。"
+  },
+  {
+    "word": "select",
+    "explanation": "选择；挑选",
+    "partOfSpeech": "v.",
+    "pronunciation": "http://audio.dict.cn/fuTd30k86f3f9f1994c3d0bdf90058cc35c1bfc9.mp3",
+    "others": "形容词:selectable;名词:selectness;过去式:selected;过去分词:selected;现在分词:selecting;第三人称单数:selects;",
+    "example": "Please select a channel to begin with from left.",
+    "exampleExplanation": "请从左边选择一个频道。"
+  },
+  {
+    "word": "manage",
+    "explanation": "管理；经营；做成；设法对付；提供；有空",
+    "partOfSpeech": "v.",
+    "pronunciation": "http://audio.dict.cn/fuTd303G4b403f370d96f0013f4f08ed220a9811.mp3",
+    "others": "过去式:managed;过去分词:managed;现在分词:managing;第三人称单数:manages;",
+    "example": "He managed the company when his father was away.",
+    "exampleExplanation": "他父亲离开的时候,由他管理公司。"
+  },
+  {
+    "word": "spin",
+    "explanation": "(使)旋转；疾驰；纺织；结网；眩晕",
+    "partOfSpeech": "v.",
+    "pronunciation": "http://audio.dict.cn/fuTd307k0170a58189115359602dc0f004b9b916.mp3",
+    "others": "过去式:spunspan;过去分词:spun;现在分词:spinning;第三人称单数:spins;",
+    "example": "My sister can spin on her toes like a dancer.",
+    "exampleExplanation": "我妹妹能像舞者一样踮着脚尖旋转。"
+  },
+  {
+    "word": "successfully",
+    "explanation": "成功地，圆满地",
+    "partOfSpeech": null,
+    "pronunciation": "http://audio.dict.cn/fuTd30qG0e7b26e741bfe0882346f30a0d7c07a7.mp3",
+    "others": "",
+    "example": "They have accomplished their mission successfully.",
+    "exampleExplanation": "他们成功地完成了任务。"
+  },
+  {
+    "word": "commander",
+    "explanation": "司令官；指挥官",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd303D91244fbe8a4a2bfd4ef870ee6e270fea.mp3",
+    "others": "",
+    "example": "The commander ordered a counterattack.",
+    "exampleExplanation": "司令官命令反攻。"
+  },
+  {
+    "word": "land",
+    "explanation": "陆地；国土；土地",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0Xh99b434b94b9de06e781cdd7a08260962.mp3",
+    "others": "过去式:landed;过去分词:landed;现在分词:landing;第三人称单数:lands;",
+    "example": "We are glad to be on land again.",
+    "exampleExplanation": "我们很高兴又踏上陆地了。"
+  },
+  {
+    "word": "giant",
+    "explanation": "巨人；巨物；大公司",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30PT2ad609c4a0e926d8393d5e64f004c42b.mp3",
+    "others": "",
+    "example": "The hero smote the giant with his sword.",
+    "exampleExplanation": "英雄用剑猛劈巨人。"
+  },
+  {
+    "word": "leap",
+    "explanation": "跳跃；跃过；跃",
+    "partOfSpeech": "v.",
+    "pronunciation": "http://audio.dict.cn/fuTd30xF6e860454bf74f7ff6c631f0e4952f1d3.mp3",
+    "others": "名词:leaper;过去式:leapedleapt;过去分词:leapedleapt;现在分词:leaping;第三人称单数:leaps;",
+    "example": "I leap for joy at the good news.",
+    "exampleExplanation": "我一听到这个好消息高兴得跳了起来。"
+  },
+  {
+    "word": "mankind",
+    "explanation": "人类；男人",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30aPa5e5fcbe8fddc83f81c0a79ffd6cd616.mp3",
+    "others": "",
+    "example": "Mankind learns its first language in early childhood.",
+    "exampleExplanation": "人类是在幼年开始学习第一种语言的。"
+  },
+  {
+    "word": "sample",
+    "explanation": "样品；样本",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0ALd2648cdd1aba5243e9f20ce617232f94.mp3",
+    "others": "过去式:sampled;过去分词:sampled;现在分词:sampling;第三人称单数:samples;",
+    "example": "Thousands of people have written in to us for a free sample.",
+    "exampleExplanation": "现已有数千人给我们来信索要免费样品。"
+  },
+  {
+    "word": "huge",
+    "explanation": "巨大的；庞大的；极大的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuk0bE0b09bf52dfe6b6202a26a65fbb376dd7.mp3",
+    "others": "副词:hugely;比较级:huger;最高级:hugest;名词:hugeness;",
+    "example": "The atomic explosion is always accompanied by huge fireball.",
+    "exampleExplanation": "原子弹爆炸总是伴随着巨大的火球。"
+  },
+  {
+    "word": "citizen",
+    "explanation": "公民；市民",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd302Re09f4bd40ff826e7314b39e3b4a1ddc4.mp3",
+    "others": "形容词:citizenly;",
+    "example": "He is a Dane inasmuch as he was born in Denmark, but he became a British citizen at the age of 30.",
+    "exampleExplanation": "他按其出生在丹麦来说是丹麦人，但他在30岁时成了英国公民。"
+  },
+  {
+    "word": "exploration",
+    "explanation": "探险；探索；勘探；探测",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd309C1bea1eb504e19616d7802b9af9397ade.mp3",
+    "others": "形容词:exploratory;",
+    "example": "It is true during their explorations they often faced difficulties and dangers of the most perilous nature.",
+    "exampleExplanation": "确实在探险中，他们经常面临着各种最有危险性的艰难和险阻。"
+  },
+  {
+    "word": "truly",
+    "explanation": "真实地；真诚地；正确地",
+    "partOfSpeech": "adv.",
+    "pronunciation": "http://audio.dict.cn/fuk0fz14c1a14b80dc571b2b738e2112a158f5.mp3",
+    "others": "",
+    "example": "The performance truly exalted the audience.",
+    "exampleExplanation": "演出确使观众情绪高昂。"
+  },
+  {
+    "word": "pride",
+    "explanation": "骄傲；自豪；自尊心；引以自豪的东西",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30Qt183c24242efa178ed3bdfe2e2c679b73.mp3",
+    "others": "过去式:prided;过去分词:prided;现在分词:priding;第三人称单数:prides;",
+    "example": "My teaching is my pride and joy.",
+    "exampleExplanation": "我的教学工作是我的快乐和骄傲。"
+  },
+  {
+    "word": "particular",
+    "explanation": "特定的；专指的；特殊的；特别的；挑剔的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuk0P1ee6f2b0572388bc1a5eca047c8119b42.mp3",
+    "others": "",
+    "example": "They depend on a particular historical situation.",
+    "exampleExplanation": "它们取决于特定的历史境况。"
+  },
+  {
+    "word": "armed",
+    "explanation": "武装的；有扶手的；[生]有防护器官的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuk0qu4d82449d4ba64dba38385868ef4c47fa.mp3",
+    "others": "",
+    "example": "He was put away for ten years for armed robbery.",
+    "exampleExplanation": "他因持械抢劫而关押了十年。"
+  },
+  {
+    "word": "mission",
+    "explanation": "使命；代表团；任务；布道",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0SD1c85c8d36e2bb1ef2f262295a3f962cc.mp3",
+    "others": "形容词:missional;过去式:missioned;过去分词:missioned;现在分词:missioning;第三人称单数:missions;",
+    "example": "The minister was sent to Spain on mission.",
+    "exampleExplanation": "这位部长奉命前往西班牙。"
+  },
+  {
+    "word": "absent",
+    "explanation": "缺席的；不在的；缺乏的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30aObe0384ea9ac2d86a78f9abd8ddbf26ae.mp3",
+    "others": "副词:absently;过去式:absented;过去分词:absented;现在分词:absenting;第三人称单数:absents;",
+    "example": "Many students were absent, notably the monitor.",
+    "exampleExplanation": "许多学生缺席，特别是连班长也没来。"
+  },
+  {
+    "word": "helper",
+    "explanation": "助手；帮手",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30AVe5a988bcc704c4ef2e16ed8e4a4cc227.mp3",
+    "others": "",
+    "example": "Mr Smith sent his helper to post these letters.",
+    "exampleExplanation": "史密斯先生派他的助手去寄这些信。"
+  },
+  {
+    "word": "spoil",
+    "explanation": "宠坏；溺爱；破坏；腐坏；使索然无味",
+    "partOfSpeech": "v.",
+    "pronunciation": "http://audio.dict.cn/fuTd302u2c32cab84cfbc3729fe0dad74585e812.mp3",
+    "others": "过去式:spoiledspoilt;过去分词:spoiledspoilt;现在分词:spoiling;第三人称单数:spoils;",
+    "example": "A fond mother may spoil her child.",
+    "exampleExplanation": "溺爱的母亲可能会宠坏她的孩子。"
+  },
+  {
+    "word": "broth",
+    "explanation": "肉汤；清汤",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd307b379d66a846e5a1e55ec05fd9b1dbcbae.mp3",
+    "others": "名词复数:broths;",
+    "example": "Let the broth simmer down a bit more.",
+    "exampleExplanation": "让肉汤炖得再久一些吧。"
+  },
+  {
+    "word": "physics",
+    "explanation": "物理学",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30AA87d8323a7c932da7c7c031702c6316b6.mp3",
+    "others": "",
+    "example": "He does well in physics.",
+    "exampleExplanation": "他的物理学得很好。"
+  },
+  {
+    "word": "equation",
+    "explanation": "相等；均衡；方程式；等式",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30YN45a95414cc70eeafde621d42d71b71ec.mp3",
+    "others": "形容词:equational;副词:equationally;",
+    "example": "The equation of wealth with happiness can be dangerous.",
+    "exampleExplanation": "把财富与幸福等同起来是很危险的"
+  },
+  {
+    "word": "university",
+    "explanation": "大学",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0K4087653cc91cb8219045665e81465b4eb.mp3",
+    "others": "名词复数:universities;",
+    "example": "John is one of his alumni in the university.",
+    "exampleExplanation": "约翰是他大学时的校友之一。"
+  },
+  {
+    "word": "contribution",
+    "explanation": "贡献；捐款(赠)；投稿",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30BQd695603437dc79c696857cd4de4b50a3.mp3",
+    "others": "",
+    "example": "Don't undervalue Jim's contribution to the research.",
+    "exampleExplanation": "不要低估了吉姆在研究工作中的贡献。"
+  },
+  {
+    "word": "unique",
+    "explanation": "独特的；独一无二的；稀罕的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30si2b7ed5bd5c5b8886409f79c3a9d4ec1c.mp3",
+    "others": "副词:uniquely;名词:uniqueness;",
+    "example": "He occupies a unique place in English literature.",
+    "exampleExplanation": "他在英国文学中占有独特的地位。"
+  },
+  {
+    "word": "mention",
+    "explanation": "提到；说起",
+    "partOfSpeech": "vt.",
+    "pronunciation": "http://audio.dict.cn/fuk0Ji9c7a61fbc83856d7098b4dd1ce014594.mp3",
+    "others": "形容词:mentionable;过去式:mentioned;过去分词:mentioned;现在分词:mentioning;第三人称单数:mentions;",
+    "example": "Speaking of Macao, it is necessary to mention lotus flowers.",
+    "exampleExplanation": "说到澳门,就不得不提到莲花了。"
+  },
+  {
+    "word": "light",
+    "explanation": "光；光线；灯；打火机；领悟；浅色；天窗",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk02o4dd977a92bfa865123d6354663fc533b.mp3",
+    "others": "比较级:lighter;最高级:lightest;过去式:lightedlit;过去分词:lightedlit;现在分词:lighting;第三人称单数:lights;",
+    "example": "I try to see but I'm blinded by the white light.",
+    "exampleExplanation": "我试着去看，但是有道白光让我什么都看不到。"
+  },
+  {
+    "word": "mathematics",
+    "explanation": "数学",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30aKa70488f4e470655e9f122f2723cefa25.mp3",
+    "others": "",
+    "example": "Mathematics is her favorite subject.",
+    "exampleExplanation": "数学是她喜欢的科目。"
+  },
+  {
+    "word": "Frenchman",
+    "explanation": "法国人",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30nH28eeadea67f3424ae61df0802eb20e1e.mp3",
+    "others": "",
+    "example": "The mastermind of the expedition was a Frenchman.",
+    "exampleExplanation": "这次探险的策划者是一个法国人。"
+  },
+  {
+    "word": "radium",
+    "explanation": "[化]镭（元素符号Ra）",
+    "partOfSpeech": null,
+    "pronunciation": "http://audio.dict.cn/fuTd30AN1824dabc4fbee247db76f851c0b81a34.mp3",
+    "others": "简写符号:Ra;",
+    "example": "Radium and uranium are radioactive elements.",
+    "exampleExplanation": "镭和铀是放射性元素。"
+  },
+  {
+    "word": "professor",
+    "explanation": "教授；老师",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk03Fcc6c0699b4ff0c8d306a54f9c34f1270.mp3",
+    "others": "形容词:professorial;副词:professorially;名词:professorship;",
+    "example": "Our professor is a man of profound learning.",
+    "exampleExplanation": "我们的教授是一个学识渊博的人。"
+  },
+  {
+    "word": "couple",
+    "explanation": "对；夫妇；数个",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0tN5e889d1b3d228030b2e230f6ba44f693.mp3",
+    "others": "过去式:coupled;过去分词:coupled;现在分词:coupling;第三人称单数:couples;",
+    "example": "They are a nice couple.",
+    "exampleExplanation": "他们是很美满的一对。"
+  },
+  {
+    "word": "unknown",
+    "explanation": "未知的；不出名的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuk0vb2dfdb166beaf7a278d753aa70cb8ee7d.mp3",
+    "others": "",
+    "example": "Its greater part is unknown to me.",
+    "exampleExplanation": "它的大部分对我是未知的。"
+  },
+  {
+    "word": "x-ray",
+    "explanation": "X射线；光机；X光照片",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuTd30nFb6a98a5e2020e32c6b1ad1f51205b11f.mp3",
+    "others": "过去式:x-rayedX-rayed;过去分词:x-rayedX-rayed;现在分词:x-rayingX-raying;第三人称单数:x-raysX-rays;",
+    "example": "",
+    "exampleExplanation": null
+  },
+  {
+    "word": "literature",
+    "explanation": "文学；文献；<口>印刷品</口>",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0a73f1d4586b33766d1a8404e3eff993445.mp3",
+    "others": "",
+    "example": "She is fond of polite literature.",
+    "exampleExplanation": "她喜爱风雅文学。"
+  },
+  {
+    "word": "sudden",
+    "explanation": "突然的；出乎意料的",
+    "partOfSpeech": "adj.",
+    "pronunciation": "http://audio.dict.cn/fuTd30Jr59709bcf8f090ac6e013f392bc32e4a3.mp3",
+    "others": "副词:suddenly;名词:suddenness;",
+    "example": "His sudden death upset everybody.",
+    "exampleExplanation": "他的突然去世使大家深感悲伤。"
+  },
+  {
+    "word": "religion",
+    "explanation": "宗教；宗教信仰",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0kke68df961db4fc02f77029e1dcfeb5452.mp3",
+    "others": "",
+    "example": "He is a disciple of religion.",
+    "exampleExplanation": "他是宗教信徒。"
+  },
+  {
+    "word": "Indian",
+    "explanation": "印度人；印第安人；印第安语",
+    "partOfSpeech": "n.",
+    "pronunciation": "http://audio.dict.cn/fuk0sE6e4a080ad3cbfde537166cebcb1a6c28.mp3",
+    "others": "",
+    "example": "No Indian ever runs an unnecessary risk.",
+    "exampleExplanation": "没有一个印度人愿意冒无谓的危险。"
+  }
+]

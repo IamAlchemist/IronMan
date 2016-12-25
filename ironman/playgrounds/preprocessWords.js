@@ -10,22 +10,21 @@ const Promise = require('bluebird').Promise,
     logger = require('../libs/ironmanLogger');
 
 function preprocess() {
-    readFile(`./categories_words_raw.txt`, "utf8")
+    readFile(`./nine_grade_half_b.csv`, "utf8")
         .then((content)=>{
             let alllines = content.split('\n');
             logger.warn(`all lines count : ${alllines.length}`);
 
             let string = "";
             for (let line of alllines) {
-                //const word = line.trim().split('(')[0].trim();
-                const  words = line.trim().split('=');
-
-                for (let word of words) {
+                const word = line.trim();
+//                const  words = line.trim().split('=');
+                if (word.length > 0) {
                     string += word.trim() + '\n';
                 }
             }
 
-            fs.writeFile(`./categories_words_raw_2.txt`, string);
+            fs.writeFile(`./nine_grade_half_b_raw.txt`, string);
         });
 }
 
