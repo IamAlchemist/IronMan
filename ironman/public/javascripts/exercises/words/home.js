@@ -8,6 +8,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     $(document).ready(function () {
         messageAlertElem = $('#messageAlert');
         setupWordsBandUpdateButton();
+        setupImportWordsFromNineHalfB();
         setupImportWordsFromNineHalfA();
         setupImportWordsFromEightHalfB();
         setupImportWordsFromEightHalfA();
@@ -53,6 +54,12 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     function setupImportWordsFromNineHalfA() {
         const elem = $('#importWordsFromNineGradeHalfA');
         const gradeMail = "nine.grade.half.a@gmail.com";
+        setupImportButton(elem, gradeMail);
+    }
+
+    function setupImportWordsFromNineHalfB() {
+        const elem = $('#importWordsFromNineGradeHalfB');
+        const gradeMail = "nine.grade.half.b@gmail.com";
         setupImportButton(elem, gradeMail);
     }
 
