@@ -11,6 +11,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
         setupImportWordsFromNineHalfA();
         setupImportWordsFromEightHalfB();
         setupImportWordsFromEightHalfA();
+        setupImportWordsFromCategoriesWords();
     });
 
     function setupImportButton(elem, gradeMail) {
@@ -31,6 +32,11 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
         });
     }
 
+    function setupImportWordsFromCategoriesWords() {
+        const elem = $('#importWordsFromCategoriesWords');
+        const gradeMail = 'categories.words@gmail.com';
+        setupImportButton(elem, gradeMail);
+    }
 
     function setupImportWordsFromEightHalfB() {
         const elem = $('#importWordsFromEightGradeHalfB');
