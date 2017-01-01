@@ -477,6 +477,52 @@ define(['http://cdn.bootcss.com/moment.js/2.17.1/moment-with-locales.min.js',
             return chart;
         }
 
+        function showPieChart(nodeId, data) {
+            var chart = {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            };
+
+            var title = {
+                text: `${data.mail}掌握单词比例`
+            };
+
+            var tooltip = {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            };
+
+            var plotOptions = {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b style="color: red">{point.name}</b>: {point.percentage:.1f}%, 共计: {point.y}个',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                        }
+                    }
+                }
+            };
+
+            var series = [{
+                type: 'pie',
+                name: '比例',
+                data: data.data
+            }];
+
+            var json = {};
+            json.chart = chart;
+            json.title = title;
+            json.tooltip = tooltip;
+            json.series = series;
+            json.plotOptions = plotOptions;
+
+            $(nodeId).highcharts(json);
+        }
+
+
 
         // polyfill for Array.find() method
         /* jshint ignore:start */
@@ -512,6 +558,7 @@ define(['http://cdn.bootcss.com/moment.js/2.17.1/moment-with-locales.min.js',
             decorateRadioInputs: decorateRadioInputs,
             getMessageFromJson: getMessageFromJson,
             showCalendarsWithType: showCalendarsWithType,
-            showHeatWithType: showHeatWithType
+            showHeatWithType: showHeatWithType,
+            showPieChart: showPieChart
         };
     });
