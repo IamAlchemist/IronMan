@@ -388,26 +388,26 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
 
             .done((result)=> {
                 if (result.errorCode == 0) {
-                    if (result.content.isPunched) {
-
-                        $.getJSON('/exercises/words/achievementToday')
-                            .done((res)=> {
-                                if (res.errorCode == 0) {
-                                    const progress = res.content.progressesToday;
-                                    showCelebrationPage(progress);
-                                }
-                                else {
-                                    ironmanLib.alert(res.message, 'alert-danger');
-                                }
-                            })
-                    }
-                    else {
+                    // if (result.content.isPunched) {
+                    //
+                    //     $.getJSON('/exercises/words/achievementToday')
+                    //         .done((res)=> {
+                    //             if (res.errorCode == 0) {
+                    //                 const progress = res.content.progressesToday;
+                    //                 showCelebrationPage(progress);
+                    //             }
+                    //             else {
+                    //                 ironmanLib.alert(res.message, 'alert-danger');
+                    //             }
+                    //         })
+                    // }
+                    // else {
                         const source = $('#startMemorizing-template').html();
                         const startMemorizingTmpl = Handlebars.compile(source);
 
                         contentElem.html(startMemorizingTmpl());
                         initStartMemorizingButton();
-                    }
+                    // }
                 }
                 else if (result.errorCode == 108) {
                     inspectWordProgressToday();
