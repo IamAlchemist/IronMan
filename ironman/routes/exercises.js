@@ -63,6 +63,17 @@ router.get('/words/statistics', (req, res) => {
     res.render('exercises/words/statistics', params);
 });
 
+router.get('/words/dashboard', (req, res) => {
+    const mail = comonLib.getUserFromRequest(req).mail;
+    let punchingType = "word";
+    let params = {
+        mail,
+        punchingType
+    };
+
+    res.render('exercises/words/dashboard', params);
+});
+
 
 /* API */
 router.get('/words/inspect/progressToday', (req, res)=> {
@@ -140,7 +151,7 @@ router.get('/punching/punchForChild', (req, res)=> {
     }
 
     exercisesLib.punchForChild(user, childMail, type)
-        .then(()=>{
+        .then(()=> {
             res.send(new Result(0));
         })
         .catch((error)=> {
