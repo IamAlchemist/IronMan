@@ -140,7 +140,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
 
     function initNextExerciseButtonInDetail() {
         let nextButton = $('#nextWordExerciseButton');
-        if (numberOfAvaiableWordProgresses() > 1) {
+        if (numberOfAvaiableWordProgresses() > 0) {
             nextButton.removeAttr('disabled');
         }
         else {
