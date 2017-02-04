@@ -118,7 +118,7 @@ module.exports.wordExercisesForToday = function (mail) {
 
                 return WordExerciseProgress.WordExerciseProgressModel
                     .find({mail, "wordExercise.mail": source})
-                    .where('progress').gt(0).lte(maxProgress)
+                    .where('progress').gt(0).lt(maxProgress)
                     .sort('progress')
                     .limit(progress_non_zero_count)
                     .exec()
