@@ -100,7 +100,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
 
                 if (wordExerciseProgresses[currentWordExerciseProgressIndex].progress
                     - originalWordExerciseProgresses[currentWordExerciseProgressIndex].progress < 3
-                && wordExerciseProgresses[currentWordExerciseProgressIndex].progresses < maxPoint) {
+                && wordExerciseProgresses[currentWordExerciseProgressIndex].progress < maxPoint) {
                     currentWordExerciseProgress = wordExerciseProgresses[currentWordExerciseProgressIndex];
                     break;
                 }
