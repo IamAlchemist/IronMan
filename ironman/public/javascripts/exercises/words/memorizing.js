@@ -3,34 +3,34 @@
  */
 
 require(['../../libs/ironmanLib'], function (ironmanLib) {
-    var contentElem;
-    var progressElem;
-    var progressBarElem;
-    var totalNumberElem;
-    var messageAlertElem;
+    let contentElem;
+    let progressElem;
+    let progressBarElem;
+    let totalNumberElem;
+    let messageAlertElem;
 
-    var messageElem;
-    var hintElem;
-    var nextButtonCotainerElem;
-    var nextButtonElem;
+    let messageElem;
+    let hintElem;
+    let nextButtonCotainerElem;
+    let nextButtonElem;
 
-    var originalWordExerciseProgresses;
-    var wordExerciseProgresses = Array();
+    let originalWordExerciseProgresses;
+    let wordExerciseProgresses = [];
 
-    var exerciseTmpl;
-    var wordDetailTmpl;
-    var celebrationTmpl;
-    var inspectionTmpl;
+    let exerciseTmpl;
+    let wordDetailTmpl;
+    let celebrationTmpl;
+    let inspectionTmpl;
 
-    var currentWordExerciseProgress;
-    var currentWordExerciseProgressIndex;
+    let currentWordExerciseProgress;
+    let currentWordExerciseProgressIndex;
 
-    var currentAnswerIndex;
-    var currentHints;
-    var currentHintIndex = 0;
-    var hintUsed = false;
+    let currentAnswerIndex;
+    let currentHints;
+    let currentHintIndex = 0;
+    let hintUsed = false;
 
-    var currentChoosedId;
+    let currentChoosedId;
 
     const maxPoint = 24;
 
@@ -85,7 +85,7 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     }
 
     function pickNextWordProgress() {
-        if (currentWordExerciseProgressIndex == undefined) {
+        if (currentWordExerciseProgressIndex === undefined) {
             currentWordExerciseProgressIndex = 0;
             currentWordExerciseProgress = wordExerciseProgresses[0];
         }
@@ -99,7 +99,8 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
                 }
 
                 if (wordExerciseProgresses[currentWordExerciseProgressIndex].progress
-                    - originalWordExerciseProgresses[currentWordExerciseProgressIndex].progress < 3) {
+                    - originalWordExerciseProgresses[currentWordExerciseProgressIndex].progress < 3
+                && wordExerciseProgresses[currentWordExerciseProgressIndex].progresses < maxPoint) {
                     currentWordExerciseProgress = wordExerciseProgresses[currentWordExerciseProgressIndex];
                     break;
                 }
@@ -130,7 +131,8 @@ require(['../../libs/ironmanLib'], function (ironmanLib) {
     function numberOfAvaiableWordProgresses() {
         let result = 0;
         for (let i = 0, l = wordExerciseProgresses.length; i < l; ++i) {
-            if (wordExerciseProgresses[i].progress - originalWordExerciseProgresses[i].progress < 3) {
+            if (wordExerciseProgresses[i].progress - originalWordExerciseProgresses[i].progress < 3
+            && wordExerciseProgresses[i].progress < maxPoint) {
                 result += 1;
             }
         }
